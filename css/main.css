@@ -1,10 +1,10 @@
 @font-face {
     font-family:'sena_icon';
-    src:url('fonts/sena.eot');
-    src:url('fonts/sena.eot?#iefix') format('embedded-opentype'),
-        url('fonts/sena.woff') format('woff'),
-        url('fonts/sena.ttf') format('truetype'),
-        url('fonts/sena.svg') format('svg');
+    src:url('../fonts/sena.eot');
+    src:url('../fonts/sena.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/sena.woff') format('woff'),
+        url('../fonts/sena.ttf') format('truetype'),
+        url('../fonts/sena.svg') format('svg');
     font-weight:normal;
     font-style:normal;
 }
@@ -43,8 +43,8 @@ header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desp
 {
 	font-family: 'sena_icon';
 	border: none;
-	color: yellow;
-	background-color: blue;
+	color: #e09f12;
+	background-color: #1b1f31;
 	height: 4.6rem;
 	margin-top: 0.1rem;
 	width: 4rem;
@@ -61,7 +61,8 @@ header div:nth-child(2) /*Barra roja*/
 	background: linear-gradient(to right,  #8c0d11 25%,#6d0019 80%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0d11', endColorstr='#6d0019',GradientType=1 );
 	margin-top: -5px;
-	color: white;
+	/*Miga de pan*/
+	color: #e09f12;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
