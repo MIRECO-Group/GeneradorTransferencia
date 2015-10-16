@@ -1,0 +1,167 @@
+@font-face {
+    font-family:'sena_icon';
+    src:url('fonts/sena.eot');
+    src:url('fonts/sena.eot?#iefix') format('embedded-opentype'),
+        url('fonts/sena.woff') format('woff'),
+        url('fonts/sena.ttf') format('truetype'),
+        url('fonts/sena.svg') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'SourceSans Pro';
+    src:url('../fonts/SourceSansPro-Regular.otf');
+    font-weight:normal;
+    font-style:normal;
+}
+
+body
+{
+	background-color: yellow;
+	font-family: "SourceSans Pro";
+	font-size: 16px;
+}
+
+header
+{
+	max-height: 140px;
+}
+header div:nth-child(1) /*Cabecera gris*/
+{
+	background-image: url("../img/barragris.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: space-between;
+}
+header div:nth-child(1) > h1
+{
+	margin-left: 12%;
+}
+header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
+{
+	font-family: 'sena_icon';
+	border: none;
+	color: yellow;
+	background-color: blue;
+	height: 4.6rem;
+	margin-top: 0.1rem;
+	width: 4rem;
+}
+
+header div:nth-child(2) /*Barra roja*/
+{
+	background: #8c0d11;
+	background: -moz-linear-gradient(left,  #8c0d11 25%, #6d0019 80%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(25%,#8c0d11), color-stop(80%,#6d0019));
+	background: -webkit-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+	background: -o-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+	background: -ms-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+	background: linear-gradient(to right,  #8c0d11 25%,#6d0019 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0d11', endColorstr='#6d0019',GradientType=1 );
+	margin-top: -5px;
+	color: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+header div:nth-child(2) > span
+{
+	margin-left: 10%;
+}
+header ul:nth-child(3)
+{
+	display: none;
+	background-color: #333333;
+	position: absolute;
+	list-style: none;
+	right: 0.5rem;
+	top: 5rem;
+	margin-top: 0px;
+	padding: 1% 1%;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+header ul:nth-child(3) li p
+{
+	color: white;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 40px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'sena_icon';
+    margin-top: 20%;
+}
+header ul:nth-child(3) li span:nth-child(1)
+{
+	color: white;
+	background-color: #305570;
+	position: absolute;
+	display: none;
+	right: 4.5rem;
+	margin-top: 1.6rem;
+	padding: 2% 15%;
+}
+header > img:nth-child(4)
+{
+	position: absolute;
+	top: 1.6%;
+	left: 2%;
+	height: 6rem;
+	width: 6rem;
+}
+
+div#content_container
+{
+	background-color: green;
+}
+
+footer
+{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	background-color: blue;
+}
+footer input[type="button"]
+{
+	font-family: 'sena_icon';
+}
+footer > input[type="button"]:nth-child(1)
+{
+	flex-grow: 1;
+}
+footer > input[type="button"]:nth-child(2)
+{
+	flex-grow: 1;
+}
+footer > input[type="button"]:nth-child(3)
+{
+	flex-grow: 2;
+}
+footer > input[type="button"]:nth-child(4)
+{
+	flex-grow: 2;
+}
+footer > input[type="button"]:nth-child(5)
+{
+	flex-grow: 3;
+}
+footer > input[type="button"]:nth-child(6)
+{
+	flex-grow: 1;
+}
+footer > input[type="button"]:nth-child(7)
+{
+	flex-grow: 1;
+}
+footer > input[type="button"]:nth-child(8)
+{
+	flex-grow: 1;
+}
+footer > input[type="button"]:nth-child(9)
+{
+	flex-grow: 1;
+}
