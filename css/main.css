@@ -18,9 +18,19 @@
 
 body
 {
-	background-color: yellow;
 	font-family: "SourceSans Pro";
 	font-size: 16px;
+}
+
+.icon_arrow_ed_s
+{
+	font-family: "sena_icon";
+	color: #e09f12;
+}
+
+.slash_color
+{
+	color: #08809F;
 }
 
 header
@@ -34,23 +44,28 @@ header div:nth-child(1) /*Cabecera gris*/
 	background-size: 100% 100%;
 	display: flex;
 	justify-content: space-between;
+	height: 4rem;
 }
 header div:nth-child(1) > h1
 {
-	margin-left: 12%;
+	margin: 0.6rem 0 0 10rem;
+    font-size: 2rem;
+    height: 2rem;
 }
 header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
 {
 	font-family: 'sena_icon';
-	border: none;
-	color: #e09f12;
-	background-color: #1b1f31;
-	height: 4.6rem;
-	margin-top: 0.1rem;
-	width: 4rem;
+    border: none;
+    color: #e09f12;
+    background-color: #1b1f31;
+    height: 3.6rem;
+    font-size: 2rem;
+    border-top-right-radius: 3px;
+    margin-top: 0.1rem;
+    width: 3rem;
 }
 
-header div:nth-child(2) /*Barra roja*/
+header div:nth-child(2) > p/*Barra roja*/
 {
 	background: #8c0d11;
 	background: -moz-linear-gradient(left,  #8c0d11 25%, #6d0019 80%);
@@ -62,55 +77,58 @@ header div:nth-child(2) /*Barra roja*/
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0d11', endColorstr='#6d0019',GradientType=1 );
 	margin-top: -5px;
 	/*Miga de pan*/
-	color: #e09f12;
+	color: white;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	padding: 5px 0px 5px 9.5rem;
 }
-header div:nth-child(2) > span
-{
-	margin-left: 10%;
-}
-header ul:nth-child(3)
+header ul:nth-child(3) /* Menú desplegable de la barra superior */
 {
 	display: none;
 	background-color: #333333;
 	position: absolute;
 	list-style: none;
 	right: 0.5rem;
-	top: 5rem;
+	top: 4.2rem;
 	margin-top: 0px;
-	padding: 1% 1%;
+	padding: 1rem 0.5rem;
 	border-bottom-left-radius: 1rem;
 	border-bottom-right-radius: 1rem;
 }
-header ul:nth-child(3) li p
+header ul:nth-child(3) li p /* Iconos del menú desplegable */
 {
 	color: white;
     cursor: pointer;
     background-color: gray;
     border-radius: 40px;
     font-size: 2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     font-family: 'sena_icon';
-    margin-top: 20%;
+    margin-top: 0.5rem;
 }
-header ul:nth-child(3) li span:nth-child(1)
+header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
 {
 	color: white;
 	background-color: #305570;
 	position: absolute;
 	display: none;
-	right: 4.5rem;
-	margin-top: 1.6rem;
-	padding: 2% 15%;
+	right: 3.5rem;
+	margin-top: 0.4rem;
+	padding: 5% 30%;
 }
-header > img:nth-child(4)
+header > p:nth-child(4) /*Logo del sena*/
 {
-	position: absolute;
-	top: 1.6%;
-	left: 2%;
-	height: 6rem;
-	width: 6rem;
+	font-family: "sena_icon";
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: -4.3rem;
+    left: 2rem;
+    font-size: 4.5rem;
+    padding: 0.6rem 0.8rem 0.8rem 0.8rem;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
 }
 
 div#content_container
@@ -124,45 +142,121 @@ footer
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: nowrap;
-	background-color: blue;
+	align-items: stretch;
+	background-color: #A9AFB5;
+	border-radius: 10px;
 }
 footer input[type="button"]
 {
 	font-family: 'sena_icon';
 }
-footer > input[type="button"]:nth-child(1)
-{
-	flex-grow: 1;
-}
-footer > input[type="button"]:nth-child(2)
-{
-	flex-grow: 1;
-}
-footer > input[type="button"]:nth-child(3)
+footer > div#left_buttons
 {
 	flex-grow: 2;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
 }
-footer > input[type="button"]:nth-child(4)
+footer > div#left_buttons > input[type="button"]:nth-child(1) /*Botón Home*/
+{
+	font-size: 2rem;
+    border-style: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+    padding: 3% 4%;
+    background-color: #287383;
+}
+footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón XYZ*/
+{
+	font-size: 1.8rem;
+    border-style: none;
+    color: white;
+    padding: 3% 4%;
+    background-color: #009B3A;
+}
+footer > div#center_buttons
+{
+	flex-grow: 4;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+footer > div#center_buttons > input[type="button"]:nth-child(1)/*Botón ir a la izquierda*/
+{
+	font-size: 2.3rem;
+    background-color: #454A59;
+    border-style: none;
+    font-weight: bold;
+    color: #F5A013;
+    margin-right: -1px;
+    border-top-left-radius: 5px;
+    padding: 0% 5%;
+    border-bottom-left-radius: 5px;
+}
+footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que recurso va*/
+{
+	font-size: 1.8rem;
+    background-color: #454A59;
+    border-style: none;
+    color: white;
+    padding: 0.8rem 5%;
+    width: 5rem;
+    margin: 0;
+}
+footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la derecha*/
+{
+	font-size: 2.3rem;
+    background-color: #454A59;
+    border-style: none;
+    font-weight: bold;
+    color: #F5A013;
+    margin-left: -1px;
+    padding: 0% 5%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+footer > div#right_buttons
 {
 	flex-grow: 2;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
 }
-footer > input[type="button"]:nth-child(5)
+footer > div#right_buttons > input[type="button"]:nth-child(1)
 {
-	flex-grow: 3;
+	font-size: 2rem;
+    border-style: none;
+    color: white;
+    padding: 3% 3%;
+    background-color: #009B3A;
 }
-footer > input[type="button"]:nth-child(6)
+footer > div#right_buttons > input[type="button"]:nth-child(2)
 {
-	flex-grow: 1;
+	font-size: 2rem;
+    border-style: none;
+    color: white;
+    padding: 3% 3%;
+    background-color: #009B3A;
 }
-footer > input[type="button"]:nth-child(7)
+footer > div#right_buttons > input[type="button"]:nth-child(3)
 {
-	flex-grow: 1;
+	font-size: 2rem;
+    border-style: none;
+    color: white;
+    padding: 3% 3%;
+    background-color: #009B3A;
 }
-footer > input[type="button"]:nth-child(8)
+footer > div#right_buttons > input[type="button"]:nth-child(4)
 {
-	flex-grow: 1;
-}
-footer > input[type="button"]:nth-child(9)
-{
-	flex-grow: 1;
+	font-size: 2rem;
+    border-style: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    padding: 3% 3%;
+    background-color: #AF4A4A;
 }
