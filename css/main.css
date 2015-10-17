@@ -16,12 +16,6 @@
     font-style:normal;
 }
 
-body
-{
-	font-family: "SourceSans Pro";
-	font-size: 16px;
-}
-
 .icon_arrow_ed_s
 {
 	font-family: "sena_icon";
@@ -33,230 +27,271 @@ body
 	color: #08809F;
 }
 
-header
-{
-	max-height: 140px;
-}
-header div:nth-child(1) /*Cabecera gris*/
-{
-	background-image: url("../img/barragris.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	display: flex;
-	justify-content: space-between;
-	height: 4rem;
-}
-header div:nth-child(1) > h1
-{
-	margin: 0.6rem 0 0 10rem;
-    font-size: 2rem;
-    height: 2rem;
-}
-header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
-{
-	font-family: 'sena_icon';
-    border: none;
-    color: #e09f12;
-    background-color: #1b1f31;
-    height: 3.6rem;
-    font-size: 2rem;
-    border-top-right-radius: 3px;
-    margin-top: 0.1rem;
-    width: 3rem;
+	html
+	{
+		font-size: 16px; /*1rem = 16px*/
+	}
+
+	body
+	{
+		font-family: "SourceSans Pro";
+	}
+	header
+	{
+		max-height: 140px;
+	}
+	header div:nth-child(1) /*Cabecera gris*/
+	{
+		background-image: url("../img/barragris.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		display: flex;
+		justify-content: space-between;
+		height: 4rem;
+	}
+	header div:nth-child(1) > h1
+	{
+		margin: 0.6rem 0 0 10rem;
+	    font-size: 2rem;
+	    height: 2rem;
+	}
+	header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
+	{
+		font-family: 'sena_icon';
+	    border: none;
+	    color: #e09f12;
+	    background-color: #1b1f31;
+	    height: 3.6rem;
+	    font-size: 2rem;
+	    border-top-right-radius: 3px;
+	    margin-top: 0.1rem;
+	    width: 3rem;
+	}
+	
+	header div:nth-child(2) > p/*Barra roja*/
+	{
+		background: #8c0d11;
+		background: -moz-linear-gradient(left,  #8c0d11 25%, #6d0019 80%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(25%,#8c0d11), color-stop(80%,#6d0019));
+		background: -webkit-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+		background: -o-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+		background: -ms-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+		background: linear-gradient(to right,  #8c0d11 25%,#6d0019 80%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0d11', endColorstr='#6d0019',GradientType=1 );
+		margin-top: -5px;
+		/*Miga de pan*/
+		color: white;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		padding: 5px 0px 5px 9.5rem;
+	}
+	header ul:nth-child(3) /* Menú desplegable de la barra superior */
+	{
+		display: none;
+		background-color: #333333;
+		position: absolute;
+		list-style: none;
+		right: 8px;
+		top: 4.2rem;
+		margin-top: 0px;
+		padding: 1rem 0.5rem;
+		border-bottom-left-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+	}
+	header ul:nth-child(3) li p /* Iconos del menú desplegable */
+	{
+		color: white;
+	    cursor: pointer;
+	    background-color: gray;
+	    border-radius: 40px;
+	    font-size: 2rem;
+	    margin-bottom: 1.5rem;
+	    text-align: center;
+	    font-family: 'sena_icon';
+	    margin-top: 0.5rem;
+	}
+	header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
+	{
+		color: white;
+		background-color: #305570;
+		position: absolute;
+		/*display: none;*/
+		right: 3.5rem;
+		margin-top: 0.4rem;
+		padding: 5% 30%;
+	}
+	header > p:nth-child(4) /*Logo del sena*/
+	{
+		font-family: "sena_icon";
+	    background-color: white;
+	    color: black;
+	    position: absolute;
+	    top: -4.3rem;
+	    left: 2rem;
+	    font-size: 4.5rem;
+	    padding: 0.6rem 0.8rem 0.8rem 0.8rem;
+	    border-bottom-left-radius: 45px;
+	    border-bottom-right-radius: 45px;
+	}
+	
+	div#content_container
+	{
+		background-color: green;
+	}
+	
+	footer
+	{
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		background-color: #A9AFB5;
+		border-radius: 10px;
+	}
+	footer input[type="button"]
+	{
+		font-family: 'sena_icon';
+	}
+	footer > div#left_buttons
+	{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+	footer > div#left_buttons > input[type="button"]:nth-child(1) /*Botón Home*/
+	{
+		font-size: 2rem;
+	    border-style: none;
+	    border-top-left-radius: 5px;
+	    border-bottom-left-radius: 5px;
+	    color: white;
+	    padding: 3% 4%;
+	    background-color: #287383;
+	}
+	footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón XYZ*/
+	{
+		font-size: 1.8rem;
+	    border-style: none;
+	    color: white;
+	    padding: 3% 4%;
+	    background-color: #009B3A;
+	}
+	footer > div#center_buttons
+	{
+		flex-grow: 2;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	footer > div#center_buttons > input[type="button"]:nth-child(1)/*Botón ir a la izquierda*/
+	{
+		font-size: 2.3rem;
+	    background-color: #454A59;
+	    border-style: none;
+	    font-weight: bold;
+	    color: #F5A013;
+	    margin-right: -1px;
+	    border-top-left-radius: 5px;
+	    padding: 0% 5%;
+	    border-bottom-left-radius: 5px;
+	}
+	footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que recurso va*/
+	{
+		font-size: 1.8rem;
+	    background-color: #454A59;
+	    border-style: none;
+	    color: white;
+	    padding: 0.8rem 5%;
+	    width: 5rem;
+	    margin: 0;
+	}
+	footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la derecha*/
+	{
+		font-size: 2.3rem;
+	    background-color: #454A59;
+	    border-style: none;
+	    font-weight: bold;
+	    color: #F5A013;
+	    margin-left: -1px;
+	    padding: 0% 5%;
+	    border-top-right-radius: 5px;
+	    border-bottom-right-radius: 5px;
+	}
+	footer > div#right_buttons
+	{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+	}
+	footer > div#right_buttons > input[type="button"]:nth-child(1)
+	{
+		font-size: 2rem;
+	    border-style: none;
+	    color: white;
+	    padding: 3% 3%;
+	    background-color: #009B3A;
+	}
+	footer > div#right_buttons > input[type="button"]:nth-child(2)
+	{
+		font-size: 2rem;
+	    border-style: none;
+	    color: white;
+	    padding: 3% 3%;
+	    background-color: #009B3A;
+	}
+	footer > div#right_buttons > input[type="button"]:nth-child(3)
+	{
+		font-size: 2rem;
+	    border-style: none;
+	    color: white;
+	    padding: 3% 3%;
+	    background-color: #009B3A;
+	}
+	footer > div#right_buttons > input[type="button"]:nth-child(4)
+	{
+		font-size: 2rem;
+	    border-style: none;
+	    border-top-right-radius: 5px;
+	    border-bottom-right-radius: 5px;
+	    color: white;
+	    padding: 3% 3%;
+	    background-color: #AF4A4A;
+	}
+
+@media (max-width: 701px){ /**********************************************************/
+	html
+	{
+		font-size: 14px;
+	}
+
+	header div:nth-child(1) > h1
+	{
+		margin: 0.6rem 0 0 10rem;
+	    font-size: 1.9rem;
+	}
 }
 
-header div:nth-child(2) > p/*Barra roja*/
-{
-	background: #8c0d11;
-	background: -moz-linear-gradient(left,  #8c0d11 25%, #6d0019 80%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(25%,#8c0d11), color-stop(80%,#6d0019));
-	background: -webkit-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
-	background: -o-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
-	background: -ms-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
-	background: linear-gradient(to right,  #8c0d11 25%,#6d0019 80%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0d11', endColorstr='#6d0019',GradientType=1 );
-	margin-top: -5px;
-	/*Miga de pan*/
-	color: white;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	padding: 5px 0px 5px 9.5rem;
-}
-header ul:nth-child(3) /* Menú desplegable de la barra superior */
-{
-	display: none;
-	background-color: #333333;
-	position: absolute;
-	list-style: none;
-	right: 0.5rem;
-	top: 4.2rem;
-	margin-top: 0px;
-	padding: 1rem 0.5rem;
-	border-bottom-left-radius: 1rem;
-	border-bottom-right-radius: 1rem;
-}
-header ul:nth-child(3) li p /* Iconos del menú desplegable */
-{
-	color: white;
-    cursor: pointer;
-    background-color: gray;
-    border-radius: 40px;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-family: 'sena_icon';
-    margin-top: 0.5rem;
-}
-header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
-{
-	color: white;
-	background-color: #305570;
-	position: absolute;
-	display: none;
-	right: 3.5rem;
-	margin-top: 0.4rem;
-	padding: 5% 30%;
-}
-header > p:nth-child(4) /*Logo del sena*/
-{
-	font-family: "sena_icon";
-    background-color: white;
-    color: black;
-    position: absolute;
-    top: -4.3rem;
-    left: 2rem;
-    font-size: 4.5rem;
-    padding: 0.6rem 0.8rem 0.8rem 0.8rem;
-    border-bottom-left-radius: 45px;
-    border-bottom-right-radius: 45px;
-}
+@media (max-width: 570px){ /**********************************************************/
+	html
+	{
+		font-size: 12px;
+	}
 
-div#content_container
-{
-	background-color: green;
-}
+	header div:nth-child(1) > h1
+	{
+		margin: 0.6rem 0 0 8rem;
+	    font-size: 1.5rem;
+	    height: 2rem;
+	}
 
-footer
-{
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: nowrap;
-	align-items: stretch;
-	background-color: #A9AFB5;
-	border-radius: 10px;
-}
-footer input[type="button"]
-{
-	font-family: 'sena_icon';
-}
-footer > div#left_buttons
-{
-	flex-grow: 2;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-}
-footer > div#left_buttons > input[type="button"]:nth-child(1) /*Botón Home*/
-{
-	font-size: 2rem;
-    border-style: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    color: white;
-    padding: 3% 4%;
-    background-color: #287383;
-}
-footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón XYZ*/
-{
-	font-size: 1.8rem;
-    border-style: none;
-    color: white;
-    padding: 3% 4%;
-    background-color: #009B3A;
-}
-footer > div#center_buttons
-{
-	flex-grow: 4;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-}
-footer > div#center_buttons > input[type="button"]:nth-child(1)/*Botón ir a la izquierda*/
-{
-	font-size: 2.3rem;
-    background-color: #454A59;
-    border-style: none;
-    font-weight: bold;
-    color: #F5A013;
-    margin-right: -1px;
-    border-top-left-radius: 5px;
-    padding: 0% 5%;
-    border-bottom-left-radius: 5px;
-}
-footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que recurso va*/
-{
-	font-size: 1.8rem;
-    background-color: #454A59;
-    border-style: none;
-    color: white;
-    padding: 0.8rem 5%;
-    width: 5rem;
-    margin: 0;
-}
-footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la derecha*/
-{
-	font-size: 2.3rem;
-    background-color: #454A59;
-    border-style: none;
-    font-weight: bold;
-    color: #F5A013;
-    margin-left: -1px;
-    padding: 0% 5%;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-footer > div#right_buttons
-{
-	flex-grow: 2;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-}
-footer > div#right_buttons > input[type="button"]:nth-child(1)
-{
-	font-size: 2rem;
-    border-style: none;
-    color: white;
-    padding: 3% 3%;
-    background-color: #009B3A;
-}
-footer > div#right_buttons > input[type="button"]:nth-child(2)
-{
-	font-size: 2rem;
-    border-style: none;
-    color: white;
-    padding: 3% 3%;
-    background-color: #009B3A;
-}
-footer > div#right_buttons > input[type="button"]:nth-child(3)
-{
-	font-size: 2rem;
-    border-style: none;
-    color: white;
-    padding: 3% 3%;
-    background-color: #009B3A;
-}
-footer > div#right_buttons > input[type="button"]:nth-child(4)
-{
-	font-size: 2rem;
-    border-style: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    color: white;
-    padding: 3% 3%;
-    background-color: #AF4A4A;
+	header div:nth-child(2) > p/*Barra roja*/
+	{
+		padding: 5px 0px 5px 9rem;
+	}
 }
