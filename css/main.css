@@ -1,12 +1,12 @@
 @font-face {
-    font-family:'sena_icon';
-    src:url('../fonts/sena.eot');
-    src:url('../fonts/sena.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/sena.woff') format('woff'),
-        url('../fonts/sena.ttf') format('truetype'),
-        url('../fonts/sena.svg') format('svg');
-    font-weight:normal;
-    font-style:normal;
+    font-family: 'sena_icon';
+    src: url('../fonts/sena-webfont.eot');
+    src: url('../fonts/sena-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sena-webfont.woff2') format('woff2'),
+         url('../fonts/sena-webfont.woff') format('woff'),
+         url('../fonts/sena-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -14,6 +14,50 @@
     src:url('../fonts/SourceSansPro-Regular.otf');
     font-weight:normal;
     font-style:normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 .icon_arrow_ed_s
@@ -27,132 +71,139 @@
 	color: #08809F;
 }
 
-	html
-	{
-		font-size: 16px; /*1rem = 16px*/
-	}
+html
+{
+	height: 100%;
+	font-size: 16px; /*1rem = 16px*/
+}
 
-	body
-	{
-		font-family: "SourceSans Pro";
-	}
-	header
-	{
-		max-height: 140px;
-	}
-	header div:nth-child(1) /*Cabecera gris*/
-	{
-		background-image: url("../img/barragris.png");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		display: flex;
-		justify-content: space-between;
-		height: 4rem;
-	}
-	header div:nth-child(1) > h1
-	{
-		margin: 0.6rem 0 0 10rem;
-	    font-size: 2rem;
-	    height: 2rem;
-	}
-	header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
-	{
-		font-family: 'sena_icon';
-	    border: none;
-	    color: #e09f12;
-	    background-color: #1b1f31;
-	    height: 3.6rem;
-	    font-size: 2rem;
-	    border-top-right-radius: 3px;
-	    margin-top: 0.1rem;
-	    width: 3rem;
-	}
+body
+{
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: "SourceSans Pro";
+}
+header
+{
+	padding: 10px 10px 0 10px;
+}
+header div:nth-child(1) /*Cabecera gris*/
+{
+	background-image: url("../img/barragris.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+}
+header div:nth-child(1) > h1
+{
+	margin: 0.6rem 0px 0.6rem 8.5rem;
+	font-size: 2rem;
+}
+header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
+{
+	font-family: 'sena_icon';
+	border: none;
+	color: #e09f12;
+	background-color: #1b1f31;
+	height: 3.6rem;
+	font-size: 2rem;
+	border-top-right-radius: 3px;
+	margin-top: 0.1rem;
+	width: 3rem;
+}
+
+header div:nth-child(2)
+{
+	height: auto;
+}
+header div:nth-child(2) > p/*Barra roja*/
+{
+	background: #8c0d11;
+	background: -moz-linear-gradient(left,  #8c0d11 25%, #6d0019 80%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(25%,#8c0d11), color-stop(80%,#6d0019));
+	background: -webkit-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+	background: -o-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+	background: -ms-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
+	background: linear-gradient(to right,  #8c0d11 25%,#6d0019 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0d11', endColorstr='#6d0019',GradientType=1 );
+	margin-top: -5px;
+	/*Miga de pan*/
+	color: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 5px 0px 5px 9.5rem;	
+}
+header ul:nth-child(3) /* Menú desplegable de la barra superior */
+{
+	display: none;
+	background-color: #333333;
+	position: absolute;
+	list-style: none;
+	right: 8px;
+	top: 4.2rem;
+	margin-top: 0px;
+	padding: 1rem 0.5rem;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+header ul:nth-child(3) li p /* Iconos del menú desplegable */
+{
+	color: white;
+	cursor: pointer;
+	background-color: gray;
+	border-radius: 40px;
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	font-family: 'sena_icon';
+	margin-top: 0.5rem;
+}
+header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
+{
+	color: white;
+	background-color: #305570;
+	position: absolute;
+	display: none;
+	right: 3.5rem;
+	margin-top: 0.4rem;
+	padding: 5% 30%;
+}
+header > img:nth-child(4) /*Logo del sena*/
+{
+	font-family: "sena_icon";
+	position: absolute;
+	top: 0.6rem;
+	left: 1.2rem;
+	width: 7.5rem;
+}
 	
-	header div:nth-child(2) > p/*Barra roja*/
-	{
-		background: #8c0d11;
-		background: -moz-linear-gradient(left,  #8c0d11 25%, #6d0019 80%);
-		background: -webkit-gradient(linear, left top, right top, color-stop(25%,#8c0d11), color-stop(80%,#6d0019));
-		background: -webkit-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
-		background: -o-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
-		background: -ms-linear-gradient(left,  #8c0d11 25%,#6d0019 80%);
-		background: linear-gradient(to right,  #8c0d11 25%,#6d0019 80%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0d11', endColorstr='#6d0019',GradientType=1 );
-		margin-top: -5px;
-		/*Miga de pan*/
-		color: white;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
-		padding: 5px 0px 5px 9.5rem;
-	}
-	header ul:nth-child(3) /* Menú desplegable de la barra superior */
-	{
-		display: none;
-		background-color: #333333;
-		position: absolute;
-		list-style: none;
-		right: 8px;
-		top: 4.2rem;
-		margin-top: 0px;
-		padding: 1rem 0.5rem;
-		border-bottom-left-radius: 1rem;
-		border-bottom-right-radius: 1rem;
-	}
-	header ul:nth-child(3) li p /* Iconos del menú desplegable */
-	{
-		color: white;
-	    cursor: pointer;
-	    background-color: gray;
-	    border-radius: 40px;
-	    font-size: 2rem;
-	    margin-bottom: 1.5rem;
-	    text-align: center;
-	    font-family: 'sena_icon';
-	    margin-top: 0.5rem;
-	}
-	header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
-	{
-		color: white;
-		background-color: #305570;
-		position: absolute;
-		/*display: none;*/
-		right: 3.5rem;
-		margin-top: 0.4rem;
-		padding: 5% 30%;
-	}
-	header > p:nth-child(4) /*Logo del sena*/
-	{
-		font-family: "sena_icon";
-	    background-color: white;
-	    color: black;
-	    position: absolute;
-	    top: -4.3rem;
-	    left: 2rem;
-	    font-size: 4.5rem;
-	    padding: 0.6rem 0.8rem 0.8rem 0.8rem;
-	    border-bottom-left-radius: 45px;
-	    border-bottom-right-radius: 45px;
-	}
-	
-	div#content_container
-	{
-		background-color: green;
-	}
-	
-	footer
-	{
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: nowrap;
-		align-items: stretch;
-		background-color: #A9AFB5;
-		border-radius: 10px;
-	}
-	footer input[type="button"]
-	{
-		font-family: 'sena_icon';
-	}
+div#content_container
+{
+	background-color: gray;
+	margin: 0px 10px;
+	height: 100%;
+}
+
+footer
+{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	background-color: #A9AFB5;
+	border-radius: 10px;
+	margin: 0 10px 10px 10px;
+}
+footer input[type="button"]
+{
+	font-family: 'sena_icon';
+}
 	footer > div#left_buttons
 	{
 		flex-grow: 1;
@@ -265,33 +316,9 @@
 	}
 
 @media (max-width: 701px){ /**********************************************************/
-	html
-	{
-		font-size: 14px;
-	}
-
-	header div:nth-child(1) > h1
-	{
-		margin: 0.6rem 0 0 10rem;
-	    font-size: 1.9rem;
-	}
+	
 }
 
 @media (max-width: 570px){ /**********************************************************/
-	html
-	{
-		font-size: 12px;
-	}
 
-	header div:nth-child(1) > h1
-	{
-		margin: 0.6rem 0 0 8rem;
-	    font-size: 1.5rem;
-	    height: 2rem;
-	}
-
-	header div:nth-child(2) > p/*Barra roja*/
-	{
-		padding: 5px 0px 5px 9rem;
-	}
 }
