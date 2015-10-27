@@ -5,21 +5,20 @@
  */
 
 
-/* global angular */
+/* global angular, plantilla */
+
+var PLANTILLA = {};
 
 (function () {
     var app = angular.module("plantilla-transferencia", ["routes"]);
 
     app.controller("Initialize", ["$http", "$log", function ($http, $log) {
-            this.plantilla = {};
+            var plantilla = this;
+            plantilla.config = {};
 
             $http.get("application/system/config.json").success(function (data) {
-                this.plantilla = data;
-                $log.log(this.plantilla);
+                plantilla.config = data;
+                PLANTILLA = data;
             });
-
-
         }]);
-
-
 })();
