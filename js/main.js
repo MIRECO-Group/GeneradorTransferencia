@@ -8,7 +8,7 @@ $(document).ready(function ()
             $(this).removeClass('closed');
             $(this).addClass('opened');
         }
-        else if ($("header > div:nth-child(1) > input[type='button']").hasClass('opened'))
+        else if ($("header > div:nth-child(1) > input[type='button']").hasClass('opened'))    
         {
             $("header > ul:nth-child(3)").slideUp("slow");
             $(this).removeClass('opened');
@@ -30,17 +30,20 @@ $(document).ready(function ()
         {
             $("#extended_descrip_leccion").slideUp("fast");
             $("#extended_descrip_leccion").removeClass("visible_me");
+            $("#lesson_span_arrow").text("(");
         }
 
         if ($("#extended_descrip_unidad").hasClass("visible_me"))
         {
             $("#extended_descrip_unidad").slideUp("slow");
             $("#extended_descrip_unidad").removeClass("visible_me");
+            $("#unit_span_arrow").text("(");
         }
         else
         {
             $("#extended_descrip_unidad").slideDown("slow");
             $("#extended_descrip_unidad").addClass("visible_me");
+            $("#unit_span_arrow").text(")");
         }
     });
 
@@ -50,17 +53,20 @@ $(document).ready(function ()
         {
             $("#extended_descrip_unidad").slideUp("fast");
             $("#extended_descrip_unidad").removeClass("visible_me");
+            $("#unit_span_arrow").text("(");
         }
 
         if ($("#extended_descrip_leccion").hasClass("visible_me"))
         {
             $("#extended_descrip_leccion").slideUp("slow");
             $("#extended_descrip_leccion").removeClass("visible_me");
+            $("#lesson_span_arrow").text("(");
         }
         else
         {
             $("#extended_descrip_leccion").slideDown("slow");
             $("#extended_descrip_leccion").addClass("visible_me");
+            $("#lesson_span_arrow").text(")");
         }
     });
 
