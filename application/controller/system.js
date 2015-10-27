@@ -5,25 +5,21 @@
  */
 
 
+/* global angular */
+
 (function () {
     var app = angular.module("plantilla-transferencia", ["routes"]);
 
-    app.controller("CommentExample", ["$http", function ($http) {
-            this.comments = [];
-            this.postComment = {};
+    app.controller("Initialize", ["$http", "$log", function ($http, $log) {
+            this.plantilla = {};
 
-            var comments = this;
-
-            $http.get("config.json").success(function (data) {
-                comments.comments = data;
+            $http.get("application/system/config.json").success(function (data) {
+                this.plantilla = data;
+                $log.log(this.plantilla);
             });
 
-            this.setComment = function () {
-                console.log(this.postComment);
-                this.comments.push(this.postComment);
-                this.postComment = {};
-            };
 
         }]);
+
 
 })();
