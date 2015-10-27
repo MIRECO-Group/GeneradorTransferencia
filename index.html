@@ -7,30 +7,27 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--<script src="js/soundjs-0.5.2.min.js"></script>-->
-        <script src="js/jquery-1.10.2.js"></script>
-        <script src="js/main.js"></script>
-        <script src="application/controller/system.js"></script>
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
-        <header>
+    <body ng-app="plantilla-transferencia">
+        <header ng-controller="Initialize as initz">
             <div>
-                <h1>Tema 2. Título del tema</h1>
+                <h1>Tema {{initz.config.tema.numero}}. {{initz.config.tema.nombre}}</h1>
                 <input type="button" value="W" class="closed">                 
             </div>
             <div>
-            <p>
-                <span id="unit_span">
-                    <span id="unit_span_arrow">(</span>Unidad 1
-                </span>
-                <span class="icon_arrow_ed_s">x</span>
-                <span id="lesson_span">
-                    <span id="lesson_span_arrow">(</span>lección 1
-                </span>
-                <img src="img/bandera_colombia.svg">
-            </p>
-            <p id="extended_descrip_unidad">Enfoques 3 Enseñanza de lenguas para propósitos específicos y pedagogía por proyectos</p>
-            <p id="extended_descrip_leccion">¿Cuales estrategias implementar en las sesiones formativas de IPE en el Sena?</p>
+                <p>
+                    <span id="unit_span">
+                        <span id="unit_span_arrow">(</span>Unidad {{initz.config.unidad.numero}}
+                    </span>
+                    <span class="icon_arrow_ed_s">x</span>
+                    <span id="lesson_span">
+                        <span id="lesson_span_arrow">(</span>Lección {{initz.config.leccion.numero}}
+                    </span>
+                    <img src="img/bandera_colombia.svg">
+                </p>
+                <p id="extended_descrip_unidad">{{initz.config.unidad.descripcion}}</p>
+                <p id="extended_descrip_leccion">{{initz.config.leccion.descripcion}}</p>
             </div>
             <ul>
                 <li><span>tooltips</span><p>P</p></li>
@@ -65,5 +62,10 @@
                 <input type="button" value="-">
             </div>
         </footer>
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="application/system/angular.min.js" type="text/javascript"></script>
+        <script src="js/main.js"></script>
+        <script src="application/controller/system.js" type="text/javascript"></script>
+        <script src="application/controller/routes.js" type="text/javascript"></script>
     </body>
 </html>

@@ -3,12 +3,14 @@
     "unidad": {
         "numero": 1,
         "nombre": "Pedagodía de lenguas extranjeras I",
-        "lugar": "Inglaterra"
+        "lugar": "Inglaterra",
+        "descripcion" : "Enfoques 3 Enseñanza de lenguas para propósitos específicos y pedagogía por proyectos"
     },
     "leccion": {
         "numero": 1,
         "nombre": "Uso TIC parte 1",
-        "lugar": "Londres"
+        "lugar": "Londres",
+        "descripcion": "¿Cuales estrategias implementar en las sesiones formativas de IPE en el Sena?"
     },
     "tema": {
         "numero": 1,
