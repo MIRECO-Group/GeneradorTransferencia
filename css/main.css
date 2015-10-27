@@ -60,10 +60,15 @@ table {
 	border-spacing: 0;
 }
 
-.icon_arrow_ed_s
+.icon_arrow_ed_s, #lesson_span_arrow, #unit_span_arrow
 {
 	font-family: "sena_icon";
 	color: #FFFFFF;
+}
+
+#lesson_span_arrow, #unit_span_arrow
+{
+	color: #B2A809;
 }
 
 .slash_color
@@ -141,6 +146,7 @@ header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desp
 header div:nth-child(2)
 {
 	height: auto;
+	background-color: rgba(255, 255, 255, 0.85);
 }
 header div:nth-child(2) > p:nth-child(1)/*Barra miga de pan*/
 {
@@ -203,25 +209,29 @@ header div:nth-child(2) > p:nth-child(3) /*Barra miga de pan - texto que se mues
 header ul:nth-child(3) /* Menú desplegable de la barra superior */
 {
 	display: none;
-	background-color: #333333;
+	background-color: rgba(0,0,0,0.6);
 	position: absolute;
 	list-style: none;
 	right: 10px;
 	top: 4rem;
 	margin-top: 0px;
-	padding: 1rem 0.5rem;
-	border-bottom-left-radius: 1rem;
-	border-bottom-right-radius: 1rem;
+	padding: 1rem 0rem;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 3rem;
 	z-index: 50;
+}
+header ul:nth-child(3) li:hover
+{
+	background-color: rgba(255,255,255,0.3);
 }
 header ul:nth-child(3) li p /* Iconos del menú desplegable */
 {
 	color: white;
 	cursor: pointer;
-	background-color: gray;
 	border-radius: 40px;
 	font-size: 2rem;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.5rem;
 	text-align: center;
 	font-family: 'sena_icon';
 	margin-top: 0.5rem;
@@ -242,14 +252,15 @@ header > img:nth-child(4) /*Logo del sena*/
 	position: absolute;
 	top: 0.6rem;
 	left: 1.2rem;
-	width: 7.5rem;
+	width: 6rem;
 	z-index: 10;
 }
 	
 div#content_container
 {
-	background-color: gray;
-	border-radius: 5px;
+	background-color: rgba(255,255,255,0.85);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	margin: 0px 10px;
 	height: 100%;
 }
@@ -446,7 +457,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 	font-size: 2rem;
 	border-style: none;
 	color: white;
-	padding: 3% 3%;
+	padding: 4%;
 	background: #49819f;
 	background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
@@ -455,6 +466,8 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 	background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
 	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
+	border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
 }
 
 @media (max-width: 701px){ /**********************************************************/
