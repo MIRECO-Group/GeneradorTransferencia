@@ -35,7 +35,7 @@ var PLANTILLA = {};
             //$scope.$on('plantillaLoaded', function (event, data) {
             $http.get("application/system/config.json").success(function (data) {
                 that.paginas = data.macrorecursos;
-                that.actual = 1;
+                that.actual = 3;
                 $.each(that.paginas, function (k, v) {
 
                 });
