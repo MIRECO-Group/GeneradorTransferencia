@@ -4,6 +4,7 @@
         "numero": 1,
         "nombre": "Pedagodía de lenguas extranjeras I",
         "lugar": "Inglaterra",
+        "bandera" : "img/bandera_colombia.svg",
         "descripcion" : "Enfoques 3 Enseñanza de lenguas para propósitos específicos y pedagogía por proyectos"
     },
     "leccion": {

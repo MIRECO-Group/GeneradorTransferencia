@@ -24,7 +24,7 @@
                     <span id="lesson_span">
                         <span id="lesson_span_arrow">(</span>Lección {{initz.config.leccion.numero}}
                     </span>
-                    <img src="img/bandera_colombia.svg">
+                    <img ng-src="{{initz.config.unidad.bandera}}" alt="{{initz.config.unidad.lugar}}">
                 </p>
                 <p id="extended_descrip_unidad">{{initz.config.unidad.descripcion}}</p>
                 <p id="extended_descrip_leccion">{{initz.config.leccion.descripcion}}</p>
@@ -39,11 +39,12 @@
             <img src="img/logo_sena.svg"/>
         </header>
 
-        <div id="content_container">
+        <div id="content_container" ng-controller="Paginacion as pag">
+            {{pag.actual}}
             <!--<iframe src="#"></iframe>-->
         </div>
 
-        <footer>
+        <footer ng-controller="Paginacion as pag">
             <div id="left_buttons">
                 <input type="button" value="a">                
                 <input type="button" value="g">
@@ -52,7 +53,7 @@
             </div>
             <div id="center_buttons">
                 <input type="button" value="w">
-                <p>15 <span class="slash_color">/</span> 15</p>
+                <p>{{pag.actual}} <span class="slash_color">/</span> {{pag.final}}</p>
                 <input type="button" value="x">
             </div>
             <div id="right_buttons">                
