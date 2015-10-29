@@ -10,42 +10,73 @@
 (function () {
     var app = angular.module("routes", []);
 
-    app.directive("titulo1", ["$http", function ($http) {
-            return{
-                restrict: "E",
-                templateUrl: "application/snippet/element/titulo/titulo1/titulo1.html",
-                controller: function () {
-                    var menu = this;
+    app.directive("titulo1", function ($http) {
+        return{
+            restrict: "E",
+            templateUrl: "application/snippet/element/titulo/titulo1/titulo1.html",
+            controller: function () {
+                var menu = this;
 
-                    menu.menu = 0;
+                menu.menu = 0;
 
-                    menu.data = [];
+                menu.data = [];
 
-                    menu.isClicked = function (position) {
-                        return position === menu.menu;
-                    };
+                menu.isClicked = function (position) {
+                    return position === menu.menu;
+                };
 
-                    menu.setClick = function (position) {
-                        menu.menu = position | 0;
-                    };
+                menu.setClick = function (position) {
+                    menu.menu = position | 0;
+                };
 
-                    menu.isSet = function (object, attr) {
-                        return typeof object[attr] !== 'undefined';
-                    };
+                menu.isSet = function (object, attr) {
+                    return typeof object[attr] !== 'undefined';
+                };
 
-                    $http.get("application/system/config.json").success(function (data) {
-                        menu.data = data;
-                    });
-                },
-                controllerAs: "menu"
-            };
-        }]);
+                $http.get("application/system/config.json").success(function (data) {
+                    menu.data = data;
+                });
+            },
+            controllerAs: "menu"
+        };
+    });
+
+    app.directive("scripts1", function ($http) {
+        return{
+            restrict: "E",
+            templateUrl: "application/model/scripts.html",
+            controller: function () {
+                var menu = this;
+
+                menu.menu = 0;
+
+                menu.data = [];
+
+                menu.isClicked = function (position) {
+                    return position === menu.menu;
+                };
+
+                menu.setClick = function (position) {
+                    menu.menu = position | 0;
+                };
+
+                menu.isSet = function (object, attr) {
+                    return typeof object[attr] !== 'undefined';
+                };
+
+                $http.get("application/system/config.json").success(function (data) {
+                    menu.data = data;
+                });
+            },
+            controllerAs: "menu"
+        };
+    });
 
     /*app.directive("footerDefault", function () {
-        return {
-            restrict: "E",
-            templateUrl: "views/footer.html"
-        };
-    });//*/
+     return {
+     restrict: "E",
+     templateUrl: "views/footer.html"
+     };
+     });//*/
 
 })();
