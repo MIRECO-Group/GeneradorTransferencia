@@ -24,7 +24,7 @@ $(document).ready(function ()
         $(this).siblings('span').fadeOut("fast");
     });
 
-    $("#unit_span").click(function ()
+    $("#unit_span").click(function()
     {
         if ($("#extended_descrip_leccion").is(":visible"))
         {
@@ -67,6 +67,27 @@ $(document).ready(function ()
             $("#extended_descrip_leccion").slideDown("slow");
             $("#extended_descrip_leccion").addClass("visible_me");
             $("#lesson_span_arrow").text(")");
+        }
+    });
+
+    $(window).resize(function()
+    {
+        if($(window).width() <= 700)
+        {
+            $("header > ul:nth-child(3) > li p").unbind();
+        }
+        else
+        {
+            $("header > ul:nth-child(3) > li p").bind({
+                mouseenter: function()
+                {
+                    $(this).siblings('span').fadeIn("fast");
+                },
+                mouseleave: function()
+                {
+                    $(this).siblings('span').fadeOut("fast");
+                }
+            });
         }
     });
 
