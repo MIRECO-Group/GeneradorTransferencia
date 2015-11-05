@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5/11/2015, 09:51:57 AM
+    Author     : ltoscano
+*/
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+/*---------------------------- DUMMY LAYOUT ---------------------------------*/
+
+.dummy_layout{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.dummy_layout .c1{
+    height: 10%;
+    width: 100%;
+}
+
+.dummy_layout .contenedor_1{
+   height: 90%;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.dummy_layout .contenedor_1 div{
+    width: 50%;
+    height: 100%;
+}
+
+@media (max-width: 600px) { 
+
+.dummy_layout .contenedor_1{
+   flex-direction: column;
+}
+
+.dummy_layout .contenedor_1 div{
+    width: 100%;
+    height: 50%;
+}
+}
+
+/*----------------------- LAYOUT_CONTEXTUALIZACION ---------------------------*/
+
+.layout_contextualizacion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.layout_contextualizacion .c1{
+    height: 10%;
+    width: 100%;
+}
+
+.layout_contextualizacion .contenedor_1{
+   height: 90%;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.layout_contextualizacion .contenedor_1 .c2{
+    flex-grow: 1;
+    height: 100%;
+}
+
+.layout_contextualizacion .contenedor_1 .c3{
+    flex-grow: 2;
+    height: 100%;
+}
+
+@media (max-width: 600px) { 
+
+.layout_contextualizacion .contenedor_1{
+   flex-direction: column;
+}
+
+.layout_contextualizacion .contenedor_1 div{
+    width: 100%;
+    height: 50%;
+}
+}
