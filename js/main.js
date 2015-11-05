@@ -16,6 +16,26 @@ $(document).ready(function ()
         }
     });
 
+    $("footer > div#right_buttons > input[type='button']:nth-child(4)").click(function()
+    {
+        if (!$("footer > div#right_buttons > input[type='button']:nth-child(1)").is(":visible"))
+        {
+            if ($("footer > div#right_buttons > input[type='button']:nth-child(4)").hasClass('closed'))
+            {
+                $("ul#smart_menu").slideUp("slow");
+                $(this).removeClass('closed');
+                $(this).addClass('opened');
+            }
+            else if($("footer > div#right_buttons > input[type='button']:nth-child(4)").hasClass('opened'))
+            {
+                $("ul#smart_menu").slideDown("slow");
+                $(this).removeClass('opened');
+                $(this).addClass('closed');
+            }
+        }
+        
+    });
+
     $("header > ul:nth-child(3) > li p").mouseenter(function ()
     {
         $(this).siblings('span').fadeIn("fast");

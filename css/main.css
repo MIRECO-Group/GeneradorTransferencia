@@ -171,6 +171,7 @@ header div:nth-child(2) > p:nth-child(1)/*Barra miga de pan*/
 }
 header div:nth-child(2) > p img/*Barra miga de pan - imagen bandera*/
 {
+	margin: 0px 5px;
 	width: 1rem;
 }
 header div:nth-child(2) > p span#unit_span
@@ -420,9 +421,27 @@ footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la 
 }
 footer > div#center_buttons > ul#smart_menu
 {
-	background-color: #101E43;
+	display: none;
+	bottom: 80px;
+	right: 10px;
 	color: #FFFFFF;
 	position: absolute;
+	width: 130px;
+}
+footer > div#center_buttons > ul#smart_menu li
+{
+	background-color: #101E43;
+	border-radius: 2px;
+	padding: 5px 10px;
+	margin: 10px 0px;
+}
+footer > div#center_buttons > ul#smart_menu li span
+{
+	float: right;
+}
+footer > div#center_buttons > ul#smart_menu li p
+{
+
 }
 footer > div#right_buttons
 {
