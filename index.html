@@ -39,9 +39,8 @@
             <img src="img/logo_sena.svg"/>
         </header>
 
-        <div id="content_container" ng-controller="Contenedor as content">
-            {{pagina}}
-            <!--<titulo1></titulo1>-->
+        <div id="content_container" ng-controller="Paginacion as pag">
+            {{pag.actual}}
             <!--<iframe src="#"></iframe>-->
         </div>
 
@@ -56,19 +55,24 @@
                 <input type="button" value="w">
                 <p>{{pag.actual}} <span class="slash_color">/</span> {{pag.final}}</p>
                 <input type="button" value="x">
+                <ul id="smart_menu">
+                    <li><p>PDF<span class="icon_arrow_ed_s">k</span></p></li>
+                    <li><p>Mapa<span class="icon_arrow_ed_s">j</span></p></li>
+                    <li><p>Glosario<span class="icon_arrow_ed_s">i</span></p></li>
+                    <li><p>Bibliografía<span class="icon_arrow_ed_s">g</span></p></li>
+                </ul>
             </div>
             <div id="right_buttons">                
                 <input type="button" value="j">
                 <span class="divition_bot_span"></span>
                 <input type="button" value="k">
-                <input type="button" value="-">
+                <input type="button" value="-" class="closed">
             </div>
         </footer>
         <script src="js/jquery-1.10.2.js"></script>
-        <script src="js/angular.min.js" type="text/javascript"></script>
-        <script src="js/main.js" type="text/javascript"></script>
+        <script src="application/system/angular.min.js" type="text/javascript"></script>
+        <script src="js/main.js"></script>
         <script src="application/controller/system.js" type="text/javascript"></script>
         <script src="application/controller/routes.js" type="text/javascript"></script>
-    <scripts1></scripts1>
-</body>
+    </body>
 </html>

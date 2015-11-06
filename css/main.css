@@ -95,6 +95,7 @@ html
 
 body
 {
+	background-color: green;
 	height: 100%;
 	position: absolute;
 	width: 100%;
@@ -170,6 +171,7 @@ header div:nth-child(2) > p:nth-child(1)/*Barra miga de pan*/
 }
 header div:nth-child(2) > p img/*Barra miga de pan - imagen bandera*/
 {
+	margin: 0px 5px;
 	width: 1rem;
 }
 header div:nth-child(2) > p span#unit_span
@@ -230,6 +232,7 @@ header ul:nth-child(3) li p /* Iconos del menú desplegable */
 	color: white;
 	cursor: pointer;
 	border-radius: 40px;
+	display: block;
 	font-size: 2rem;
 	margin-bottom: 0.5rem;
 	text-align: center;
@@ -311,11 +314,12 @@ footer > div#left_buttons > input[type="button"]:nth-child(1) /*Botón Portada*/
 	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
 }
-footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón XYZ*/
+footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón Bibliografía*/
 {
 	font-size: 1.8rem;
 	border-style: none;
 	color: #00435A;
+	display: block;
 	padding: 3% 4%;
 	background: #808080;
 	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
@@ -326,11 +330,12 @@ footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón XYZ*/
 	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
-footer > div#left_buttons > input[type="button"]:nth-child(4) /*Botón XYZ*/
+footer > div#left_buttons > input[type="button"]:nth-child(4) /*Botón Glosario*/
 {
 	font-size: 1.8rem;
 	border-style: none;
 	color: #00435A;
+	display: block;
 	padding: 3% 4%;
 	background: #808080;
 	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
@@ -414,19 +419,44 @@ footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la 
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
-	footer > div#right_buttons
-	{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-end;
-	}
-footer > div#right_buttons > input[type="button"]:nth-child(1)
+footer > div#center_buttons > ul#smart_menu
+{
+	display: none;
+	bottom: 80px;
+	right: 10px;
+	color: #FFFFFF;
+	position: absolute;
+	width: 130px;
+}
+footer > div#center_buttons > ul#smart_menu li
+{
+	background-color: #101E43;
+	border-radius: 2px;
+	padding: 5px 10px;
+	margin: 10px 0px;
+}
+footer > div#center_buttons > ul#smart_menu li span
+{
+	float: right;
+}
+footer > div#center_buttons > ul#smart_menu li p
+{
+
+}
+footer > div#right_buttons
+{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+footer > div#right_buttons > input[type="button"]:nth-child(1) /*Botón Mapa Conceptual*/
 {
 	font-size: 1.8rem;
 	border-style: none;
 	color: #00435A;
+	display: block;
 	padding: 3% 3%;
 	background: #808080;
 	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
@@ -437,11 +467,12 @@ footer > div#right_buttons > input[type="button"]:nth-child(1)
 	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
-footer > div#right_buttons > input[type="button"]:nth-child(3)
+footer > div#right_buttons > input[type="button"]:nth-child(3) /*Botón Descargable - PDF*/
 {
 	font-size: 1.8rem;
 	border-style: none;
 	color: #00435A;
+	display: block;
 	padding: 3% 3%;
 	background: #808080;
 	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
@@ -467,13 +498,73 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
 	border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
-@media (max-width: 701px){ /**********************************************************/
-	
+@media (max-width: 701px){ /*************************Tablet***********************/
+
+	header ul:nth-child(3) /*Menú desplegable*/
+	{		
+		background-color: inherit;
+		padding: 0 0;
+		width: auto;
+	}
+
+	header ul:nth-child(3) li
+	{
+		background-color: rgba(0,0,0,0.8);
+		border-radius: 5px;
+		margin-top:10px;		
+		padding: 0px 5px;
+	}
+
+	header ul:nth-child(3) li:hover
+	{
+		background-color: rgba(0,0,0,0.7);
+	}
+
+	header ul:nth-child(3) li span:nth-child(1) /*Tool tips del menú desplegable*/
+	{
+		background-color: initial;
+		display: inline-block;
+		padding: 0px 5px 0px 0px;
+		position: inherit;
+		margin-top: 0;
+		right: 0;
+		width: 6rem;
+	}
+
+	header ul:nth-child(3) li p /*iconos del menú desplegable*/
+	{
+		border-radius: 0px;
+		display: inline-block;
+		font-size: 1.5rem;
+		margin-top: 0px;
+		margin-bottom: 0px;		
+	}
+
+	footer > div#left_buttons > input[type="button"]:nth-child(2)
+	{
+		display: none;
+	}
+	footer > div#left_buttons > input[type="button"]:nth-child(4)
+	{
+		display: none;
+	}
+	footer > div#right_buttons > input[type="button"]:nth-child(1)
+	{
+		display: none;
+	}
+	footer > div#right_buttons > input[type="button"]:nth-child(3)
+	{
+		display: none;
+	}
+	.divition_bot_span
+	{
+		display: none;
+	}
 }
 
-@media (max-width: 570px){ /**********************************************************/
+@media (max-width: 570px){ /***********************Smartphone**************************/
 
 }
