@@ -60,6 +60,22 @@ table {
 	border-spacing: 0;
 }
 
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline : 0;
+}
+
+input[type="button"]
+{
+	cursor: pointer;
+}
+
 .icon_arrow_ed_s, #lesson_span_arrow, #unit_span_arrow
 {
 	font-family: "sena_icon";
@@ -421,7 +437,7 @@ footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la 
 }
 footer > div#center_buttons > ul#smart_menu
 {
-	display: none;
+	display: none;	
 	bottom: 80px;
 	right: 10px;
 	color: #FFFFFF;
@@ -432,6 +448,7 @@ footer > div#center_buttons > ul#smart_menu li
 {
 	background-color: #101E43;
 	border-radius: 2px;
+	cursor: pointer;
 	padding: 5px 10px;
 	margin: 10px 0px;
 }
@@ -512,6 +529,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 
 	header ul:nth-child(3) li
 	{
+		cursor: pointer;
 		background-color: rgba(0,0,0,0.8);
 		border-radius: 5px;
 		margin-top:10px;		
