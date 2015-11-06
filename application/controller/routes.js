@@ -41,7 +41,7 @@
         };
     });
 
-    app.directive("scripts1", function ($http) {
+    app.directive("scriptsSystem", function ($http) {
         return{
             restrict: "E",
             templateUrl: "application/model/scripts.html",
