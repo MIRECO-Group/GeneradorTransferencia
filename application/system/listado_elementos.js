@@ -4,25 +4,21 @@
 var curso = {
     "nombre": "Transferencia de conocimiento"
 };
-
 var unidad = {
     "numero": 1,
     "nombre": "Pedagodía de lenguas extranjeras I",
     "lugar": "Inglaterra"
 };
-
 var leccion = {
     "numero": 1,
     "nombre": "Uso TIC parte 1",
     "lugar": "Londres"
 };
-
 var tema = {
     numero: 1,
     nombre: "Qué se entiende por TIC?",
     lugar: "Aeropuerto Heathrow"
 };
-
 //****************************************************************************MACRORECURSO*********************************************************************
 
 var macrorecurso = {
@@ -30,7 +26,6 @@ var macrorecurso = {
     nombre: "Sensibilización de apertura",
     recursos: {}
 };
-
 //**************************************************************************** RECURSO **************************************************************************
 
 //Los recursos SIEMPRE deben tener tipo layout
@@ -41,7 +36,6 @@ var recurso = {
     estilo: "layout_recurso_2",
     componentes: {}
 };
-
 //**************************************************************************** COMPONENTES ************************************************************************
 
 //Todos los componentes utilizan los atributos "tipo" (titulo, parrafo, imagen, etc...) y "estilo" (variacion de estilo propia de cada componente).
@@ -57,13 +51,12 @@ var recurso = {
 var componente = {
     tipo: "titulo",
     estilo: "titulo_recurso",
-    mostrar_icono: true,
-    elementos: {
-        titulo: "Contenido I",
-        subtitulo: "Descubramos las TIC"
+    atributos: {
+        titulo: "",
+        subtitulo: "",
+        mostrar_icono: false
     }
 };
-
 //PARRAFO
 /*
  parrafos: Objeto. OBLIGATORIO. Es la información principal a mostrarse en el componente.
@@ -74,18 +67,14 @@ var componente = {
 var componente = {
     tipo: "parrafo",
     estilo: "parrafo_basico",
-    elementos: {
+    atributos: {
         parrafos: {
-            1: {
-                texto: ""
-            },
-            2: {
-                texto: ""
-            }
+            1: "",
+            2: "",
+            3: ""
         }
     }
 };
-
 //IMAGEN
 /*
  url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra la imagen a mostrar.
@@ -95,12 +84,12 @@ var componente = {
 var componente = {
     tipo: "imagen",
     estilo: "imagen_basica",
-    elementos: {
+    atributos: {
+        thumbnail: "img/prueba_thumbnail.png",
         url: "img/prueba.png",
-        title: ""
+        descripcion: ""
     }
 };
-
 //BOTON
 /*
  tag: Texto. Obligatorio. Texto que aparecerá dentro del botón.
@@ -110,13 +99,11 @@ var componente = {
 var componente = {
     tipo: "boton",
     estilo: "submit_actividad",
-    elementos: {
+    atributos: {
         tag: "Enviar",
         funcion: "iniciar_examen"
     }
 };
-
-
 //REPRODUCTOR
 /*
  tipo: Texto. OBLIGATORIO. Corresponde al tipo de archivo multimedia a ser reproducido (audio/video).
@@ -126,7 +113,7 @@ var componente = {
 var componente = {
     tipo: "reproductor",
     estilo: "reproductor_basico",
-    elementos: {
+    atributos: {
         1: {
             tipo: "audio",
             url: "media/audio/melones.mp3",
@@ -134,7 +121,6 @@ var componente = {
         }
     }
 };
-
 //LISTA
 /*
  categoria: Texto. OBLIGATORIO. Corresponde al tipo de lista a utilizarse (ordenada, no ordenada). 
@@ -143,21 +129,16 @@ var componente = {
 
 var componente = {
     tipo: "lista",
-    estilo: "lista_horizontal",
-    categoria: "numerada",
-    elementos: {
-        1: {
-            texto: "elemento 1"
-        },
-        2: {
-            texto: "elemento 2"
-        },
-        3: {
-            texto: "elemento 3"
+    estilo: "lista_vertical",
+    atributos: {
+        categoria: "numerada",
+        elementos: {
+            1: "elemento 1",
+            2: "elemento 2",
+            3: "elemento 3"
         }
     }
 };
-
 //ORGANIZADOR GRAFICO
 /*
  *  tabs : Objeto. OBLIGATORIO. Corresponde a los contenidos del organizador con navegación interna mediante tabs.
@@ -172,68 +153,47 @@ var componente = {
 var componente = {
     tipo: "organizador",
     estilo: "organizador_saberes",
-    elementos: {
+    atributos: {
+        titulo: "",
         tabs: {
             1: {
                 tag: "1",
-                estimulo: {
-                    tipo: "imagen",
-                    url: "img/estimulo1.jpg"
-                },
-                titulo: "Título tab 1",
-                parrafos: {
-                    1: "Este es mi contenido de organizador gráfico 1",
-                    2: "Este es mi contenido de organizador gráfico 1",
-                    3: "Este es mi contenido de organizador gráfico 1",
-                    4: "Este es mi contenido de organizador gráfico 1"
-                }
-            },
-            2: {
-                tag: "2",
-                estimulo: {
-                    tipo: "imagen",
-                    url: "img/estimulo2.jpg"
-                },
-                titulo: "Título tab 2",
-                parrafos: {
-                    1: "Este es mi contenido de organizador gráfico 1",
-                    2: "Este es mi contenido de organizador gráfico 1",
-                    3: "Este es mi contenido de organizador gráfico 1",
-                    4: "Este es mi contenido de organizador gráfico 1"
-                }
-            },
-            3: {
-                tag: "3",
-                estimulo: {
-                    tipo: "imagen",
-                    url: "img/estimulo3.jpg"
-                },
-                titulo: "Título tab 3",
-                parrafos: {
-                    1: "Este es mi contenido de organizador gráfico 1",
-                    2: "Este es mi contenido de organizador gráfico 1",
-                    3: "Este es mi contenido de organizador gráfico 1",
-                    4: "Este es mi contenido de organizador gráfico 1"
-                }
-            },
-            4: {
-                tag: "4",
-                estimulo: {
-                    tipo: "imagen",
-                    url: "img/estimulo4.jpg"
-                },
-                titulo: "Título tab 4",
-                parrafos: {
-                    1: "Este es mi contenido de organizador gráfico 1",
-                    2: "Este es mi contenido de organizador gráfico 1",
-                    3: "Este es mi contenido de organizador gráfico 1",
-                    4: "Este es mi contenido de organizador gráfico 1"
+                tipo: "layout",
+                estilo: "layout_og1_1",
+                componentes: {
+                    1: {
+                        tipo: "titulo",
+                        estilo: "titulo_recurso",
+                        atributos: {
+                        },
+                        componentes: {
+                        }
+                    },
+                    2: {
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
+                        atributos: {
+                            thumbnail: "img/prueba_thumbnail.png",
+                            url: "img/prueba.png",
+                            descripcion: ""
+                        }
+                    },
+                    3: {
+                        tipo: "parrafo",
+                        estilo: "parrafo_basico",
+                        atributos: {
+                            parrafos: {
+                                1: "Este es mi contenido de organizador gráfico 1",
+                                2: "Este es mi contenido de organizador gráfico 1",
+                                3: "Este es mi contenido de organizador gráfico 1"
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 };
-
 //*************************** ACTIVIDADES ******************************
 
 //DRAG AND DROP
@@ -249,35 +209,98 @@ var componente = {
 var componente = {
     tipo: "drag_drop",
     estilo: "dragdrop_horizontal",
-    elementos: {
-        tipo_drags: "texto",
-        drags: {
+    atributos: {
+        preguntas: {
             1: {
-                texto: "drag 1"
-            },
-            2: {
-                texto: "drag 2"
-            },
-            3: {
-                texto: "drag 3"
-            },
-            4: {
-                texto: "drag 4"
-            }
-        },
-        tipo_drops: "imagen",
-        drops: {
-            1: {
-                url: "img/imagen1.png",
-            },
-            2: {
-                url: "img/imagen2.png"
-            },
-            3: {
-                url: "img/imagen3.png"
-            },
-            4: {
-                url: "img/imagen4.png"
+                enunciado: "",
+                drags: {
+                    1: {
+                        tipo: "parrafo",
+                        estilo: "parrafo_basico",
+                        atributos: {
+                            parrafos: {
+                                1: "drag 1"
+                            }
+                        }
+                    },
+                    2: {
+                        tipo: "parrafo",
+                        estilo: "parrafo_basico",
+                        atributos: {
+                            parrafos: {
+                                1: "drag 2"
+                            }
+                        }
+                    },
+                    3: {
+                        tipo: "parrafo",
+                        estilo: "parrafo_basico",
+                        atributos: {
+                            parrafos: {
+                                1: "drag 3"
+                            }
+                        }
+                    },
+                    4: {
+                        tipo: "parrafo",
+                        estilo: "parrafo_basico",
+                        atributos: {
+                            parrafos: {
+                                1: ""
+                            }
+                        }
+                    }
+                },
+                drops: {
+                    1: {
+                        accepted: [4],
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/drop1_thumbnail.png",
+                                url: "img/drop1.png",
+                                descripcion: ""
+                            }
+                        }
+                    },
+                    2: {
+                        accepted: [3],
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/drop2_thumbnail.png",
+                                url: "img/drop2.png",
+                                descripcion: ""
+                            }
+                        }
+                    },
+                    3: {
+                        accepted: [2],
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/drop3_thumbnail.png",
+                                url: "img/drop3.png",
+                                descripcion: ""
+                            }
+                        }
+                    },
+                    4: {
+                        accepted: [1],
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/drop4_thumbnail.png",
+                                url: "img/drop4.png",
+                                descripcion: ""
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -298,31 +321,61 @@ var componente = {
 var componente = {
     tipo: "pick_many",
     estilo: "pickmany_horizontal",
-    elementos: {
+    atributos: {
         preguntas: {
             1: {
-                pregunta: "¿De qué color es la nieve?",
-                tipo_picks: "texto",
+                enunciado: "¿De qué color es la nieve?",
+                respuesta: [2],
                 picks: {
                     1: {
-                        texto: "Blanca",
-                        correct: true
+                        elemento: {
+                            tipo: "parrafo",
+                            estilo: "parrafo_basico",
+                            atributos: {
+                                parrafos: {
+                                    1: "Roja"
+                                }
+                            }
+                        }
                     },
                     2: {
-                        texto: "Verde"
+                        elemento: {
+                            tipo: "parrafo",
+                            estilo: "parrafo_basico",
+                            atributos: {
+                                parrafos: {
+                                    1: "Blanca"
+                                }
+                            }
+                        }
                     },
                     3: {
-                        texto: "Amarilla"
+                        elemento: {
+                            tipo: "parrafo",
+                            estilo: "parrafo_basico",
+                            atributos: {
+                                parrafos: {
+                                    1: "Verde"
+                                }
+                            }
+                        }
                     },
                     4: {
-                        texto: "Roja"
+                        elemento: {
+                            tipo: "parrafo",
+                            estilo: "parrafo_basico",
+                            atributos: {
+                                parrafos: {
+                                    1: "Azul"
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
 };
-
 //ORDENAMIENTO
 /*
  orden: Arreglo de enteros. OBLIGATORIO. Especifica el orden correcto de los elementos en la actividad.
@@ -332,24 +385,16 @@ var componente = {
 var componente = {
     tipo: "sortable",
     estilo: "sortable_vertical",
-    orden: [1, 3, 2, 4],
-    elementos: {
-        1: {
-            texto: "Despertar"
-        },
-        2: {
-            texto: "Comer"
-        },
-        3: {
-            texto: "Cocinar"
-        },
-        4: {
-            texto: "Cepillar"
+    atributos: {
+        orden: [1, 3, 2, 4],
+        elementos: {
+            1: "Despertar",
+            2: "Comer",
+            3: "Cocinar",
+            4: "Cepillar"
         }
-
     }
 };
-
 //LISTA DESPLEGABLE
 /*
  selects: Objeto. OBLIGATORIO. Grupo de listas desplegables a utilizarse en la actividad.
@@ -371,81 +416,76 @@ var componente = {
         preguntas: {
             1: {
                 selects: {
-                    tipo_estimulo: "imagen",
                     1: {
-                        url: "img/imagen_select1.png",
-                        opcion_default: "Selecciona la respuesta correcta",
-                        opciones: {
-                            1: {
-                                texto: "Blanco",
-                                correct: true
-                            },
-                            2: {
-                                texto: "Verde"
-                            },
-                            3: {
-                                texto: "Amarillo"
-                            },
-                            4: {
-                                texto: "Rojo"
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/select1_thumbnail.png",
+                                url: "img/select1.png",
+                                descripcion: ""
                             }
+                        },
+                        respuesta : 1,
+                        opciones: {
+                            1: "Blanco",
+                            2: "Verde",
+                            3: "Amarillo",
+                            4: "Rojo"
                         }
                     },
                     2: {
-                        url: "img/imagen_select2.png",
-                        opcion_default: "Selecciona la respuesta correcta",
-                        opciones: {
-                            1: {
-                                texto: "Perro"
-                            },
-                            2: {
-                                texto: "Casa"
-                            },
-                            3: {
-                                texto: "Zapato",
-                                correct: true
-                            },
-                            4: {
-                                texto: "Puente"
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/select2_thumbnail.png",
+                                url: "img/select2.png",
+                                descripcion: ""
                             }
+                        },
+                        respuesta : 2,
+                        opciones: {
+                            1: "Blanco",
+                            2: "Verde",
+                            3: "Amarillo",
+                            4: "Rojo"
                         }
                     },
                     3: {
-                        url: "img/imagen_select3.png",
-                        opcion_default: "Selecciona la respuesta correcta",
-                        opciones: {
-                            1: {
-                                texto: "1"
-                            },
-                            2: {
-                                texto: "11",
-                                correct: true
-                            },
-                            3: {
-                                texto: "22"
-                            },
-                            4: {
-                                texto: "12"
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/select3_thumbnail.png",
+                                url: "img/select3.png",
+                                descripcion: ""
                             }
+                        },
+                        respuesta : 3,
+                        opciones: {
+                            1: "Blanco",
+                            2: "Verde",
+                            3: "Amarillo",
+                            4: "Rojo"
                         }
                     },
                     4: {
-                        url: "img/imagen_select4.png",
-                        opcion_default: "Selecciona la respuesta correcta",
-                        opciones: {
-                            1: {
-                                texto: "Camisa"
-                            },
-                            2: {
-                                texto: "Pantalon"
-                            },
-                            3: {
-                                texto: "Medias"
-                            },
-                            4: {
-                                texto: "Correa",
-                                correct: true
+                        elemento: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/select4_thumbnail.png",
+                                url: "img/select4.png",
+                                descripcion: ""
                             }
+                        },
+                        respuesta : 4,
+                        opciones: {
+                            1: "Blanco",
+                            2: "Verde",
+                            3: "Amarillo",
+                            4: "Rojo"
                         }
                     }
                 }
