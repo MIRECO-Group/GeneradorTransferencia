@@ -5,7 +5,7 @@
  */
 
 
-/* global angular, plantilla */
+/* global angular, plantilla, generales */
 
 var PLANTILLA = {};
 
@@ -30,7 +30,7 @@ var PLANTILLA = {};
             })
             .controller("Initialize", function ($http, $log, $scope, $plantilla) {
                 var plantilla = this;
-                plantilla.config = {};
+                plantilla.config = generales;
 
 
             })
