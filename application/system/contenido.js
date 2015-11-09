@@ -1,64 +1,64 @@
 /* 
-*  Esta configuración corresponde al contenido de un objeto de aprendizaje del
-*  curso de transferencia de conocimiento. Para llenar este contenido por favor
-*  inicie por asignar un indice dentro del objeto "macrorecursos" para cada 
-*  macrorecurso definido en la arquitectura aprobada para el curso, es decir:
-*  
-*  1: portada 
-*  2: sensibilización de apertura
-*  3: contextualización
-*  4: contenido y actividades
-*  5: recordemos
-*  6: preguntas de conocimiento
-*  7: sensibilización de cierre
-*  
-*  Cada uno de estos macrorecursos cuenta con atributos que definen su nombre y 
-*  un id que permita al software identificarlo con mas facilidad. Esta información
-*  no debe cambiar entre un objeto y otro.
-*  
-*  También cuentan con un atributo recursos, el cual conserva la información de 
-*  cada recurso contenido en un macrorecurso específico. El atributo recursos es
-*  también un objeto Javascript y debe asignarse un índice numérico (iniciando 
-*  desde 1) que aumenta en 1 para cada recurso.
-*  
-*  Cada uno de estos recursos cuenta con atributos que definen su nombre, tipo y estilo.
-*  El tipo para un recurso siempre debe ser "layout", el cual corresponde a una disposición
-*  (retícula) de elementos. Es en el atributo estilo donde podemos definir la reticula 
-*  específica que va a utilizar el recurso, por medio de un identificador previamente 
-*  definido para las variaciones disponibles.
-*  
-*  También cuentan con un atributo componentes, el cual conserva la información de 
-*  cada contenido a situarse en un espacio de la retícula definida en estilo.
-*  El atributo componentes es también un objeto Javascript y debe asignarse un índice
-*  numérico (iniciando desde 1) que aumenta en 1 para cada componente.
-*  
-*  Cada uno de estos componentes cuenta con atributos que definen su tipo y estilo.
-*  Algunos componentes como los títulos podrían tener además atributos propios (mostrar_icono).
-*  El tipo para un componente representa los posibles contenidos que pueden asignarse a 
-*  una sección de layout, estos incluyen entre otros:
-*  
-*  título
-*  párrafo
-*  imagen
-*  botón
-*  reproductor
-*  lista
-*  organizadores gráficos
-*  actividades.
-*  
-*  Sin embargo, cada actividad correspondrá a un tipo de componente diferente (drag_drop, pick_many, etc...).
-*  
-*  El atributo estilo, al igual que para los recursos definirá la disposición de elementos
-*  dentro del componente (por ejemplo, si una lista es vertical u horizontal).
-*  
-*  También cuentan con un atributo elementos, el cual conserva la información de 
-*  cada elemento a distribuirse dentro de un componente. El atributo elementos es también 
-*  un objeto Javascript y debe asignarse un índice numérico (iniciando desde 1) 
-*  que aumenta en 1 para cada componente.
-*  
-*  Los atributos de cada objeto consignado en el atributo elementos son propios de cada
-*  componente y se encuentran listados en el listado de elementos. 
-*/
+ *  Esta configuración corresponde al contenido de un objeto de aprendizaje del
+ *  curso de transferencia de conocimiento. Para llenar este contenido por favor
+ *  inicie por asignar un indice dentro del objeto "macrorecursos" para cada 
+ *  macrorecurso definido en la arquitectura aprobada para el curso, es decir:
+ *  
+ *  1: portada 
+ *  2: sensibilización de apertura
+ *  3: contextualización
+ *  4: contenido y actividades
+ *  5: recordemos
+ *  6: preguntas de conocimiento
+ *  7: sensibilización de cierre
+ *  
+ *  Cada uno de estos macrorecursos cuenta con atributos que definen su nombre y 
+ *  un id que permita al software identificarlo con mas facilidad. Esta información
+ *  no debe cambiar entre un objeto y otro.
+ *  
+ *  También cuentan con un atributo recursos, el cual conserva la información de 
+ *  cada recurso contenido en un macrorecurso específico. El atributo recursos es
+ *  también un objeto Javascript y debe asignarse un índice numérico (iniciando 
+ *  desde 1) que aumenta en 1 para cada recurso.
+ *  
+ *  Cada uno de estos recursos cuenta con atributos que definen su nombre, tipo y estilo.
+ *  El tipo para un recurso siempre debe ser "layout", el cual corresponde a una disposición
+ *  (retícula) de elementos. Es en el atributo estilo donde podemos definir la reticula 
+ *  específica que va a utilizar el recurso, por medio de un identificador previamente 
+ *  definido para las variaciones disponibles.
+ *  
+ *  También cuentan con un atributo componentes, el cual conserva la información de 
+ *  cada contenido a situarse en un espacio de la retícula definida en estilo.
+ *  El atributo componentes es también un objeto Javascript y debe asignarse un índice
+ *  numérico (iniciando desde 1) que aumenta en 1 para cada componente.
+ *  
+ *  Cada uno de estos componentes cuenta con atributos que definen su tipo y estilo.
+ *  Algunos componentes como los títulos podrían tener además atributos propios (mostrar_icono).
+ *  El tipo para un componente representa los posibles contenidos que pueden asignarse a 
+ *  una sección de layout, estos incluyen entre otros:
+ *  
+ *  título
+ *  párrafo
+ *  imagen
+ *  botón
+ *  reproductor
+ *  lista
+ *  organizadores gráficos
+ *  actividades.
+ *  
+ *  Sin embargo, cada actividad correspondrá a un tipo de componente diferente (drag_drop, pick_many, etc...).
+ *  
+ *  El atributo estilo, al igual que para los recursos definirá la disposición de elementos
+ *  dentro del componente (por ejemplo, si una lista es vertical u horizontal).
+ *  
+ *  También cuentan con un atributo elementos, el cual conserva la información de 
+ *  cada elemento a distribuirse dentro de un componente. El atributo elementos es también 
+ *  un objeto Javascript y debe asignarse un índice numérico (iniciando desde 1) 
+ *  que aumenta en 1 para cada componente.
+ *  
+ *  Los atributos de cada objeto consignado en el atributo elementos son propios de cada
+ *  componente y se encuentran listados en el listado de elementos. 
+ */
 
 var macrorecursos = {
     1: {
@@ -69,28 +69,43 @@ var macrorecursos = {
                 nombre: "portada",
                 tipo: "layout",
                 estilo: "layout_portada",
+                background: "img/fondo_portada.png",
                 componentes: {
-                    1: {
-                        tipo: "imagen",
-                        estilo: "fondo_portada",
-                        elementos: {
-                            url: "img/fondo_portada.png"
-                        }
-                    },
+                    1: {},
                     2: {
                         tipo: "organizador",
                         estilo: "organizador_saberes",
-                        elementos: {
+                        atributos: {
+                            titulo: "Saberes",
                             tabs: {
                                 1: {
-                                    tag: "",
-                                    titulo: "Saberes",
-                                    parrafos: {
-                                        1: "<viñeta> Las TIC: Conceptualización.",
-                                        2: "<viñeta> Recursos, herramientas y programas.",
-                                        3: "<viñeta> TIC en educación.",
-                                        4: "<viñeta> Nuevos conceptos.",
-                                        5: "<viñeta> Nuevos competencias."
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_og_saberes",
+                                    componentes: {
+                                        1: {
+                                            tipo: "titulo",
+                                            estilo: "titulo_saberes",
+                                            atributos: {
+                                                titulo: "subtitulo saberes",
+                                                subtitulo: "",
+                                                mostrar_icono: false
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "lista",
+                                            estilo: "lista_saberes",
+                                            atributos: {
+                                                categoria: "no_numerada",
+                                                elementos: {
+                                                    1: "Las TIC: Conceptualización.",
+                                                    2: "Recursos, herramientas y programas.",
+                                                    3: "TIC en educación.",
+                                                    4: "Nuevos conceptos.",
+                                                    5: "Nuevos competencias."
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -99,24 +114,44 @@ var macrorecursos = {
                     3: {
                         tipo: "organizador",
                         estilo: "organizador_saberes",
-                        elementos: {
+                        atributos: {
+                            titulo: "Resultados",
                             tabs: {
                                 1: {
-                                    tag: "",
-                                    titulo: "Resultados",
-                                    parrafos: {
-                                        1: "<viñeta> Caracterizar los Recursos Educativos Digitales para la enseñanza de lenguas en el SENA de acuerdo con los criterios pedagógicos establecidos por la institución."
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_og_saberes",
+                                    componentes: {
+                                        1: {
+                                            tipo: "titulo",
+                                            estilo: "titulo_saberes",
+                                            atributos: {
+                                                titulo: "subtitulo resultados",
+                                                subtitulo: "",
+                                                mostrar_icono: false
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "lista",
+                                            estilo: "lista_saberes",
+                                            atributos: {
+                                                categoria: "no_numerada",
+                                                elementos: {
+                                                    1: "Caracterizar los Recursos Educativos Digitales para la enseñanza de lenguas en el SENA de acuerdo con los criterios pedagógicos establecidos por la institución."
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
                     },
                     4: {
-                        tipo: "titulo",
-                        estilo: "titulo_portada",
-                        mostrar_icono: true,
-                        elementos: {
-                            titulo: "¿Qué se entiende por TIC?"
+                        tipo: "boton",
+                        estilo: "boton_portada",
+                        atributos: {
+                            tag: "¿Qué se entiende por TIC?",
+                            funcion: "iniciar_objeto"
                         }
                     }
                 }
@@ -133,21 +168,13 @@ var macrorecursos = {
                 estilo: "layout_sensibilizacion",
                 componentes: {
                     1: {
-                        tipo: "titulo",
-                        estilo: "titulo_recurso",
-                        mostar_icono: true,
-                        elementos: {
-                            titulo: "Sensibilización de Apertura"
-                        }
-                    },
-                    2: {
                         tipo: "reproductor",
                         estilo: "reproductor_sensibilizacion",
-                        elementos: {
+                        atributos: {
                             1: {
                                 tipo: "video",
-                                url: "media/audio/melones.mp4",
-                                imagen_reproductor: "img/melon.png"
+                                url: "media/video/sapertura.mp4",
+                                imagen_reproductor: "img/sapertura.png"
                             }
                         }
                     }
@@ -167,34 +194,30 @@ var macrorecursos = {
                     1: {
                         tipo: "titulo",
                         estilo: "titulo_recurso",
-                        mostar_icono: true,
-                        elementos: {
-                            titulo: "Sensibilización de Apertura"
+                        atributos: {
+                            titulo: "Contextualización",
+                            subtitulo: "",
+                            mostrar_icono: true
                         }
                     },
                     2: {
                         tipo: "parrafo",
                         estilo: "parrafo_basico",
-                        elementos: {
+                        atributos: {
                             parrafos: {
-                                1: {
-                                    texto: ""
-                                },
-                                2: {
-                                    texto: ""
-                                }
+                                1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                             }
                         }
                     },
                     3: {
                         tipo: "reproductor",
-                        estilo: "estandar",
-                        elementos: {
+                        estilo: "reproductor_basico",
+                        atributos: {
                             1: {
                                 tipo: "video",
-                                contenido: {
-                                    url: "media/videos/s_apertura.mp4"
-                                }
+                                url: "media/video/contextualizacion.mp4",
+                                imagen_reproductor: "img/contextualizacion.png"
                             }
                         }
                     }
@@ -213,19 +236,37 @@ var macrorecursos = {
                 estilo: "layout_subportada",
                 componentes: {
                     1: {
-                        tipo: "titulo",
-                        estilo: "titulo_recurso",
-                        mostar_icono: true,
-                        elementos: {
-                            titulo: "Contenido 1"
-                        }
-                    },
-                    2: {
-                        tipo: "imagen",
-                        estilo: "imagen_subportada",
-                        elementos: {
-                            url: "img/subportada.png",
-                            title: ""
+                        tipo: "organizador",
+                        estilo: "organizador_subportada",
+                        atributos: {
+                            titulo: "",
+                            tabs: {
+                                1: {
+                                    tag: "",
+                                    tipo: "layout",
+                                    estilo: "layout_og_subportada_1",
+                                    componentes: {
+                                        1: {
+                                            tipo: "titulo",
+                                            estilo: "titulo_recurso",
+                                            atributos: {
+                                                titulo: "Capitulo 1: Lorem Ipsum",
+                                                subtitulo: "",
+                                                mostrar_icono: true
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "imagen",
+                                            estilo: "imagen_basica",
+                                            atributos: {
+                                                thumbnail: "img/subportada1_thumbnail.png",
+                                                url: "img/subportada1.png",
+                                                descripcion: ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -238,98 +279,133 @@ var macrorecursos = {
                     1: {
                         tipo: "titulo",
                         estilo: "titulo_recurso",
-                        mostar_icono: true,
-                        elementos: {
-                            titulo: "Contenido 1"
+                        atributos: {
+                            titulo: "Contenido 1",
+                            subtitulo: "",
+                            mostrar_icono: true
                         }
                     },
                     2: {
                         tipo: "parrafo",
                         estilo: "parrafo_basico",
-                        elementos: {
+                        atributos: {
                             parrafos: {
-                                1: {
-                                    texto: "Las herramientas digitales son programas que ayudan a interactuar con la tecnología para el logro de una variedad de propósitos, por ejemplo:"
-                                }
+                                1: "Las herramientas digitales son programas que ayudan a interactuar con la tecnología para el logro de una variedad de propósitos, por ejemplo:"
                             }
                         }
                     },
                     3: {
                         tipo: "lista",
                         estilo: "lista_vertical",
-                        categoria: "no_numerada",
-                        elementos: {
-                            1: {
-                                texto: "Permiten la comunicación en tiempo real sin barreras de tiempo y espacio."
-                            },
-                            2: {
-                                texto: "permiten crear bases de datos, encuestas, etc."
-                            },
-                            3: {
-                                texto: "facilitan la recopilación, manejo de la información, gestión de procesos pedagógicos, entre muchos otros."
-                            },
-                            4: {
-                                texto: "facilitan la recopilación, manejo de la información, gestión de procesos pedagógicos, entre muchos otros."
-                            },
-                            5: {
-                                texto: "le permiten al aprendiz: buscar, seleccionar, registrar información, y muchas otras actividades."
+                        atributos: {
+                            categoria: "no_numerada",
+                            elementos: {
+                                1: "Permiten la comunicación en tiempo real sin barreras de tiempo y espacio.",
+                                2: "Permiten crear bases de datos, encuestas, etc.",
+                                3: "Facilitan la recopilación, manejo de la información, gestión de procesos pedagógicos, entre muchos otros.",
+                                4: "facilitan la recopilación, manejo de la información, gestión de procesos pedagógicos, entre muchos otros.",
+                                5: "le permiten al aprendiz: buscar, seleccionar, registrar información, y muchas otras actividades."
                             }
                         }
                     },
                     4: {
                         tipo: "parrafo",
                         estilo: "parrafo_basico",
-                        elementos: {
+                        atributos: {
                             parrafos: {
-                                1: {
-                                    texto: "<b>Instrucción:</b> En el campo de la educación podemos mencionar las siguientes aplicaciones. Haga clic sobre los botones listados a la izquierda."
-                                }
+                                1: "<b>Instrucción:</b> En el campo de la educación podemos mencionar las siguientes aplicaciones. Haga clic sobre los botones listados a la izquierda."
                             }
                         }
                     },
                     5: {
                         tipo: "organizador",
-                        estilo: "organizador_3",
-                        elementos: {
+                        estilo: "organizador_saberes",
+                        atributos: {
+                            titulo: "",
                             tabs: {
                                 1: {
                                     tag: "CMS",
-                                    titulo: "",
-                                    parrafos: {
-                                        1: "parrafo 1",
-                                        2: "parrafo 2"
+                                    tipo: "layout",
+                                    estilo: "layout_og2_1",
+                                    componentes: {
+                                        2: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "Párrafo 1",
+                                                    2: "Párrafo 2"
+                                                }
+                                            }
+                                        }
                                     }
                                 },
                                 2: {
                                     tag: "LMS",
-                                    titulo: "",
-                                    parrafos: {
-                                        1: "parrafo 1",
-                                        2: "parrafo 2"
+                                    tipo: "layout",
+                                    estilo: "layout_og2_1",
+                                    componentes: {
+                                        2: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "Párrafo 1",
+                                                    2: "Párrafo 2"
+                                                }
+                                            }
+                                        }
                                     }
                                 },
                                 3: {
                                     tag: "LCMS",
-                                    titulo: "",
-                                    parrafos: {
-                                        1: "parrafo 1",
-                                        2: "parrafo 2"
+                                    tipo: "layout",
+                                    estilo: "layout_og2_1",
+                                    componentes: {
+                                        2: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "Párrafo 1",
+                                                    2: "Párrafo 2"
+                                                }
+                                            }
+                                        }
                                     }
                                 },
                                 4: {
                                     tag: "Redes Sociales",
-                                    titulo: "",
-                                    parrafos: {
-                                        1: "parrafo 1",
-                                        2: "parrafo 2"
+                                    tipo: "layout",
+                                    estilo: "layout_og2_1",
+                                    componentes: {
+                                        2: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "Párrafo 1",
+                                                    2: "Párrafo 2"
+                                                }
+                                            }
+                                        }
                                     }
                                 },
                                 5: {
                                     tag: "Multimedia",
-                                    titulo: "",
-                                    parrafos: {
-                                        1: "parrafo 1",
-                                        2: "parrafo 2"
+                                    tipo: "layout",
+                                    estilo: "layout_og2_1",
+                                    componentes: {
+                                        2: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "Párrafo 1",
+                                                    2: "Párrafo 2"
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -345,46 +421,74 @@ var macrorecursos = {
                     1: {
                         tipo: "titulo",
                         estilo: "titulo_recurso",
-                        mostar_icono: true,
-                        elementos: {
-                            titulo: "Contenido 2"
+                        atributos: {
+                            titulo: "Contenido 2",
+                            subtitulo: "",
+                            mostrar_icono: true
                         }
                     },
                     2: {
                         tipo: "parrafo",
                         estilo: "parrafo_basico",
-                        elementos: {
+                        atributos: {
                             parrafos: {
-                                1: {
-                                    texto: "Un programa es un conjunto de instrucciones ordenadas de manera lógica que permiten el procesamiento de la información, para el logro de unos resultados específicos. Algunos ejemplos de programa o aplicación son los procesadores de texto, las hojas de cálculo, los juegos, los simuladores y los buscadores."
-                                },
-                                2: {
-                                    texto: "<b>Instrucción:</b> Revisemos lo que hasta ahora hemos estudiado acerca de las TIC. Alba es instructora de Logística en el SENA. ¿Cuál de los siguientes elementos le permite a Alba personalizar y manejar un curso de nivel intermedio por módulos? Seleccione la respuesta correcta."
-                                }
+                                1: "Un programa es un conjunto de instrucciones ordenadas de manera lógica que permiten el procesamiento de la información, para el logro de unos resultados específicos. Algunos ejemplos de programa o aplicación son los procesadores de texto, las hojas de cálculo, los juegos, los simuladores y los buscadores.",
+                                2: "<b>Instrucción:</b> Revisemos lo que hasta ahora hemos estudiado acerca de las TIC. Alba es instructora de Logística en el SENA. ¿Cuál de los siguientes elementos le permite a Alba personalizar y manejar un curso de nivel intermedio por módulos? Seleccione la respuesta correcta."
                             }
                         }
                     },
                     3: {
                         tipo: "pick_many",
                         estilo: "pickmany_vertical",
-                        elementos: {
+                        atributos: {
                             preguntas: {
                                 1: {
-                                    pregunta: "De las siguientes opciones solo una es correcta.",
-                                    tipo_picks: "texto",
+                                    enunciado: "De las siguientes opciones solo una es correcta.",
+                                    respuesta: [3],
                                     picks: {
                                         1: {
-                                            texto: "El sistema operativo"
+                                            elemento: {
+                                                tipo: "parrafo",
+                                                estilo: "parrafo_basico",
+                                                atributos: {
+                                                    parrafos: {
+                                                        1: "El sistema operativo"
+                                                    }
+                                                }
+                                            }
                                         },
                                         2: {
-                                            texto: "Las bases de datos"
+                                            elemento: {
+                                                tipo: "parrafo",
+                                                estilo: "parrafo_basico",
+                                                atributos: {
+                                                    parrafos: {
+                                                        1: "Las bases de datos"
+                                                    }
+                                                }
+                                            }
                                         },
                                         3: {
-                                            texto: "el LMS",
-                                            correct: true
+                                            elemento: {
+                                                tipo: "parrafo",
+                                                estilo: "parrafo_basico",
+                                                atributos: {
+                                                    parrafos: {
+                                                        1: "El LMS"
+                                                    }
+                                                }
+                                            }
                                         },
                                         4: {
-                                            texto: "Las redes sociales"
+                                            elemento: {
+                                                tipo: "parrafo",
+                                                estilo: "parrafo_basico",
+                                                atributos: {
+                                                    parrafos: {
+                                                        1: "Las redes sociales"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -394,9 +498,9 @@ var macrorecursos = {
                     4: {
                         tipo: "boton",
                         estilo: "submit_actividad",
-                        elementos: {
+                        atributos: {
                             tag: "Enviar",
-                            funcion: "enviar_actividad"
+                            funcion: "iniciar_examen"
                         }
                     }
                 }
