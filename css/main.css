@@ -76,6 +76,11 @@ input[type="button"]
 	cursor: pointer;
 }
 
+#unit_span, #lesson_span
+{
+	font-weight: bold;
+}
+
 .icon_arrow_ed_s, #lesson_span_arrow, #unit_span_arrow
 {
 	font-family: "sena_icon";
@@ -122,6 +127,8 @@ body
 header
 {
 	padding: 10px 10px 0 10px;
+	flex: 1 0 auto;
+
 }
 header div:nth-child(1) /*Cabecera azul*/
 {
@@ -139,7 +146,7 @@ header div:nth-child(1) > h1
 {
 	color: white;
 	font-size: 1.8rem;
-	margin: 0.8rem 0px 0.8rem 9rem;
+	margin: 0.8rem 0px 0.8rem 7rem;
 }
 header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
 {
@@ -165,64 +172,25 @@ header div:nth-child(2)
 	height: auto;
 	background-color: rgba(255, 255, 255, 0.85);
 }
-header div:nth-child(2) > p:nth-child(1)/*Barra miga de pan*/
+header div:nth-child(2) > p /*Barra miga de pan*/
 {
-	background: #b2a809;
-	background: -moz-linear-gradient(left, #b2a809 0%, #403c00 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b2a809), color-stop(100%,#403c00));
-	background: -webkit-linear-gradient(left, #b2a809 0%,#403c00 100%);
-	background: -o-linear-gradient(left, #b2a809 0%,#403c00 100%);
-	background: -ms-linear-gradient(left, #b2a809 0%,#403c00 100%);
-	background: linear-gradient(to right, #b2a809 0%,#403c00 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2a809', endColorstr='#403c00',GradientType=1 );
+	background: #c48800;
+	background: -moz-linear-gradient(left,  #c48800 0%, #5a4e00 64%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#c48800), color-stop(64%,#5a4e00));
+	background: -webkit-linear-gradient(left,  #c48800 0%,#5a4e00 64%);
+	background: -o-linear-gradient(left,  #c48800 0%,#5a4e00 64%);
+	background: -ms-linear-gradient(left,  #c48800 0%,#5a4e00 64%);
+	background: linear-gradient(to right,  #c48800 0%,#5a4e00 64%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c48800', endColorstr='#5a4e00',GradientType=1 );
 	/*Miga de pan*/
 	color: white;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	text-align: right;
-	padding: 10px 0px 5px 9.5rem;
+	text-align: left;
+	padding: 10px 0px 5px 110px;
 	margin-top: -5px;
 	position: relative;
 	z-index: 2;
-}
-header div:nth-child(2) > p img/*Barra miga de pan - imagen bandera*/
-{
-	margin: 0px 5px;
-	width: 1rem;
-}
-header div:nth-child(2) > p span#unit_span
-{
-	cursor: pointer;
-}
-header div:nth-child(2) > p span#lesson_span
-{
-	cursor: pointer;
-}
-header div:nth-child(2) > p:nth-child(2) /*Barra miga de pan - texto que se muestra extended_descrip_unidad*/
-{
-	display: none;
-	background-color: #00435A;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	color: #FFFFFF;
-	position: relative;
-	text-align: right;
-	padding: 15px 5px 5px 0rem;
-	z-index: 1;
-	margin-top: -10px;
-}
-header div:nth-child(2) > p:nth-child(3) /*Barra miga de pan - texto que se muestra extended_descrip_leccion*/
-{
-	display: none;
-	background-color: #00435A;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	color: #FFFFFF;
-	position: relative;
-	text-align: right;
-	padding: 15px 5px 5px 0rem;
-	z-index: 1;
-	margin-top: -10px;
 }
 header ul:nth-child(3) /* Menú desplegable de la barra superior */
 {
@@ -281,6 +249,7 @@ div#content_container
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	margin: 0px 10px;
+	flex: 1 1 auto;
 	height: 100%;
 }
 
@@ -300,6 +269,7 @@ footer
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99808080', endColorstr='#99666666',GradientType=0 );
 	border-radius: 10px;
 	margin: 0 10px 10px 10px;
+	flex: 1 0 auto;
 }
 footer input[type="button"]
 {
@@ -443,6 +413,7 @@ footer > div#center_buttons > ul#smart_menu
 	color: #FFFFFF;
 	position: absolute;
 	width: 130px;
+	z-index: 4;
 }
 footer > div#center_buttons > ul#smart_menu li
 {
@@ -583,6 +554,21 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 	}
 }
 
-@media (max-width: 570px){ /***********************Smartphone**************************/
+@media (max-width: 520px){ /***********************Smartphone**************************/
+
+	footer > div#center_buttons
+	{
+		flex-grow: 6;
+	}
+}
+
+@media (max-width: 450px){ /***********************Smartphone**************************/
+
+	footer > div#center_buttons
+	{
+		flex-grow: 8;
+	}
+
+
 
 }

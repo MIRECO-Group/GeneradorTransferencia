@@ -14,7 +14,20 @@ $(document).ready(function ()
             $(this).removeClass('opened');
             $(this).addClass('closed');
         }
+
+        if($("ul#smart_menu").is(":visible"))
+        {
+            $("ul#smart_menu").slideUp("slow");
+            $("footer > div#right_buttons > input[type='button']:nth-child(4)").removeClass('opened');
+            $("footer > div#right_buttons > input[type='button']:nth-child(4)").addClass('closed');
+        }
     });
+
+    if($(window).width() <= 701)
+    {
+        $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value','q');
+        $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('-');
+    }
 
     $("footer > div#right_buttons > input[type='button']:nth-child(4)").click(function()
     {
@@ -38,6 +51,13 @@ $(document).ready(function ()
             $("ul#smart_menu").hide();
             $("ul#smart_menu").removeClass('opened').addClass('closed');
         }
+
+        if($("header > ul:nth-child(3)").is(":visible"))
+        {
+            $("header > ul:nth-child(3)").slideUp("slow");
+            $("header > div:nth-child(1) > input[type='button']").removeClass('opened');
+            $("header > div:nth-child(1) > input[type='button']").addClass('closed');
+        }
         
     });
 
@@ -49,52 +69,6 @@ $(document).ready(function ()
         $(this).siblings('span').fadeOut("fast");
     });
 
-    $("#unit_span").click(function()
-    {
-        if ($("#extended_descrip_leccion").is(":visible"))
-        {
-            $("#extended_descrip_leccion").slideUp("fast");
-            $("#extended_descrip_leccion").removeClass("visible_me");
-            $("#lesson_span_arrow").text("(");
-        }
-
-        if ($("#extended_descrip_unidad").hasClass("visible_me"))
-        {
-            $("#extended_descrip_unidad").slideUp("slow");
-            $("#extended_descrip_unidad").removeClass("visible_me");
-            $("#unit_span_arrow").text("(");
-        }
-        else
-        {
-            $("#extended_descrip_unidad").slideDown("slow");
-            $("#extended_descrip_unidad").addClass("visible_me");
-            $("#unit_span_arrow").text(")");
-        }
-    });
-
-    $("#lesson_span").click(function ()
-    {
-        if ($("#extended_descrip_unidad").is(":visible"))
-        {
-            $("#extended_descrip_unidad").slideUp("fast");
-            $("#extended_descrip_unidad").removeClass("visible_me");
-            $("#unit_span_arrow").text("(");
-        }
-
-        if ($("#extended_descrip_leccion").hasClass("visible_me"))
-        {
-            $("#extended_descrip_leccion").slideUp("slow");
-            $("#extended_descrip_leccion").removeClass("visible_me");
-            $("#lesson_span_arrow").text("(");
-        }
-        else
-        {
-            $("#extended_descrip_leccion").slideDown("slow");
-            $("#extended_descrip_leccion").addClass("visible_me");
-            $("#lesson_span_arrow").text(")");
-        }
-    });
-
     $(window).resize(function()
     {
         $("header ul:nth-child(3)").css('top',$("header div:nth-child(1)").height()+10);
@@ -103,6 +77,8 @@ $(document).ready(function ()
         if($(window).width() <= 700)
         {
             $("header > ul:nth-child(3) > li p").unbind();
+            $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value','q');            
+            $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('-');
         }
         else
         {
@@ -116,12 +92,16 @@ $(document).ready(function ()
                     $(this).siblings('span').fadeOut("fast");
                 }
             });
+            $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value','-'); 
+            $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('q');
         }
     });
 
     if($(window).width() <= 700)
         {
             $("header > ul:nth-child(3) > li p").unbind();
+            $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value','q');            
+            $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('-');
         }
         else
         {
@@ -135,6 +115,8 @@ $(document).ready(function ()
                     $(this).siblings('span').fadeOut("fast");
                 }
             });
+            $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value','-'); 
+            $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('q');
         }
 
 });
