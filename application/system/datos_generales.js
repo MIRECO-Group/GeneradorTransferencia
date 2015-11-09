@@ -4,7 +4,8 @@ var generales = {
     unidad: {
         numero: 1,
         nombre: "Pedagodía de lenguas extranjeras I",
-        lugar: "Inglaterra"
+        lugar: "Inglaterra",
+        bandera: "img/icons/bandera_inglaterra.png"
     },
     leccion: {
         numero: 1,
