@@ -5,7 +5,7 @@ var generales = {
         numero: 1,
         nombre: "Pedagodía de lenguas extranjeras I",
         lugar: "Inglaterra",
-        bandera: "img/icons/bandera_inglaterra.svg"
+        bandera: "img/bandera_inglaterra.svg"
     },
     leccion: {
         numero: 1,
