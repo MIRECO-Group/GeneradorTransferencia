@@ -386,6 +386,7 @@ var componente = {
     tipo: "sortable",
     estilo: "sortable_vertical",
     atributos: {
+        enunciado: "",
         orden: [1, 3, 2, 4],
         elementos: {
             1: "Despertar",
@@ -412,9 +413,10 @@ var componente = {
 var componente = {
     tipo: "select",
     estilo: "select_horizontal",
-    elementos: {
+    atributos: {
         preguntas: {
             1: {
+                enunciado: "",
                 selects: {
                     1: {
                         elemento: {
