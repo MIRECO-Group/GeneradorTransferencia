@@ -6,6 +6,7 @@
         <title>Test_Plantilla</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="application/components/css/layouts.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/main.css">
         <link href="application/components/css/layouts.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -17,17 +18,12 @@
             </div>
             <div>
                 <p>
-                    <span id="unit_span">
-                        <span id="unit_span_arrow">(</span>Unidad {{initz.config.unidad.numero}}
-                    </span>
+                    <span id="unit_span"> Unidad {{initz.config.unidad.numero}} &nbsp;</span>
+                    <span>{{initz.config.unidad.nombre}} &nbsp;</span>
                     <span class="icon_arrow_ed_s">x</span>
-                    <span id="lesson_span">
-                        <span id="lesson_span_arrow">(</span>Lección {{initz.config.leccion.numero}}
-                    </span>
-                    <img ng-src="{{initz.config.unidad.bandera}}" alt="{{initz.config.unidad.lugar}}">
+                    <span id="lesson_span">Lección {{initz.config.leccion.numero}} &nbsp;</span> 
+                    <span>{{initz.config.leccion.nombre}}</span>
                 </p>
-                <p id="extended_descrip_unidad">{{initz.config.unidad.nombre}}</p>
-                <p id="extended_descrip_leccion">{{initz.config.leccion.nombre}}</p>
             </div>
             <ul>
                 <li><span>tooltips</span><p>P</p></li>
@@ -36,18 +32,10 @@
                 <li><span>tooltips</span><p>U</p></li>
                 <li><span>tooltips</span><p>R</p></li>
             </ul>
-            <img src="img/logo_sena.svg"/>
+            <img src="img/logo_sena.svg" title="sena"/>
         </header>
 
         <div id="content_container" ng-controller="Paginacion as pag">
-            {{pag.actual}}
-            <div class="dummy_layout">
-    <div class="c1"></div>
-    <div class="contenedor_1">
-        <div class="c2"></div>
-        <div class="c3"></div>
-    </div>
-</div>
             <!--<iframe src="#"></iframe>-->
         </div>
 
@@ -67,6 +55,7 @@
                     <li><p>Mapa<span class="icon_arrow_ed_s">j</span></p></li>
                     <li><p>Glosario<span class="icon_arrow_ed_s">i</span></p></li>
                     <li><p>Bibliografía<span class="icon_arrow_ed_s">g</span></p></li>
+                    <li><p>Indice<span class="icon_arrow_ed_s">q</span></p></li>
                 </ul>
             </div>
             <div id="right_buttons">                

@@ -69,11 +69,7 @@ select::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
     border: 0;
     outline : 0;
-}
-
-input[type="button"]
-{
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .icon_arrow_ed_s, #lesson_span_arrow, #unit_span_arrow
@@ -139,7 +135,7 @@ header div:nth-child(1) > h1
 {
 	color: white;
 	font-size: 1.8rem;
-	margin: 0.8rem 0px 0.8rem 9rem;
+	margin: 0.8rem 0px 0.8rem 105px;
 }
 header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
 {
@@ -179,8 +175,8 @@ header div:nth-child(2) > p:nth-child(1)/*Barra miga de pan*/
 	color: white;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	text-align: right;
-	padding: 10px 0px 5px 9.5rem;
+	text-align: left;
+	padding: 10px 0px 5px 110px;
 	margin-top: -5px;
 	position: relative;
 	z-index: 2;
@@ -280,6 +276,7 @@ div#content_container
 	background-color: rgba(255,255,255,0.85);
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	overflow: auto;
 	margin: 0px 10px;
 	height: 100%;
 }
@@ -437,7 +434,7 @@ footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la 
 }
 footer > div#center_buttons > ul#smart_menu
 {
-	display: none;	
+	display: none;
 	bottom: 80px;
 	right: 10px;
 	color: #FFFFFF;
@@ -448,7 +445,6 @@ footer > div#center_buttons > ul#smart_menu li
 {
 	background-color: #101E43;
 	border-radius: 2px;
-	cursor: pointer;
 	padding: 5px 10px;
 	margin: 10px 0px;
 }
@@ -529,7 +525,6 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 
 	header ul:nth-child(3) li
 	{
-		cursor: pointer;
 		background-color: rgba(0,0,0,0.8);
 		border-radius: 5px;
 		margin-top:10px;		
@@ -583,6 +578,24 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 	}
 }
 
-@media (max-width: 570px){ /***********************Smartphone**************************/
+@media (max-width: 927px){
+	footer > div#center_buttons
+	{
+		flex-grow: 2;
+	}
 
+}
+
+@media (max-width: 503px){ /***********************Smartphone**************************/
+	footer > div#center_buttons
+	{
+		flex-grow: 5;
+	}
+}
+
+@media (max-width: 360px){
+	footer > div#center_buttons
+	{
+		flex-grow: 40;
+	}
 }
