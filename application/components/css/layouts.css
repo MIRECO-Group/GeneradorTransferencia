@@ -40,7 +40,7 @@ and open the template in the editor.
 /*----------------------- LAYOUT_CONTEXTUALIZACION ---------------------------*/
 
 .dummy_layout{
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     width: 100%;
     flex: 5 1 auto;
