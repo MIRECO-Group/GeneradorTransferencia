@@ -103,13 +103,13 @@ html
 {
 	height: 100%;
 	font-size: 16px; /*1rem = 16px*/
+	width: 100%;
 }
 
 body
 {
 	background-color: green;
 	height: 100%;
-	position: absolute;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -118,6 +118,7 @@ body
 header
 {
 	padding: 10px 10px 0 10px;
+	flex: 1 0 10%;
 }
 header div:nth-child(1) /*Cabecera azul*/
 {
@@ -279,6 +280,7 @@ div#content_container
 	overflow: auto;
 	margin: 0px 10px;
 	height: 100%;
+	flex: 5 1 80%;
 }
 
 footer
@@ -297,6 +299,7 @@ footer
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99808080', endColorstr='#99666666',GradientType=0 );
 	border-radius: 10px;
 	margin: 0 10px 10px 10px;
+	flex: 1 0 10%;
 }
 footer input[type="button"]
 {
