@@ -438,7 +438,7 @@ var macrorecursos = {
                         }
                     },
                     3: {
-                        tipo: "pick_many",
+                        tipo: "actividad",
                         estilo: "pickmany_vertical",
                         atributos: {
                             preguntas: {
@@ -717,7 +717,7 @@ var macrorecursos = {
                                 }
                             },
                             2: {
-                                tipo: "select",
+                                tipo: "actividad",
                                 estilo: "select_vertical",
                                 elementos: {
                                     preguntas: {
@@ -754,7 +754,7 @@ var macrorecursos = {
                                 }
                             },
                             3: {
-                                tipo: "select",
+                                tipo: "actividad",
                                 estilo: "select_vertical",
                                 atributos: {
                                     preguntas: {
@@ -806,7 +806,7 @@ var macrorecursos = {
                                 }
                             },
                             2: {
-                                tipo: "pick_many",
+                                tipo: "actividad",
                                 estilo: "pickmany_vertical",
                                 atributos: {
                                     preguntas: {
@@ -878,7 +878,7 @@ var macrorecursos = {
                                 }
                             },
                             2: {
-                                tipo: "pick_many",
+                                tipo: "actividad",
                                 estilo: "pickmany_vertical",
                                 atributos: {
                                     preguntas: {
