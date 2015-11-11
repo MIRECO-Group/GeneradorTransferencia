@@ -8,35 +8,6 @@ and open the template in the editor.
     Author     : ltoscano
 */
 
-/*---------------------------- PARA BORRAR ---------------------------------*/
-
-.c1{
-    background-color: orange;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-.c2{
-    background-color: gold;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-.c3{
-    background-color: greenyellow;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-.c4{
-    background-color: cornflowerblue;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
 /*----------------------- LAYOUT_CONTEXTUALIZACION ---------------------------*/
 
 .dummy_layout{
