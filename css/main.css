@@ -138,7 +138,7 @@ header div:nth-child(1) > h1
 	font-size: 1.8rem;
 	margin: 0.8rem 0px 0.8rem 105px;
 }
-header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
+header div:nth-child(1) > input[type="button"] /*BotÃ³n que activa el menÃº desplegable*/
 {
 	font-family: 'sena_icon';
 	border: none;
@@ -221,7 +221,7 @@ header div:nth-child(2) > p:nth-child(3) /*Barra miga de pan - texto que se mues
 	z-index: 1;
 	margin-top: -10px;
 }
-header ul:nth-child(3) /* Menú desplegable de la barra superior */
+header ul:nth-child(3) /* MenÃº desplegable de la barra superior */
 {
 	display: none;
 	background-color: rgba(0,0,0,0.6);
@@ -240,7 +240,7 @@ header ul:nth-child(3) li:hover
 {
 	background-color: rgba(255,255,255,0.3);
 }
-header ul:nth-child(3) li p /* Iconos del menú desplegable */
+header ul:nth-child(3) li p /* Iconos del menÃº desplegable */
 {
 	color: white;
 	cursor: pointer;
@@ -281,6 +281,7 @@ div#content_container
 	margin: 0px 10px;
 	height: 100%;
 	flex: 5 1 80%;
+	display: flex;
 }
 
 footer
@@ -313,7 +314,7 @@ footer input[type="button"]
 		flex-wrap: nowrap;
 		justify-content: flex-start;
 	}
-footer > div#left_buttons > input[type="button"]:nth-child(1) /*Botón Portada*/
+footer > div#left_buttons > input[type="button"]:nth-child(1) /*BotÃ³n Portada*/
 {
 	font-size: 2rem;
 	border-style: none;
@@ -330,7 +331,7 @@ footer > div#left_buttons > input[type="button"]:nth-child(1) /*Botón Portada*/
 	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
 }
-footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón Bibliografía*/
+footer > div#left_buttons > input[type="button"]:nth-child(2) /*BotÃ³n BibliografÃ­a*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -346,7 +347,7 @@ footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón Bibliogra
 	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
-footer > div#left_buttons > input[type="button"]:nth-child(4) /*Botón Glosario*/
+footer > div#left_buttons > input[type="button"]:nth-child(4) /*BotÃ³n Glosario*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -380,7 +381,7 @@ footer > div#center_buttons
 	border-radius: 5px;
 	width: 0rem;
 }
-footer > div#center_buttons > input[type="button"]:nth-child(1)/*Botón ir a la izquierda*/
+footer > div#center_buttons > input[type="button"]:nth-child(1)/*BotÃ³n ir a la izquierda*/
 {
 	font-size: 2rem;
 	background: #49819f;
@@ -417,7 +418,7 @@ footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que rec
 	width: 15rem;
 	text-align: center;
 }
-footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la derecha*/
+footer > div#center_buttons > input[type="button"]:nth-child(3)/*BotÃ³n ir a la derecha*/
 {
 	font-size: 2rem;
 	background: #49819f;
@@ -467,7 +468,7 @@ footer > div#right_buttons
 	flex-wrap: nowrap;
 	justify-content: flex-end;
 }
-footer > div#right_buttons > input[type="button"]:nth-child(1) /*Botón Mapa Conceptual*/
+footer > div#right_buttons > input[type="button"]:nth-child(1) /*BotÃ³n Mapa Conceptual*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -483,7 +484,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(1) /*Botón Mapa Con
 	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
-footer > div#right_buttons > input[type="button"]:nth-child(3) /*Botón Descargable - PDF*/
+footer > div#right_buttons > input[type="button"]:nth-child(3) /*BotÃ³n Descargable - PDF*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -519,7 +520,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 
 @media (max-width: 701px){ /*************************Tablet***********************/
 
-	header ul:nth-child(3) /*Menú desplegable*/
+	header ul:nth-child(3) /*MenÃº desplegable*/
 	{		
 		background-color: inherit;
 		padding: 0 0;
@@ -539,7 +540,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 		background-color: rgba(0,0,0,0.7);
 	}
 
-	header ul:nth-child(3) li span:nth-child(1) /*Tool tips del menú desplegable*/
+	header ul:nth-child(3) li span:nth-child(1) /*Tool tips del menÃº desplegable*/
 	{
 		background-color: initial;
 		display: inline-block;
@@ -550,7 +551,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 		width: 6rem;
 	}
 
-	header ul:nth-child(3) li p /*iconos del menú desplegable*/
+	header ul:nth-child(3) li p /*iconos del menÃº desplegable*/
 	{
 		border-radius: 0px;
 		display: inline-block;
