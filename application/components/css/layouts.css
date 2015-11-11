@@ -44,3 +44,20 @@ and open the template in the editor.
         flex-direction: column;
     }
 }
+
+/*----------------------- LAYOUT_1 ---------------------------*/
+
+.layout_1 .c1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 2;
+}
+
+.layout_1 .c2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+}
+
