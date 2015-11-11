@@ -48,7 +48,7 @@ var recurso = {
  subtitulo: Texto. Opcional. Información menos jerárquica a aparecer junto al título. 
  */
 
-var componente = {
+var componente1 = {
     tipo: "titulo",
     estilo: "titulo_recurso",
     atributos: {
@@ -64,7 +64,7 @@ var componente = {
  
  */
 
-var componente = {
+var componente2 = {
     tipo: "parrafo",
     estilo: "parrafo_basico",
     atributos: {
@@ -81,7 +81,7 @@ var componente = {
  title: Texto. OPCIONAL. Contenido a mostrarse al ubicar el cursor sobre la imagen (pequeña descripción).
  */
 
-var componente = {
+var componente3 = {
     tipo: "imagen",
     estilo: "imagen_basica",
     atributos: {
@@ -96,7 +96,7 @@ var componente = {
  funcion: Texto. Obligatorio. Define la funcionalidad que debe tener el botón.
  */
 
-var componente = {
+var componente4 = {
     tipo: "boton",
     estilo: "submit_actividad",
     atributos: {
@@ -110,7 +110,7 @@ var componente = {
  url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra el archivo multimedia a reproducir.
  imagen_reproductor: Texto con formato URL. OPCIONAL. Corresponde a la ruta donde se encuentra la imagen a mostrar por defecto en el reproductor (antes de dar play si es un video, siempre si es un audio).
  */
-var componente = {
+var componente5 = {
     tipo: "reproductor",
     estilo: "reproductor_basico",
     atributos: {
@@ -127,7 +127,7 @@ var componente = {
  texto: Texto. OBLIGATORIO. Corresponde al texto a mostrarse en un elemento específico de la lista.
  */
 
-var componente = {
+var componente6 = {
     tipo: "lista",
     estilo: "lista_vertical",
     atributos: {
@@ -150,7 +150,7 @@ var componente = {
  *      parrafos: Objeto. OBLIGATORIO. Corresponde al texto de contenido en un tab específico separado por párrafos. 
  */
 
-var componente = {
+var componente7 = {
     tipo: "organizador",
     estilo: "organizador_saberes",
     atributos: {
@@ -206,7 +206,7 @@ var componente = {
  texto: Texto. OBLIGATORIO. Corresponde al texto a convertirse en drag (solo aplica si el tipo de drags o drops es texto).
  */
 
-var componente = {
+var componente8 = {
     tipo: "drag_drop",
     estilo: "dragdrop_horizontal",
     atributos: {
@@ -318,7 +318,7 @@ var componente = {
  como falsa para esa opción específica.
  */
 
-var componente = {
+var componente9 = {
     tipo: "pick_many",
     estilo: "pickmany_horizontal",
     atributos: {
@@ -382,7 +382,7 @@ var componente = {
  texto: Texto. OBLIGATORIO. Corresponde al texto a usarse como elemento ordenable en la actividad.
  */
 
-var componente = {
+var componente10 = {
     tipo: "sortable",
     estilo: "sortable_vertical",
     atributos: {
@@ -410,7 +410,7 @@ var componente = {
  
  */
 
-var componente = {
+var componente11 = {
     tipo: "select",
     estilo: "select_horizontal",
     atributos: {
