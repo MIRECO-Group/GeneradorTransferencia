@@ -2,9 +2,9 @@
     font-family: 'sena_icon';
     src: url('../fonts/sena-webfont.eot');
     src: url('../fonts/sena-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/sena-webfont.woff2') format('woff2'),
-         url('../fonts/sena-webfont.woff') format('woff'),
-         url('../fonts/sena-webfont.ttf') format('truetype');
+        url('../fonts/sena-webfont.woff2') format('woff2'),
+        url('../fonts/sena-webfont.woff') format('woff'),
+        url('../fonts/sena-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,35 +29,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 a:focus, a:active, 
@@ -74,386 +74,388 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 .icon_arrow_ed_s, #lesson_span_arrow, #unit_span_arrow
 {
-	font-family: "sena_icon";
-	color: #FFFFFF;
+    font-family: "sena_icon";
+    color: #FFFFFF;
 }
 
 #lesson_span_arrow, #unit_span_arrow
 {
-	color: #B2A809;
+    color: #B2A809;
 }
 
 .slash_color
 {
-	color: #08809F;
+    color: #08809F;
 }
 
 .divition_bot_span
 {
-	display: inline-block;
-	width: 0px;
-	height: 60px;
-	border-left: 1px solid #666;
-	border-right: 1px solid #666;
-	margin: 5px 0;
-	position: absolute;
+    display: inline-block;
+    width: 0px;
+    height: 60px;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+    margin: 5px 0;
+    position: absolute;
 }
 
 html
 {
-	height: 100%;
-	font-size: 16px; /*1rem = 16px*/
-	width: 100%;
+    height: 100%;
+    font-size: 16px; /*1rem = 16px*/
+    width: 100%;
 }
 
 body
 {
-	background-color: green;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	font-family: "SourceSans Pro";
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "SourceSans Pro";
 }
 header
 {
-	padding: 10px 10px 0 10px;
-	flex: 1 0 10%;
+    padding: 10px 10px 0 10px;
+    flex: 1 0 10%;
 }
 header div:nth-child(1) /*Cabecera azul*/
 {
-	background-image: url("../img/barrasuperior.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	border-radius: 5px;
-	display: flex;
-	justify-content: space-between;
-	height: auto;
-	position: relative;
-	z-index: 3;
+    background-image: url("../img/barrasuperior.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    position: relative;
+    z-index: 3;
 }
 header div:nth-child(1) > h1
 {
-	color: white;
-	font-size: 1.8rem;
-	margin: 0.8rem 0px 0.8rem 105px;
+    color: white;
+    font-size: 1.8rem;
+    margin: 0.8rem 0px 0.8rem 105px;
 }
 header div:nth-child(1) > input[type="button"] /*Botón que activa el menú desplegable*/
 {
-	font-family: 'sena_icon';
-	border: none;
-	color: #00435A;
-	background: #808080;
-	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
-	background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
-	height: auto;
-	font-size: 2rem;
-	border-top-right-radius: 3px;
-	width: 3rem;
+    font-family: 'sena_icon';
+    border: none;
+    color: #00435A;
+    background: #808080;
+    background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
+    background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
+    height: auto;
+    font-size: 2rem;
+    border-top-right-radius: 3px;
+    width: 3rem;
 }
 
 header div:nth-child(2)
 {
-	height: auto;
-	background-color: rgba(255, 255, 255, 0.85);
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.85);
 }
 header div:nth-child(2) > p:nth-child(1)/*Barra miga de pan*/
 {
-	background: #b2a809;
-	background: -moz-linear-gradient(left, #b2a809 0%, #403c00 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b2a809), color-stop(100%,#403c00));
-	background: -webkit-linear-gradient(left, #b2a809 0%,#403c00 100%);
-	background: -o-linear-gradient(left, #b2a809 0%,#403c00 100%);
-	background: -ms-linear-gradient(left, #b2a809 0%,#403c00 100%);
-	background: linear-gradient(to right, #b2a809 0%,#403c00 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2a809', endColorstr='#403c00',GradientType=1 );
-	/*Miga de pan*/
-	color: white;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	text-align: left;
-	padding: 10px 0px 5px 110px;
-	margin-top: -5px;
-	position: relative;
-	z-index: 2;
+    background: #b2a809;
+    background: -moz-linear-gradient(left, #b2a809 0%, #403c00 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b2a809), color-stop(100%,#403c00));
+    background: -webkit-linear-gradient(left, #b2a809 0%,#403c00 100%);
+    background: -o-linear-gradient(left, #b2a809 0%,#403c00 100%);
+    background: -ms-linear-gradient(left, #b2a809 0%,#403c00 100%);
+    background: linear-gradient(to right, #b2a809 0%,#403c00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2a809', endColorstr='#403c00',GradientType=1 );
+    /*Miga de pan*/
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: left;
+    padding: 10px 0px 5px 110px;
+    margin-top: -5px;
+    position: relative;
+    z-index: 2;
 }
 header div:nth-child(2) > p img/*Barra miga de pan - imagen bandera*/
 {
-	margin: 0px 5px;
-	width: 1rem;
+    margin: 0px 5px;
+    width: 1rem;
 }
 header div:nth-child(2) > p span#unit_span
 {
-	cursor: pointer;
+    cursor: pointer;
 }
 header div:nth-child(2) > p span#lesson_span
 {
-	cursor: pointer;
+    cursor: pointer;
 }
 header div:nth-child(2) > p:nth-child(2) /*Barra miga de pan - texto que se muestra extended_descrip_unidad*/
 {
-	display: none;
-	background-color: #00435A;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	color: #FFFFFF;
-	position: relative;
-	text-align: right;
-	padding: 15px 5px 5px 0rem;
-	z-index: 1;
-	margin-top: -10px;
+    display: none;
+    background-color: #00435A;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #FFFFFF;
+    position: relative;
+    text-align: right;
+    padding: 15px 5px 5px 0rem;
+    z-index: 1;
+    margin-top: -10px;
 }
 header div:nth-child(2) > p:nth-child(3) /*Barra miga de pan - texto que se muestra extended_descrip_leccion*/
 {
-	display: none;
-	background-color: #00435A;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	color: #FFFFFF;
-	position: relative;
-	text-align: right;
-	padding: 15px 5px 5px 0rem;
-	z-index: 1;
-	margin-top: -10px;
+    display: none;
+    background-color: #00435A;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #FFFFFF;
+    position: relative;
+    text-align: right;
+    padding: 15px 5px 5px 0rem;
+    z-index: 1;
+    margin-top: -10px;
 }
 header ul:nth-child(3) /* Menú desplegable de la barra superior */
 {
-	display: none;
-	background-color: rgba(0,0,0,0.6);
-	position: absolute;
-	list-style: none;
-	right: 10px;
-	top: 4rem;
-	margin-top: 0px;
-	padding: 1rem 0rem;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	width: 3rem;
-	z-index: 50;
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    list-style: none;
+    right: 10px;
+    top: 4rem;
+    margin-top: 0px;
+    padding: 1rem 0rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 3rem;
+    z-index: 50;
 }
 header ul:nth-child(3) li:hover
 {
-	background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.3);
 }
 header ul:nth-child(3) li p /* Iconos del menú desplegable */
 {
-	color: white;
-	cursor: pointer;
-	border-radius: 40px;
-	display: block;
-	font-size: 2rem;
-	margin-bottom: 0.5rem;
-	text-align: center;
-	font-family: 'sena_icon';
-	margin-top: 0.5rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-family: 'sena_icon';
+    margin-top: 0.5rem;
 }
 header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
 {
-	color: white;
-	background-color: #305570;
-	position: absolute;
-	display: none;
-	right: 3.5rem;
-	margin-top: 0.4rem;
-	padding: 5% 30%;
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    display: none;
+    right: 3.5rem;
+    margin-top: 0.4rem;
+    padding: 5% 30%;
 }
 header > img:nth-child(4) /*Logo del sena*/
 {
-	font-family: "sena_icon";
-	position: absolute;
-	top: 0.6rem;
-	left: 1.2rem;
-	width: 6rem;
-	z-index: 10;
+    font-family: "sena_icon";
+    position: absolute;
+    top: 0.6rem;
+    left: 1.2rem;
+    width: 6rem;
+    z-index: 10;
 }
-	
+
 div#content_container
 {
-	background-color: rgba(255,255,255,0.85);
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	overflow: auto;
-	margin: 0px 10px;
-	height: 100%;
-	flex: 5 1 80%;
+    background-color: rgba(255,255,255,0.85);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: auto;
+    margin: 0px 10px;
+    /* height: 100%; */
+    flex: 5 1 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 footer
 {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: nowrap;
-	align-items: stretch;
-	background: -moz-linear-gradient(top, rgba(128,128,128,0.6) 0%, rgba(230,230,230,0.6) 50%, rgba(179,179,179,0.6) 51%, rgba(102,102,102,0.6) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(128,128,128,0.6)), color-stop(50%,rgba(230,230,230,0.6)), color-stop(51%,rgba(179,179,179,0.6)), color-stop(100%,rgba(102,102,102,0.6)));
-	background: -webkit-linear-gradient(top, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
-	background: -o-linear-gradient(top, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
-	background: -ms-linear-gradient(top, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
-	background: linear-gradient(to bottom, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99808080', endColorstr='#99666666',GradientType=0 );
-	border-radius: 10px;
-	margin: 0 10px 10px 10px;
-	flex: 1 0 10%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    background: -moz-linear-gradient(top, rgba(128,128,128,0.6) 0%, rgba(230,230,230,0.6) 50%, rgba(179,179,179,0.6) 51%, rgba(102,102,102,0.6) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(128,128,128,0.6)), color-stop(50%,rgba(230,230,230,0.6)), color-stop(51%,rgba(179,179,179,0.6)), color-stop(100%,rgba(102,102,102,0.6)));
+    background: -webkit-linear-gradient(top, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
+    background: -o-linear-gradient(top, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
+    background: -ms-linear-gradient(top, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
+    background: linear-gradient(to bottom, rgba(128,128,128,0.6) 0%,rgba(230,230,230,0.6) 50%,rgba(179,179,179,0.6) 51%,rgba(102,102,102,0.6) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99808080', endColorstr='#99666666',GradientType=0 );
+    border-radius: 10px;
+    margin: 0 10px 10px 10px;
+    flex: 1 0 10%;
 }
 footer input[type="button"]
 {
-	font-family: 'sena_icon';
+    font-family: 'sena_icon';
 }
-	footer > div#left_buttons
-	{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-	}
+footer > div#left_buttons
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
 footer > div#left_buttons > input[type="button"]:nth-child(1) /*Botón Portada*/
 {
-	font-size: 2rem;
-	border-style: none;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	color: white;
-	padding: 3% 4%;
-	background: #49819f;
-	background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
-	background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
+    font-size: 2rem;
+    border-style: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+    padding: 3% 4%;
+    background: #49819f;
+    background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
+    background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
 }
 footer > div#left_buttons > input[type="button"]:nth-child(2) /*Botón Bibliografía*/
 {
-	font-size: 1.8rem;
-	border-style: none;
-	color: #00435A;
-	display: block;
-	padding: 3% 4%;
-	background: #808080;
-	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
-	background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
+    font-size: 1.8rem;
+    border-style: none;
+    color: #00435A;
+    display: block;
+    padding: 3% 4%;
+    background: #808080;
+    background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
+    background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
 footer > div#left_buttons > input[type="button"]:nth-child(4) /*Botón Glosario*/
 {
-	font-size: 1.8rem;
-	border-style: none;
-	color: #00435A;
-	display: block;
-	padding: 3% 4%;
-	background: #808080;
-	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
-	background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
+    font-size: 1.8rem;
+    border-style: none;
+    color: #00435A;
+    display: block;
+    padding: 3% 4%;
+    background: #808080;
+    background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
+    background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
 footer > div#center_buttons
 {
-	flex-grow: 1.5;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	background: #49819f;
-	background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
-	background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
-	border-radius: 5px;
-	width: 0rem;
+    flex-grow: 1.5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background: #49819f;
+    background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
+    background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
+    border-radius: 5px;
+    width: 0rem;
 }
 footer > div#center_buttons > input[type="button"]:nth-child(1)/*Botón ir a la izquierda*/
 {
-	font-size: 2rem;
-	background: #49819f;
-	background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
-	background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
-	border-style: none;
-	font-weight: bold;
-	color: #FFFFFF;
-	margin-right: -1px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+    font-size: 2rem;
+    background: #49819f;
+    background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
+    background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
+    border-style: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-right: -1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que recurso va*/
 {
-	font-size: 1.8rem;
-	background: #b3b3b3;
-	background: -moz-linear-gradient(top, #b3b3b3 0%, #ffffff 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3b3b3), color-stop(100%,#ffffff));
-	background: -webkit-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
-	background: -o-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
-	background: -ms-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
-	background: linear-gradient(to bottom, #b3b3b3 0%,#ffffff 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#ffffff',GradientType=0 );
-	border-style: none;
-	border-radius: 5px;
-	color: #00435A;
-	padding: 15px 15px;
-	margin: 5px 0px;
-	width: 15rem;
-	text-align: center;
+    font-size: 1.8rem;
+    background: #b3b3b3;
+    background: -moz-linear-gradient(top, #b3b3b3 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3b3b3), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
+    background: -o-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
+    background: linear-gradient(to bottom, #b3b3b3 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#ffffff',GradientType=0 );
+    border-style: none;
+    border-radius: 5px;
+    color: #00435A;
+    padding: 15px 15px;
+    margin: 5px 0px;
+    width: 15rem;
+    text-align: center;
 }
 footer > div#center_buttons > input[type="button"]:nth-child(3)/*Botón ir a la derecha*/
 {
-	font-size: 2rem;
-	background: #49819f;
-	background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
-	background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
-	border-style: none;
-	font-weight: bold;
-	color: #FFFFFF;
-	margin-left: -1px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+    font-size: 2rem;
+    background: #49819f;
+    background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
+    background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
+    border-style: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: -1px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 footer > div#center_buttons > ul#smart_menu
 {
-	display: none;
-	bottom: 80px;
-	right: 10px;
-	color: #FFFFFF;
-	position: absolute;
-	width: 130px;
+    display: none;
+    bottom: 80px;
+    right: 10px;
+    color: #FFFFFF;
+    position: absolute;
+    width: 130px;
 }
 footer > div#center_buttons > ul#smart_menu li
 {
-	background-color: #101E43;
-	border-radius: 2px;
-	padding: 5px 10px;
-	margin: 10px 0px;
+    background-color: #101E43;
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin: 10px 0px;
 }
 footer > div#center_buttons > ul#smart_menu li span
 {
-	float: right;
+    float: right;
 }
 footer > div#center_buttons > ul#smart_menu li p
 {
@@ -461,144 +463,144 @@ footer > div#center_buttons > ul#smart_menu li p
 }
 footer > div#right_buttons
 {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
 }
 footer > div#right_buttons > input[type="button"]:nth-child(1) /*Botón Mapa Conceptual*/
 {
-	font-size: 1.8rem;
-	border-style: none;
-	color: #00435A;
-	display: block;
-	padding: 3% 3%;
-	background: #808080;
-	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
-	background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
+    font-size: 1.8rem;
+    border-style: none;
+    color: #00435A;
+    display: block;
+    padding: 3% 3%;
+    background: #808080;
+    background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
+    background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
 footer > div#right_buttons > input[type="button"]:nth-child(3) /*Botón Descargable - PDF*/
 {
-	font-size: 1.8rem;
-	border-style: none;
-	color: #00435A;
-	display: block;
-	padding: 3% 3%;
-	background: #808080;
-	background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
-	background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
+    font-size: 1.8rem;
+    border-style: none;
+    color: #00435A;
+    display: block;
+    padding: 3% 3%;
+    background: #808080;
+    background: -moz-linear-gradient(top, #808080 0%, #e6e6e6 50%, #b3b3b3 51%, #666666 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(50%,#e6e6e6), color-stop(51%,#b3b3b3), color-stop(100%,#666666));
+    background: -webkit-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -o-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: -ms-linear-gradient(top, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    background: linear-gradient(to bottom, #808080 0%,#e6e6e6 50%,#b3b3b3 51%,#666666 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#666666',GradientType=0 );
 }
 footer > div#right_buttons > input[type="button"]:nth-child(4)
 {
-	font-size: 2rem;
-	border-style: none;
-	color: white;
-	padding: 4%;
-	background: #49819f;
-	background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
-	background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+    font-size: 2rem;
+    border-style: none;
+    color: white;
+    padding: 4%;
+    background: #49819f;
+    background: -moz-linear-gradient(top, #49819f 0%, #21749e 50%, #115570 51%, #1b2344 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#49819f), color-stop(50%,#21749e), color-stop(51%,#115570), color-stop(100%,#1b2344));
+    background: -webkit-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -o-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: -ms-linear-gradient(top, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    background: linear-gradient(to bottom, #49819f 0%,#21749e 50%,#115570 51%,#1b2344 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#1b2344',GradientType=0 );
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 @media (max-width: 701px){ /*************************Tablet***********************/
 
-	header ul:nth-child(3) /*Menú desplegable*/
-	{		
-		background-color: inherit;
-		padding: 0 0;
-		width: auto;
-	}
+    header ul:nth-child(3) /*Menú desplegable*/
+    {		
+        background-color: inherit;
+        padding: 0 0;
+        width: auto;
+    }
 
-	header ul:nth-child(3) li
-	{
-		background-color: rgba(0,0,0,0.8);
-		border-radius: 5px;
-		margin-top:10px;		
-		padding: 0px 5px;
-	}
+    header ul:nth-child(3) li
+    {
+        background-color: rgba(0,0,0,0.8);
+        border-radius: 5px;
+        margin-top:10px;		
+        padding: 0px 5px;
+    }
 
-	header ul:nth-child(3) li:hover
-	{
-		background-color: rgba(0,0,0,0.7);
-	}
+    header ul:nth-child(3) li:hover
+    {
+        background-color: rgba(0,0,0,0.7);
+    }
 
-	header ul:nth-child(3) li span:nth-child(1) /*Tool tips del menú desplegable*/
-	{
-		background-color: initial;
-		display: inline-block;
-		padding: 0px 5px 0px 0px;
-		position: inherit;
-		margin-top: 0;
-		right: 0;
-		width: 6rem;
-	}
+    header ul:nth-child(3) li span:nth-child(1) /*Tool tips del menú desplegable*/
+    {
+        background-color: initial;
+        display: inline-block;
+        padding: 0px 5px 0px 0px;
+        position: inherit;
+        margin-top: 0;
+        right: 0;
+        width: 6rem;
+    }
 
-	header ul:nth-child(3) li p /*iconos del menú desplegable*/
-	{
-		border-radius: 0px;
-		display: inline-block;
-		font-size: 1.5rem;
-		margin-top: 0px;
-		margin-bottom: 0px;		
-	}
+    header ul:nth-child(3) li p /*iconos del menú desplegable*/
+    {
+        border-radius: 0px;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-top: 0px;
+        margin-bottom: 0px;		
+    }
 
-	footer > div#left_buttons > input[type="button"]:nth-child(2)
-	{
-		display: none;
-	}
-	footer > div#left_buttons > input[type="button"]:nth-child(4)
-	{
-		display: none;
-	}
-	footer > div#right_buttons > input[type="button"]:nth-child(1)
-	{
-		display: none;
-	}
-	footer > div#right_buttons > input[type="button"]:nth-child(3)
-	{
-		display: none;
-	}
-	.divition_bot_span
-	{
-		display: none;
-	}
+    footer > div#left_buttons > input[type="button"]:nth-child(2)
+    {
+        display: none;
+    }
+    footer > div#left_buttons > input[type="button"]:nth-child(4)
+    {
+        display: none;
+    }
+    footer > div#right_buttons > input[type="button"]:nth-child(1)
+    {
+        display: none;
+    }
+    footer > div#right_buttons > input[type="button"]:nth-child(3)
+    {
+        display: none;
+    }
+    .divition_bot_span
+    {
+        display: none;
+    }
 }
 
 @media (max-width: 927px){
-	footer > div#center_buttons
-	{
-		flex-grow: 2;
-	}
+    footer > div#center_buttons
+    {
+        flex-grow: 2;
+    }
 
 }
 
 @media (max-width: 503px){ /***********************Smartphone**************************/
-	footer > div#center_buttons
-	{
-		flex-grow: 5;
-	}
+    footer > div#center_buttons
+    {
+        flex-grow: 5;
+    }
 }
 
 @media (max-width: 360px){
-	footer > div#center_buttons
-	{
-		flex-grow: 40;
-	}
+    footer > div#center_buttons
+    {
+        flex-grow: 40;
+    }
 }
