@@ -2,7 +2,7 @@
 
 (function () {
     angular.module("plantilla-transferencia", ["routes", "services"])
-            .controller("Initialize", function ($http, $log, $scope, $plantilla) {
+            .controller("Initialize", function ($http, $log, $scope, $plantilla, $contenido) {
                 var plantilla = this;
                 plantilla.config = $plantilla.get_generales();
             })
