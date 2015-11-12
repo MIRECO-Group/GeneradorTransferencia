@@ -5,22 +5,22 @@
             .factory('$plantilla', function ($log, $http) {
                 var config = {
                     data: generales,
-                    pagina_actual: 0,
+                    pagina_actual: 1,
                     pagina_final: 0,
-                    datos: macrorecursos,
+                    recursos: macrorecursos,
                     pages: []
                 };
 
                 var read_pages = function (data) {
                     $.each(data, function (k, v) {
                         if (v.hasOwnProperty("recursos")) {
-                            $.each(v, function (key, value) {
-                                var objExtra = {numberID: k};
-                                config.pages.push($.extend({}, v, objExtra));
+                            $.each(v.recursos, function (key, value) {
+                                var objExtra = {numberID: k, padre: v};
+                                config.pages.push($.extend(value, objExtra));
                             });
                         }
                     });
-                    $log.log(config);
+                    $log.log(config, data);
                     config.pagina_final = config.pages.length;
                 };
 
@@ -42,7 +42,7 @@
                     },
                     get_pagina_final: function () {
                         if (config.pagina_final === 0) {
-                            read_pages(config.data);
+                            read_pages(config.recursos);
                         }
                         return config.pagina_final;
                     }

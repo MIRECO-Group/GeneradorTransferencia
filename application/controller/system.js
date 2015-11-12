@@ -9,7 +9,7 @@
             .controller("Paginacion", function ($http, $log, $scope, $plantilla) {
                 this.paginas = {};
                 this.actual = $plantilla.get_pagina();
-                this.final = 1;
+                this.final = $plantilla.get_pagina_final();
                 this.pagina_actual = {};
                 //console.log($plantilla.get());
 
@@ -22,8 +22,5 @@
                 };
 
                 $scope.pagina = $plantilla.get_pagina();
-            })
-            .controller("Contenedor", function ($http, $log, $scope, $compile, $plantilla) {
-
             });
 })();
