@@ -8,6 +8,8 @@
                     pagina_actual: 1,
                     pagina_final: 0,
                     recursos: macrorecursos,
+                    pagina_inicial: generales.generales.pagina_inicial,
+                    configuracion: generales.generales,
                     pages: []
                 };
 

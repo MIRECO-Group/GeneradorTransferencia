@@ -5,15 +5,13 @@
  */
 
 
-/* global angular */
-
 (function () {
-    var app = angular.module("routes", ["organizadores"]);
-
-    app.directive("titulo1", function ($http) {
+    var app = angular.module("organizadores", []);
+    
+    app.directive("organizadorTabsSuperiores", function ($http) {
         return{
             restrict: "E",
-            templateUrl: "application/snippet/element/titulo/titulo1/titulo1.html",
+            templateUrl: "application/components/organizadores_graficos/organizador_tabs_superiores.html",
             controller: function () {
                 var menu = this;
 
@@ -37,7 +35,7 @@
                     menu.data = data;
                 });
             },
-            controllerAs: "menu"
+            controllerAs: "organizador"
         };
     });
 
