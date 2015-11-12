@@ -207,7 +207,7 @@ var componente7 = {
  */
 
 var componente8 = {
-    tipo: "drag_drop",
+    tipo: "actividad",
     estilo: "dragdrop_horizontal",
     atributos: {
         preguntas: {
@@ -319,7 +319,7 @@ var componente8 = {
  */
 
 var componente9 = {
-    tipo: "pick_many",
+    tipo: "actividad",
     estilo: "pickmany_horizontal",
     atributos: {
         preguntas: {
@@ -383,7 +383,7 @@ var componente9 = {
  */
 
 var componente10 = {
-    tipo: "sortable",
+    tipo: "actividad",
     estilo: "sortable_vertical",
     atributos: {
         enunciado: "",
@@ -411,7 +411,7 @@ var componente10 = {
  */
 
 var componente11 = {
-    tipo: "select",
+    tipo: "actividad",
     estilo: "select_horizontal",
     atributos: {
         preguntas: {
