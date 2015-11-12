@@ -2,7 +2,7 @@
 
 (function () {
     angular.module("services", [])
-            .service('$plantilla', function ($log, $http) {
+            .factory('$plantilla', function ($log, $http) {
                 var config = {
                     data: generales,
                     pagina_actual: 0,
@@ -10,15 +10,18 @@
                     datos: macrorecursos,
                     pages: []
                 };
-                
-                this.read_pages = function (data){
-                    $.each(data, function(k,v){
-                        if(v.hasOwnProperty("recursos")){
-                            this.read_pages(v);
-                        }else{
-                            config.pages.push();
+
+                var read_pages = function (data) {
+                    $.each(data, function (k, v) {
+                        if (v.hasOwnProperty("recursos")) {
+                            $.each(v, function (key, value) {
+                                var objExtra = {numberID: k};
+                                config.pages.push($.extend({}, v, objExtra));
+                            });
                         }
                     });
+                    $log.log(config);
+                    config.pagina_final = config.pages.length;
                 };
 
                 var interfaz = {
@@ -28,17 +31,17 @@
                     set: function (objData) {
                         config = objData;
                     },
-                    set_pagina: function(pagina){
+                    set_pagina: function (pagina) {
                         config.pagina_actual = pagina | 0;
                     },
-                    get_pagina: function(){
+                    get_pagina: function () {
                         return config.pagina_actual;
                     },
                     get_generales: function () {
                         return config.data;
                     },
-                    get_pagina_final: function(){
-                        if(!config.pagina_final){
+                    get_pagina_final: function () {
+                        if (config.pagina_final === 0) {
                             read_pages(config.data);
                         }
                         return config.pagina_final;
