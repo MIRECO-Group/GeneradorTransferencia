@@ -10,7 +10,7 @@
 var PLANTILLA = {};
 
 (function () {
-    angular.module("plantilla-transferencia", ["routes"])
+    angular.module("plantilla-transferencia", ["routes", "organizadores"])
             .factory('$plantilla', function ($log, $http) {
 
                 config = {};

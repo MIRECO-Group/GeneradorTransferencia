@@ -8,42 +8,13 @@ and open the template in the editor.
     Author     : ltoscano
 */
 
-/*---------------------------- PARA BORRAR ---------------------------------*/
-
-.c1{
-    background-color: orange;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-.c2{
-    background-color: gold;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-.c3{
-    background-color: greenyellow;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
-
-.c4{
-    background-color: cornflowerblue;
-    min-height: 10%;
-    display: flex;
-    flex-direction: row;
-}
 /*----------------------- LAYOUT_CONTEXTUALIZACION ---------------------------*/
 
 .dummy_layout{
     display: flex;
     flex-direction: column;
     width: 100%;
-    flex: 5 1 auto;
+    flex: 1;
     overflow: auto;
 }
 
@@ -73,3 +44,57 @@ and open the template in the editor.
         flex-direction: column;
     }
 }
+
+/*----------------------- LAYOUT_1 ---------------------------*/
+
+.layout_1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+.layout_1 .c1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 2;
+}
+
+.layout_1 .c2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+}
+
+
+@media (max-width: 750px) {  
+    .layout_1{
+        flex-direction: column;
+    }
+    
+    .layout_1 .c1{
+        order: 2 ;
+        flex: 0;
+    }
+
+    .layout_1 .c2{
+        flex: 0;
+        margin-left: 30%;
+        margin-right: 30%;
+        order: 1;
+    }
+}
+
+@media (max-width: 550px) {  
+    .layout_1 .c2{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+
+
+
