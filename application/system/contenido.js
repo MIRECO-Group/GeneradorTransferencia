@@ -165,9 +165,9 @@ var macrorecursos = {
             1: {
                 nombre: "nombre del recurso",
                 tipo: "layout",
-                estilo: "layout_sensibilizacion",
+                estilo: "dummy_layout",
                 componentes: {
-                    1: {
+                    2: {
                         tipo: "reproductor",
                         estilo: "reproductor_sensibilizacion",
                         atributos: {
@@ -175,6 +175,50 @@ var macrorecursos = {
                                 tipo: "video",
                                 url: "media/video/sapertura.mp4",
                                 imagen_reproductor: "img/sapertura.png"
+                            }
+                        }
+                    },
+                    3: {
+                        tipo: "organizador",
+                        estilo: "organizador_tabs_superiores",
+                        atributos: {
+                            titulo: "Caguai",
+                            tabs: {
+                                1: {
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_1",
+                                    componentes: {
+                                        1: {
+                                            tipo: "titulo",
+                                            estilo: "titulo_recurso",
+                                            atributos: {
+                                            },
+                                            componentes: {
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "imagen",
+                                            estilo: "imagen_basica",
+                                            atributos: {
+                                                thumbnail: "img/prueba_thumbnail.png",
+                                                url: "img/prueba.png",
+                                                descripcion: ""
+                                            }
+                                        },
+                                        3: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "Este es mi contenido de organizador gráfico 1",
+                                                    2: "Este es mi contenido de organizador gráfico 1",
+                                                    3: "Este es mi contenido de organizador gráfico 1"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
