@@ -1,53 +1,29 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 /* global angular, plantilla, generales */
 
-var PLANTILLA = {};
-
 (function () {
-    angular.module("plantilla-transferencia", ["routes", "organizadores"])
-            .factory('$plantilla', function ($log, $http) {
-
-                config = {};
-
-
-
-                var interfaz = {
-                    get: function () {
-                        return config;
-                    },
-                    set: function (objData) {
-                        config = objData;
-                    }
-                };
-
-                return interfaz;
-            })
+    angular.module("plantilla-transferencia", ["routes", "services"])
             .controller("Initialize", function ($http, $log, $scope, $plantilla) {
                 var plantilla = this;
-                plantilla.config = generales;
-
-
+                plantilla.config = $plantilla.get_generales();
             })
             .controller("Paginacion", function ($http, $log, $scope, $plantilla) {
-                //var paginacion = this;
                 this.paginas = {};
-                this.actual = 0;
+                this.actual = $plantilla.get_pagina();
                 this.final = 1;
                 this.pagina_actual = {};
+                //console.log($plantilla.get());
 
-                //this.actual = $plantilla.config.length;
+                $scope.showdiv = function () {
+                    var str = "<organizador_tabs_superiores></organizador_tabs_superiores>";
+                    var compiledeHTML = $compile(str)($scope);
+                    $("#content_container").append(compiledeHTML);
+                    var pagina = $plantilla.get_pagina() + 1;
+                    $plantilla.set_pagina(pagina);
+                };
 
-
-                console.log($plantilla.get());
-
+                $scope.pagina = $plantilla.get_pagina();
             })
-            .controller("Contenedor", function ($http, $log, $scope, $plantilla) {
-                $scope.pagina = "<titulo1></titulo1>";
+            .controller("Contenedor", function ($http, $log, $scope, $compile, $plantilla) {
+
             });
 })();

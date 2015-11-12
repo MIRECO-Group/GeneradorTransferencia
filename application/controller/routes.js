@@ -8,7 +8,7 @@
 /* global angular */
 
 (function () {
-    var app = angular.module("routes", []);
+    var app = angular.module("routes", ["organizadores"]);
 
     app.directive("titulo1", function ($http) {
         return{
