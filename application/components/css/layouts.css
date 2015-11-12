@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5/11/2015, 09:51:57 AM
+    Author     : ltoscano
+*/
+
+/*---------------------------- PARA BORRAR ---------------------------------*/
+
+.c1{
+    background-color: orange;
+    min-height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.c2{
+    background-color: gold;
+    min-height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.c3{
+    background-color: greenyellow;
+    min-height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.c4{
+    background-color: cornflowerblue;
+    min-height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+/*----------------------- LAYOUT_CONTEXTUALIZACION ---------------------------*/
+
+.dummy_layout{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 5 1 auto;
+    overflow: auto;
+}
+
+.dummy_layout .c1{
+    flex-grow: 1;
+    width: 100%;
+}
+
+.dummy_layout .contenedor_1{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-grow: 10;
+    width: 100%;
+}
+
+.dummy_layout .contenedor_1 .c2{
+    flex: 1 0 30%;
+}
+
+.dummy_layout .contenedor_1 .c3{
+    flex: 3 0 70%;
+}
+
+@media (max-width: 600px) { 
+    .dummy_layout .contenedor_1{
+        flex-direction: column;
+    }
+}

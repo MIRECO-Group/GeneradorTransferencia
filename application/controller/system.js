@@ -5,45 +5,49 @@
  */
 
 
-/* global angular, plantilla */
+/* global angular, plantilla, generales */
 
 var PLANTILLA = {};
 
 (function () {
-    var app = angular.module("plantilla-transferencia", ["routes"]);
+    angular.module("plantilla-transferencia", ["routes"])
+            .factory('$plantilla', function ($log, $http) {
 
-    app.controller("Initialize", ["$http", "$log", "$scope", function ($http, $log, $scope) {
-            var plantilla = this;
-            plantilla.config = {};
+                config = {};
 
-            $http.get("application/system/config.json").success(function (data) {
-                plantilla.config = data;
-                PLANTILLA = data;
-                $scope.$emit('plantillaLoaded', {data: data});
-                $log.log(data);
+
+
+                var interfaz = {
+                    get: function () {
+                        return config;
+                    },
+                    set: function (objData) {
+                        config = objData;
+                    }
+                };
+
+                return interfaz;
+            })
+            .controller("Initialize", function ($http, $log, $scope, $plantilla) {
+                var plantilla = this;
+                plantilla.config = generales;
+
+
+            })
+            .controller("Paginacion", function ($http, $log, $scope, $plantilla) {
+                //var paginacion = this;
+                this.paginas = {};
+                this.actual = 0;
+                this.final = 1;
+                this.pagina_actual = {};
+
+                //this.actual = $plantilla.config.length;
+
+
+                console.log($plantilla.get());
+
+            })
+            .controller("Contenedor", function ($http, $log, $scope, $plantilla) {
+                $scope.pagina = "<titulo1></titulo1>";
             });
-        }]);
-
-    app.controller("Paginacion", ["$log", "$http", "$scope", function ($log, $http, $scope) {
-            //var paginacion = this;
-            this.paginas = {};
-            this.actual = 0;
-            this.final = 1;
-
-            var that = this;
-
-            //$scope.$on('plantillaLoaded', function (event, data) {
-            $http.get("application/system/config.json").success(function (data) {
-                that.paginas = data.macrorecursos;
-                that.actual = 3;
-                $.each(that.paginas, function (k, v) {
-
-                });
-            });
-
-            /*$http.get("application/system/config.json").success(function (data) {
-             
-             });*/
-
-        }]);
 })();

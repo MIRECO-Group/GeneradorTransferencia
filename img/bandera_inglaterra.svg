@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 31.2 31.2" enable-background="new 0 0 31.2 31.2" xml:space="preserve">
+<g id="fondo">
+</g>
+<g id="barra_x5F_navegacion">
+</g>
+<g id="btn1_x5F_menu">
+</g>
+<g id="contador">
+</g>
+<g id="portada" display="none">
+</g>
+<g id="toolt_x5F_miga1" display="none">
+</g>
+<g id="toolt_x5F_miga2" display="none">
+</g>
+<g id="migadepan1_x5F_intro">
+	<g>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="4.388604e-002" y1="15.6086" x2="31.2611" y2="15.6086">
+			<stop  offset="0" style="stop-color:#403C00"/>
+			<stop  offset="0.1554" style="stop-color:#4A4501"/>
+			<stop  offset="0.4154" style="stop-color:#635E03"/>
+			<stop  offset="0.7459" style="stop-color:#8D8506"/>
+			<stop  offset="1" style="stop-color:#B2A809"/>
+		</linearGradient>
+		<circle fill="url(#SVGID_2_)" cx="15.7" cy="15.6" r="15.6"/>
+		<g>
+			<defs>
+				<circle id="SVGID_29_" cx="15.7" cy="15.6" r="14.5"/>
+			</defs>
+			<clipPath id="SVGID_3_">
+				<use xlink:href="#SVGID_29_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_3_)">
+				<rect x="-4.6" y="0.7" fill="#FCD116" width="40.5" height="15"/>
+				<rect x="-4.6" y="15.7" fill="#003893" width="40.5" height="7.4"/>
+				<rect x="-4.6" y="23.1" fill="#CE1126" width="40.5" height="7.4"/>
+			</g>
+		</g>
+		<ellipse opacity="0.25" fill="#FFFFFF" cx="15.9" cy="7.4" rx="10.1" ry="5.5"/>
+		
+			<ellipse transform="matrix(0.956 0.2933 -0.2933 0.956 2.1419 -5.4834)" opacity="0.2" fill="#FFFFFF" cx="19.4" cy="4.4" rx="3.3" ry="1.7"/>
+		
+			<ellipse transform="matrix(0.8566 0.516 -0.516 0.8566 6.298 -10.9972)" opacity="0.2" fill="#FFFFFF" cx="22.9" cy="5.8" rx="2" ry="1"/>
+		
+			<ellipse transform="matrix(0.9989 4.648021e-002 -4.648021e-002 0.9989 1.2389 -0.6605)" opacity="0.1" cx="14.8" cy="26.3" rx="8.3" ry="3.1"/>
+	</g>
+</g>
+<g id="migadepan2_x5F_prof" display="none">
+</g>
+<g id="menu_x5F_desp" display="none">
+</g>
+<g id="menu_x5F_hover" display="none">
+</g>
+<g id="bannersup">
+</g>
+<g id="tooltip2" display="none">
+</g>
+<g id="mouse-over-nav" display="none">
+</g>
+<g id="menu" display="none">
+</g>
+<g id="subportada" display="none">
+</g>
+</svg>
