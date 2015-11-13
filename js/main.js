@@ -82,8 +82,6 @@ $(document).ready(function ()
 
             if(!$("header > ul:nth-child(3) > li span").is(":visible"))
             {
-                console.info("it is not visible!");
-                console.log($("header > ul:nth-child(3) > li span"));
                 $("header > ul:nth-child(3) > li span").css('display','inline-block');
             }
         }
