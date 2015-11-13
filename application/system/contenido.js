@@ -69,7 +69,7 @@ var macrorecursos = {
                 nombre: "portada",
                 tipo: "layout",
                 estilo: "layout_portada",
-                background: "img/fondo_portada.png",
+                background: "img/fondo_portada.jpg",
                 componentes: {
                     1: {},
                     2: {
