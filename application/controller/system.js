@@ -12,8 +12,8 @@
                 this.final = $plantilla.get_pagina_final();
 
                 var page = $plantilla.get_obj_pagina(this.actual -1);
-                $contenido.set_obj_pgina(page);
-                var render = $contenido.get_render_pgina();
+                $contenido.set_obj_pagina(page);
+                var render = $contenido.get_render_pagina();
                 
                 $log.log(page, render);
 

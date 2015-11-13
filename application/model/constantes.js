@@ -6,5 +6,9 @@
 
 
 var BASE_DATA = {
-    
+    layouts: {
+        layout_portada: {
+            tag: "dummy_layout"
+        }
+    }
 };
