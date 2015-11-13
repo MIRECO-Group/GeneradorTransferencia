@@ -2,7 +2,7 @@
 
 (function () {
     var app = angular.module("services", []);
-    app.service('$plantilla', function ($log, $contenido) {
+    app.service('$plantilla', function ($log) {
         var config = {
             data: generales,
             pagina_actual: 1,
@@ -22,7 +22,7 @@
                     });
                 }
             });
-            $log.log(config, data);
+            // $log.log(config, data);
             config.pagina_final = config.pages.length;
         };
 
@@ -39,6 +39,9 @@
             get_pagina: function () {
                 return config.pagina_actual;
             },
+            get_obj_pagina: function (id) {
+                return config.pages[id];
+            },
             get_generales: function () {
                 return config.data;
             },
@@ -54,13 +57,42 @@
 
     app.service("$contenido", function ($log) {
         var data = {
-            page: {}
+            page: {},
+            render_page: null
+        };
+
+        var read_page = function () {
+            $.each(data.page, function (k, v) {
+                switch (k) {
+                    case "background":
+                        $("html").css({
+                            "background": "url(" + v + ") no-repeat center center fixed",
+                            "-webkit-background-size": "cover",
+                            "-moz-background-size": "cover",
+                            "-o-background-size": "cover",
+                            "background-size": "cover"
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            });
+        };
+
+        var read_components = function () {
+
         };
 
         var interface = {
-            set_page: function (objPage) {
+            set_obj_pgina: function (objPage) {
                 data.page = objPage;
-                $log.log(data);
+            },
+            get_obj_pgina: function () {
+                return data.page;
+            },
+            get_render_pgina: function () {
+                read_page();
+                return data.render_page;
             }
         };
 

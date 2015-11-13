@@ -6,21 +6,21 @@
                 var plantilla = this;
                 plantilla.config = $plantilla.get_generales();
             })
-            .controller("Paginacion", function ($http, $log, $scope, $plantilla) {
+            .controller("Paginacion", function ($http, $log, $scope, $plantilla, $contenido) {
                 this.paginas = {};
                 this.actual = $plantilla.get_pagina();
                 this.final = $plantilla.get_pagina_final();
-                this.pagina_actual = {};
-                //console.log($plantilla.get());
 
-                $scope.showdiv = function () {
-                    var str = "<organizador_tabs_superiores></organizador_tabs_superiores>";
-                    var compiledeHTML = $compile(str)($scope);
-                    $("#content_container").append(compiledeHTML);
-                    var pagina = $plantilla.get_pagina() + 1;
-                    $plantilla.set_pagina(pagina);
-                };
+                var page = $plantilla.get_obj_pagina(this.actual -1);
+                $contenido.set_obj_pgina(page);
+                var render = $contenido.get_render_pgina();
+                
+                $log.log(page, render);
 
-                $scope.pagina = $plantilla.get_pagina();
+                /*
+                 var compiledeHTML = $compile(render)($scope);
+                 $("#content_container").html(compiledeHTML);
+                 
+                 $scope.pagina = $plantilla.get_pagina();*/
             });
 })();
