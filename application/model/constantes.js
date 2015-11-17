@@ -8,10 +8,14 @@
 var BASE_DATA = {
     layouts: {
         layout_portada: {
-            tag: "dummy_layout"
+            tag: "dummy-layout"
         }
     },
-    organizador: {
-        
+    componentes: {
+        organizador : {
+            organizador_saberes : {
+                tag : "o-saberes"
+            }
+        }
     }
 };

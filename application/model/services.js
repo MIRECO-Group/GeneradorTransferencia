@@ -72,11 +72,10 @@
         };
 
         var read_page = function () {
-            var arrRead = null;
+            var objRead = null;
             //<editor-fold defaultstate="collapsed" desc="Lectura de páginas">
             if (data.page.hasOwnProperty("estilo")) {
-                var layout = read_layout(data.page.estilo);
-                arrRead = layout;
+                var objRead = read_layout(data.page);
 
                 var components = [];
                 $.each(data.page, function (k, v) {
@@ -93,30 +92,51 @@
                             //</editor-fold>
                             break;
                         case "componentes":
-                            $.each(v, function (key, value) {
-                                components.push(read_components(value));
+                            $.each(this, function () {
+                                components.push(read_components(this));
                             });
                             break;
                         default:
                             break;
                     }
                 });
-                
-                layout.prop("pt-componentes", components);
+                $log.log(objRead);
+                objRead.prop("pt-componentes", components);
             }
-            return arrRead;
+            return objRead;
             //</editor-fold>
         };
 
         var read_components = function (component) {
-            $log.log(component);
+            var objRead = null;
+            if (BASE_DATA.componentes.hasOwnProperty(component.tipo)
+                    && BASE_DATA.componentes[component.tipo].hasOwnProperty(component.estilo)) {
+                
+                objRead = $("<" + BASE_DATA.componentes[component.tipo][component.estilo].tag + "/>");
+                $log.log(component, objRead);
+                
+                if(component.atributos.tabs){
+                    var tabs = [];
+                    $.each(component.atributos.tabs, function(){
+                        tabs.push(read_tab(this));
+                    });
+                    objRead.prop("pt-tabs", tabs);
+                }
+                
+            }else{
+                $log.error(component, objRead, "ORGANIZADOR INEXISTENTE", component.tipo, "->", component.estilo);
+            }
+            return objRead;
         };
-
-        var read_layout = function (estilo) {
-            var obj = null;
-            if (BASE_DATA.layout.hasOwnProperty(estilo)) {
-                obj = $("<" + BASE_DATA.layout[estilo] + "/>");
-                obj.prop("pt-componentes", []);
+        
+        var read_tab = function (tab){
+            var obj = read_layout(tab);
+            if(tab.componentes && obj){
+                var componentes = [];
+                $.each(tab.componentes, function(){
+                    componentes.push(read_components(this));
+                });
+                obj.prop("pt-componentes", componentes);
             }
             return obj;
         };
@@ -126,12 +146,17 @@
          * que debe ser usado en el caso pertinente según el estilo definido
          * como parametro. Si el layout no existe @return null
          */
-        var read_layout = function (estilo) {
-            var layout = null;
+        var read_layout = function (object) {
+            //console.warn(object);
+            var estilo = object.estilo;
+            var obj = null;
             if (BASE_DATA.layouts.hasOwnProperty(estilo)) {
-                var tag = $("<" + BASE_DATA.layouts[estilo].tag + "/>");
+                obj = $("<" + BASE_DATA.layouts[estilo].tag + "/>");
+                obj.prop("pt-componentes", []);
+            }else{
+                $log.error(object, obj, "LAYOUT INEXISTENTE", estilo);
             }
-            return layout;
+            return obj;
         };
 
         /*
