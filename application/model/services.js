@@ -12,7 +12,7 @@
             configuracion: generales.generales,
             pages: []
         };
-        
+
         /*
          * Lee todos los elementos contenidos en @config.recursos donde están
          * contenidos los elementos que deben ser cargados. Además entrega el 
@@ -31,7 +31,7 @@
             $log.log(config);
             config.pagina_final = config.pages.length;
         };
-        
+
         /*
          * Funciones publicas para las funciones básicas de plantilla.
          */
@@ -72,35 +72,55 @@
         };
 
         var read_page = function () {
+            var arrRead = null;
             //<editor-fold defaultstate="collapsed" desc="Lectura de páginas">
-            var obj = "";
-            $.each(data.page, function (k, v) {
-                switch (k) {
-                    case "background":
-                        $("body").css({
-                            "background": "url(" + v + ") no-repeat center center fixed",
-                            "-webkit-background-size": "cover",
-                            "-moz-background-size": "cover",
-                            "-o-background-size": "cover",
-                            "background-size": "cover"
-                        });
-                        break;
-                    case "componentes":
-                        $.each(v, function (key, value) {
-                            obj += read_components(value);
-                        });
-                        break;
-                    default:
-                        break;
-                }
-            });
+            if (data.page.hasOwnProperty("estilo")) {
+                var layout = read_layout(data.page.estilo);
+                arrRead = layout;
+
+                var components = [];
+                $.each(data.page, function (k, v) {
+                    switch (k) {
+                        case "background":
+                            //<editor-fold defaultstate="collapsed" desc="Background">
+                            $("body").css({
+                                "background": "url(" + v + ") no-repeat center center fixed",
+                                "-webkit-background-size": "cover",
+                                "-moz-background-size": "cover",
+                                "-o-background-size": "cover",
+                                "background-size": "cover"
+                            });
+                            //</editor-fold>
+                            break;
+                        case "componentes":
+                            $.each(v, function (key, value) {
+                                components.push(read_components(value));
+                            });
+                            break;
+                        default:
+                            break;
+                    }
+                });
+                
+                layout.prop("pt-componentes", components);
+            }
+            return arrRead;
             //</editor-fold>
         };
 
         var read_components = function (component) {
             $log.log(component);
         };
-        
+
+        var read_layout = function (estilo) {
+            var obj = null;
+            if (BASE_DATA.layout.hasOwnProperty(estilo)) {
+                obj = $("<" + BASE_DATA.layout[estilo] + "/>");
+                obj.prop("pt-componentes", []);
+            }
+            return obj;
+        };
+
         /*
          * Busca en la página de constantes.js el estilo y busca el tag correcto
          * que debe ser usado en el caso pertinente según el estilo definido
@@ -113,7 +133,7 @@
             }
             return layout;
         };
-        
+
         /*
          * Funciones básicas para generar el código que debe ser visualizado
          */

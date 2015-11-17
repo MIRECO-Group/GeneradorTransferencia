@@ -10,5 +10,8 @@ var BASE_DATA = {
         layout_portada: {
             tag: "dummy_layout"
         }
+    },
+    organizador: {
+        
     }
 };
