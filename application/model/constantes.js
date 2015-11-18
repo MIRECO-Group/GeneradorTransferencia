@@ -9,6 +9,9 @@ var BASE_DATA = {
     layouts: {
         layout_portada: {
             tag: "dummy-layout"
+        },
+        layout_og_saberes : {
+            tag : ""
         }
     },
     componentes: {

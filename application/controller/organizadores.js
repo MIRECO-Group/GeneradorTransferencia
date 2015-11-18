@@ -6,69 +6,67 @@
 
 
 (function () {
-    var app = angular.module("organizadores", []);
-    
-    app.directive("organizadorTabsSuperiores", function ($http) {
-        return{
-            restrict: "E",
-            templateUrl: "application/components/organizadores_graficos/organizador_tabs_superiores.html",
-            controller: function () {
-                var menu = this;
+    angular.module("organizadores", [])
+            .directive("organizadorTabsSuperiores", function ($http) {
+                return{
+                    restrict: "E",
+                    templateUrl: "application/components/organizadores_graficos/organizador_tabs_superiores.html",
+                    controller: function () {
+                        var menu = this;
 
-                menu.menu = 0;
+                        menu.menu = 0;
 
-                menu.data = [];
+                        menu.data = [];
 
-                menu.isClicked = function (position) {
-                    return position === menu.menu;
+                        menu.isClicked = function (position) {
+                            return position === menu.menu;
+                        };
+
+                        menu.setClick = function (position) {
+                            menu.menu = position | 0;
+                        };
+
+                        menu.isSet = function (object, attr) {
+                            return typeof object[attr] !== 'undefined';
+                        };
+
+                        $http.get("application/system/config.json").success(function (data) {
+                            menu.data = data;
+                        });
+                    },
+                    controllerAs: "organizador"
                 };
+            })
+            .directive("scriptsSystem", function ($http) {
+                return{
+                    restrict: "E",
+                    templateUrl: "application/model/scripts.html",
+                    controller: function () {
+                        var menu = this;
 
-                menu.setClick = function (position) {
-                    menu.menu = position | 0;
+                        menu.menu = 0;
+
+                        menu.data = [];
+
+                        menu.isClicked = function (position) {
+                            return position === menu.menu;
+                        };
+
+                        menu.setClick = function (position) {
+                            menu.menu = position | 0;
+                        };
+
+                        menu.isSet = function (object, attr) {
+                            return typeof object[attr] !== 'undefined';
+                        };
+
+                        $http.get("application/system/config.json").success(function (data) {
+                            menu.data = data;
+                        });
+                    },
+                    controllerAs: "menu"
                 };
-
-                menu.isSet = function (object, attr) {
-                    return typeof object[attr] !== 'undefined';
-                };
-
-                $http.get("application/system/config.json").success(function (data) {
-                    menu.data = data;
-                });
-            },
-            controllerAs: "organizador"
-        };
-    });
-
-    app.directive("scriptsSystem", function ($http) {
-        return{
-            restrict: "E",
-            templateUrl: "application/model/scripts.html",
-            controller: function () {
-                var menu = this;
-
-                menu.menu = 0;
-
-                menu.data = [];
-
-                menu.isClicked = function (position) {
-                    return position === menu.menu;
-                };
-
-                menu.setClick = function (position) {
-                    menu.menu = position | 0;
-                };
-
-                menu.isSet = function (object, attr) {
-                    return typeof object[attr] !== 'undefined';
-                };
-
-                $http.get("application/system/config.json").success(function (data) {
-                    menu.data = data;
-                });
-            },
-            controllerAs: "menu"
-        };
-    });
+            });
 
     /*app.directive("footerDefault", function () {
      return {
