@@ -90,30 +90,63 @@
                                     });
                                     //</editor-fold>
                                     break;
-                                case "componentes":
-                                    $.each(this, function () {
-                                        components.push(read_components(this));
-                                    });
-                                    break;
+                                    /*
+                                     case "componentes":
+                                     $.each(this, function () {
+                                     components.push(read_components(this));
+                                     });
+                                     break;*/
                                 default:
                                     break;
                             }
                         });
-                        $log.log(objRead);
-                        objRead.prop("pt-componentes", components);
                     }
                     return objRead;
                     //</editor-fold>
                 };
-
+                
+                /*
+                 * Esta función identifica en la configuración el elemento que debe ser
+                 * obtenido.
+                 * @param {array} arrTreeId Array de elementos que corresponde a
+                 * la jerarquía en el que debe ser encontrado el objeto.
+                 * @returns {data.page|element.atributos@arr;tabs|element@arr;componentes} 
+                 * Corresponde al objeto que debe ser obtenido segun la jerarquía del
+                 * arreglo de elementos.
+                 */
+                var get_element_page = function(arrTreeId){
+                    $log.log(arrTreeId, data.page);
+                    var element = null;
+                    $.each(arrTreeId, function(k, v){
+                        if(k === 0 && v === 1){
+                            element = data.page;
+                            return true;
+                        }else if(element.hasOwnProperty("componentes")){
+                            element = element.componentes[v];
+                        }else if(element.atributos.hasOwnProperty("tabs")){
+                            element = element.atributos.tabs[v];
+                        }else {
+                            $log.error("COMPONENTE INEXISTENTE -> ANTERIOR", element);
+                            element = null;
+                            return false;
+                        }
+                    });
+                    return element;
+                };
+                
+                var render_element = function(){
+                    
+                };
+                
+                //<editor-fold defaultstate="collapsed" desc="Funciones temporales">
                 var read_components = function (component) {
                     var objRead = null;
                     if (BASE_DATA.componentes.hasOwnProperty(component.tipo)
                             && BASE_DATA.componentes[component.tipo].hasOwnProperty(component.estilo)) {
-
+                        
                         objRead = $("<" + BASE_DATA.componentes[component.tipo][component.estilo].tag + "/>");
                         $log.log(component, objRead);
-
+                        
                         if (component.atributos.tabs) {
                             var tabs = [];
                             $.each(component.atributos.tabs, function () {
@@ -121,13 +154,13 @@
                             });
                             objRead.prop("pt-tabs", tabs);
                         }
-
+                        
                     } else {
                         $log.error(component, objRead, "ORGANIZADOR INEXISTENTE", component.tipo, "->", component.estilo);
                     }
                     return objRead;
                 };
-
+                
                 var read_tab = function (tab) {
                     var obj = read_layout(tab);
                     if (tab.componentes && obj) {
@@ -139,7 +172,7 @@
                     }
                     return obj;
                 };
-
+                
                 /*
                  * Busca en la página de constantes.js el estilo y busca el tag correcto
                  * que debe ser usado en el caso pertinente según el estilo definido
@@ -157,6 +190,8 @@
                     }
                     return obj;
                 };
+                
+                //</editor-fold>
 
                 /*
                  * Funciones básicas para generar el código que debe ser visualizado
@@ -165,14 +200,17 @@
                     set_obj_pagina: function (objPage) {
                         data.page = objPage;
                         data.padre_page = objPage.padre;
+                        read_page();
                         delete data.page.padre;
                     },
                     get_obj_pagina: function () {
                         return data.page;
                     },
                     get_render_pagina: function () {
-                        read_page();
                         return data.render_page;
+                    },
+                    get_element_page: function (arrTreeId){
+                        return get_element_page(arrTreeId);
                     }
                 };
 

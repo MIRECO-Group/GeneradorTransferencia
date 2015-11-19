@@ -37,7 +37,8 @@
             <img src="img/logo_sena.svg" title="sena"/>
         </header>
 
-        <div id="content_container" ng-view>
+        <div id="content_container">
+            <dummy-layout pt-constructor="[1]"></dummy-layout>
         </div>
 
         <footer ng-controller="Paginacion as pag">
@@ -76,5 +77,6 @@
         <script src="application/controller/routes.js" type="text/javascript"></script>
         <script src="application/model/services.js" type="text/javascript"></script>
         <script src="application/controller/organizadores.js" type="text/javascript"></script>
+        <script src="application/controller/layouts.js" type="text/javascript"></script>
     </body>
 </html>

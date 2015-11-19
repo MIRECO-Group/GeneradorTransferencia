@@ -11,7 +11,7 @@ var BASE_DATA = {
             tag: "dummy-layout"
         },
         layout_og_saberes : {
-            tag : ""
+            tag : "dummy-layout"
         }
     },
     componentes: {

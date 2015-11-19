@@ -13,9 +13,9 @@
 
                 var page = $plantilla.get_obj_pagina(this.actual -1);
                 $contenido.set_obj_pagina(page);
-                var render = $contenido.get_render_pagina();
+                //var render = $contenido.get_render_pagina();
                 
-                $log.log(page, render);
+                //$log.log(page, render);
 
                 /*
                  var compiledeHTML = $compile(render)($scope);

@@ -10,6 +10,11 @@ and open the template in the editor.
 
 /*----------------------- LAYOUT_CONTEXTUALIZACION ---------------------------*/
 
+[pt-constructor]{
+    display:flex;
+    flex: 1;
+}
+
 .dummy_layout{
     display: flex;
     flex-direction: column;
@@ -51,6 +56,7 @@ and open the template in the editor.
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     flex: 1;
     overflow: auto;
 }
@@ -74,7 +80,7 @@ and open the template in the editor.
     .layout_1{
         flex-direction: column;
     }
-    
+
     .layout_1 .c1{
         order: 2 ;
         flex: 0;
