@@ -7,33 +7,29 @@
 
 (function () {
     var app = angular.module("organizadores", []);
-    
+
     app.directive("organizadorTabsSuperiores", function ($http) {
         return{
             restrict: "E",
             templateUrl: "application/components/organizadores_graficos/organizador_tabs_superiores.html",
             controller: function () {
-                var menu = this;
+                this.tab = 1;
 
-                menu.menu = 0;
-
-                menu.data = [];
-
-                menu.isClicked = function (position) {
-                    return position === menu.menu;
+                this.setTab = function (newTab) {
+                    this.tab = newTab;
                 };
 
-                menu.setClick = function (position) {
-                    menu.menu = position | 0;
+                this.isSet = function (tab) {
+                    return this.tab == tab;
                 };
 
-                menu.isSet = function (object, attr) {
-                    return typeof object[attr] !== 'undefined';
+                this.setActive = function (tab) {
+                    if (this.isSet(tab)) {
+                        return "active";
+                    }
                 };
-
-                $http.get("application/system/config.json").success(function (data) {
-                    menu.data = data;
-                });
+                
+                this.tabs = {}; //agregar aqui el objeto tabs leído por el servicio
             },
             controllerAs: "organizador"
         };

@@ -23,6 +23,11 @@ html, body{
     height: 100%;
 }
 
+.og_tabs_superiores .tabs{
+    display: flex;
+    width: 100%;
+}
+
 .og_tabs_superiores .tabs ul{
     list-style: none;
     display: flex;
@@ -35,7 +40,8 @@ html, body{
 
 .og_tabs_superiores .tabs li{
     color: white;
-    background-color: blue;
+    background-color: #00b2be;
+    border: 1px solid #70c6d3;
     border-radius: 10px 10px 0px 0px; 
     padding: 15px;
     margin-left: 2px;
@@ -45,9 +51,18 @@ html, body{
     width: 15%; 
 }
 
+.og_tabs_superiores .tabs li:hover{
+    cursor: pointer;
+}
+
+.og_tabs_superiores .tabs li.active{
+    border: 0px;
+    background-color: #044059; 
+}
+
 .og_tabs_superiores .contenido {
-    background-color: lightgray;
-    border: 2px solid blue;
+    background-color: white;
+    border: 2px solid #8669ab;
     width: 99%;
     margin: 0 auto;
     display: flex;
@@ -66,7 +81,16 @@ html, body{
 }
 
 .og_tabs_superiores .tabs li{
-    margin-bottom: 10px;
-    border-radius: 10px 10px 10px 10px; 
+    display: flex;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0px;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.og_tabs_superiores .contenido {
+    border-radius: 10px 10px 10px 10px;
 }
 }
