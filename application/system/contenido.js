@@ -69,7 +69,7 @@ var macrorecursos = {
                 nombre: "portada",
                 tipo: "layout",
                 estilo: "layout_portada",
-                background: "img/fondo_portada.png",
+                background: "img/fondo_portada.jpg",
                 componentes: {
                     1: {},
                     2: {
@@ -107,13 +107,43 @@ var macrorecursos = {
                                             }
                                         }
                                     }
+                                },
+                                2: {
+                                    tag: "Plantilla",
+                                    tipo: "layout",
+                                    estilo: "layout_og_saberes",
+                                    componentes: {
+                                        1: {
+                                            tipo: "titulo",
+                                            estilo: "titulo_saberes",
+                                            atributos: {
+                                                titulo: "subtitulo saberes",
+                                                subtitulo: "",
+                                                mostrar_icono: false
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "lista",
+                                            estilo: "lista_saberes",
+                                            atributos: {
+                                                categoria: "no_numerada",
+                                                elementos: {
+                                                    1: "Las TIC: Conceptualización.",
+                                                    2: "Recursos, herramientas y programas.",
+                                                    3: "TIC en educación.",
+                                                    4: "Nuevos conceptos.",
+                                                    5: "Nuevos competencias."
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
                     },
                     3: {
                         tipo: "organizador",
-                        estilo: "organizador_saberes",
+                        estilo: "organizador_saberes2",
                         atributos: {
                             titulo: "Resultados",
                             tabs: {
