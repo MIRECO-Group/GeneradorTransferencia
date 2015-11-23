@@ -8,7 +8,12 @@ and open the template in the editor.
     Author     : ltoscano
 */
 
-/*----------------------- LAYOUT_DUMMY ---------------------------*/
+/*----------------------- LAYOUT_CONTEXTUALIZACION ---------------------------*/
+
+[pt-constructor]{
+    display:flex;
+    flex: 1;
+}
 
 .dummy_layout{
     display: flex;
@@ -51,6 +56,7 @@ and open the template in the editor.
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     flex: 1;
     overflow: auto;
 }
@@ -74,7 +80,7 @@ and open the template in the editor.
     .layout_1{
         flex-direction: column;
     }
-    
+
     .layout_1 .c1{
         order: 2 ;
         flex: 0;
@@ -93,30 +99,6 @@ and open the template in the editor.
         margin-left: 25%;
         margin-right: 25%;
     }
-}
-
-/*----------------------- LAYOUT_2 ---------------------------*/
-
-.layout_2{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex: 1;
-    overflow: auto;
-}
-
-.layout_2 .c1{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 2;
-}
-
-.layout_2 .c2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 1;
 }
 
 
