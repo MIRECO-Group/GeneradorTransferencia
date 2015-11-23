@@ -6,71 +6,58 @@
 
 
 (function () {
-    var app = angular.module("organizadores", []);
+    angular.module("organizadores", [])
+            .directive("organizadorTabsSuperiores", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/tabs_superiores.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            /*
+             * this.chainId = $scope.ptConstructor; //Atributos iniciales que identifican el objeto
+             * $scope.tabs = {}; //agregar aqui el objeto tabs leído por el servicio
+             */
+            .controller("oTabController", function ($scope, $contenido, $render, $compile) {
+                this.chainId = $scope.ptConstructor;
+                $scope.tabs = $contenido.get_element_page(this.chainId).atributos.tabs;
+                var that = this;
 
-    app.directive("organizadorTabsSuperiores", function ($http) {
-        return{
-            restrict: "E",
-            templateUrl: "application/components/organizadores_graficos/organizador_tabs_superiores.html",
-            controller: function () {
-                this.tab = 1;
+                $scope.tab = 1;
 
-                this.setTab = function (newTab) {
-                    this.tab = newTab;
+                $scope.contTab = function (numTab) {
+                    var init = that.chainId.concat([numTab]);
+                    var element = $contenido.get_element_page(init);
+
+                    if (element) {
+                        var render = $contenido.render_element(element, init);
+
+                        if (render) {
+                            var selector = JSON.stringify(that.chainId);
+                            var where2Render = $("[ng-init='contTab(" + numTab + ")']",
+                                    "[pt-constructor='" + selector + "']");
+                            $render.jQueryCompile(render, where2Render, $compile, $scope);
+                        }
+                        console.log(element, render);
+                    }
                 };
 
-                this.isSet = function (tab) {
-                    return this.tab == tab;
+                $scope.setTab = function (newTab) {
+                    $scope.tab = newTab;
                 };
 
-                this.setActive = function (tab) {
-                    if (this.isSet(tab)) {
+                $scope.isSet = function (tab) {
+                    return $scope.tab == tab;
+                };
+
+                $scope.setActive = function (tab) {
+                    if ($scope.isSet(tab)) {
                         return "active";
                     }
                 };
-                
-                this.tabs = {}; //agregar aqui el objeto tabs leído por el servicio
-            },
-            controllerAs: "organizador"
-        };
-    });
-
-    app.directive("scriptsSystem", function ($http) {
-        return{
-            restrict: "E",
-            templateUrl: "application/model/scripts.html",
-            controller: function () {
-                var menu = this;
-
-                menu.menu = 0;
-
-                menu.data = [];
-
-                menu.isClicked = function (position) {
-                    return position === menu.menu;
-                };
-
-                menu.setClick = function (position) {
-                    menu.menu = position | 0;
-                };
-
-                menu.isSet = function (object, attr) {
-                    return typeof object[attr] !== 'undefined';
-                };
-
-                $http.get("application/system/config.json").success(function (data) {
-                    menu.data = data;
-                });
-            },
-            controllerAs: "menu"
-        };
-    });
-
-    /*app.directive("footerDefault", function () {
-     return {
-     restrict: "E",
-     templateUrl: "views/footer.html"
-     };
-     });//*/
-
-})();
+            });
+})(angular);
