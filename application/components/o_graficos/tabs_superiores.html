@@ -1,0 +1,12 @@
+<div class="og_tabs_superiores"> 
+    <div class="tabs">
+        <ul>
+            <li ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" ng-class="setActive(key)">
+                {{tab.tag}}
+            </li>
+        </ul>    
+    </div>
+    <div class="contenido">
+        <div ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" ng-init="contTab(key)"></div>
+    </div>
+</div>

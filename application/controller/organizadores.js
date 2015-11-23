@@ -10,7 +10,7 @@
             .directive("organizadorTabsSuperiores", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/organizadores_graficos/tabs_superiores.html",
+                    templateUrl: "application/components/o_graficos/tabs_superiores.html",
                     controller: "oTabController",
                     controllerAs: "organizador",
                     scope: {

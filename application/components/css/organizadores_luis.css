@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/11/2015, 11:24:29 AM
+    Author     : LUIS TOSCANO
+*/
+
+
+html, body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.og_tabs_superiores {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    max-width: 700px;
+    height: 100%;
+}
+
+.og_tabs_superiores .tabs{
+    display: flex;
+    width: 100%;
+}
+
+.og_tabs_superiores .tabs ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    max-width: 99%;
+    width: 100%;
+}
+
+.og_tabs_superiores .tabs li{
+    color: white;
+    background-color: #00b2be;
+    border: 1px solid #70c6d3;
+    border-radius: 10px 10px 0px 0px; 
+    padding: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    font-weight: bold;
+    width: 15%; 
+}
+
+.og_tabs_superiores .tabs li:hover{
+    cursor: pointer;
+}
+
+.og_tabs_superiores .tabs li.active{
+    border: 0px;
+    background-color: #044059; 
+}
+
+.og_tabs_superiores .contenido {
+    background-color: white;
+    border: 2px solid #8669ab;
+    width: 99%;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 0px 10px 10px 10px;
+    min-height: 10%;
+}
+
+.og_tabs_superiores .contenido div[class^=tab_]{
+    display: none;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {  
+    .og_tabs_superiores .tabs ul{
+    flex-direction: column;
+}
+
+.og_tabs_superiores .tabs li{
+    display: flex;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0px;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.og_tabs_superiores .contenido {
+    border-radius: 10px 10px 10px 10px;
+}
+}
