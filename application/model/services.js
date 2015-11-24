@@ -10,7 +10,8 @@
                     recursos: macrorecursos,
                     pagina_inicial: generales.generales.pagina_inicial,
                     configuracion: generales.generales,
-                    pages: []
+                    pages: [],
+                    contenedor_principal : $("#content_container")
                 };
 
                 /*
@@ -60,7 +61,8 @@
                             read_pages(config.recursos);
                         }
                         return config.pagina_final;
-                    }
+                    },
+                    base_container: config.contenedor_principal
                 };
                 return interfaz;
             })
@@ -236,7 +238,7 @@
                 var compile = function (render, jQueryContainer, $compile, $scope) {
                     var compiledeHTML = $compile(render)($scope);
                     //$("#content_container")
-                    jQueryContainer.html(compiledeHTML);
+                    jQueryContainer.append(compiledeHTML);
                 };
                 
                 return {
