@@ -170,6 +170,65 @@ and open the template in the editor.
 
 }
 
+/*----------------------- LAYOUT_4 ---------------------------*/
+
+.layout_4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.layout_4 .contenedor_1{
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+}
+
+.layout_4 .c1{
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.layout_4 .c2{
+    display: flex;
+    flex: 3;
+}
+
+.layout_4 .c3{
+    display: flex;
+    flex: 1;
+}
+
+@media (max-width: 550px) {  
+
+    .layout_4 .contenedor_1{
+        flex-direction: column;
+    }
+
+    .layout_4 .c3{
+        flex: 1 0 auto;
+    }
+    
+    .layout_4 .c4{
+        flex: 1 0 auto;
+    }
+
+}
+
+/*----------------------- LAYOUT_4 ---------------------------*/
+
+.layout_5{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.layout_5 .c1{
+    display: flex;
+    flex: 1;
+}
 
 
 
