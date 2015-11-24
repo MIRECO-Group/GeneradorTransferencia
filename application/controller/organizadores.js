@@ -24,27 +24,15 @@
              */
             .controller("oTabController", function ($scope, $contenido, $render, $compile) {
                 this.chainId = $scope.ptConstructor;
-                $scope.tabs = $contenido.get_element_page(this.chainId).atributos.tabs;
                 var that = this;
 
+
+                $scope.tabs = $contenido.get_element_page(this.chainId).atributos.tabs;
+                $.each($scope.tabs, function (key, value) {
+                    value.chain = JSON.stringify(that.chainId.concat([parseInt(key)]));
+                });
+
                 $scope.tab = 1;
-
-                $scope.contTab = function (numTab) {
-                    var init = that.chainId.concat([numTab]);
-                    var element = $contenido.get_element_page(init);
-
-                    if (element) {
-                        var render = $contenido.render_element(element, init);
-
-                        if (render) {
-                            var selector = JSON.stringify(that.chainId);
-                            var where2Render = $("[ng-init='contTab(" + numTab + ")']",
-                                    "[pt-constructor='" + selector + "']");
-                            $render.jQueryCompile(render, where2Render, $compile, $scope);
-                        }
-                        console.log(element, render);
-                    }
-                };
 
                 $scope.setTab = function (newTab) {
                     $scope.tab = newTab;
@@ -59,5 +47,32 @@
                         return "active";
                     }
                 };
+            })
+            .directive("ptNewTab", function () {
+                return{
+                    restrict: "A",
+                    controller: "newTabController",
+                    scope: {
+                        ptNewTab: "="
+                    }
+                };
+            })
+            .controller("newTabController", function ($scope, $contenido, $render, $compile, $element) {
+                this.chainId = $scope.ptConstructor;
+                var that = this;
+                var init = JSON.parse($scope.ptNewTab);
+
+                var element = $contenido.get_element_page(init);
+
+                if (element) {
+                    var render = $contenido.render_element(element, init);
+
+                    if (render) {
+                        var where2Render = $element;
+                        console.log(where2Render, render);
+                        $render.jQueryCompile(render, where2Render, $compile, $scope);
+
+                    }
+                }
             });
 })(angular);

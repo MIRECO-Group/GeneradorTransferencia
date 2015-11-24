@@ -233,15 +233,15 @@
                 return interface;
             })
             .factory("$render", function ($log) {
-                var compile = function (render, Jcontainer, $compile, $scope) {
+                var compile = function (render, jQueryContainer, $compile, $scope) {
                     var compiledeHTML = $compile(render)($scope);
                     //$("#content_container")
-                    Jcontainer.html(compiledeHTML);
+                    jQueryContainer.html(compiledeHTML);
                 };
                 
                 return {
-                    jQueryCompile : function (render, Jcontainer, $compile, $scope) {
-                        compile(render, Jcontainer, $compile, $scope);
+                    jQueryCompile : function (render, jQueryContainer, $compile, $scope) {
+                        compile(render, jQueryContainer, $compile, $scope);
                     }
                 };
             });
