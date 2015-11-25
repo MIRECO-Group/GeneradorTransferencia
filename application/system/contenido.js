@@ -142,41 +142,6 @@ var macrorecursos = {
                         }
                     },
                     3: {
-                        tipo: "organizador",
-                        estilo: "organizador_saberes",
-                        atributos: {
-                            titulo: "Resultados",
-                            tabs: {
-                                1: {
-                                    tag: "1",
-                                    tipo: "layout",
-                                    estilo: "layout_og_saberes",
-                                    componentes: {
-                                        1: {
-                                            tipo: "titulo",
-                                            estilo: "titulo_saberes",
-                                            atributos: {
-                                                titulo: "subtitulo resultados",
-                                                subtitulo: "",
-                                                mostrar_icono: false
-                                            }
-                                        },
-                                        2: {
-                                            tipo: "lista",
-                                            estilo: "lista_saberes",
-                                            atributos: {
-                                                categoria: "no_numerada",
-                                                elementos: {
-                                                    1: "Caracterizar los Recursos Educativos Digitales para la enseñanza de lenguas en el SENA de acuerdo con los criterios pedagógicos establecidos por la institución."
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    4: {
                         tipo: "boton",
                         estilo: "boton_portada",
                         atributos: {

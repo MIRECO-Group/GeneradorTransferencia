@@ -22,7 +22,9 @@
                     var page = $plantilla.get_obj_pagina(idPage - 1);
                     $contenido.set_obj_pagina(page);
                     var render = $contenido.render_element(page, [1]);
+                    console.log(page, render);
                     var where2Render = $plantilla.base_container;
+                    
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 };
 

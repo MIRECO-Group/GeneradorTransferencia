@@ -22,7 +22,7 @@
              * this.chainId = $scope.ptConstructor; //Atributos iniciales que identifican el objeto
              * $scope.tabs = {}; //agregar aqui el objeto tabs leído por el servicio
              */
-            .controller("oTabController", function ($scope, $contenido, $render, $compile) {
+            .controller("oTabController", function ($scope, $contenido) {
                 this.chainId = $scope.ptConstructor;
                 var that = this;
 

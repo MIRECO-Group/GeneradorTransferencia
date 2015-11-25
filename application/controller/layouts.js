@@ -9,12 +9,12 @@
 
 (function () {
     angular.module("layouts", [])
-            .directive("dummyLayout", function () {
+            .directive("layout0", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/dummy.html",
+                    templateUrl: "application/components/layouts/0.html",
                     scope: {
                         'ptConstructor': '='
                     }

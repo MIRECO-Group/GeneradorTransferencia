@@ -7,46 +7,38 @@
 var BASE_DATA = {
     layouts: {
         layout_portada: {
-            tag: "dummy-layout"
+            tag: "layout4"
         },
         layout_og_saberes: {
             tag: "layout5"
         },
         layout_sensibilizacion: {
-            tag: "layout2"
+            tag: "layout5"
         },
         layout_contextualizacion: {
-            tag: "layout-contextualizacion"
+            tag: "layout0"
         },
         layout_subportada: {
-            tag: "layout-subportada"
+            tag: ""
         },
         layout_og_subportada_1: {
-            tag: "layout-og-subportada-1"
+            tag: ""
         },
         layout_recurso_1: {
-            tag: "layout-recurso-1"
+            tag: "layout03"
         },
-        layout_og2_1: {
-            tag: "layout_og2_1"
-        },
-        layout_recurso_4: {
-            tag: "layout-recurso-4"
-        },
+        
+        
         layout_recordemos: {
-            tag: "layout-recordemos"
+            tag: ""
         },
-        layout_og1_1: {
-            tag: "layout-og1-1"
-        },
+        
+        
         layout_examen:{
-            tag: "layout-examen"
+            tag: ""
         },
         layout_portada_examen:{
-            tag: "layout-portada-examen"
-        },
-        layout_recurso_5:{
-            tag: "layout-recurso-5"
+            tag: ""
         }
     },
     componentes: {
