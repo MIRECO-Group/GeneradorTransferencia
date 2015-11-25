@@ -35,11 +35,11 @@
                 $scope.tab = 1;
 
                 $scope.setTab = function (newTab) {
-                    $scope.tab = newTab;
+                    $scope.tab = parseInt(newTab);
                 };
 
                 $scope.isSet = function (tab) {
-                    return $scope.tab == tab;
+                    return $scope.tab === parseInt(tab);
                 };
 
                 $scope.setActive = function (tab) {
@@ -59,7 +59,6 @@
             })
             .controller("newTabController", function ($scope, $contenido, $render, $compile, $element) {
                 this.chainId = $scope.ptConstructor;
-                var that = this;
                 var init = JSON.parse($scope.ptNewTab);
 
                 var element = $contenido.get_element_page(init);

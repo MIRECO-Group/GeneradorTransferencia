@@ -20,12 +20,67 @@
                     }
                 };
             })
-            .directive("layoutOgSaberes", function () {
+            .directive("layout1", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
                     templateUrl: "application/components/layouts/1.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("layout2", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/2.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("layout3", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/3.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("layout4", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/4.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("layout5", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/5.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("layout6", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/6.html",
                     scope: {
                         'ptConstructor': '='
                     }

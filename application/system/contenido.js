@@ -143,7 +143,7 @@ var macrorecursos = {
                     },
                     3: {
                         tipo: "organizador",
-                        estilo: "organizador_saberes2",
+                        estilo: "organizador_saberes",
                         atributos: {
                             titulo: "Resultados",
                             tabs: {

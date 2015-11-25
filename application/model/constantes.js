@@ -4,14 +4,49 @@
  * and open the template in the editor.
  */
 
-
 var BASE_DATA = {
     layouts: {
         layout_portada: {
             tag: "dummy-layout"
         },
         layout_og_saberes: {
-            tag: "layout_og_saberes"
+            tag: "layout5"
+        },
+        layout_sensibilizacion: {
+            tag: "layout2"
+        },
+        layout_contextualizacion: {
+            tag: "layout-contextualizacion"
+        },
+        layout_subportada: {
+            tag: "layout-subportada"
+        },
+        layout_og_subportada_1: {
+            tag: "layout-og-subportada-1"
+        },
+        layout_recurso_1: {
+            tag: "layout-recurso-1"
+        },
+        layout_og2_1: {
+            tag: "layout_og2_1"
+        },
+        layout_recurso_4: {
+            tag: "layout-recurso-4"
+        },
+        layout_recordemos: {
+            tag: "layout-recordemos"
+        },
+        layout_og1_1: {
+            tag: "layout-og1-1"
+        },
+        layout_examen:{
+            tag: "layout-examen"
+        },
+        layout_portada_examen:{
+            tag: "layout-portada-examen"
+        },
+        layout_recurso_5:{
+            tag: "layout-recurso-5"
         }
     },
     componentes: {
@@ -22,14 +57,3 @@ var BASE_DATA = {
         }
     }
 };
-
-function merge_options(obj1, obj2) {
-    var obj3 = {};
-    for (var attrname in obj1) {
-        obj3[attrname] = obj1[attrname];
-    }
-    for (var attrname in obj2) {
-        obj3[attrname] = obj2[attrname];
-    }
-    return obj3;
-}
