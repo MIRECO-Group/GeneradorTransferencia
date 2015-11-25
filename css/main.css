@@ -94,11 +94,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 {
 	display: inline-block;
 	width: 0px;
-	height: 60px;
+	height: 45px;
 	border-left: 1px solid #004C5E;
 	border-right: 1px solid #004C5E;
-	margin: 5px 0;
 	position: absolute;
+	margin: 7px 0px;
 }
 
 html
@@ -390,20 +390,12 @@ footer > div#center_buttons > input[type="button"]:nth-child(1)/*BotÃ³n ir a l
 footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que recurso va*/
 {
 	font-size: 1.8rem;
-	background: #b3b3b3;
-	background: -moz-linear-gradient(top, #b3b3b3 0%, #ffffff 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3b3b3), color-stop(100%,#ffffff));
-	background: -webkit-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
-	background: -o-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
-	background: -ms-linear-gradient(top, #b3b3b3 0%,#ffffff 100%);
-	background: linear-gradient(to bottom, #b3b3b3 0%,#ffffff 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#ffffff',GradientType=0 );
+	background-color: #FFFFFF;
 	border-style: none;
-	border-radius: 5px;
 	color: #00435A;
 	padding: 15px 15px;
-	margin: 5px 0px;
 	width: 15rem;
+	height: 2rem;
 	text-align: center;
 }
 footer > div#center_buttons > input[type="button"]:nth-child(3)/*BotÃ³n ir a la derecha*/
