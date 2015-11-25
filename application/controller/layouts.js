@@ -92,7 +92,7 @@
                 var selector = "pt-panel";
 
                 var contPanel = function (numPanel) {
-                    var init = that.chainId.concat([numPanel]);
+                    var init = that.chainId.concat([parseInt(numPanel)]);
                     var element = $contenido.get_element_page(init);
 
                     if (element) {

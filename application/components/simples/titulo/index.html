@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title>Organizador gráfico de título</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../css/organizadores_santiago.css">
-    </head>
-    <body ng-app="plantilla-transferencia">
-        <div class="title_container">
-            <div class="title_title_icon">
-                <span class="transfe_font title_icon_style">h</span>
-            </div>
-            <div class="title_title_text">
-                <h1>This title</h1>
-            </div>
-            <div class="title_subtitle_text">
-                <h5> <span class="transfe_font">></span> And a subtitle</h5>
-            </div>
-        </div>     
-        <script src="../../../../js/jquery-1.10.2.js"></script>
-        <script src="../../js/main_santiago.js"></script>
-    </body>
-</html>
+<div class="title_container">
+    <div class="title_title_icon">
+        <span class="transfe_font title_icon_style" pt-icon>h</span>
+    </div>
+    <div class="title_title_text">
+        <h1>{{titulo}}</h1>
+    </div>
+    <div class="title_subtitle_text">
+        <h5> <span class="transfe_font">></span> {{subtitulo}}</h5>
+    </div>
+</div>

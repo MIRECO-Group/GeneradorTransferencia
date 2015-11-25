@@ -115,7 +115,7 @@ var macrorecursos = {
                                     componentes: {
                                         1: {
                                             tipo: "titulo",
-                                            estilo: "titulo_saberes",
+                                            estilo: "titulo_saberes2",
                                             atributos: {
                                                 titulo: "subtitulo saberes",
                                                 subtitulo: "",

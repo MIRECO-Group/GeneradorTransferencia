@@ -46,6 +46,11 @@ var BASE_DATA = {
             organizador_saberes: {
                 tag: "organizador-tabs-superiores"
             }
+        },
+        titulo: {
+            titulo_saberes: {
+                tag: "titulo"
+            }
         }
     }
 };
