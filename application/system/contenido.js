@@ -87,9 +87,9 @@ var macrorecursos = {
                                             tipo: "titulo",
                                             estilo: "titulo_saberes",
                                             atributos: {
-                                                titulo: "subtitulo saberes",
-                                                subtitulo: "",
-                                                mostrar_icono: false
+                                                titulo: "Titulo saberes",
+                                                subtitulo: "subtitulo de los saberes",
+                                                mostrar_icono: true
                                             }
                                         },
                                         2: {
