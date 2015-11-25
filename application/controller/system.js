@@ -25,11 +25,29 @@
                     var where2Render = $plantilla.base_container;
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 };
-
+                
                 render_content(this.actual);
                 
+                for(var i=this.actual; i < this.final; i++){
+                    //render_content(i);
+                }
+                
                 this.cambiar_pagina = function (idPage){
-                    render_content(idPage);
+                    this.actual = idPage;
+                    $plantilla.set_pagina(this.actual);
+                    render_content(this.actual);
+                };
+                
+                this.sgte_pagina = function (){
+                    this.actual = this.actual++;
+                    $plantilla.set_pagina(this.actual);
+                    render_content(this.actual);
+                };
+                
+                this.ant_pagina = function (){
+                    this.actual = this.actual--;
+                    $plantilla.set_pagina(this.actual);
+                    render_content(this.actual);
                 };
 
                 /* <div dummy-layout pt-constructor="[1]"></div> */
