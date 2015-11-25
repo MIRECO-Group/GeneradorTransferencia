@@ -10,7 +10,7 @@ var BASE_DATA = {
             tag: "layout4"
         },
         layout_og_saberes: {
-            tag: "layout5"
+            tag: "layout2"
         },
         layout_sensibilizacion: {
             tag: "layout5"
@@ -27,29 +27,30 @@ var BASE_DATA = {
         layout_recurso_1: {
             tag: "layout03"
         },
-        
-        
         layout_recordemos: {
             tag: ""
         },
-        
-        
-        layout_examen:{
+        layout_examen: {
             tag: ""
         },
-        layout_portada_examen:{
+        layout_portada_examen: {
             tag: ""
         }
     },
     componentes: {
         organizador: {
             organizador_saberes: {
-                tag: "organizador-tabs-superiores"
+                tag: "pt-organizador-tabs-superiores"
             }
         },
         titulo: {
             titulo_saberes: {
-                tag: "titulo"
+                tag: "pt-titulo"
+            }
+        },
+        parrafo: {
+            parrafo_basico: {
+                tag: "pt-parrafo"
             }
         }
     }

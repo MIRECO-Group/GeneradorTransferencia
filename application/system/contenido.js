@@ -115,7 +115,7 @@ var macrorecursos = {
                                     componentes: {
                                         1: {
                                             tipo: "titulo",
-                                            estilo: "titulo_saberes2",
+                                            estilo: "titulo_saberes",
                                             atributos: {
                                                 titulo: "subtitulo saberes",
                                                 subtitulo: "",
@@ -123,16 +123,13 @@ var macrorecursos = {
                                             }
                                         },
                                         2: {
-                                            tipo: "lista",
-                                            estilo: "lista_saberes",
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
                                             atributos: {
-                                                categoria: "no_numerada",
-                                                elementos: {
-                                                    1: "Las TIC: Conceptualización.",
-                                                    2: "Recursos, herramientas y programas.",
-                                                    3: "TIC en educación.",
-                                                    4: "Nuevos conceptos.",
-                                                    5: "Nuevos competencias."
+                                                parrafos: {
+                                                    1: "aaaa",
+                                                    2: "bbb",
+                                                    3: "cc"
                                                 }
                                             }
                                         }
