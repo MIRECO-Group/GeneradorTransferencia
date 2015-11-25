@@ -421,6 +421,7 @@ footer > div#center_buttons > ul#smart_menu
 	color: #FFFFFF;
 	position: absolute;
 	width: 130px;
+	z-index: 1;
 }
 footer > div#center_buttons > ul#smart_menu li
 {
