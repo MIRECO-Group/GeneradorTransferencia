@@ -77,20 +77,20 @@ html, body{
 
 @media (max-width: 600px) {  
     .og_tabs_superiores .tabs ul{
-    flex-direction: column;
-}
+        flex-direction: column;
+    }
 
-.og_tabs_superiores .tabs li{
-    display: flex;
-    border-radius: 10px 10px 10px 10px;
-    margin: 0px;
-    margin-bottom: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-}
+    .og_tabs_superiores .tabs li{
+        display: flex;
+        border-radius: 10px 10px 10px 10px;
+        margin: 0px;
+        margin-bottom: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
 
-.og_tabs_superiores .contenido {
-    border-radius: 10px 10px 10px 10px;
-}
+    .og_tabs_superiores .contenido {
+        border-radius: 10px 10px 10px 10px;
+    }
 }
