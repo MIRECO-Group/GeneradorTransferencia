@@ -52,6 +52,11 @@ var BASE_DATA = {
             parrafo_basico: {
                 tag: "pt-parrafo"
             }
+        },
+        imagen:{
+            imagen_basica: {
+                tag: "pt-imagen"
+            }
         }
     }
 };

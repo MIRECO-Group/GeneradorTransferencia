@@ -129,7 +129,7 @@ div.img_container button
 	cursor: pointer;
 }
 
-/* ----- Sección del popup ----- */
+/* ----- Secci?n del popup ----- */
 div.blackout
 {
 	background-color: black;
@@ -145,15 +145,16 @@ div.blackout
 }
 div.popup
 {
-	display: flex;
-    height: 100%;
-    left: 0;    	
-    position: fixed;
-    top: 0;
-    margin: 0 auto;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	z-index: 10000000;
 }
 div.popup img
 {
@@ -181,7 +182,7 @@ div.popup button
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5247', endColorstr='#e32221',GradientType=1 );
 }
 
-/*-------------------SECCIÓN DEL ORGANIZADOR GRÁFICO: TÍTULO--------------------------------*/
+/*-------------------SECCI?N DEL ORGANIZADOR GR?FICO: T?TULO--------------------------------*/
 
 .transfe_font
 {

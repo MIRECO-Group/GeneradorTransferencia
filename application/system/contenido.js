@@ -71,7 +71,15 @@ var macrorecursos = {
                 estilo: "layout_portada",
                 background: "img/fondo_portada.jpg",
                 componentes: {
-                    1: {},
+                    1: {
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
+                        atributos: {
+                            thumbnail: "img/prueba_thumbnail.png",
+                            url: "img/prueba.png",
+                            descripcion: ""
+                        }
+                    },
                     2: {
                         tipo: "organizador",
                         estilo: "organizador_saberes",
@@ -89,7 +97,7 @@ var macrorecursos = {
                                             atributos: {
                                                 titulo: "Titulo saberes",
                                                 subtitulo: "subtitulo de los saberes",
-                                                mostrar_icono: true
+                                                icono: "saberes"
                                             }
                                         },
                                         2: {
@@ -114,12 +122,12 @@ var macrorecursos = {
                                     estilo: "layout_og_saberes",
                                     componentes: {
                                         1: {
-                                            tipo: "titulo",
-                                            estilo: "titulo_saberes",
+                                            tipo: "imagen",
+                                            estilo: "imagen_basica",
                                             atributos: {
-                                                titulo: "subtitulo saberes",
-                                                subtitulo: "",
-                                                mostrar_icono: false
+                                                thumbnail: "img/prueba_thumbnail2.png",
+                                                url: "img/prueba2.png",
+                                                descripcion: ""
                                             }
                                         },
                                         2: {
