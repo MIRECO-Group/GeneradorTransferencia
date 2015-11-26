@@ -1,0 +1,280 @@
+
+/*--------------------------- ORG_ES_NUM -----------------------------------  */
+
+.orgEsfNum {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 30px auto 0 auto;
+  max-width: 700px;
+  text-align: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/*btns*/
+.orgEsfNum-contBtns {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  height: 140px;
+}
+/*3 bnts*/
+.orgEsfNum-contBtns--3btns .orgEsfNum-col3,
+.orgEsfNum-contBtns--3btns .orgEsfNum-col4,
+.orgEsfNum-contBtns--3btns .orgEsfNum-col1 .orgEsfNum-btn:last-child {
+  display: none;
+}
+/*4 bnts*/
+.orgEsfNum-contBtns--4btns {
+  height: 196px;
+}
+.orgEsfNum-contBtns--4btns .orgEsfNum-col3,
+.orgEsfNum-contBtns--4btns .orgEsfNum-col4 {
+  display: none;
+}
+/*5 bnts*/
+.orgEsfNum-contBtns--5btns .orgEsfNum-col4,
+.orgEsfNum-contBtns--5btns .orgEsfNum-col1 .orgEsfNum-btn:last-child {
+  display: none;
+}
+/*6 bnts*/
+.orgEsfNum-contBtns--6btns .orgEsfNum-col1 .orgEsfNum-btn:last-child {
+  display: none;
+}
+/**/
+.orgEsfNum-col {
+  color: inherit;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.orgEsfNum-col:nth-child(1),
+.orgEsfNum-col:nth-child(4) {
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+.orgEsfNum-col:nth-child(2),
+.orgEsfNum-col:nth-child(3) {
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+.orgEsfNum-col:nth-child(1) {
+  margin-right: -20px;
+}
+.orgEsfNum-col:nth-child(4) {
+  margin-left: -20px;
+}
+.orgEsfNum-btn {
+  background-color: #01b3be;
+  border: 5px solid #c9eff1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  height: 54px;
+  line-height: 44px;
+  margin: 1px;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  width: 55px;
+}
+.orgEsfNum-btn.active {
+  background-color: #004b5e;
+  border-color: #004b5e;
+}
+.orgEsfNum-btn:not(.active):hover {
+  border-color: #01b3be;
+ }
+/*txts*/
+.orgEsfNum-contTxts {
+  border: 2px solid #e2ddeb;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  color: #357181;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  margin-left: 40px;
+  padding: 20px;
+  text-align: justify;
+}
+.orgEsfNum-txt > h3 {
+  border-bottom: 2px solid #c9eff1;
+  margin-bottom: 30px;
+  padding-bottom: 4px;
+  text-align: left;
+}
+.orgEsfNum-txt > p {
+  color: #5b606e;
+  line-height: 28px;
+  padding-left: 12px;
+  text-align: justify;
+}
+/* Extra small devices */
+@media screen and (max-width: 767px) {
+  .orgEsfNum {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  .orgEsfNum-contTxts  {
+    margin: 8px;
+  }
+  .orgEsfNum-contBtns {
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: auto;
+  }
+  .orgEsfNum-col {
+    margin: 0 !important;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  .orgEsfNum-img {
+    margin: 2px;
+  }
+}
+
+/*Anotaciones:
+Aplicando la clase "orgEsfNum-contBtns--3btns" al elemento "orgEsfNum-contBtns"
+genera la estructura de 3 esferas.
+Para 4, 5, 6 el proceder es similar, solo cambiando el valor del número.
+*/
+
+
+/*--------------------------- ORG_TIT_TXT_IMG ------------------------------  */
+
+.orgTitTxtImg {
+  align-items: center;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  margin: 30px auto 0;
+  max-width: 1024px;
+  width: 80%;
+}
+.orgTitTxtImg-contenMedia {
+  width: 500px;
+}
+.orgTitTxtImg-media {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+  vertical-align: middle;
+  width: 100%;
+}
+.orgTitTxtImg-contenImg {
+  width: 100%;
+  height: inherit;
+  position: relative;
+  display: block;
+}
+.orgTitTxtImg-img {
+  width: 100%;
+}
+.orgTitTxtImg-audio {
+  display: none;
+}
+.orgTitTxtImg-video {
+  display: none;
+}
+.orgTitTxtImg-contenTxt {
+  margin-left: 70px;
+}
+.orgTitTxtImg-txt > h3 {
+  border-bottom: 2px solid #357181;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  text-align: left;
+}
+.orgTitTxtImg-txt > p {
+  line-height: 26px;
+  text-align: justify;
+}
+/*Media queries*/
+@media screen and (max-width: 767px) {
+  .orgTitTxtImg  {
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    width: 98%;
+  }
+  .orgTitTxtImg-contenMedia  {
+    margin-bottom: 30px;
+    width: 65%;
+  }
+  .orgTitTxtImg-contenTxt  {
+    margin: 0 10px;
+  }
+  .orgTitTxtImg-txt > h3 {
+    border-color: transparent;
+  }
+}
+
+/*Nota:
+Según el elemento que quiera visualizarse (imagen, audio o vídeo),
+aplicarle diplay: none o display: block según la intención a:
+orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
+*/
+
+/*--------------------------- ORG_TIT_TXT_IMG ------------------------------  */
+
+.orgTxtImgGrande {
+  margin: 10px auto;
+  max-width: 1024px;
+  display: block;
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  -webkit-box-shadow: 0px 4px 4px 0 rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 4px 4px 0 rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 4px 4px 0 rgba(50, 50, 50, 0.75);
+  width: 98%;
+}
+/*image*/
+.orgTxtImgGrande-contenImg {
+  display: block;
+  height: inherit;
+  position: relative;
+}
+.orgTxtImgGrande-img {
+  width: 100%;
+}
+/*texto*/
+.orgTxtImgGrande-contenTxt {
+  line-height: 24px;
+  padding: 20px 38px;
+  text-align: justify;
+}
+/*Media queries*/
+@media screen and (max-width: 767px) {
+  .orgTxtImgGrande-contenTxt {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

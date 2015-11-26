@@ -69,9 +69,17 @@ var macrorecursos = {
                 nombre: "portada",
                 tipo: "layout",
                 estilo: "layout_portada",
-                background: "img/fondo_portada.png",
+                background: "img/fondo_portada.jpg",
                 componentes: {
-                    1: {},
+                    1: {
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
+                        atributos: {
+                            thumbnail: "img/prueba_thumbnail.png",
+                            url: "img/prueba.png",
+                            descripcion: ""
+                        }
+                    },
                     2: {
                         tipo: "organizador",
                         estilo: "organizador_saberes",
@@ -87,9 +95,9 @@ var macrorecursos = {
                                             tipo: "titulo",
                                             estilo: "titulo_saberes",
                                             atributos: {
-                                                titulo: "subtitulo saberes",
-                                                subtitulo: "",
-                                                mostrar_icono: false
+                                                titulo: "Titulo saberes",
+                                                subtitulo: "subtitulo de los saberes",
+                                                icono: "saberes"
                                             }
                                         },
                                         2: {
@@ -107,37 +115,29 @@ var macrorecursos = {
                                             }
                                         }
                                     }
-                                }
-                            }
-                        }
-                    },
-                    3: {
-                        tipo: "organizador",
-                        estilo: "organizador_saberes",
-                        atributos: {
-                            titulo: "Resultados",
-                            tabs: {
-                                1: {
-                                    tag: "1",
+                                },
+                                2: {
+                                    tag: "Plantilla",
                                     tipo: "layout",
                                     estilo: "layout_og_saberes",
                                     componentes: {
                                         1: {
-                                            tipo: "titulo",
-                                            estilo: "titulo_saberes",
+                                            tipo: "imagen",
+                                            estilo: "imagen_basica",
                                             atributos: {
-                                                titulo: "subtitulo resultados",
-                                                subtitulo: "",
-                                                mostrar_icono: false
+                                                thumbnail: "img/prueba_thumbnail2.png",
+                                                url: "img/prueba2.png",
+                                                descripcion: ""
                                             }
                                         },
                                         2: {
-                                            tipo: "lista",
-                                            estilo: "lista_saberes",
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
                                             atributos: {
-                                                categoria: "no_numerada",
-                                                elementos: {
-                                                    1: "Caracterizar los Recursos Educativos Digitales para la enseñanza de lenguas en el SENA de acuerdo con los criterios pedagógicos establecidos por la institución."
+                                                parrafos: {
+                                                    1: "aaaa",
+                                                    2: "bbb",
+                                                    3: "cc"
                                                 }
                                             }
                                         }
@@ -146,7 +146,7 @@ var macrorecursos = {
                             }
                         }
                     },
-                    4: {
+                    3: {
                         tipo: "boton",
                         estilo: "boton_portada",
                         atributos: {

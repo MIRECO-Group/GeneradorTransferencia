@@ -6,45 +6,39 @@
         <title>Test_Plantilla</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
+        <link href="application/components/css/for_test.css" rel="stylesheet" type="text/css"/>
+        <link href="application/components/css/organizadores_luis.css" rel="stylesheet" type="text/css"/>
+        <link href="application/components/css/organizadores_santiago.css" rel="stylesheet" type="text/css"/>
         <link href="application/components/css/layouts.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/main.css">
+        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
     </head>
     <body ng-app="plantilla-transferencia">
         <header ng-controller="Initialize as initz">
             <div>
                 <h1>Tema {{initz.config.tema.numero}}. {{initz.config.tema.nombre}}</h1>
-                <input type="button" value="W" class="closed">                 
+                <input type="button" value="W" class="closed">
             </div>
             <div>
                 <p>
                     <span id="unit_span"> Unidad {{initz.config.unidad.numero}} &nbsp;</span>
                     <span>{{initz.config.unidad.nombre}} &nbsp;</span>
-                    <span class="icon_arrow_ed_s">x</span>
+                    <span class="icon_arrow_ed_s">></span>
                     <span id="lesson_span">Lección {{initz.config.leccion.numero}} &nbsp;</span> 
                     <span>{{initz.config.leccion.nombre}}</span>
                 </p>
             </div>
             <ul>
-                <li><span>tooltips</span><p>P</p></li>
-                <li><span>tooltips</span><p>Q</p></li>
-                <li><span>tooltips</span><p>T</p></li>
-                <li><span>tooltips</span><p>U</p></li>
-                <li><span>tooltips</span><p>R</p></li>
+                <li><span>tooltips</span><p>A</p></li>
+                <li><span>tooltips</span><p>B</p></li>
+                <li><span>tooltips</span><p>C</p></li>
+                <li><span>tooltips</span><p>D</p></li>
+                <li><span>tooltips</span><p>E</p></li>
             </ul>
             <img src="img/logo_sena.svg" title="sena"/>
         </header>
 
-        <div id="content_container" ng-controller="Paginacion as pag">
-            <!--<iframe src="#"></iframe>-->
-            <div class="dummy_layout">
-                <div class="c1">1</div>
-                <div class="contenedor_1">
-                    <div class="c2">2</div>
-                    <div class="c3">3</div>
-                </div>
-            </div>
-
+        <div id="content_container" class="owl-carousel">
         </div>
 
         <footer ng-controller="Paginacion as pag">
@@ -55,9 +49,9 @@
                 <input type="button" value="i">
             </div>
             <div id="center_buttons">
-                <input type="button" value="w">
-                <p>{{pag.actual}} <span class="slash_color">/</span> {{pag.final}}</p>
-                <input type="button" value="x">
+                <input type="button" value="<">
+                <p></p>
+                <input type="button" value=">">
                 <ul id="smart_menu">
                     <li><p>PDF<span class="icon_arrow_ed_s">k</span></p></li>
                     <li><p>Mapa<span class="icon_arrow_ed_s">j</span></p></li>
@@ -76,9 +70,15 @@
         <script src="js/jquery-1.10.2.js"></script>
         <script src="js/angular.min.js" type="text/javascript"></script>
         <script src="js/main.js"></script>
-        <script src="application/system/datos_generales.js" type="text/javascript"></script>
-        <script src="application/system/contenido.js" type="text/javascript"></script>
-        <script src="application/controller/system.js" type="text/javascript"></script>
+        <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+        
+        <script src="application/controller/layouts.js" type="text/javascript"></script>
+        <script src="application/controller/organizadores.js" type="text/javascript"></script>
         <script src="application/controller/routes.js" type="text/javascript"></script>
+        <script src="application/controller/system.js" type="text/javascript"></script>
+        <script src="application/model/constantes.js" type="text/javascript"></script>
+        <script src="application/model/services.js" type="text/javascript"></script>
+        <script src="application/system/contenido.js" type="text/javascript"></script>
+        <script src="application/system/datos_generales.js" type="text/javascript"></script>
     </body>
 </html>

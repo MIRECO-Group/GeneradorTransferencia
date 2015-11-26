@@ -7,47 +7,51 @@
 
 /* global angular, plantilla, generales */
 
-var PLANTILLA = {};
-
 (function () {
-    angular.module("plantilla-transferencia", ["routes"])
-            .factory('$plantilla', function ($log, $http) {
+    angular.module("plantilla-transferencia", ["routes", "services"])
+            .controller("Initialize", function ($plantilla) {
+                var plantilla = this;
+                plantilla.config = $plantilla.get_generales();
+            })
+            .controller("Paginacion", function ($compile, $scope, $plantilla, $contenido, $render) {
+                this.paginas = {};
+                this.actual = $plantilla.get_pagina();
+                this.final = $plantilla.get_pagina_final();
 
-                config = {};
-
-
-
-                var interfaz = {
-                    get: function () {
-                        return config;
-                    },
-                    set: function (objData) {
-                        config = objData;
-                    }
+                var render_content = function (idPage) {
+                    var page = $plantilla.get_obj_pagina(idPage - 1);
+                    $contenido.set_obj_pagina(page);
+                    var render = $contenido.render_element(page, [1]);
+                    console.log(page, render);
+                    var where2Render = $plantilla.base_container;
+                    
+                    $render.jQueryCompile(render, where2Render, $compile, $scope);
                 };
 
-                return interfaz;
-            })
-            .controller("Initialize", function ($http, $log, $scope, $plantilla) {
-                var plantilla = this;
-                plantilla.config = generales;
+                render_content(this.actual);
 
+                for (var i = this.actual; i < this.final; i++) {
+                    //render_content(i);
+                }
 
-            })
-            .controller("Paginacion", function ($http, $log, $scope, $plantilla) {
-                //var paginacion = this;
-                this.paginas = {};
-                this.actual = 0;
-                this.final = 1;
-                this.pagina_actual = {};
+                this.cambiar_pagina = function (idPage) {
+                    this.actual = idPage;
+                    $plantilla.set_pagina(this.actual);
+                    render_content(this.actual);
+                };
 
-                //this.actual = $plantilla.config.length;
+                this.sgte_pagina = function () {
+                    this.actual = this.actual++;
+                    $plantilla.set_pagina(this.actual);
+                    render_content(this.actual);
+                };
 
+                this.ant_pagina = function () {
+                    this.actual = this.actual--;
+                    $plantilla.set_pagina(this.actual);
+                    render_content(this.actual);
+                };
 
-                console.log($plantilla.get());
-
-            })
-            .controller("Contenedor", function ($http, $log, $scope, $plantilla) {
-                $scope.pagina = "<titulo1></titulo1>";
+                /* <div dummy-layout pt-constructor="[1]"></div> */
             });
 })();

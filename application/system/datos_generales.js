@@ -12,10 +12,14 @@ var generales = {
         nombre: "Uso de TIC parte 1",
         lugar: "Londres"
     },
-    tema:{
+    tema: {
         numero: 1,
         nombre: "¿Qué se entiende por TIC?",
         lugar: "Aeropuerto Heathrow"
+    },
+    generales: {
+        pagina_inicial: 1,
+        precargas: []
     }
 };
 

@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'transferenciaregular';
+    src: url('../../../fonts/trans_pro-webfont.eot');
+    src: url('../../../fonts/trans_pro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/trans_pro-webfont.woff2') format('woff2'),
+         url('../../../fonts/trans_pro-webfont.woff') format('woff'),
+         url('../../../fonts/trans_pro-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'SourceSans Pro';
+    src:url('../../../fonts/SourceSansPro-Regular.otf');
+    font-weight:normal;
+    font-style:normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline : 0;
+}
+
+input[type="button"]
+{
+	cursor: pointer;
+}
+
+html
+{
+	height: 100%;
+	font-size: 16px; /*1rem = 16px*/
+}
+
+body
+{
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: "SourceSans Pro";
+}
+
+div.img_container
+{
+	position: relative;
+	width: 80%;
+	border: solid 1px black;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+div.img_container img
+{
+	width: 100%;
+	margin: 0 auto;
+}
+
+div.img_container button
+{
+	font-family: 'transferenciaregular';
+	color: white;
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	background: #49819f;
+	background: -moz-radial-gradient(center, ellipse cover, #49819f 0%, #00435a 85%);
+	background: -webkit-radial-gradient(center, ellipse cover, #49819f 0%,#00435a 85%);
+	background: radial-gradient(ellipse at center, #49819f 0%,#00435a 85%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#00435a',GradientType=1 );
+	border-style: solid;
+	border-width: 3px;
+	border-color: #C48800;
+	border-radius: 40px;
+	font-size: 45px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+/* ----- Secci?n del popup ----- */
+div.blackout
+{
+	background-color: black;
+	display: none;
+	position: fixed;
+	opacity: 0.9;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+div.popup
+{
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	z-index: 10000000;
+}
+div.popup img
+{
+	margin: 0 auto;
+	width: 80%;
+}
+div.popup button
+{
+	font-family: 'transferenciaregular';
+	position: absolute;
+	color: white;
+	right: 8%;
+	top: 17%;
+	font-size: 20px;
+	padding: 5px 3px;
+	cursor: pointer;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #A1161A;
+	border-radius: 40px;
+	background: #ff5247;
+	background: -moz-radial-gradient(center, ellipse cover, #ff5247 0%, #e32221 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #ff5247 0%,#e32221 100%);
+	background: radial-gradient(ellipse at center, #ff5247 0%,#e32221 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5247', endColorstr='#e32221',GradientType=1 );
+}
+
+/*-------------------SECCI?N DEL ORGANIZADOR GR?FICO: T?TULO--------------------------------*/
+
+.transfe_font
+{
+	font-family: "transferenciaregular"
+}
+
+div#content_container div.title_container
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+div#content_container div.title_title_icon
+{
+	color: white;
+	padding: 5px;
+	width: 35px;
+	font-size: 30px;
+	border-radius: 25px;
+	height: 35px;
+	text-align: center;
+	margin-left: 10px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d43209+50,490700+100 */
+	background: #d43209; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #d43209 50%, #490700 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #d43209 50%,#490700 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #d43209 50%,#490700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d43209', endColorstr='#490700',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+div#content_container div.title_title_text
+{
+	margin: 0 15px;
+	font-size: 2rem;
+}
+
+div#content_container div.title_subtitle_text
+{
+	font-size: 1.5rem;
+}
