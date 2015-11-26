@@ -2,8 +2,8 @@
     <img ng-src="{{atributos.thumbnail}}" alt="{{atributos.descripcion}}">
     <button type="button" ng-click="abrir_pop()">0</button>
 </div>
-<div class="blackout"></div>
-<div class="popup">
+<div class="blackout" ng-click="cerrar_pop()"></div>
+<div class="popup" ng-click="cerrar_pop()">
     <img ng-src="{{atributos.url}}" alt="{{atributos.descripcion}}">
     <button type="button" ng-click="cerrar_pop()">7</button>
 </div>
