@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/for_test.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/organizadores_luis.css" rel="stylesheet" type="text/css"/>
+        <script src="../../../js/angular.min.js" type="text/javascript"></script>
+        <script src="../js/module_test.js" type="text/javascript"></script>
+    </head>
+    <body ng-app="test">
+-->
+        <div class="og_tabs_superiores"> <!-- ng-controller="TabController as tabCtrl" -->
+            <div class="tabs">
+                <ul>
+                    <li ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" ng-class="setActive(key)">
+                       {{tab.tag}}
+                    </li>
+                </ul>    
+            </div>
+            <div class="contenido">
+                <div ng-repeat="(key, tab) in tabs" ng-show="isSet(key)"></div>
+            </div>
+        </div>
+<!--
+    </body>
+</html> 
+-->
