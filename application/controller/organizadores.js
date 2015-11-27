@@ -50,42 +50,40 @@
                     }
                 };
 
-                $scope.addTab = function() {
+                $scope.addTab = function () {
                     if ($scope.tab < cantTabs && $scope.tab >= 1) {
-                        console.log("flagging "+$scope.tab+" !! "+cantTabs);
+                        console.log("flagging " + $scope.tab + " !! " + cantTabs);
                         $scope.tab = $scope.tab + 1;
                     }
-                }
+                };
 
-                $scope.subtractTab = function() {
+                $scope.subtractTab = function () {
                     if ($scope.tab <= cantTabs && $scope.tab > 1) {
-                        console.log("flagging "+$scope.tab+" !! "+cantTabs);
+                        console.log("flagging " + $scope.tab + " !! " + cantTabs);
                         $scope.tab = $scope.tab - 1;
                     }
-                }
+                };
 
-                $scope.checkMore = function()
+                $scope.checkMore = function ()
                 {
-                    if($scope.tab < cantTabs && $scope.tab >= 1)
+                    if ($scope.tab < cantTabs && $scope.tab >= 1)
                     {
                         return true;
-                    }
-                    else
+                    } else
                     {
                         return false;
                     }
-                }
+                };
 
-                $scope.checkLess = function()
+                $scope.checkLess = function ()
                 {
                     if ($scope.tab <= cantTabs && $scope.tab > 1) {
                         return true;
-                    }
-                    else
+                    } else
                     {
                         return false;
                     }
-                }
+                };
             })
             .directive("ptNewTab", function () {
                 return{
@@ -113,8 +111,6 @@
                     }
                 }
             })
-            //</editor-fold>
-            //<editor-fold defaultstate="collapsed" desc="TABS">
             .directive("ptOrganizadorTabsLateralIzq", function () {
                 return{
                     restrict: "A",
@@ -170,11 +166,12 @@
                     }
                 };
             })
+            //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Titulo">
             .directive("ptTitulo", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/titulo/index.html",
+                    templateUrl: "application/components/simples/titulo/simple.html",
                     controller: "tituloController",
                     scope: {
                         'ptConstructor': '='
@@ -193,19 +190,38 @@
                     restrict: "A",
                     controller: "iconoController",
                     scope: {
+                        'ptIcono': '='
+                    }
+                };
+            })
+            .directive("ptSensibilizacionApertura", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/sensibilizacion_apertura.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .controller("iconoController", function () {
+            .controller("iconoController", function ($scope, $contenido, $render, $compile, $element) {
+                this.ptIcono = $scope.ptIcono;
+                var element = {tipo: "icono", estilo: this.ptIcono};
 
+                var render = $contenido.render_element(element, []);
+                if (render) {
+                    var where2Render = $element;
+                    console.log(where2Render, render);
+                    $render.jQueryCompile(render, where2Render, $compile, $scope);
+                }
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Parrafo">
             .directive("ptParrafo", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/texto/index.html",
+                    templateUrl: "application/components/simples/texto/simple.html",
                     controller: "parrafoController",
                     scope: {
                         'ptConstructor': '='
@@ -223,7 +239,7 @@
             .directive("ptImagen", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/imagen/index.html",
+                    templateUrl: "application/components/simples/imagen/simple.html",
                     controller: "imagenController",
                     scope: {
                         'ptConstructor': '='

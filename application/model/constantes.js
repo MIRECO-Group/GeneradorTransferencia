@@ -68,9 +68,20 @@ var BASE_DATA = {
                 tag: "pt-parrafo"
             }
         },
-        imagen:{
+        imagen: {
             imagen_basica: {
                 tag: "pt-imagen"
+            }
+        },
+        icono: {
+            saberes: {
+                tag: "ico-saberes"
+            },
+            mapa: {
+                tag: "ico-map"
+            },
+            "sensibilizacion apertura": {
+                tag: "pt-sensibilizacion-apertura"
             }
         }
     }

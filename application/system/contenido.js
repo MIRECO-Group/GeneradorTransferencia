@@ -89,7 +89,7 @@ var macrorecursos = {
                                             atributos: {
                                                 titulo: "Titulo saberes",
                                                 subtitulo: "subtitulo de los saberes",
-                                                mostrar_icono: true
+                                                icono: "sensibilizacion apertura"
                                             }
                                         },
                                         2: {
