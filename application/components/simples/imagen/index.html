@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title>Organizador gráfico de imágen</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../../css/organizadores_santiago.css">
-    </head>
-    <body ng-app="plantilla-transferencia">
-        <div class="img_container">
-            <img src="../../img/image.jpg" alt="name">
-            <button type="button">0</button>
-        </div>
-        <div class="blackout"></div>
-        <div class="popup">
-            <img src="../../img/image.jpg" alt="name">
-            <button type="button">7</button>
-        </div>        
-        <script src="../../../../js/jquery-1.10.2.js"></script>
-        <script src="../../js/main_santiago.js"></script>
-    </body>
-</html>
+<div class="img_container">
+    <img ng-src="{{atributos.thumbnail}}" alt="{{atributos.descripcion}}">
+    <button type="button" ng-click="abrir_pop()">V</button>
+</div>
+<div class="blackout" ng-click="cerrar_pop()"></div>
+<div class="popup" ng-click="cerrar_pop()">
+    <img ng-src="{{atributos.url}}" alt="{{atributos.descripcion}}">
+    <button type="button" ng-click="cerrar_pop()">x</button>
+</div>

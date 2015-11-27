@@ -41,6 +41,21 @@ var BASE_DATA = {
         organizador: {
             organizador_saberes: {
                 tag: "pt-organizador-tabs-superiores"
+            },
+            organizador_tabs_izquierda: {
+                tag: "pt-organizador-tabs-lateral-izq"
+            },
+            organizador_tabs_num_superior: {
+                tag: "pt-organizador-tabs-numero-superior"
+            },
+            organizador_linea_de_tiempo: {
+                tag: "pt-organizador-linea-de-tiempo"
+            },
+            organizador_tabs_num_izquierda: {
+                tag: "pt-organizador-tabs-num-izq"
+            },
+            organizador_tabs_botones_flechas: {
+                tag: "pt-organizador-tabs-botones-flechas"
             }
         },
         titulo: {
@@ -51,6 +66,11 @@ var BASE_DATA = {
         parrafo: {
             parrafo_basico: {
                 tag: "pt-parrafo"
+            }
+        },
+        imagen:{
+            imagen_basica: {
+                tag: "pt-imagen"
             }
         }
     }

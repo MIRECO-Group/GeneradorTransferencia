@@ -26,28 +26,66 @@
             .controller("oTabController", function ($scope, $contenido) {
                 this.chainId = $scope.ptConstructor;
                 var that = this;
-                
-                
+                var cantTabs = 0;
+
                 $scope.tabs = $contenido.get_element_page(this.chainId).atributos.tabs;
                 $.each($scope.tabs, function (key, value) {
                     value.chain = JSON.stringify(that.chainId.concat([parseInt(key)]));
+                    cantTabs = cantTabs + 1;
                 });
-                
+
                 $scope.tab = 1;
-                
+
                 $scope.setTab = function (newTab) {
                     $scope.tab = parseInt(newTab);
                 };
-                
+
                 $scope.isSet = function (tab) {
                     return $scope.tab === parseInt(tab);
                 };
-                
+
                 $scope.setActive = function (tab) {
                     if ($scope.isSet(tab)) {
                         return "active";
                     }
                 };
+
+                $scope.addTab = function() {
+                    if ($scope.tab < cantTabs && $scope.tab >= 1) {
+                        console.log("flagging "+$scope.tab+" !! "+cantTabs);
+                        $scope.tab = $scope.tab + 1;
+                    }
+                }
+
+                $scope.subtractTab = function() {
+                    if ($scope.tab <= cantTabs && $scope.tab > 1) {
+                        console.log("flagging "+$scope.tab+" !! "+cantTabs);
+                        $scope.tab = $scope.tab - 1;
+                    }
+                }
+
+                $scope.checkMore = function()
+                {
+                    if($scope.tab < cantTabs && $scope.tab >= 1)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
+                $scope.checkLess = function()
+                {
+                    if ($scope.tab <= cantTabs && $scope.tab > 1) {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
             })
             .directive("ptNewTab", function () {
                 return{
@@ -61,21 +99,77 @@
             .controller("newTabController", function ($scope, $contenido, $render, $compile, $element) {
                 this.chainId = $scope.ptConstructor;
                 var init = JSON.parse($scope.ptNewTab);
-                
+
                 var element = $contenido.get_element_page(init);
-                
+
                 if (element) {
                     var render = $contenido.render_element(element, init);
-                    
+
                     if (render) {
                         var where2Render = $element;
                         console.log(where2Render, render);
                         $render.jQueryCompile(render, where2Render, $compile, $scope);
-                        
+
                     }
                 }
             })
             //</editor-fold>
+            //<editor-fold defaultstate="collapsed" desc="TABS">
+            .directive("ptOrganizadorTabsLateralIzq", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/org_pes_lat.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptOrganizadorTabsNumeroSuperior", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/org_bot_num_bol.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptOrganizadorLineaDeTiempo", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/org_lin_tie.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptOrganizadorTabsNumIzq", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/org_bot_num.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptOrganizadorTabsBotonesFlechas", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/org_int_sli_est.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             //<editor-fold defaultstate="collapsed" desc="Titulo">
             .directive("ptTitulo", function () {
                 return{
@@ -104,7 +198,7 @@
                 };
             })
             .controller("iconoController", function () {
-                
+
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Parrafo">
@@ -125,6 +219,31 @@
                 console.log(element);
             })
             //</editor-fold>
-            
+            //<editor-fold defaultstate="collapsed" desc="Imagen">
+            .directive("ptImagen", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/imagen/index.html",
+                    controller: "imagenController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .controller("imagenController", function ($scope, $contenido, $element) {
+                this.chainId = $scope.ptConstructor;
+                var element = $contenido.get_element_page(this.chainId);
+
+                $scope.abrir_pop = function () {
+                    $('.blackout, .popup', $element).fadeIn("fast");
+                };
+
+                $scope.cerrar_pop = function () {
+                    $(".blackout, .popup", $element).fadeOut("fast");
+                };
+
+                $scope.atributos = element.atributos;
+            })
+            //</editor-fold>
             ;
 })(angular);

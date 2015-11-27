@@ -15,6 +15,10 @@ html, body{
     height: 100%;
 }
 
+[pt-new-tab]{
+    width: 100%;
+}
+
 .og_tabs_superiores {
     display: flex;
     flex:1;
