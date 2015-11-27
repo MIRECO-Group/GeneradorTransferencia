@@ -277,3 +277,16 @@ div#content_container .button_btn::after
 	left: -50px;
 	top: -10px;
 }
+
+.icon_style_sensibilizacion_apertura
+{
+	color: white;
+	font-size: 3rem;
+	padding: 10px;
+	border-radius: 40px;
+	background: #437678;
+	background: -moz-radial-gradient(center, ellipse cover, #437678 50%, #142438 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #437678 50%,#142438 100%);
+	background: radial-gradient(ellipse at center, #437678 50%,#142438 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#437678', endColorstr='#142438',GradientType=1 );
+}
