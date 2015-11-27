@@ -198,8 +198,6 @@
                 return{
                     restrict: "A",
                     templateUrl: "application/components/iconos/sensibilizacion_apertura.html",
-                    controller: "oTabController",
-                    controllerAs: "organizador",
                     scope: {
                         'ptConstructor': '='
                     }
