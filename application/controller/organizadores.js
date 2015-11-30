@@ -259,5 +259,34 @@
                 $scope.atributos = element.atributos;
             })
             //</editor-fold>
+            //<editor-fold defaultstate="collapsed" desc="PopUp">
+            .directive("ptPopup", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/pops/popup.html",
+                    controller: "popUpController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .controller("popUpController", function ($scope, $contenido, $render, $compile, $element) {
+                this.chainId = $scope.ptConstructor;
+                var init = JSON.parse($scope.ptConstructor);
+
+                var element = $contenido.get_element_page(init);
+
+                if (element) {
+                    var render = $contenido.render_element(element, init);
+
+                    if (render) {
+                        var where2Render = $element;
+                        console.log(where2Render, render);
+                        $render.jQueryCompile(render, where2Render, $compile, $scope);
+
+                    }
+                }
+            })
+            //</editor-fold>
             ;
 })(angular);
