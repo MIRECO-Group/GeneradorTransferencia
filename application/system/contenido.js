@@ -17,24 +17,26 @@
  *  no debe cambiar entre un objeto y otro.
  *  
  *  También cuentan con un atributo recursos, el cual conserva la información de 
- *  cada recurso contenido en un macrorecurso específico. El atributo recursos es
+ *  cada slide contenido en un macrorecurso específico. El atributo recursos es
  *  también un objeto Javascript y debe asignarse un índice numérico (iniciando 
  *  desde 1) que aumenta en 1 para cada recurso.
  *  
- *  Cada uno de estos recursos cuenta con atributos que definen su nombre, tipo y estilo.
+ *  Cada uno de estos recursos cuenta con atributos que definen su tipo y estilo.
  *  El tipo para un recurso siempre debe ser "layout", el cual corresponde a una disposición
- *  (retícula) de elementos. Es en el atributo estilo donde podemos definir la reticula 
- *  específica que va a utilizar el recurso, por medio de un identificador previamente 
- *  definido para las variaciones disponibles.
+ *  (retícula) de elementos. Es en el atributo estilo donde podemos definir el identificador 
+ *  de la reticula específica que va a utilizar el recurso.
  *  
  *  También cuentan con un atributo componentes, el cual conserva la información de 
  *  cada contenido a situarse en un espacio de la retícula definida en estilo.
  *  El atributo componentes es también un objeto Javascript y debe asignarse un índice
- *  numérico (iniciando desde 1) que aumenta en 1 para cada componente.
+ *  numérico (iniciando desde 1) que aumenta en 1 para cada componente y corresponde a la 
+ *  sección en la retícula que ocupará dicho componente.
  *  
- *  Cada uno de estos componentes cuenta con atributos que definen su tipo y estilo.
- *  Algunos componentes como los títulos podrían tener además atributos propios (mostrar_icono).
- *  El tipo para un componente representa los posibles contenidos que pueden asignarse a 
+ *  Cada uno de estos componentes cuenta con la posibilidad de definir tipo y estilo.
+ *  El objeto atributos contiene los atributos específicos de configuración para un componente 
+ *  (ej. titulo, subtitulo e icono para componente titulo).
+ *  
+ *  El tipo de un componente representa los posibles contenidos que pueden asignarse a 
  *  una sección de layout, estos incluyen entre otros:
  *  
  *  título
@@ -46,8 +48,10 @@
  *  organizadores gráficos
  *  actividades.
  *  
- *  Sin embargo, cada actividad correspondrá a un tipo de componente diferente (drag_drop, pick_many, etc...).
+ *  Sin embargo, en el caso de las actividades, se usará un tipo diferente para cada actividad 
+ *  (drag_drop, pick_many, etc...), y no un tipo "actividad".
  *  
+ *      
  *  El atributo estilo, al igual que para los recursos definirá la disposición de elementos
  *  dentro del componente (por ejemplo, si una lista es vertical u horizontal).
  *  
@@ -56,11 +60,10 @@
  *  un objeto Javascript y debe asignarse un índice numérico (iniciando desde 1) 
  *  que aumenta en 1 para cada componente.
  *  
- *  Los atributos de cada objeto consignado en el atributo elementos son propios de cada
- *  componente y se encuentran listados en el listado de elementos. 
  */
 
 var macrorecursos = {
+    //<editor-fold defaultstate="collapsed" desc="PORTADA">
     1: {
         id: "portada",
         nombre: "portada",
@@ -118,6 +121,8 @@ var macrorecursos = {
             }
         }
     },
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="SENSIBILIZACION DE APERTURA">
     2: {
         id: "sensibilizacion_apertura",
         nombre: "sensibilización de apertura",
@@ -142,6 +147,8 @@ var macrorecursos = {
             }
         }
     },
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="CONTEXTUALIZACION">
     3: {
         id: "contextualizacion",
         nombre: "contextualización",
@@ -183,8 +190,9 @@ var macrorecursos = {
                 }
             }
         }
-    }
-    ,
+    },
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="CONTENIDO/ACTIVIDADES">
     4: {
         id: "contenido",
         nombre: "Contenido/Actividades",
@@ -389,6 +397,8 @@ var macrorecursos = {
             }
         }
     },
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="RECORDEMOS">
     5: {
         id: "recordemos",
         nombre: "recordemos",
@@ -527,6 +537,8 @@ var macrorecursos = {
             }
         }
     },
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="PREGUNTAS DE CONOCIMIENTO">
     6: {
         id: "preguntas",
         nombre: "preguntas de conocimiento",
@@ -611,32 +623,16 @@ var macrorecursos = {
                                         },
                                         3: {
                                             tipo: "actividad",
-                                            estilo: "select_vertical",
+                                            estilo: "sortable_vertical",
                                             atributos: {
-                                                enunciado: "El nuevo instructor debe:",
                                                 preguntas: {
                                                     1: {
-                                                        respuesta: 3,
-                                                        opciones: {
+                                                        enunciado: "El nuevo instructor debe:",
+                                                        orden: [3, 2, 1],
+                                                        elementos: {
                                                             1: "Generar conocimiento",
                                                             2: "Profundizar conocimiento",
                                                             3: "Tener nociones básicas de TIC"
-                                                        }
-                                                    },
-                                                    2: {
-                                                        respuesta: 3,
-                                                        opciones: {
-                                                            1: "Tener nociones básicas de TIC",
-                                                            2: "Generar conocimiento",
-                                                            3: "Profundizar conocimiento"
-                                                        }
-                                                    },
-                                                    3: {
-                                                        respuesta: 3,
-                                                        opciones: {
-                                                            1: "Profundizar conocimiento",
-                                                            2: "Tener nociones básicas de TIC",
-                                                            3: "Generar conocimiento"
                                                         }
                                                     }
                                                 }
@@ -644,32 +640,16 @@ var macrorecursos = {
                                         },
                                         4: {
                                             tipo: "actividad",
-                                            estilo: "select_vertical",
+                                            estilo: "sortable_vertical",
                                             atributos: {
-                                                enunciado: "El aprendiz digital debe:",
                                                 preguntas: {
                                                     1: {
-                                                        respuesta: 3,
-                                                        opciones: {
+                                                        enunciado: "El aprendiz digital debe:",
+                                                        orden: [3, 2, 1],
+                                                        elementos: {
                                                             1: "Tener autonomía",
                                                             2: "Gestionar su tiempo",
                                                             3: "Ser autodisciplinado"
-                                                        }
-                                                    },
-                                                    2: {
-                                                        respuesta: 3,
-                                                        opciones: {
-                                                            1: "Ser autodisciplinado",
-                                                            2: "Tener autonomía",
-                                                            3: "Gestionar su tiempo"
-                                                        }
-                                                    },
-                                                    3: {
-                                                        respuesta: 3,
-                                                        opciones: {
-                                                            1: "Gestionar su tiempo",
-                                                            2: "Ser autodisciplinado",
-                                                            3: "Tener autonomía"
                                                         }
                                                     }
                                                 }
@@ -725,17 +705,99 @@ var macrorecursos = {
                                         },
                                         2: {
                                             tipo: "actividad",
-                                            estilo: "pickmany_vertical",
+                                            estilo: "select_vertical",
                                             atributos: {
+                                                enunciado: "Las personas y las instituciones generan _____________ al cambio",
                                                 preguntas: {
                                                     1: {
-                                                        enunciado: "Las personas y las instituciones generan _____________ al cambio",
-                                                        respuesta: [1],
-                                                        picks: {
+                                                        respuesta: 1,
+                                                        opciones: {
                                                             1: "resistencia",
                                                             2: "deseo",
                                                             3: "amor por",
                                                             4: "severidad"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                5: {
+                                    tipo: "layout",
+                                    estilo: "layout_recurso_4",
+                                    componentes: {
+                                        1: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "<b>Instrucción:</b> seleccione la opción que completa la frase."
+                                                }
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "actividad",
+                                            estilo: "dragdrop_horizontal",
+                                            atributos: {
+                                                preguntas: {
+                                                    1: {
+                                                        enunciado: "Este es un drag and drop de prueba",
+                                                        drags: {
+                                                            1: "texto 1",
+                                                            2: "texto 2",
+                                                            3: "texto 3",
+                                                            4: "texto 4"
+                                                        },
+                                                        drops: {
+                                                            1: {
+                                                                accepted: [4],
+                                                                elemento: {
+                                                                    tipo: "imagen",
+                                                                    estilo: "imagen_basica",
+                                                                    atributos: {
+                                                                        thumbnail: "img/drop1_thumbnail.png",
+                                                                        url: "img/drop1.png",
+                                                                        descripcion: "imagen del drop 1"
+                                                                    }
+                                                                }
+                                                            },
+                                                            2: {
+                                                                accepted: [3],
+                                                                elemento: {
+                                                                    tipo: "imagen",
+                                                                    estilo: "imagen_basica",
+                                                                    atributos: {
+                                                                        thumbnail: "img/drop2_thumbnail.png",
+                                                                        url: "img/drop2.png",
+                                                                        descripcion: "imagen del drop 2"
+                                                                    }
+                                                                }
+                                                            },
+                                                            3: {
+                                                                accepted: [2],
+                                                                elemento: {
+                                                                    tipo: "imagen",
+                                                                    estilo: "imagen_basica",
+                                                                    atributos: {
+                                                                        thumbnail: "img/drop3_thumbnail.png",
+                                                                        url: "img/drop3.png",
+                                                                        descripcion: "imagen del drop 3"
+                                                                    }
+                                                                }
+                                                            },
+                                                            4: {
+                                                                accepted: [1],
+                                                                elemento: {
+                                                                    tipo: "imagen",
+                                                                    estilo: "imagen_basica",
+                                                                    atributos: {
+                                                                        thumbnail: "img/drop4_thumbnail.png",
+                                                                        url: "img/drop4.png",
+                                                                        descripcion: "imagen del drop 4"
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -750,6 +812,8 @@ var macrorecursos = {
             }
         }
     },
+    //</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="SENSIBILIZACION DE CIERRE">
     7: {
         id: "sensibilizacion_cierre",
         nombre: "sensibilización de cierre",
@@ -761,12 +825,13 @@ var macrorecursos = {
                 componentes: {
                     1: {
                         tipo: "reproductor",
-                        estilo: "reproductor_sensibilizacion",
+                        estilo: "reproductor_completo",
                         atributos: {
                             1: {
                                 tipo: "video",
                                 url: "media/video/scierre.mp4",
-                                imagen_reproductor: "img/scierre.png"
+                                imagen_reproductor: "img/scierre.png",
+                                descripcion: "Marco en el taxi"
                             }
                         }
                     }
@@ -774,6 +839,7 @@ var macrorecursos = {
             }
         }
     }
+    //</editor-fold>
 };
 
 
