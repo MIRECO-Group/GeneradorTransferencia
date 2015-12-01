@@ -11,25 +11,20 @@ html, body {
     position: fixed;
     top: 0; bottom: 0; left: 0; right: 0;
     z-index: 10;
-    -moz-pointer-events: none;
+    /*-moz-pointer-events: none;
     -webkit-pointer-events: none;
-    pointer-events: none;
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
+    pointer-events: none;*/
     -ms-align-items: center;
     -webkit-align-items: center;
     align-items: center;
     -ms-justify-content: center;
     -webkit-justify-content: center;
     justify-content: center;
-    opacity: 0;
 }
 .popup.activado {
-    opacity: 1;
-    -moz-pointer-events: auto;
-    -webkit-pointer-events: auto;
-    pointer-events: auto;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
 }
 .popup-contenedor {
     height: 400px;
