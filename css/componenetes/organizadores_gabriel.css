@@ -242,7 +242,7 @@ aplicarle diplay: none o display: block según la intención a:
 orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 */
 
-/*--------------------------- ORG_TIT_TXT_IMG ------------------------------  */
+
 
 .orgTxtImgGrande {
   margin: 10px auto;
@@ -276,5 +276,151 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   .orgTxtImgGrande-contenTxt {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+/*--------------------------- org_aco ------------------------------  */
+
+/*Contenedor principal*/
+.org_aco-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+.rg_aco-text {
+  display: block;
+  margin: 20px 20px 60px 20px;
+}
+/*Acordeón y botones acordeón*/
+.acordeon {
+  background-color: #eae9e9;
+  margin: 0 auto;
+  position: relative;
+  -ms-display: flex;
+  -webkit-display: flex;
+  display: flex;
+  border: 2px solid #c9eff1;
+}
+.acordeon-btn {
+  background-color: #01b3be;
+  border-right: 2px solid #c9eff1;
+  display: block;
+  height: 100%;
+  margin: 0 !important;
+  position: relative;
+  width: 60px;
+  cursor: pointer;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.acordeon-btn-text {
+  display: block;
+  left: 50%;
+  position: relative;
+  text-align: center;
+  transform: rotate(270deg) translateY(-50%);
+  transform-origin: left top 0;
+  z-index: 2;
+  color: white;
+}
+/**/
+.acordeon          { height: 300px; }
+.acordeon-btn-text { bottom: -300px; width: 300px; }
+/**/
+/*Contenedor de información*/
+.acordeon-container {
+  background-color: #eae9e9;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+  -ms-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  -ms-display: flex;
+  -webkit-display: flex;
+  display: flex;
+  max-width: 0;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  opacity: 0;
+}
+.acordeon-container-info {
+  width: 90%;
+  height: auto;
+  -ms-display: flex;
+  -webkit-display: flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.acordeon-container-info-img {
+  width: 300px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 2px solid #004b5e;
+}
+.acordeon-container-info-text {
+  line-height: 22px;
+  text-align: justify;
+  padding: 0 40px;
+}
+/*Responsive*/
+@media screen and (max-width: 767px) {
+  .acordeon { 
+    display: block;
+    height: auto;
+  }
+  .acordeon-btn {
+    width: auto;
+    height: auto;
+    padding: 20px 0;
+    border-bottom: 2px solid #c9eff1;
+  }
+  .acordeon-btn.seleccionado {
+    background-color: #004b5e;
+  }
+  .acordeon-btn.seleccionado + .acordeon-container {
+    max-height: 100%;
+    opacity: 1;
+  }
+  .acordeon-btn-text {
+    position: static;
+    width: auto; transform: none;
+    transform-origin: inherit;
+    left: 0; bottom: 0;
+  }
+  .acordeon-container {
+    height: inherit;
+    max-height: 0;
+    opacity: 0;
+    display: block;
+    max-width: 100%;
+  }
+  .acordeon-container-info {
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 40px 0;
+  }
+  .acordeon-container-info-img {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .acordeon-btn.seleccionado {
+    background-color: #004b5e;
+  }
+  .acordeon-btn.seleccionado + .acordeon-container {
+    max-width: 100%; 
+    opacity: 1;
   }
 }
