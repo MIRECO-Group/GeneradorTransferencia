@@ -43,9 +43,9 @@ var recurso = {
 
 //TITULO
 /*
- mostrar_icono: define si el título debería ir acompañado del icono correspondiente al macrorecurso donde se encuentra. 
  titulo: Texto. OBLIGATORIO. Es la información principal a mostrarse en el componente.  
  subtitulo: Texto. Opcional. Información menos jerárquica a aparecer junto al título. 
+ icono : Texto. OBLIGATORIO. Corresponde al identificador del icono a mostrar.
  */
 
 var componente1 = {
@@ -54,7 +54,7 @@ var componente1 = {
     atributos: {
         titulo: "",
         subtitulo: "",
-        mostrar_icono: false
+        icono: ""
     }
 };
 //PARRAFO
@@ -77,8 +77,9 @@ var componente2 = {
 };
 //IMAGEN
 /*
- url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra la imagen a mostrar.
- title: Texto. OPCIONAL. Contenido a mostrarse al ubicar el cursor sobre la imagen (pequeña descripción).
+ * thumbnail: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra la versión pequeña de la imagen a mostrar.
+ url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra la versión grande de la imagen a mostrar.
+ descripcion: Texto. OPCIONAL. Contenido a mostrarse al ubicar el cursor sobre la imagen (pequeña descripción).
  */
 
 var componente3 = {
@@ -117,21 +118,24 @@ var componente5 = {
         1: {
             tipo: "audio",
             url: "media/audio/melones.mp3",
-            imagen_reproductor: "img/melon.png"
+            imagen_reproductor: "img/melon.png",
+            descripcion: ""
         }
     }
 };
 //LISTA
 /*
- categoria: Texto. OBLIGATORIO. Corresponde al tipo de lista a utilizarse (ordenada, no ordenada). 
- texto: Texto. OBLIGATORIO. Corresponde al texto a mostrarse en un elemento específico de la lista.
+ categoria: Texto. OBLIGATORIO. Corresponde al tipo de lista a utilizarse (ordenada, no ordenada).
+ enunciado: Texto. OPCIONAL. Corresponde a un texto introductorio que precede a la lista.
+ elementos: Texto. OBLIGATORIO. Corresponde a los textos a organizarse dentro de la lista.
  */
 
 var componente6 = {
     tipo: "lista",
     estilo: "lista_vertical",
     atributos: {
-        categoria: "numerada",
+        categoria: "ordenada",
+        enunciado: "",
         elementos: {
             1: "elemento 1",
             2: "elemento 2",
@@ -141,20 +145,14 @@ var componente6 = {
 };
 //ORGANIZADOR GRAFICO
 /*
- *  tabs : Objeto. OBLIGATORIO. Corresponde a los contenidos del organizador con navegación interna mediante tabs.
- *      tag: Texto. OBLIGATORIO. Corresponde al texto visible en cada uno de los tags del organizador.
- *      estimulo: Objeto. OPCIONAL. Corresponde al archivo multimedia que acompaña el contenido en un tab específico (audio o imagen)
- *          tipo: Texto. OBLIGATORIO. Corresponde al tipo del estimulo (imagen o audio).
- *          url: Texto con formato URL. Corresponde a la dirección del archivo de estímulo.
- *      titulo: Texto. OBLIGATORIO. Corresponde al titulo a visualizarse en un tab específico.
- *      parrafos: Objeto. OBLIGATORIO. Corresponde al texto de contenido en un tab específico separado por párrafos. 
+ *  tabs : Objeto. OBLIGATORIO. Corresponde a los contenidos del organizador. 
+ *  Funcionan como recursos independientes usando layouts y componentes.
  */
 
 var componente7 = {
     tipo: "organizador",
     estilo: "organizador_saberes",
     atributos: {
-        titulo: "",
         tabs: {
             1: {
                 tag: "1",
@@ -198,12 +196,16 @@ var componente7 = {
 
 //DRAG AND DROP
 /*
- tipo_drags: Texto. OBLIGATORIO. Corresponde al tipo de elemento que usaran todos los drags (audio/texto). 
- tipo_drops: Texto. OBLIGATORIO. Corresponde al tipo de elemento que usaran todos los drops (imagen/audio). 
+ * enunciado: Texto. OPCIONAL. Puede ser usado como pregunta antes de un drag and drop como complemento de la instrucción del recurso.
  drags: Objeto. OBLIGATORIO. Grupo de elementos drags a utilizarse en la actividad.
  drops: Objeto. OBLIGATORIO. Grupo de elementos drops a utilizarse en la actividad.
- url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra el archivo a convertir en drag o drop (solo aplica si el tipo de drags o drops es imagen o audio).
- texto: Texto. OBLIGATORIO. Corresponde al texto a convertirse en drag (solo aplica si el tipo de drags o drops es texto).
+ accepted: Array. Incluye los ids de los drags que son aceptados como respuesta en este drop correspondiente.
+ Los ids deben corresponder a los utilizados en el objeto drags.
+ elemento: contenido del drop.
+ 
+ Los contenidos de drags y drops pueden ser imagen, audio o texto. En el caso de imagen
+ o audio deben usarse los componentes correspondientes (imagen / reproductor), para texto se
+ recibe solo el texto deseado y no un objeto.
  */
 
 var componente8 = {
@@ -214,42 +216,10 @@ var componente8 = {
             1: {
                 enunciado: "",
                 drags: {
-                    1: {
-                        tipo: "parrafo",
-                        estilo: "parrafo_basico",
-                        atributos: {
-                            parrafos: {
-                                1: "drag 1"
-                            }
-                        }
-                    },
-                    2: {
-                        tipo: "parrafo",
-                        estilo: "parrafo_basico",
-                        atributos: {
-                            parrafos: {
-                                1: "drag 2"
-                            }
-                        }
-                    },
-                    3: {
-                        tipo: "parrafo",
-                        estilo: "parrafo_basico",
-                        atributos: {
-                            parrafos: {
-                                1: "drag 3"
-                            }
-                        }
-                    },
-                    4: {
-                        tipo: "parrafo",
-                        estilo: "parrafo_basico",
-                        atributos: {
-                            parrafos: {
-                                1: ""
-                            }
-                        }
-                    }
+                    1: "texto 1",
+                    2: "texto 2",
+                    3: "texto 3",
+                    4: "texto 4"
                 },
                 drops: {
                     1: {
@@ -309,13 +279,18 @@ var componente8 = {
 //PICK MANY
 /*
  preguntas: Objeto. OBLIGATORIO. Grupo de preguntas a utilizarse en la actividad.
- pregunta: Texto. OPCIONAL. Puede ser usado como enunciado corto antes de un pick many (solo aplica si el tipo de picks es texto) como complemento de la instrucción del recurso.
- tipo_picks: Texto. OBLIGATORIO. Corresponde al tipo de elemento que usaran todos las opciones de respuesta (imagen/audio/texto). 
- url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra el archivo a usarse como opción de respuesta (solo aplica si el tipo de picks es imagen o audio).
- texto: Texto. OBLIGATORIO. Corresponde al texto a usarse como opción de respuesta (solo aplica si el tipo de picks es texto).
- correct: Boolean. OBLIGATORIO (en al menos una opción de respuesta). Especifica cual es la opción correcta en un pick many, si hay varias opciones con la opción correct asignada en true,
- la actividad se tratará como una pregunta de múltiple respuesta. De lo contrario se tratará como pregunta de única respuesta. Si no se asigna a una opción, automáticamente se tomará
+ enunciado: Texto. OPCIONAL. Puede ser usado como pregunta antes de un pick many como complemento de la instrucción del recurso.
+ respuesta: Array. Incluye los ids de los picks que son aceptados como respuesta en esta pregunta correspondiente.
+ Los ids deben corresponder a los utilizados en el objeto picks.
+ 
+ Si el arreglo de respuestas contiene mas de un id, la actividad se tratará como una pregunta de múltiple respuesta. De lo contrario se tratará como pregunta de única respuesta. Si no se asigna a una opción, automáticamente se tomará
  como falsa para esa opción específica.
+ 
+ picks: contenido del pick.
+ 
+ Los contenidos de cada pick pueden ser imagen, audio o texto. En el caso de imagen
+ o audio deben usarse los componentes correspondientes (imagen / reproductor), para texto se
+ recibe solo el texto deseado y no un objeto.
  */
 
 var componente9 = {
@@ -328,47 +303,39 @@ var componente9 = {
                 respuesta: [2],
                 picks: {
                     1: {
-                        elemento: {
-                            tipo: "parrafo",
-                            estilo: "parrafo_basico",
-                            atributos: {
-                                parrafos: {
-                                    1: "Roja"
-                                }
-                            }
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
+                        atributos: {
+                            thumbnail: "img/pick1_thumbnail.png",
+                            url: "img/pick1.png",
+                            descripcion: ""
                         }
                     },
                     2: {
-                        elemento: {
-                            tipo: "parrafo",
-                            estilo: "parrafo_basico",
-                            atributos: {
-                                parrafos: {
-                                    1: "Blanca"
-                                }
-                            }
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
+                        atributos: {
+                            thumbnail: "img/pick2_thumbnail.png",
+                            url: "img/pick2.png",
+                            descripcion: ""
                         }
                     },
                     3: {
-                        elemento: {
-                            tipo: "parrafo",
-                            estilo: "parrafo_basico",
-                            atributos: {
-                                parrafos: {
-                                    1: "Verde"
-                                }
-                            }
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
+                        atributos: {
+                            thumbnail: "img/pick3_thumbnail.png",
+                            url: "img/pick3.png",
+                            descripcion: ""
                         }
                     },
                     4: {
-                        elemento: {
-                            tipo: "parrafo",
-                            estilo: "parrafo_basico",
-                            atributos: {
-                                parrafos: {
-                                    1: "Azul"
-                                }
-                            }
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
+                        atributos: {
+                            thumbnail: "img/pick4_thumbnail.png",
+                            url: "img/pick4.png",
+                            descripcion: ""
                         }
                     }
                 }
@@ -378,120 +345,67 @@ var componente9 = {
 };
 //ORDENAMIENTO
 /*
+ preguntas: Objeto. OBLIGATORIO. Grupo de actividades.
+ enunciado: Texto. OPCIONAL. Puede ser usado como pregunta antes de un ordenamiento como complemento de la instrucción del recurso.
  orden: Arreglo de enteros. OBLIGATORIO. Especifica el orden correcto de los elementos en la actividad.
- texto: Texto. OBLIGATORIO. Corresponde al texto a usarse como elemento ordenable en la actividad.
+ elementos: Objeto. OBLIGATORIO. Corresponde al grupo de elementos (solo texto) que se usarán en el ordenamiento.
  */
 
 var componente10 = {
     tipo: "actividad",
     estilo: "sortable_vertical",
     atributos: {
-        enunciado: "",
-        orden: [1, 3, 2, 4],
-        elementos: {
-            1: "Despertar",
-            2: "Comer",
-            3: "Cocinar",
-            4: "Cepillar"
+        preguntas: {
+            1: {
+                enunciado: "",
+                orden: [1, 3, 2, 4],
+                elementos: {
+                    1: "Despertar",
+                    2: "Comer",
+                    3: "Cocinar",
+                    4: "Cepillar"
+                }
+            }
         }
     }
 };
 //LISTA DESPLEGABLE
 /*
- selects: Objeto. OBLIGATORIO. Grupo de listas desplegables a utilizarse en la actividad.
- tipo_estimulo: 	Texto. OBLIGATORIO. Corresponde al tipo de elemento que se usará como estímulo previo en todas las listas desplegables (imagen/audio/texto). 
- url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra el archivo a usarse como estímulo (solo aplica si el tipo de estímulo es imagen o audio).
- opcion_default: Texto. OPCIONAL. Corresponde al mensaje que se mostrará por defecto en la lista desplegable al iniciar la actividad.
- opciones: Objeto. OBLIGATORIO. Grupo de opciones de respuesta a desplegarse en una lista específica.
- pregunta: Texto. OPCIONAL. Puede ser usado como enunciado corto antes de un pick many (solo aplica si el tipo de estímulo es texto) como complemento de la instrucción del recurso.
- texto: Texto. OBLIGATORIO. Corresponde al texto a usarse como opción de respuesta.
- correct: Boolean. OBLIGATORIO (en al menos una opción de respuesta). Especifica cual es la opción correcta en una lista desplegable. Si no se asigna a una opción, 
- automáticamente se tomarácomo falsa para esa opción específica.
+ enunciado: Texto. OPCIONAL. Puede ser usado como pregunta antes de un ordenamiento como complemento de la instrucción del recurso.
+ preguntas: Objeto. OBLIGATORIO. Grupo de actividades.
+ respuesta: Array. Corresponde al id de la opción correcta.
+ Los ids deben corresponder a los utilizados en el objeto opciones.
  
+ Si el arreglo de respuestas contiene mas de un id, la actividad se tratará como una pregunta de múltiple respuesta. De lo contrario se tratará como pregunta de única respuesta. Si no se asigna a una opción, automáticamente se tomará
+ como falsa para esa opción específica.
+ 
+ picks: contenido del pick.
  */
 
 var componente11 = {
     tipo: "actividad",
     estilo: "select_horizontal",
     atributos: {
+        enunciado: "",
         preguntas: {
             1: {
-                enunciado: "",
-                selects: {
-                    1: {
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/select1_thumbnail.png",
-                                url: "img/select1.png",
-                                descripcion: ""
-                            }
-                        },
-                        respuesta : 1,
-                        opciones: {
-                            1: "Blanco",
-                            2: "Verde",
-                            3: "Amarillo",
-                            4: "Rojo"
-                        }
-                    },
-                    2: {
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/select2_thumbnail.png",
-                                url: "img/select2.png",
-                                descripcion: ""
-                            }
-                        },
-                        respuesta : 2,
-                        opciones: {
-                            1: "Blanco",
-                            2: "Verde",
-                            3: "Amarillo",
-                            4: "Rojo"
-                        }
-                    },
-                    3: {
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/select3_thumbnail.png",
-                                url: "img/select3.png",
-                                descripcion: ""
-                            }
-                        },
-                        respuesta : 3,
-                        opciones: {
-                            1: "Blanco",
-                            2: "Verde",
-                            3: "Amarillo",
-                            4: "Rojo"
-                        }
-                    },
-                    4: {
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/select4_thumbnail.png",
-                                url: "img/select4.png",
-                                descripcion: ""
-                            }
-                        },
-                        respuesta : 4,
-                        opciones: {
-                            1: "Blanco",
-                            2: "Verde",
-                            3: "Amarillo",
-                            4: "Rojo"
-                        }
+                respuesta: 1,
+                opciones: {
+                    1: "Blanco",
+                    2: "Verde",
+                    3: "Amarillo",
+                    4: "Rojo"
+                },
+                elemento: {
+                    tipo: "imagen",
+                    estilo: "imagen_basica",
+                    atributos: {
+                        thumbnail: "img/select1_thumbnail.png",
+                        url: "img/select1.png",
+                        descripcion: ""
                     }
                 }
             }
         }
     }
-};																																																									
+};

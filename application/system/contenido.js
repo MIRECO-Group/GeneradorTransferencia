@@ -66,91 +66,51 @@ var macrorecursos = {
         nombre: "portada",
         recursos: {
             1: {
-                nombre: "portada",
                 tipo: "layout",
                 estilo: "layout_portada",
-                background: "img/fondo_portada.jpg",
                 componentes: {
-                    1: {},
-                    2: {
-                        tipo: "organizador",
-                        estilo: "organizador_saberes",
+                    1: {
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
                         atributos: {
-                            titulo: "Saberes",
-                            tabs: {
-                                1: {
-                                    tag: "1",
-                                    tipo: "layout",
-                                    estilo: "layout_og_saberes",
-                                    componentes: {
-                                        1: {
-                                            tipo: "titulo",
-                                            estilo: "titulo_saberes",
-                                            atributos: {
-                                                titulo: "subtitulo saberes",
-                                                subtitulo: "",
-                                                mostrar_icono: false
-                                            }
-                                        },
-                                        2: {
-                                            tipo: "lista",
-                                            estilo: "lista_saberes",
-                                            atributos: {
-                                                categoria: "no_numerada",
-                                                elementos: {
-                                                    1: "Las TIC: Conceptualización.",
-                                                    2: "Recursos, herramientas y programas.",
-                                                    3: "TIC en educación.",
-                                                    4: "Nuevos conceptos.",
-                                                    5: "Nuevos competencias."
-                                                }
-                                            }
-                                        }
+                            thumbnail: "img/portada.png",
+                            url: "img/portada.png",
+                            descripcion: "imagen de portadad del objeto"
+                        }
+                    },
+                    2: {
+                        tag: "1",
+                        tipo: "layout",
+                        estilo: "layout_og_resultados",
+                        componentes: {
+                            1: {
+                                tipo: "titulo",
+                                estilo: "titulo_saberes",
+                                atributos: {
+                                    titulo: "Saberes"
+                                }
+                            },
+                            2: {
+                                tipo: "lista",
+                                estilo: "lista_saberes",
+                                atributos: {
+                                    categoria: "no_numerada",
+                                    elementos: {
+                                        1: "Las TIC: Conceptualización.",
+                                        2: "Recursos, herramientas y programas.",
+                                        3: "TIC en educación.",
+                                        4: "Nuevos conceptos.",
+                                        5: "Nuevos competencias."
                                     }
                                 }
                             }
                         }
                     },
                     3: {
-                        tipo: "organizador",
-                        estilo: "organizador_saberes",
-                        atributos: {
-                            titulo: "Resultados",
-                            tabs: {
-                                1: {
-                                    tag: "1",
-                                    tipo: "layout",
-                                    estilo: "layout_og_saberes",
-                                    componentes: {
-                                        1: {
-                                            tipo: "titulo",
-                                            estilo: "titulo_saberes",
-                                            atributos: {
-                                                titulo: "subtitulo resultados",
-                                                subtitulo: "",
-                                                mostrar_icono: false
-                                            }
-                                        },
-                                        2: {
-                                            tipo: "lista",
-                                            estilo: "lista_saberes",
-                                            atributos: {
-                                                categoria: "no_numerada",
-                                                elementos: {
-                                                    1: "Caracterizar los Recursos Educativos Digitales para la enseñanza de lenguas en el SENA de acuerdo con los criterios pedagógicos establecidos por la institución."
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    4: {
                         tipo: "boton",
                         estilo: "boton_portada",
                         atributos: {
-                            tag: "¿Qué se entiende por TIC?",
+                            tag: "Iniciemos",
                             funcion: "iniciar_objeto"
                         }
                     }
@@ -163,18 +123,18 @@ var macrorecursos = {
         nombre: "sensibilización de apertura",
         recursos: {
             1: {
-                nombre: "nombre del recurso",
                 tipo: "layout",
                 estilo: "layout_sensibilizacion",
                 componentes: {
                     1: {
                         tipo: "reproductor",
-                        estilo: "reproductor_sensibilizacion",
+                        estilo: "reproductor_completo",
                         atributos: {
                             1: {
                                 tipo: "video",
                                 url: "media/video/sapertura.mp4",
-                                imagen_reproductor: "img/sapertura.png"
+                                imagen_reproductor: "img/sapertura.png",
+                                descripcion: "marco en el aeropuerto"
                             }
                         }
                     }
@@ -187,7 +147,6 @@ var macrorecursos = {
         nombre: "contextualización",
         recursos: {
             1: {
-                nombre: "nombre del recurso",
                 tipo: "layout",
                 estilo: "layout_contextualizacion",
                 componentes: {
@@ -196,8 +155,7 @@ var macrorecursos = {
                         estilo: "titulo_recurso",
                         atributos: {
                             titulo: "Contextualización",
-                            subtitulo: "",
-                            mostrar_icono: true
+                            icono: "contextualizacion"
                         }
                     },
                     2: {
@@ -217,7 +175,8 @@ var macrorecursos = {
                             1: {
                                 tipo: "video",
                                 url: "media/video/contextualizacion.mp4",
-                                imagen_reproductor: "img/contextualizacion.png"
+                                imagen_reproductor: "img/contextualizacion.png",
+                                descripcion: "video contextualización"
                             }
                         }
                     }
@@ -231,48 +190,21 @@ var macrorecursos = {
         nombre: "Contenido/Actividades",
         recursos: {
             1: {
-                nombre: "subportada1",
                 tipo: "layout",
                 estilo: "layout_subportada",
                 componentes: {
                     1: {
-                        tipo: "organizador",
-                        estilo: "organizador_subportada",
+                        tipo: "imagen",
+                        estilo: "imagen_basica",
                         atributos: {
-                            titulo: "",
-                            tabs: {
-                                1: {
-                                    tag: "",
-                                    tipo: "layout",
-                                    estilo: "layout_og_subportada_1",
-                                    componentes: {
-                                        1: {
-                                            tipo: "titulo",
-                                            estilo: "titulo_recurso",
-                                            atributos: {
-                                                titulo: "Capitulo 1: Lorem Ipsum",
-                                                subtitulo: "",
-                                                mostrar_icono: true
-                                            }
-                                        },
-                                        2: {
-                                            tipo: "imagen",
-                                            estilo: "imagen_basica",
-                                            atributos: {
-                                                thumbnail: "img/subportada1_thumbnail.png",
-                                                url: "img/subportada1.png",
-                                                descripcion: ""
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                            thumbnail: "img/subportada1_thumbnail.png",
+                            url: "img/subportada1.png",
+                            descripcion: "subportada primer contenido"
                         }
                     }
                 }
             },
             2: {
-                nombre: "nombre del recurso",
                 tipo: "layout",
                 estilo: "layout_recurso_1",
                 componentes: {
@@ -280,25 +212,17 @@ var macrorecursos = {
                         tipo: "titulo",
                         estilo: "titulo_recurso",
                         atributos: {
-                            titulo: "Contenido 1",
-                            subtitulo: "",
-                            mostrar_icono: true
+                            titulo: "Contenidos",
+                            subtitulo: "Título del primer subcontenido",
+                            icono: "contenido"
                         }
                     },
                     2: {
-                        tipo: "parrafo",
-                        estilo: "parrafo_basico",
-                        atributos: {
-                            parrafos: {
-                                1: "Las herramientas digitales son programas que ayudan a interactuar con la tecnología para el logro de una variedad de propósitos, por ejemplo:"
-                            }
-                        }
-                    },
-                    3: {
                         tipo: "lista",
                         estilo: "lista_vertical",
                         atributos: {
                             categoria: "no_numerada",
+                            enunciado: "Las herramientas digitales son programas que ayudan a interactuar con la tecnología para el logro de una variedad de propósitos, por ejemplo:",
                             elementos: {
                                 1: "Permiten la comunicación en tiempo real sin barreras de tiempo y espacio.",
                                 2: "Permiten crear bases de datos, encuestas, etc.",
@@ -308,7 +232,7 @@ var macrorecursos = {
                             }
                         }
                     },
-                    4: {
+                    3: {
                         tipo: "parrafo",
                         estilo: "parrafo_basico",
                         atributos: {
@@ -317,18 +241,17 @@ var macrorecursos = {
                             }
                         }
                     },
-                    5: {
+                    4: {
                         tipo: "organizador",
-                        estilo: "organizador_saberes",
+                        estilo: "organizador_tabs_superiores",
                         atributos: {
-                            titulo: "",
                             tabs: {
                                 1: {
                                     tag: "CMS",
                                     tipo: "layout",
                                     estilo: "layout_og2_1",
                                     componentes: {
-                                        2: {
+                                        1: {
                                             tipo: "parrafo",
                                             estilo: "parrafo_basico",
                                             atributos: {
@@ -345,7 +268,7 @@ var macrorecursos = {
                                     tipo: "layout",
                                     estilo: "layout_og2_1",
                                     componentes: {
-                                        2: {
+                                        1: {
                                             tipo: "parrafo",
                                             estilo: "parrafo_basico",
                                             atributos: {
@@ -362,7 +285,7 @@ var macrorecursos = {
                                     tipo: "layout",
                                     estilo: "layout_og2_1",
                                     componentes: {
-                                        2: {
+                                        1: {
                                             tipo: "parrafo",
                                             estilo: "parrafo_basico",
                                             atributos: {
@@ -379,7 +302,7 @@ var macrorecursos = {
                                     tipo: "layout",
                                     estilo: "layout_og2_1",
                                     componentes: {
-                                        2: {
+                                        1: {
                                             tipo: "parrafo",
                                             estilo: "parrafo_basico",
                                             atributos: {
@@ -396,7 +319,7 @@ var macrorecursos = {
                                     tipo: "layout",
                                     estilo: "layout_og2_1",
                                     componentes: {
-                                        2: {
+                                        1: {
                                             tipo: "parrafo",
                                             estilo: "parrafo_basico",
                                             atributos: {
@@ -414,7 +337,6 @@ var macrorecursos = {
                 }
             },
             3: {
-                nombre: "nombre del recurso",
                 tipo: "layout",
                 estilo: "layout_recurso_4",
                 componentes: {
@@ -423,8 +345,8 @@ var macrorecursos = {
                         estilo: "titulo_recurso",
                         atributos: {
                             titulo: "Contenido 2",
-                            subtitulo: "",
-                            mostrar_icono: true
+                            subtitulo: "Título del primer subcontenido",
+                            icono: "contenido"
                         }
                     },
                     2: {
@@ -446,50 +368,10 @@ var macrorecursos = {
                                     enunciado: "De las siguientes opciones solo una es correcta.",
                                     respuesta: [3],
                                     picks: {
-                                        1: {
-                                            elemento: {
-                                                tipo: "parrafo",
-                                                estilo: "parrafo_basico",
-                                                atributos: {
-                                                    parrafos: {
-                                                        1: "El sistema operativo"
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        2: {
-                                            elemento: {
-                                                tipo: "parrafo",
-                                                estilo: "parrafo_basico",
-                                                atributos: {
-                                                    parrafos: {
-                                                        1: "Las bases de datos"
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        3: {
-                                            elemento: {
-                                                tipo: "parrafo",
-                                                estilo: "parrafo_basico",
-                                                atributos: {
-                                                    parrafos: {
-                                                        1: "El LMS"
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        4: {
-                                            elemento: {
-                                                tipo: "parrafo",
-                                                estilo: "parrafo_basico",
-                                                atributos: {
-                                                    parrafos: {
-                                                        1: "Las redes sociales"
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        1: "El sistema operativo",
+                                        2: "Las bases de datos",
+                                        3: "El LMS",
+                                        4: "Las redes sociales"
                                     }
                                 }
                             }
@@ -512,7 +394,6 @@ var macrorecursos = {
         nombre: "recordemos",
         recursos: {
             1: {
-                nombre: "nombre del recurso",
                 tipo: "layout",
                 estilo: "layout_recordemos",
                 componentes: {
@@ -551,7 +432,7 @@ var macrorecursos = {
                                             atributos: {
                                                 thumbnail: "img/prueba_thumbnail.png",
                                                 url: "img/prueba.png",
-                                                descripcion: ""
+                                                descripcion: "descripción de prueba"
                                             }
                                         }
                                     }
@@ -576,7 +457,7 @@ var macrorecursos = {
                                             atributos: {
                                                 thumbnail: "img/prueba_thumbnail.png",
                                                 url: "img/prueba.png",
-                                                descripcion: ""
+                                                descripcion: "descripcion de prueba"
                                             }
                                         }
                                     }
@@ -601,7 +482,7 @@ var macrorecursos = {
                                             atributos: {
                                                 thumbnail: "img/prueba_thumbnail.png",
                                                 url: "img/prueba.png",
-                                                descripcion: ""
+                                                descripcion: "descripcion de prueba"
                                             }
                                         }
                                     }
@@ -626,7 +507,7 @@ var macrorecursos = {
                                             atributos: {
                                                 thumbnail: "img/prueba_thumbnail.png",
                                                 url: "img/prueba.png",
-                                                descripcion: ""
+                                                descripcion: "descripcion de prueba"
                                             }
                                         }
                                     }
@@ -651,282 +532,210 @@ var macrorecursos = {
         nombre: "preguntas de conocimiento",
         recursos: {
             1: {
-                nombre: "nombre del recurso",
                 tipo: "layout",
                 estilo: "layout_examen",
                 componentes: {
                     1: {
-                        tipo: "layout",
-                        estilo: "layout_portada_examen",
-                        componentes: {
-                            1: {
-                                tipo: "parrafo",
-                                estilo: "parrafo_basico",
-                                atributos: {
-                                    parrafos: {
-                                        1: "<b>Verifique la apropiación de los saberes que hemos estudiado en este tema respondiendo a las siguientes preguntas.</b>",
-                                        2: "Instrucciones:"
-                                    }
-                                }
-                            },
-                            2: {
-                                tipo: "lista",
-                                estilo: "lista_vertical",
-                                atributos: {
-                                    categoria: "no_numerada",
-                                    elementos: {
-                                        1: "A continuación usted podrá encontrar alguno(s) de los siguientes tipos de preguntas: opción múltiple, verdadero/falso, de relación o de selección.",
-                                        2: "Lea cada pregunta cuidadosamente, revise todas las opciones y elija la respuesta que considere correcta.",
-                                        3: "elemento 3",
-                                        4: "Después de elegir la respuesta haga clic en la flecha para continuar a la siguiente pregunta.",
-                                        5: "En la última pregunta se habilitará el botón Enviar."
-                                    }
-                                }
-                            },
-                            3: {
-                                tipo: "parrafo",
-                                estilo: "parrafo_basico",
-                                atributos: {
-                                    parrafos: {
-                                        1: "<b>Recuerde:</b>",
-                                        2: "Responda todas las preguntas antes de hacer clic en el botón Enviar."
-                                    }
-                                }
-                            },
-                            4: {
-                                tipo: "boton",
-                                estilo: "iniciar_examen",
-                                atributos: {
-                                    tag: "Enviar",
-                                    funcion: "iniciar_examen"
-                                }
-                            }
-                        }
-                    },
-                    2: {
-                        tipo: "layout",
-                        estilo: "layout_recurso_5",
-                        componentes: {
-                            1: {
-                                tipo: "parrafo",
-                                estilo: "parrafo_basico",
-                                atributos: {
-                                    parrafos: {
-                                        1: "<b>Instrucción:</b> Organice las siguientes competencias en la columna correspondiente (para el instructor o para el aprendiz). Haga clic en la flecha para ver las opciones."
-                                    }
-                                }
-                            },
-                            2: {
-                                tipo: "actividad",
-                                estilo: "select_vertical",
-                                elementos: {
-                                    preguntas: {
+                        tipo: "organizador",
+                        estilo: "organizador_examen",
+                        atributos: {
+                            tabs: {
+                                1: {
+                                    tipo: "layout",
+                                    estilo: "layout_portada_examen",
+                                    componentes: {
                                         1: {
-                                            enunciado: "El nuevo instructor debe:",
-                                            selects: {
-                                                1: {
-                                                    respuesta: 3,
-                                                    opciones: {
-                                                        1: "Generar conocimiento",
-                                                        2: "Profundizar conocimiento",
-                                                        3: "Tener nociones básicas de TIC"
-                                                    }
-                                                },
-                                                2: {
-                                                    respuesta: 3,
-                                                    opciones: {
-                                                        1: "Tener nociones básicas de TIC",
-                                                        2: "Generar conocimiento",
-                                                        3: "Profundizar conocimiento"
-                                                    }
-                                                },
-                                                3: {
-                                                    respuesta: 3,
-                                                    opciones: {
-                                                        1: "Profundizar conocimiento",
-                                                        2: "Tener nociones básicas de TIC",
-                                                        3: "Generar conocimiento"
-                                                    }
+                                            tipo: "titulo",
+                                            estilo: "titulo_recurso",
+                                            atributos: {
+                                                titulo: "Preguntas de Conocimiento",
+                                                icono: "preguntas"
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "<b>Verifique la apropiación de los saberes que hemos estudiado en este tema respondiendo a las siguientes preguntas.</b>",
+                                                    2: "Instrucciones:"
+                                                }
+                                            }
+                                        },
+                                        3: {
+                                            tipo: "lista",
+                                            estilo: "lista_vertical",
+                                            atributos: {
+                                                categoria: "no_numerada",
+                                                elementos: {
+                                                    1: "A continuación usted podrá encontrar alguno(s) de los siguientes tipos de preguntas: opción múltiple, verdadero/falso, de relación o de selección.",
+                                                    2: "Lea cada pregunta cuidadosamente, revise todas las opciones y elija la respuesta que considere correcta.",
+                                                    3: "elemento 3",
+                                                    4: "Después de elegir la respuesta haga clic en la flecha para continuar a la siguiente pregunta.",
+                                                    5: "En la última pregunta se habilitará el botón Enviar."
+                                                }
+                                            }
+                                        },
+                                        4: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "<b>Recuerde:</b>",
+                                                    2: "Responda todas las preguntas antes de hacer clic en el botón Enviar."
                                                 }
                                             }
                                         }
                                     }
-                                }
-                            },
-                            3: {
-                                tipo: "actividad",
-                                estilo: "select_vertical",
-                                atributos: {
-                                    preguntas: {
+                                },
+                                2: {
+                                    tipo: "layout",
+                                    estilo: "layout_recurso_5",
+                                    componentes: {
                                         1: {
-                                            enunciado: "El aprendiz digital debe:",
-                                            selects: {
-                                                1: {
-                                                    respuesta: 3,
-                                                    opciones: {
-                                                        1: "Tener autonomía",
-                                                        2: "Gestionar su tiempo",
-                                                        3: "Ser autodisciplinado"
-                                                    }
-                                                },
-                                                2: {
-                                                    respuesta: 3,
-                                                    opciones: {
-                                                        1: "Ser autodisciplinado",
-                                                        2: "Tener autonomía",
-                                                        3: "Gestionar su tiempo"
-                                                    }
-                                                },
-                                                3: {
-                                                    respuesta: 3,
-                                                    opciones: {
-                                                        1: "Gestionar su tiempo",
-                                                        2: "Ser autodisciplinado",
-                                                        3: "Tener autonomía"
+                                            tipo: "titulo",
+                                            estilo: "titulo_recurso",
+                                            atributos: {
+                                                titulo: "Preguntas de Conocimiento",
+                                                icono: "preguntas"
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "<b>Instrucción:</b> Organice las siguientes competencias en la columna correspondiente (para el instructor o para el aprendiz). Haga clic en la flecha para ver las opciones."
+                                                }
+                                            }
+                                        },
+                                        3: {
+                                            tipo: "actividad",
+                                            estilo: "select_vertical",
+                                            atributos: {
+                                                enunciado: "El nuevo instructor debe:",
+                                                preguntas: {
+                                                    1: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Generar conocimiento",
+                                                            2: "Profundizar conocimiento",
+                                                            3: "Tener nociones básicas de TIC"
+                                                        }
+                                                    },
+                                                    2: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Tener nociones básicas de TIC",
+                                                            2: "Generar conocimiento",
+                                                            3: "Profundizar conocimiento"
+                                                        }
+                                                    },
+                                                    3: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Profundizar conocimiento",
+                                                            2: "Tener nociones básicas de TIC",
+                                                            3: "Generar conocimiento"
+                                                        }
                                                     }
                                                 }
                                             }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    3: {
-                        tipo: "layout",
-                        estilo: "layout_recurso_4",
-                        componentes: {
-                            1: {
-                                tipo: "parrafo",
-                                estilo: "parrafo_basico",
-                                atributos: {
-                                    parrafos: {
-                                        1: "<b>Instrucción:</b> seleccione la opción que completa la frase."
-                                    }
-                                }
-                            },
-                            2: {
-                                tipo: "actividad",
-                                estilo: "pickmany_vertical",
-                                atributos: {
-                                    preguntas: {
-                                        1: {
-                                            enunciado: "Los campos virtuales permiten la interacción con _____",
-                                            respuesta: [1],
-                                            picks: {
-                                                1: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "otros actores"
-                                                            }
+                                        },
+                                        4: {
+                                            tipo: "actividad",
+                                            estilo: "select_vertical",
+                                            atributos: {
+                                                enunciado: "El aprendiz digital debe:",
+                                                preguntas: {
+                                                    1: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Tener autonomía",
+                                                            2: "Gestionar su tiempo",
+                                                            3: "Ser autodisciplinado"
                                                         }
-                                                    }
-                                                },
-                                                2: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "dispositivos electrónicos"
-                                                            }
+                                                    },
+                                                    2: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Ser autodisciplinado",
+                                                            2: "Tener autonomía",
+                                                            3: "Gestionar su tiempo"
                                                         }
-                                                    }
-                                                },
-                                                3: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "el conocimiento"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                4: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "dispositivos y conocimiento"
-                                                            }
+                                                    },
+                                                    3: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Gestionar su tiempo",
+                                                            2: "Ser autodisciplinado",
+                                                            3: "Tener autonomía"
                                                         }
                                                     }
                                                 }
                                             }
                                         }
                                     }
-                                }
-                            }
-                        }
-                    },
-                    4: {
-                        tipo: "layout",
-                        estilo: "layout_recurso_4",
-                        componentes: {
-                            1: {tipo: "parrafo",
-                                estilo: "parrafo_basico",
-                                atributos: {
-                                    parrafos: {
-                                        1: "<b>Instrucción:</b> seleccione la opción que completa la frase."
-                                    }
-                                }
-                            },
-                            2: {
-                                tipo: "actividad",
-                                estilo: "pickmany_vertical",
-                                atributos: {
-                                    preguntas: {
+                                },
+                                3: {
+                                    tipo: "layout",
+                                    estilo: "layout_recurso_4",
+                                    componentes: {
                                         1: {
-                                            enunciado: "Las personas y las instituciones generan _____________ al cambio",
-                                            respuesta: [1],
-                                            picks: {
-                                                1: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "resistencia"
-                                                            }
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "<b>Instrucción:</b> seleccione la opción que completa la frase."
+                                                }
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "actividad",
+                                            estilo: "pickmany_vertical",
+                                            atributos: {
+                                                preguntas: {
+                                                    1: {
+                                                        enunciado: "Los campos virtuales permiten la interacción con _____",
+                                                        respuesta: [1],
+                                                        picks: {
+                                                            1: "otros actores",
+                                                            2: "dispositivos electrónicos",
+                                                            3: "el conocimiento",
+                                                            4: "dispositivos y conocimiento"
                                                         }
                                                     }
-                                                },
-                                                2: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "deseo"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                3: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "amor por"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                4: {
-                                                    elemento: {
-                                                        tipo: "parrafo",
-                                                        estilo: "parrafo_basico",
-                                                        atributos: {
-                                                            parrafos: {
-                                                                1: "severidad"
-                                                            }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                4: {
+                                    tipo: "layout",
+                                    estilo: "layout_recurso_4",
+                                    componentes: {
+                                        1: {
+                                            tipo: "parrafo",
+                                            estilo: "parrafo_basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "<b>Instrucción:</b> seleccione la opción que completa la frase."
+                                                }
+                                            }
+                                        },
+                                        2: {
+                                            tipo: "actividad",
+                                            estilo: "pickmany_vertical",
+                                            atributos: {
+                                                preguntas: {
+                                                    1: {
+                                                        enunciado: "Las personas y las instituciones generan _____________ al cambio",
+                                                        respuesta: [1],
+                                                        picks: {
+                                                            1: "resistencia",
+                                                            2: "deseo",
+                                                            3: "amor por",
+                                                            4: "severidad"
                                                         }
                                                     }
                                                 }
