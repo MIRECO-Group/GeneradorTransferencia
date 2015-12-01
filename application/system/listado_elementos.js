@@ -1,24 +1,4 @@
 
-//**************************************************************************** GENERAL *********************************************************************
-
-var curso = {
-    "nombre": "Transferencia de conocimiento"
-};
-var unidad = {
-    "numero": 1,
-    "nombre": "Pedagodía de lenguas extranjeras I",
-    "lugar": "Inglaterra"
-};
-var leccion = {
-    "numero": 1,
-    "nombre": "Uso TIC parte 1",
-    "lugar": "Londres"
-};
-var tema = {
-    numero: 1,
-    nombre: "Qué se entiende por TIC?",
-    lugar: "Aeropuerto Heathrow"
-};
 //****************************************************************************MACRORECURSO*********************************************************************
 
 var macrorecurso = {
