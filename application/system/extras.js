@@ -2,54 +2,55 @@
 var extras = {
     1: {
         id: "glosario",
-        nombre: "glosario",
         tipo: "layout",
         estilo: "layout_glosario",
+        atributos: {
+            titulo: "Glosario",
+            icono: "glosario"
+        },
         componentes: {
             1: {
-                tipo: "titulo",
-                estilo: "titulo_glosario",
-                mostrar_icono: true,
-                elementos: {
-                    titulo: "Glosario"
-                }
-            },
-            2:{
                 tipo: "lista",
-                estilo: "lista_glosario",
-                categoria: "no_numerada",
-                elementos: {
-                    1: {
-                        texto: "<b>Blog:</b> según Peña ..."
+                estilo: "lista_vertical",
+                atributos: {
+                    categoria: "no_ordenada",
+                    elementos: {
+                        1: "<b>Nombre:</b> Lorem Ipsum.",
+                        2: "<b>Nombre:</b> Lorem Ipsum.",
+                        3: "<b>Nombre:</b> Lorem Ipsum."
                     }
                 }
             }
         }
     },
     2: {
-        id: "bibliografia",
-        nombre: "bibliografía",
+        id: "final_subcontenido1",
         tipo: "layout",
-        estilo: "layout_glosario",
+        estilo: "layout_og_1",
+        atributos: {
+            titulo: "Glosario",
+            icono: "glosario"
+        },
         componentes: {
             1: {
-                tipo: "titulo",
-                estilo: "titulo_glosario",
-                mostrar_icono: true,
-                elementos: {
-                    titulo: "Bibliografía"
+                tipo: "parrafo",
+                estilo: "parrafo_basico",
+                atributos: {
+                    parrafos: {
+                        1: "Lorem Ipsum"
+                    }
                 }
             },
-            2:{
-                tipo: "lista",
-                estilo: "lista_glosario",
-                categoria: "no_numerada",
-                elementos: {
-                    1: {
-                        texto: "Consejo de Europa. (2002)..."
-                    }
+            2: {
+                tipo: "imagen",
+                estilo: "imagen_basica",
+                atributos: {
+                    thumbnail: "img/susana_thumbnail.png",
+                    url: "img/susana.png",
+                    descripcion: ""
                 }
             }
         }
     }
+
 };
