@@ -98,3 +98,103 @@ html, body{
         border-radius: 10px 10px 10px 10px;
     }
 }
+
+/* ------------------------------ PREGUNTAS -------------------------------- */
+
+.og_preguntas {
+    display: flex;
+    flex:1;
+}
+
+.og_preguntas .portada{
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.og_preguntas p.center{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.og_preguntas div.title_container, .og_preguntas div.instrucciones p, .og_preguntas div.boton{
+    flex: 1;
+}
+
+.og_preguntas div.instrucciones{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.og_preguntas div.instrucciones ul, .og_preguntas div.recuerde{
+    flex: 3;
+}
+
+.og_preguntas div.instrucciones ul{
+    list-style-type: disc;
+}
+
+.og_preguntas div.instrucciones li{
+    margin: 0px 0px 10px 25px;
+}
+
+.og_preguntas div.boton{
+    margin: 0 auto;
+}
+
+.og_preguntas div.cont_preguntas{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(1){
+    flex: 9;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2){
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div span.transfe_font{
+    font-size: 2rem;
+    color: #73BACC;
+    opacity: 0.6;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div span.transfe_font.active{
+    color: #0182A2;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion{
+    display: flex;
+    flex-direction: row;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion > div.conteo{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion > div.conteo span{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #0182A2;
+}
+
+

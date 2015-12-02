@@ -221,6 +221,7 @@ div#content_container div.title_title_text
 {
 	margin: 0 15px;
 	font-size: 2rem;
+        color: #407389;
 }
 
 div#content_container div.title_subtitle_text
@@ -228,7 +229,7 @@ div#content_container div.title_subtitle_text
 	font-size: 1.5rem;
 }
 
-div#content_container .button_btn
+div#content_container .button_portada
 {
 	border-style: none;
 	color: blue;
@@ -244,12 +245,22 @@ div#content_container .button_btn
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#ffffff',GradientType=0 );
 }
 
- div#content_container .button_btn_text
+div#content_container .button_simple
+{
+    background-color: #0182A2;
+    color: #FFF;
+    width: 10rem;
+    border-radius: 10px; 
+    padding: 10px;
+    font-size: 1rem;
+}
+
+ div#content_container .button_portada_text
 {
 	font-size: 2rem;
 }
 
-div#content_container .button_btn::after
+div#content_container .button_portada::after
 {
 	font-family: 'transferenciaregular';
 	content: 'b';
