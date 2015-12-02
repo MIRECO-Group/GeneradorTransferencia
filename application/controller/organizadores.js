@@ -276,6 +276,26 @@
                     }
                 };
             })
+            .directive("ptImagenFull", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/imagen/full.html",
+                    controller: "imagenController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptImagenMitad", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/imagen/mitad.html",
+                    controller: "imagenController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .controller("imagenController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);

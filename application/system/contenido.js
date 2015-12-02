@@ -71,14 +71,54 @@ var macrorecursos = {
                 componentes: {
                     1: {
                         tipo: "organizador",
-                        estilo: "organizador_preguntas",
+                        estilo: "preguntas",
                         atributos: {
                             tabs: {
                                 1: {
                                     tag: "1",
                                     tipo: "layout",
-                                    estilo: "layout_og1_1",
-                                    componentes: {}
+                                    estilo: "layout_sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "imagen",
+                                            estilo: "full",
+                                            atributos:{
+                                                url: "img/fondo_portada.jpg",
+                                                descripcion: ""
+                                            }
+                                        }
+                                    }
+                                },
+                                2: {
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "imagen",
+                                            estilo: "mitad",
+                                            atributos:{
+                                                url: "img/fondo_portada.jpg",
+                                                descripcion: ""
+                                            }
+                                        }
+                                    }
+                                },
+                                3: {
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "imagen",
+                                            estilo: "basica",
+                                            atributos:{
+                                                thumbnail: "img/fondo_portada.jpg",
+                                                url: "img/fondo_portada.jpg",
+                                                descripcion: ""
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

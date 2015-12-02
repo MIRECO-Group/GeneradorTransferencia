@@ -151,47 +151,55 @@ html, body{
     flex: 1;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(1){
+.og_preguntas div.cont_preguntas>div.pregunta{
     flex: 9;
+    overflow: hidden;
+    display: flex;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(2){
+.og_preguntas div.cont_preguntas>div.botonera{
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(2)>div{
+.og_preguntas div.cont_preguntas>div.botonera>div{
     flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 15px;
+    padding: 10px;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(2)>div span.transfe_font{
+.og_preguntas div.cont_preguntas>div.botonera>div span.transfe_font{
     font-size: 2rem;
     color: #73BACC;
     opacity: 0.6;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(2)>div span.transfe_font.active{
+.og_preguntas div.cont_preguntas>div.botonera>div span.transfe_font.active{
     color: #0182A2;
+    opacity: 1;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion{
+.og_preguntas div.cont_preguntas>div.botonera>div span.transfe_font.active:hover{
+    cursor: pointer;
+}
+
+.og_preguntas div.cont_preguntas>div.botonera>div div.paginacion{
     display: flex;
     flex-direction: row;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion > div.conteo{
+.og_preguntas div.cont_preguntas>div.botonera>div div.paginacion > div.conteo{
    display: flex;
    flex-direction: row;
    align-items: center;
+   margin-left: 5px;
 }
 
-.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion > div.conteo span{
+.og_preguntas div.cont_preguntas>div.botonera>div div.paginacion > div.conteo span{
     font-size: 1.2rem;
     font-weight: 900;
     color: #0182A2;

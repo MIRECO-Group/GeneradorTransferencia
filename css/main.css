@@ -126,6 +126,14 @@ strong{
     font-weight: bold;
 }
 
+p{
+    min-height: 15px;
+}
+
+img{
+    margin: 0px;
+}
+
 body
 {
 	background-color: green;

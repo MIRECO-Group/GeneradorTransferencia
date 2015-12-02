@@ -39,25 +39,25 @@ var BASE_DATA = {
     },
     componentes: {
         organizador: {
-            organizador_saberes: {
+            tabs_superior: {
                 tag: "pt-organizador-tabs-superiores"
             },
-            organizador_tabs_izquierda: {
+            tabs_lateral: {
                 tag: "pt-organizador-tabs-lateral-izq"
             },
-            organizador_tabs_num_superior: {
+            tabs_num_superior: {
                 tag: "pt-organizador-tabs-numero-superior"
             },
-            organizador_linea_de_tiempo: {
-                tag: "pt-organizador-linea-de-tiempo"
-            },
-            organizador_tabs_num_izquierda: {
+            tabs_num_lateral: {
                 tag: "pt-organizador-tabs-num-izq"
             },
-            organizador_tabs_botones_flechas: {
+            linea_de_tiempo: {
+                tag: "pt-organizador-linea-de-tiempo"
+            },
+            tabs_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
             },
-            organizador_preguntas :{
+            preguntas :{
                 tag : "pt-organizador-preguntas"
             }
         },
@@ -67,13 +67,19 @@ var BASE_DATA = {
             }
         },
         parrafo: {
-            parrafo_basico: {
+            basico: {
                 tag: "pt-parrafo"
             }
         },
         imagen: {
-            imagen_basica: {
+            basica: {
                 tag: "pt-imagen"
+            },
+            full:{
+                tag: "pt-imagen-full"
+            },
+            mitad:{
+                tag: "pt-imagen-mitad"
             }
         },
         icono: {

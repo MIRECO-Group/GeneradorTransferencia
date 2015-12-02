@@ -37,17 +37,17 @@
     </div>
     
     <div class="cont_preguntas" ng-hide="isCover()">
-        <div ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" pt-new-tab="tab.chain"></div>
-        <div>
+        <div class="pregunta" ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" pt-new-tab="tab.chain"></div>
+        <div class="botonera">
             <div>
                 <button class="button_simple">
                     <span class="button_simple_text">Enviar</span>
                 </button>
                 
                 <div class="paginacion">
-                    <span class="transfe_font" ng-class="setPrevArrowActive()"><</span>
+                    <span class="transfe_font" ng-class="setPrevArrowActive()" ng-click="subtractTab()"><</span>
                     <div class="conteo"><span>{{tab}} de {{cantTabs}}</span></div>
-                    <span class="transfe_font" ng-class="setNextArrowActive()">></span>
+                    <span class="transfe_font" ng-class="setNextArrowActive()" ng-click="addTab()">></span>
                 </div>
             </div>
         </div>
