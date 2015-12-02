@@ -2,7 +2,7 @@
 
 (function () {
     angular.module("services", [])
-            .service('$plantilla', function () {
+            .service('$plantilla', function ($log) {
                 var config = {
                     data: generales,
                     pagina_actual: 1,
@@ -68,8 +68,8 @@
             })
             .service("$contenido", function ($log) {
                 var data = {
-                    page: {},
-                    padre_page: {},
+                    page: null,
+                    padre_page: null,
                     render_page: null
                 };
 
@@ -120,7 +120,7 @@
                 var get_element_page = function (arrTreeId) {
                     var element = null;
                     $.each(arrTreeId, function (k, v) {
-                        if (k === 0 && v === 1) {
+                        if (k === 0) {
                             element = data.page;
                             return true;
                         } else if (element.hasOwnProperty("componentes")) {
@@ -171,9 +171,11 @@
                 var read_layout = function (object, objAtributos) {
                     var estilo = object.estilo;
                     var render = null;
-                    if (BASE_DATA.layouts.hasOwnProperty(estilo)) {
+                    if (BASE_DATA.layouts.hasOwnProperty(estilo) && BASE_DATA.layouts[estilo].tag) {
                         var tag = {};
                         tag[BASE_DATA.layouts[estilo].tag] = "";
+                        
+                        //console.log(object, tag, objAtributos);
 
                         objAtributos = merge_options(objAtributos, tag);
                         render = $("<div/>", objAtributos);

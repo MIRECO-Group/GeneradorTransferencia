@@ -70,51 +70,20 @@ var macrorecursos = {
         recursos: {
             1: {
                 tipo: "layout",
-                estilo: "layout_portada",
+                estilo: "layout_sensibilizacion",
                 componentes: {
                     1: {
-                        tipo: "imagen",
-                        estilo: "imagen_basica",
+                        tipo: "organizador",
+                        estilo: "organizador_preguntas",
                         atributos: {
-                            thumbnail: "img/portada.png",
-                            url: "img/portada.png",
-                            descripcion: "imagen de portadad del objeto"
-                        }
-                    },
-                    2: {
-                        tag: "1",
-                        tipo: "layout",
-                        estilo: "layout_og_resultados",
-                        componentes: {
-                            1: {
-                                tipo: "titulo",
-                                estilo: "titulo_saberes",
-                                atributos: {
-                                    titulo: "Saberes"
-                                }
-                            },
-                            2: {
-                                tipo: "lista",
-                                estilo: "lista_saberes",
-                                atributos: {
-                                    categoria: "no_numerada",
-                                    elementos: {
-                                        1: "Las TIC: Conceptualización.",
-                                        2: "Recursos, herramientas y programas.",
-                                        3: "TIC en educación.",
-                                        4: "Nuevos conceptos.",
-                                        5: "Nuevos competencias."
-                                    }
+                            tabs: {
+                                1: {
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_og1_1",
+                                    componentes: {}
                                 }
                             }
-                        }
-                    },
-                    3: {
-                        tipo: "boton",
-                        estilo: "boton_portada",
-                        atributos: {
-                            tag: "Iniciemos",
-                            funcion: "iniciar_objeto"
                         }
                     }
                 }
@@ -650,6 +619,22 @@ var macrorecursos = {
                                                             1: "Tener autonomía",
                                                             2: "Gestionar su tiempo",
                                                             3: "Ser autodisciplinado"
+                                                        }
+                                                    },
+                                                    2: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Ser autodisciplinado",
+                                                            2: "Tener autonomía",
+                                                            3: "Gestionar su tiempo"
+                                                        }
+                                                    },
+                                                    3: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Gestionar su tiempo",
+                                                            2: "Ser autodisciplinado",
+                                                            3: "Tener autonomía"
                                                         }
                                                     }
                                                 }

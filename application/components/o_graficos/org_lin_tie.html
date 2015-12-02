@@ -1,0 +1,18 @@
+<div class="org_lin_tie">
+	<div ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" pt-new-tab="tab.chain">
+		</div>
+	<ul>
+		<li>
+			<div></div>				
+		</li>
+		<li ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" ng-class="setActive(key)">
+			<div class="circulo"></div>
+			<div class="linea"></div>
+			<div class="boton" ng-class="setActive(key)"></div>
+		</li>
+		<li>
+			<div></div>	
+		</li>
+	</ul>
+	<div class="barra"></div>
+</div>

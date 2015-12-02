@@ -36,3 +36,12 @@ img{
     height: auto;
     margin: 0 auto;
 }
+
+[class*="owl"]{
+    display: flex;
+    flex: 1;
+}
+
+.owl-controls{
+    display: none;
+}

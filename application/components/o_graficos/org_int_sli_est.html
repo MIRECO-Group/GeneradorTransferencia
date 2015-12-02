@@ -1,0 +1,11 @@
+<div class="org_int_sli_est">
+	<span class="left" ng-click="subtractTab()" ng-show="checkLess()"><</span>
+	<div>
+		<div ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" pt-new-tab="tab.chain">
+		</div>
+		<ul>
+			<li ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" ng-class="setActive(key)"></li>
+		</ul>
+	</div>
+	<span class="right" ng-click="addTab()" ng-show="checkMore()">></span>
+</div>
