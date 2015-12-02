@@ -1,0 +1,8 @@
+<div class="org_bot_num">
+	<ul>
+		<li ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" ng-class="setActive(key)">{{tab.tag}}</li>
+	</ul>
+	<div>
+		<div ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" pt-new-tab="tab.chain"></div>
+	</div>
+</div>

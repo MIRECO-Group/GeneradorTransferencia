@@ -92,14 +92,13 @@
                 var selector = "pt-panel";
 
                 var contPanel = function (numPanel) {
-                    var init = that.chainId.concat([parseInt(numPanel)]);
+                    var init = that.chainId.concat([(numPanel)]);
                     var element = $contenido.get_element_page(init);
 
                     if (element) {
                         var render = $contenido.render_element(element, init);
                         if (render) {
                             var where2Render = $("[" + selector + "='" + numPanel + "']", $element);
-                            console.log(where2Render, render);
                             $render.jQueryCompile(render, where2Render, $compile, $scope);
                         }
                     }

@@ -1,0 +1,200 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/11/2015, 11:24:29 AM
+    Author     : LUIS TOSCANO
+*/
+
+
+html, body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+[pt-new-tab]{
+    width: 100%;
+}
+
+.og_tabs_superiores {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    max-width: 700px;
+    height: 100%;
+}
+
+.og_tabs_superiores .tabs{
+    display: flex;
+    width: 100%;
+}
+
+.og_tabs_superiores .tabs ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    max-width: 99%;
+    width: 100%;
+}
+
+.og_tabs_superiores .tabs li{
+    color: white;
+    background-color: #00b2be;
+    border: 1px solid #70c6d3;
+    border-radius: 10px 10px 0px 0px; 
+    padding: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    font-weight: bold;
+    width: 15%; 
+}
+
+.og_tabs_superiores .tabs li:hover{
+    cursor: pointer;
+}
+
+.og_tabs_superiores .tabs li.active{
+    border: 0px;
+    background-color: #044059; 
+}
+
+.og_tabs_superiores .contenido {
+    background-color: white;
+    border: 2px solid #8669ab;
+    width: 99%;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 0px 10px 10px 10px;
+    min-height: 10%;
+}
+
+.og_tabs_superiores .contenido div[class^=tab_]{
+    display: none;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {  
+    .og_tabs_superiores .tabs ul{
+        flex-direction: column;
+    }
+
+    .og_tabs_superiores .tabs li{
+        display: flex;
+        border-radius: 10px 10px 10px 10px;
+        margin: 0px;
+        margin-bottom: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .og_tabs_superiores .contenido {
+        border-radius: 10px 10px 10px 10px;
+    }
+}
+
+/* ------------------------------ PREGUNTAS -------------------------------- */
+
+.og_preguntas {
+    display: flex;
+    flex:1;
+}
+
+.og_preguntas .portada{
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.og_preguntas p.center{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.og_preguntas div.title_container, .og_preguntas div.instrucciones p, .og_preguntas div.boton{
+    flex: 1;
+}
+
+.og_preguntas div.instrucciones{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.og_preguntas div.instrucciones ul, .og_preguntas div.recuerde{
+    flex: 3;
+}
+
+.og_preguntas div.instrucciones ul{
+    list-style-type: disc;
+}
+
+.og_preguntas div.instrucciones li{
+    margin: 0px 0px 10px 25px;
+}
+
+.og_preguntas div.boton{
+    margin: 0 auto;
+}
+
+.og_preguntas div.cont_preguntas{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(1){
+    flex: 9;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2){
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div span.transfe_font{
+    font-size: 2rem;
+    color: #73BACC;
+    opacity: 0.6;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div span.transfe_font.active{
+    color: #0182A2;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion{
+    display: flex;
+    flex-direction: row;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion > div.conteo{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.og_preguntas div.cont_preguntas>div:nth-child(2)>div div.paginacion > div.conteo span{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #0182A2;
+}
+
+

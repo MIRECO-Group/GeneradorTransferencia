@@ -1,0 +1,10 @@
+<div class="org_pes_lat">
+	<ul>
+		<li ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" ng-class="setActive(key)">
+			{{tab.tag}}
+		</li>
+	</ul>
+	<div class="contenido tipoa">
+		<div ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" pt-new-tab="tab.chain"></div>
+	</div>
+</div>

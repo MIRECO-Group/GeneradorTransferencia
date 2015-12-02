@@ -41,6 +41,24 @@ var BASE_DATA = {
         organizador: {
             organizador_saberes: {
                 tag: "pt-organizador-tabs-superiores"
+            },
+            organizador_tabs_izquierda: {
+                tag: "pt-organizador-tabs-lateral-izq"
+            },
+            organizador_tabs_num_superior: {
+                tag: "pt-organizador-tabs-numero-superior"
+            },
+            organizador_linea_de_tiempo: {
+                tag: "pt-organizador-linea-de-tiempo"
+            },
+            organizador_tabs_num_izquierda: {
+                tag: "pt-organizador-tabs-num-izq"
+            },
+            organizador_tabs_botones_flechas: {
+                tag: "pt-organizador-tabs-botones-flechas"
+            },
+            organizador_preguntas :{
+                tag : "pt-organizador-preguntas"
             }
         },
         titulo: {
@@ -53,9 +71,38 @@ var BASE_DATA = {
                 tag: "pt-parrafo"
             }
         },
-        imagen:{
+        imagen: {
             imagen_basica: {
                 tag: "pt-imagen"
+            }
+        },
+        icono: {
+            saberes: {
+                tag: "ico-saberes"
+            },
+            portada: {
+                tag: "ico-portada"
+            },
+            sensibilizacion_apertura: {
+                tag: "ico-apertura"
+            },
+            contextualizacion: {
+                tag: "ico-context"
+            },
+            contenido: {
+                tag: "ico-contenido"
+            },
+            recordemos: {
+                tag: "ico-recordemos"
+            },
+            sensibilizacion_cierre: {
+                tag: "ico-cierre"
+            },
+            preguntas_conocimiento: {
+                tag: "ico-preguntas"
+            },
+            mapa: {
+                tag: "ico-map"
             }
         }
     }
