@@ -68,8 +68,8 @@
             })
             .service("$contenido", function ($log) {
                 var data = {
-                    page: {},
-                    padre_page: {},
+                    page: null,
+                    padre_page: null,
                     render_page: null
                 };
 
@@ -120,7 +120,7 @@
                 var get_element_page = function (arrTreeId) {
                     var element = null;
                     $.each(arrTreeId, function (k, v) {
-                        if (k === 0 && v === 1) {
+                        if (k === 0) {
                             element = data.page;
                             return true;
                         } else if (element.hasOwnProperty("componentes")) {
@@ -175,7 +175,7 @@
                         var tag = {};
                         tag[BASE_DATA.layouts[estilo].tag] = "";
                         
-                        console.log(object, tag, objAtributos);
+                        //console.log(object, tag, objAtributos);
 
                         objAtributos = merge_options(objAtributos, tag);
                         render = $("<div/>", objAtributos);

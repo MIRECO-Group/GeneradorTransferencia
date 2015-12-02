@@ -43,7 +43,7 @@
             <img src="img/logo_sena.svg" title="sena"/>
         </header>
 
-        <div id="content_container" class="owl-carousel">
+        <div id="content_container">
         </div>
 
         <footer ng-controller="Paginacion as pag">
@@ -54,9 +54,9 @@
                 <input type="button" value="i">
             </div>
             <div id="center_buttons">
-                <input type="button" value="<">
-                <p></p>
-                <input type="button" value=">">
+                <input type="button" value="<" ng-click="ant_pagina()">
+                <p>{{pag.actual}}</p>
+                <input type="button" value=">" ng-click="sgte_pagina()">
                 <ul id="smart_menu">
                     <li><p>PDF<span class="icon_arrow_ed_s">k</span></p></li>
                     <li><p>Mapa<span class="icon_arrow_ed_s">j</span></p></li>

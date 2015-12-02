@@ -15,41 +15,58 @@
             })
             .controller("Paginacion", function ($compile, $scope, $plantilla, $contenido, $render) {
                 this.paginas = {};
-                this.actual = $plantilla.get_pagina();
+                this.actual = parseInt($plantilla.get_pagina());
                 this.final = $plantilla.get_pagina_final();
+                
+                var that = this;
 
                 var render_content = function (idPage) {
-                    var page = $plantilla.get_obj_pagina(idPage - 1);
-                    $contenido.set_obj_pagina(page);
-                    var render = $contenido.render_element(page, [1]);
-                    console.log(page, render);
                     var where2Render = $plantilla.base_container;
-
+                    if($contenido.get_obj_pagina()){
+                        $(where2Render, "div").empty();
+                    }
+                    idPage--;
+                    console.log(idPage);
+                    var page = $plantilla.get_obj_pagina(idPage);
+                    
+                    $contenido.set_obj_pagina(page);
+                    var render = $contenido.render_element(page, [idPage]);
+                    
+                    console.log(page);
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 };
 
-                //render_content(this.actual);
+                render_content(this.actual);
+                //render_content(this.actual + 1);
 
                 for (var i = this.actual; i < this.final; i++) {
-                    render_content(i);
+                    //render_content(i);
                 }
 
-                this.cambiar_pagina = function (idPage) {
-                    this.actual = idPage;
+                //$element.
+
+                $scope.cambiar_pagina = function (idPage) {
+                    that.actual = idPage;
                     $plantilla.set_pagina(this.actual);
                     render_content(this.actual);
                 };
 
-                this.sgte_pagina = function () {
-                    this.actual = this.actual++;
-                    $plantilla.set_pagina(this.actual);
-                    render_content(this.actual);
+                $scope.sgte_pagina = function () {
+                    if(that.actual + 1 > that.final){
+                        return;
+                    }
+                    that.actual++;
+                    $plantilla.set_pagina(that.actual);
+                    render_content(that.actual);
                 };
 
-                this.ant_pagina = function () {
-                    this.actual = this.actual--;
-                    $plantilla.set_pagina(this.actual);
-                    render_content(this.actual);
+                $scope.ant_pagina = function () {
+                    if(that.actual - 1 < 1){
+                        return;
+                    }
+                    that.actual--;
+                    $plantilla.set_pagina(that.actual);
+                    render_content(that.actual);
                 };
 
                 /* <div dummy-layout pt-constructor="[1]"></div> */

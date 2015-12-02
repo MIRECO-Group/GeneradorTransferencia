@@ -30,18 +30,18 @@
 
                 $scope.tabs = $contenido.get_element_page(this.chainId).atributos.tabs;
                 $.each($scope.tabs, function (key, value) {
-                    value.chain = JSON.stringify(that.chainId.concat([parseInt(key)]));
+                    value.chain = JSON.stringify(that.chainId.concat([(key)]));
                     cantTabs = cantTabs + 1;
                 });
 
                 $scope.tab = 1;
 
                 $scope.setTab = function (newTab) {
-                    $scope.tab = parseInt(newTab);
+                    $scope.tab = (newTab);
                 };
 
                 $scope.isSet = function (tab) {
-                    return $scope.tab === parseInt(tab);
+                    return $scope.tab == (tab);
                 };
 
                 $scope.setActive = function (tab) {
