@@ -56,6 +56,9 @@ var BASE_DATA = {
             },
             organizador_tabs_botones_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
+            },
+            organizador_preguntas :{
+                tag : "pt-organizador-preguntas"
             }
         },
         titulo: {
@@ -77,11 +80,29 @@ var BASE_DATA = {
             saberes: {
                 tag: "ico-saberes"
             },
+            portada: {
+                tag: "ico-portada"
+            },
+            sensibilizacion_apertura: {
+                tag: "ico-apertura"
+            },
+            contextualizacion: {
+                tag: "ico-context"
+            },
+            contenido: {
+                tag: "ico-contenido"
+            },
+            recordemos: {
+                tag: "ico-recordemos"
+            },
+            sensibilizacion_cierre: {
+                tag: "ico-cierre"
+            },
+            preguntas_conocimiento: {
+                tag: "ico-preguntas"
+            },
             mapa: {
                 tag: "ico-map"
-            },
-            "sensibilizacion apertura": {
-                tag: "pt-sensibilizacion-apertura"
             }
         }
     }

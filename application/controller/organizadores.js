@@ -35,21 +35,34 @@
                 });
 
                 $scope.tab = 1;
+                $scope.cantTabs = cantTabs;
 
-                $scope.setTab = function (newTab) {
-                    $scope.tab = (newTab);
-                };
+                //consultas
 
                 $scope.isSet = function (tab) {
                     return $scope.tab == (tab);
                 };
 
-                $scope.setActive = function (tab) {
-                    if ($scope.isSet(tab)) {
-                        return "active";
-                    }
+                $scope.isCover = function () {
+                    return $scope.tab === 0;
                 };
 
+                $scope.checkMore = function ()
+                {
+                    return $scope.tab < $scope.cantTabs && $scope.tab >= 1;
+                };
+
+                $scope.checkLess = function ()
+                {
+                    return $scope.tab <= $scope.cantTabs && $scope.tab > 1;
+                };
+                
+                //aumentar o reducir tabs
+                
+                $scope.setTab = function (newTab) {
+                    $scope.tab = parseInt(newTab);
+                };
+                
                 $scope.addTab = function () {
                     if ($scope.tab < cantTabs && $scope.tab >= 1) {
                         console.log("flagging " + $scope.tab + " !! " + cantTabs);
@@ -63,25 +76,24 @@
                         $scope.tab = $scope.tab - 1;
                     }
                 };
-
-                $scope.checkMore = function ()
-                {
-                    if ($scope.tab < cantTabs && $scope.tab >= 1)
-                    {
-                        return true;
-                    } else
-                    {
-                        return false;
+                
+                //añadir clases
+                
+                $scope.setActive = function (tab) {
+                    if ($scope.isSet(tab)) {
+                        return "active";
                     }
                 };
 
-                $scope.checkLess = function ()
-                {
-                    if ($scope.tab <= cantTabs && $scope.tab > 1) {
-                        return true;
-                    } else
-                    {
-                        return false;
+                $scope.setNextArrowActive = function () {
+                    if ($scope.checkMore()) {
+                        return "active";
+                    }
+                };
+                
+                 $scope.setPrevArrowActive = function () {
+                    if ($scope.checkLess()) {
+                        return "active";
                     }
                 };
             })
@@ -166,6 +178,17 @@
                     }
                 };
             })
+            .directive("ptOrganizadorPreguntas", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/preguntas.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Titulo">
             .directive("ptTitulo", function () {
@@ -194,10 +217,19 @@
                     }
                 };
             })
-            .directive("ptSensibilizacionApertura", function () {
+            .directive("icoApertura", function () {
                 return{
                     restrict: "A",
                     templateUrl: "application/components/iconos/sensibilizacion_apertura.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("icoPreguntas", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/conocimiento.html",
                     scope: {
                         'ptConstructor': '='
                     }
@@ -256,6 +288,23 @@
                     $(".blackout, .popup", $element).fadeOut("fast");
                 };
 
+                $scope.atributos = element.atributos;
+            })
+            //</editor-fold>
+            ////<editor-fold defaultstate="collapsed" desc="Botón">
+            .directive("ptBoton", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/botones/simple.html",
+                    controller: "botonController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .controller("botonController", function ($scope, $contenido, $element) {
+                this.chainId = $scope.ptConstructor;
+                var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
             })
             //</editor-fold>
