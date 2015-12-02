@@ -86,7 +86,7 @@ var macrorecursos = {
                                             tipo: "select",
                                             estilo: "select_horizontal",
                                             atributos: {
-                                                enunciado: "",
+                                                enunciado: "Enunciado",
                                                 preguntas: {
                                                     1: {
                                                         respuesta: 1,

@@ -20,7 +20,23 @@
                     }
                 };
             })
-            .controller("listaDesplegableController", function () {
+            .controller("listaDesplegableController", function ($scope, $contenido) {
+                this.chainId = $scope.ptConstructor;
+                var element = $contenido.get_element_page(this.chainId);
+                console.log(element);
+                $scope.atributos = element.atributos;
+                $scope.preguntas = element.atributos.preguntas;
+            })
+            .directive("ptItem", function () {
+                return{
+                    restrict: "A",
+                    controller: "itemActividadController",
+                    scope: {
+                        'ptItem': '='
+                    }
+                };
+            })
+            .controller("itemActividadController", function ($scope, $contenido) {
                 
             })
             ;

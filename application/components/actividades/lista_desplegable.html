@@ -1,1 +1,15 @@
-<div>ASD</div>
+<div class="act_lis_des">
+    <div>
+        <div>
+            <p class="con_tex_ret">{{atributos.enunciado}}</p>
+        </div>
+        <div ng-repeat="(idP, pregunta) in preguntas">
+            <div class="elemento" pt-item="idP"></div>
+            <div class="con_lis">
+                <select name="select1">
+                    <option ng-repeat="(key, value) in pregunta.opciones" value="{{key}}">{{value}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
