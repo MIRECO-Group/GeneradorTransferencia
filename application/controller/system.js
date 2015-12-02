@@ -24,14 +24,14 @@
                     var render = $contenido.render_element(page, [1]);
                     console.log(page, render);
                     var where2Render = $plantilla.base_container;
-                    
+
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 };
 
-                render_content(this.actual);
+                //render_content(this.actual);
 
                 for (var i = this.actual; i < this.final; i++) {
-                    //render_content(i);
+                    render_content(i);
                 }
 
                 this.cambiar_pagina = function (idPage) {

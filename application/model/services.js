@@ -171,9 +171,11 @@
                 var read_layout = function (object, objAtributos) {
                     var estilo = object.estilo;
                     var render = null;
-                    if (BASE_DATA.layouts.hasOwnProperty(estilo)) {
+                    if (BASE_DATA.layouts.hasOwnProperty(estilo) && BASE_DATA.layouts[estilo].tag) {
                         var tag = {};
                         tag[BASE_DATA.layouts[estilo].tag] = "";
+                        
+                        console.log(object, tag, objAtributos);
 
                         objAtributos = merge_options(objAtributos, tag);
                         render = $("<div/>", objAtributos);
