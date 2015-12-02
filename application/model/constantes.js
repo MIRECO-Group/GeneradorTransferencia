@@ -57,8 +57,8 @@ var BASE_DATA = {
             organizador_tabs_botones_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
             },
-            organizador_preguntas :{
-                tag : "pt-organizador-preguntas"
+            organizador_preguntas: {
+                tag: "pt-organizador-preguntas"
             }
         },
         titulo: {
@@ -76,6 +76,7 @@ var BASE_DATA = {
                 tag: "pt-imagen"
             }
         },
+        //<editor-fold defaultstate="collapsed" desc="Iconos">
         icono: {
             saberes: {
                 tag: "ico-saberes"
@@ -104,6 +105,15 @@ var BASE_DATA = {
             mapa: {
                 tag: "ico-map"
             }
+        },
+        //</editor-fold>
+        //<editor-fold defaultstate="collapsed" desc="Actividades">
+        select: {
+            select_horizontal: {
+                tag: "pt-lista-desplegable"
+            }
         }
+        //</editor-fold>
+
     }
 };

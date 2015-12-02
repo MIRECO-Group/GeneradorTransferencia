@@ -8,5 +8,5 @@
 /* global angular */
 
 (function () {
-    angular.module("routes", ["organizadores", "layouts"]);
+    angular.module("routes", ["organizadores", "layouts", "actividades"]);
 })();

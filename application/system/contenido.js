@@ -80,8 +80,36 @@ var macrorecursos = {
                                 1: {
                                     tag: "1",
                                     tipo: "layout",
-                                    estilo: "layout_og1_1",
-                                    componentes: {}
+                                    estilo: "layout_sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "select",
+                                            estilo: "select_horizontal",
+                                            atributos: {
+                                                enunciado: "",
+                                                preguntas: {
+                                                    1: {
+                                                        respuesta: 1,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
+                                                            tipo: "imagen",
+                                                            estilo: "imagen_basica",
+                                                            atributos: {
+                                                                thumbnail: "img/select1_thumbnail.png",
+                                                                url: "img/select1.png",
+                                                                descripcion: ""
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

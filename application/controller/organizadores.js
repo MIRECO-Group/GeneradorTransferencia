@@ -65,14 +65,14 @@
                 
                 $scope.addTab = function () {
                     if ($scope.tab < cantTabs && $scope.tab >= 1) {
-                        console.log("flagging " + $scope.tab + " !! " + cantTabs);
+                        //log("flagging " + $scope.tab + " !! " + cantTabs);
                         $scope.tab = $scope.tab + 1;
                     }
                 };
 
                 $scope.subtractTab = function () {
                     if ($scope.tab <= cantTabs && $scope.tab > 1) {
-                        console.log("flagging " + $scope.tab + " !! " + cantTabs);
+                        //console.log("flagging " + $scope.tab + " !! " + cantTabs);
                         $scope.tab = $scope.tab - 1;
                     }
                 };
@@ -117,7 +117,7 @@
 
                     if (render) {
                         var where2Render = $element;
-                        console.log(where2Render, render);
+                        //console.log(where2Render, render);
                         $render.jQueryCompile(render, where2Render, $compile, $scope);
 
                     }
@@ -242,7 +242,7 @@
                 var render = $contenido.render_element(element, []);
                 if (render) {
                     var where2Render = $element;
-                    console.log(where2Render, render);
+                    //console.log(where2Render, render);
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 }
             })
@@ -262,7 +262,7 @@
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
-                console.log(element);
+                //console.log(element);
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Imagen">
@@ -330,7 +330,7 @@
 
                     if (render) {
                         var where2Render = $element;
-                        console.log(where2Render, render);
+                        //console.log(where2Render, render);
                         $render.jQueryCompile(render, where2Render, $compile, $scope);
 
                     }
