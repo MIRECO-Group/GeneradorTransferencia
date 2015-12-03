@@ -27,23 +27,19 @@
                 $.each(element.atributos.preguntas, function (key, value) {
                     value.chain = JSON.stringify(that.chainId.concat([(key)]));
                 });
-
-                var datalista = element.atributos.preguntas;
-                var internos = 0;
-                var corLD = false;
-                var html = "";
+                
                 var terLD = false;
-                var numInt = 0;
+                
                 var resIntento = [];
                 var resCambio = [];
-                var jsonSalida;
 
                 $scope.atributos = element.atributos;
                 $scope.preguntas = element.atributos.preguntas;
+                
+                console.log($scope.preguntas);
 
                 //$('.act_lis_des', $element).delegate('.con_enviarld>span.enable', 'click', enviar);
                 
-
                 var seleccion = function () {
                     terLD = false;
                     $("select", $element).each(function (i, e) {
@@ -103,19 +99,21 @@
                     });
                 };
 
-                var enviarListaDesplegable = function () {
+                $scope.enviarListaDesplegable = function () {
                     var jsonSalida = {};
                     $("select", $element).each(function (i, e) {
-                        if ($(this).find(":selected").val() != datalista[internos].preguntas[i + 1].respuesta)
+                        if ($(this).find(":selected").val() != $scope.preguntas[i + 1].respuesta)
                             jsonSalida[i + 1] = {"correcta": "false", "opcion": $(this).find(":selected").text()};
                         else
                             jsonSalida[i + 1] = {"correcta": "true", "opcion": $(this).find(":selected").text()};
                     });
+                    
+                    
                     console.log(jsonSalida);
                     return jsonSalida;
                 };
                 
-                $("select", $element).change(seleccion);
+                //$("select", $element).change(seleccion);
 
 
             })
