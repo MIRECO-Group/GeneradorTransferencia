@@ -20,7 +20,7 @@
                     }
                 };
             })
-            .controller("listaDesplegableController", function ($scope, $contenido, $element) {
+            .controller("listaDesplegableController", function ($scope, $contenido, $element, $scorm) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 var that = this;
@@ -37,8 +37,6 @@
                 $scope.preguntas = element.atributos.preguntas;
                 
                 console.log($scope.preguntas);
-
-                //$('.act_lis_des', $element).delegate('.con_enviarld>span.enable', 'click', enviar);
                 
                 var seleccion = function () {
                     terLD = false;
@@ -71,6 +69,7 @@
                     }
                 };
 
+                //<editor-fold defaultstate="collapsed" desc="Funciones de comportamiento">
                 var bloqueoListaDesplegable = function () {
                     $('.enable', $element).addClass('disable');
                     $('.enable', $element).removeClass('enable');
@@ -78,7 +77,7 @@
                         $(this).attr('disabled', true);
                     });
                 };
-
+                
                 var reseteoListaDesplegable = function () {
                     $('.enable', $element).addClass('disable');
                     $('.enable', $element).removeClass('enable');
@@ -87,7 +86,7 @@
                         $(this).val("");
                     });
                 };
-
+                
                 var nuevoIntentoListaDesplegable = function () {
                     $("select", $element).each(function (i, e) {
                         resIntento[i] = $(this).find(":selected").val();
@@ -98,6 +97,7 @@
                         $(this).val(resIntento[i]);
                     });
                 };
+                //</editor-fold>
 
                 $scope.enviarListaDesplegable = function () {
                     var jsonSalida = {};
@@ -107,9 +107,10 @@
                         else
                             jsonSalida[i + 1] = {"correcta": "true", "opcion": $(this).find(":selected").text()};
                     });
-                    
-                    
                     console.log(jsonSalida);
+                    
+                    
+                    
                     return jsonSalida;
                 };
                 
