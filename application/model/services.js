@@ -2,6 +2,20 @@
 
 (function () {
     angular.module("services", [])
+            .service("$scorm", function () {
+                var data = {
+                    suspend_data : {
+                        
+                    },
+                    interactions : {
+                        
+                    }
+                };
+        
+                var interpretate_interaction = function (){
+                    
+                };
+            })
             .service('$plantilla', function ($log) {
                 var config = {
                     data: generales,
@@ -11,7 +25,7 @@
                     pagina_inicial: generales.generales.pagina_inicial,
                     configuracion: generales.generales,
                     pages: [],
-                    contenedor_principal : $("#content_container")
+                    contenedor_principal: $("#content_container")
                 };
 
                 /*
@@ -136,11 +150,11 @@
                             return false;
                         }
                     });
-                    
-                    if(element.hasOwnProperty("elemento")){
+
+                    if (element.hasOwnProperty("elemento")) {
                         element = element.elemento;
                     }
-                    
+
                     return element;
                 };
 
@@ -182,7 +196,7 @@
                     if (BASE_DATA.layouts.hasOwnProperty(estilo) && BASE_DATA.layouts[estilo].tag) {
                         var tag = {};
                         tag[BASE_DATA.layouts[estilo].tag] = "";
-                        
+
                         //console.log(object, tag, objAtributos);
 
                         objAtributos = merge_options(objAtributos, tag);
@@ -250,9 +264,9 @@
                     //$("#content_container")
                     jQueryContainer.append(compiledeHTML);
                 };
-                
+
                 return {
-                    jQueryCompile : function (render, jQueryContainer, $compile, $scope) {
+                    jQueryCompile: function (render, jQueryContainer, $compile, $scope) {
                         compile(render, jQueryContainer, $compile, $scope);
                     }
                 };
