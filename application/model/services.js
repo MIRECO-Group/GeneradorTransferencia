@@ -133,16 +133,12 @@
                  * Corresponde al objeto que debe ser obtenido segun la jerarquía del
                  * arreglo de elementos.
                  */
-                var get_element_page = function (arrTreeId, page) {
+                var get_element_page = function (arrTreeId) {
                     var element = null;
                     //console.log(arrTreeId);
                     $.each(arrTreeId, function (k, v) {
                         if (k === 0) {
-                            if(page){
-                                element = page;
-                            }else{
-                                element = data.page;
-                            }
+                            element = data.page;
                             return true;
                         } else if (element.hasOwnProperty("componentes")) {
                             element = element.componentes[v];
@@ -244,9 +240,14 @@
                 var interface = {
                     set_obj_pagina: function (objPage) {
                         data.page = objPage;
-                        data.padre_page = objPage.padre;
+                        if(objPage.hasOwnProperty("padre")){
+                            data.padre_page = objPage.padre;
+                            delete data.page.padre;
+                        }else{
+                            data.padre = null;
+                        }
                         read_page();
-                        delete data.page.padre;
+                        
                     },
                     get_obj_pagina: function () {
                         return data.page;
