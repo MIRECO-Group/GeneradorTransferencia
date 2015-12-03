@@ -409,10 +409,20 @@
             })
             //</editor-fold>
             ////<editor-fold defaultstate="collapsed" desc="Frame">
-            .directive("ptFrame", function () {
+            .directive("ptFrameGrande", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/frame/frame.html",
+                    templateUrl: "application/components/simples/frame/frame_big.html",
+                    controller: "frameController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptFrameMediano", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/frame/frame_medium.html",
                     controller: "frameController",
                     scope: {
                         'ptConstructor': '='

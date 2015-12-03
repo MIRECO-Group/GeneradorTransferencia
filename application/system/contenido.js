@@ -81,7 +81,7 @@ var macrorecursos = {
                                     componentes: {
                                         1: {
                                             tipo: "frame",
-                                            estilo: "basico",
+                                            estilo: "mediano",
                                             atributos: {
                                                 url: "media/anim/susana_popup/anim_susana-pop-ups.html"
                                             }

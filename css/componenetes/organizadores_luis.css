@@ -253,3 +253,9 @@ ul.lista_vineta_tipografia span.transfe_font{
 .frame{
     flex: 1;
 }
+
+.frame.medium{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+

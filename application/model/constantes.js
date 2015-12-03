@@ -126,8 +126,11 @@ var BASE_DATA = {
             }
         },
         frame:{
-            basico:{
-                tag: "pt-frame"
+            grande:{
+                tag: "pt-frame-grande"
+            },
+            mediano:{
+                tag: "pt-frame-mediano"
             }
         }
     }

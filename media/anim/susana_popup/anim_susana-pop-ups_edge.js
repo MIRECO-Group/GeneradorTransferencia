@@ -22,7 +22,7 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
@@ -61,43 +61,42 @@
                 content: {
                     dom: [
                         {
-                            rect: ['23px', '-50px', '550px', '557px', 'auto', 'auto'],
-                            id: 'circulo_azul',
                             transform: [[], [], [], ['0.7', '0.7']],
+                            id: 'circulo_azul',
                             type: 'image',
+                            rect: ['23px', '-50px', '550px', '557px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/circulo_azul.png', '0px', '0px']
                         },
                         {
-                            rect: ['156px', '-32px', '156px', '295px', 'auto', 'auto'],
-                            id: 'cabello_atras',
                             transform: [[], [], [], ['0.7', '0.7']],
+                            id: 'cabello_atras',
                             type: 'image',
+                            rect: ['156px', '-32px', '156px', '295px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cabello_atras.png', '0px', '0px']
                         },
                         {
+                            rect: ['61px', '41px', '75', '377', 'auto', 'auto'],
                             id: 'brazo_mov',
                             symbolName: 'brazo_mov',
-                            rect: ['61px', '41px', '75', '377', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
-                            rect: ['145px', '43px', '370px', '441px', 'auto', 'auto'],
-                            id: 'torzo_susana',
                             transform: [[], [], [], ['0.7', '0.7']],
+                            id: 'torzo_susana',
                             type: 'image',
+                            rect: ['145px', '43px', '370px', '441px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/torzo_susana.png', '0px', '0px']
                         },
                         {
+                            rect: ['237', '4', '203', '249', 'auto', 'auto'],
                             id: 'cabeza_complet',
                             symbolName: 'cabeza_complet',
-                            rect: ['237', '4', '203', '249', 'auto', 'auto'],
                             type: 'rect'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '491px', '423px']
+                            rect: [null, null, '491px', '423px']
                         }
                     }
                 },
@@ -140,7 +139,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1077",
+                            "eid1197",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -151,7 +150,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1078",
+                            "eid1198",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -162,7 +161,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1079",
+                            "eid1199",
                             "msTransformOrigin",
                             0,
                             0,
@@ -173,7 +172,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1080",
+                            "eid1200",
                             "-o-transform-origin",
                             0,
                             0,
@@ -184,7 +183,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1081",
+                            "eid1201",
                             "transform-origin",
                             0,
                             0,
@@ -225,55 +224,54 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-30px', '-31px', '200px', '240px', 'auto', 'auto'],
-                            id: 'cabeza_susana',
                             transform: [[], [], [], ['0.7', '0.7']],
+                            id: 'cabeza_susana',
                             type: 'image',
+                            rect: ['-30px', '-31px', '200px', '240px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cabeza_susana.png', '0px', '0px']
                         },
                         {
+                            rect: ['0', '4', '140', '168', 'auto', 'auto'],
                             id: 'boquitas',
                             symbolName: 'boquitas',
-                            rect: ['0', '4', '140', '168', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
-                            rect: ['-5px', '68px', '89px', '29px', 'auto', 'auto'],
-                            id: 'ojos',
                             transform: [[], [], [], ['0.7', '0.7']],
+                            id: 'ojos',
                             type: 'image',
+                            rect: ['-5px', '68px', '89px', '29px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/ojos.png', '0px', '0px']
                         },
                         {
+                            rect: ['10', '60', '62', '16', 'auto', 'auto'],
                             id: 'mov_cejas',
                             symbolName: 'mov_cejas',
-                            rect: ['10', '60', '62', '16', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
+                            rect: ['18', '77', '44', '10', 'auto', 'auto'],
                             id: 'mov_pepasOjos',
                             symbolName: 'mov_pepasOjos',
-                            rect: ['18', '77', '44', '10', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
+                            rect: ['8', '73', '62', '20', 'auto', 'auto'],
                             id: 'parpadeo',
                             symbolName: 'parpadeo',
-                            rect: ['8', '73', '62', '20', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
-                            rect: ['-18px', '-53px', '260px', '356px', 'auto', 'auto'],
-                            id: 'cabello_delante',
                             transform: [[], [], [], ['0.7', '0.7']],
+                            id: 'cabello_delante',
                             type: 'image',
+                            rect: ['-18px', '-53px', '260px', '356px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cabello_delante.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '203px', '249px']
+                            rect: [null, null, '203px', '249px']
                         }
                     }
                 },
@@ -295,17 +293,17 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.7', '0.7']],
-                            id: 'ceja_izq',
                             type: 'image',
+                            id: 'ceja_izq',
                             rect: ['23px', '2px', '46px', '17px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.7', '0.7']],
                             fill: ['rgba(0,0,0,0)', 'images/ceja_izq.png', '0px', '0px']
                         },
                         {
-                            transform: [[], [], [], ['0.7', '0.7']],
-                            id: 'ceja_der',
                             type: 'image',
+                            id: 'ceja_der',
                             rect: ['-4px', '-3px', '28px', '22px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.7', '0.7']],
                             fill: ['rgba(0,0,0,0)', 'images/ceja_der.png', '0px', '0px']
                         }
                     ],
@@ -389,15 +387,15 @@
                 content: {
                     dom: [
                         {
-                            rect: ['37px', '3px', '7px', '7px', 'auto', 'auto'],
-                            id: 'pupila_susana',
                             type: 'image',
+                            id: 'pupila_susana',
+                            rect: ['37px', '3px', '7px', '7px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/pupila_susana.png', '0px', '0px']
                         },
                         {
-                            rect: ['0px', '0px', '7px', '7px', 'auto', 'auto'],
-                            id: 'pupila_susana2',
                             type: 'image',
+                            id: 'pupila_susana2',
+                            rect: ['0px', '0px', '7px', '7px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/pupila_susana.png', '0px', '0px']
                         }
                     ],
@@ -481,9 +479,9 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.7', '0.7']],
                             type: 'image',
                             rect: ['-12px', '-2px', '89px', '29px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.7', '0.7']],
                             id: 'parpados2',
                             display: 'none',
                             clip: 'rect(0px 89px 4px 0px)',
@@ -515,7 +513,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1082",
+                            "eid1202",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -526,7 +524,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1083",
+                            "eid1203",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -537,7 +535,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1084",
+                            "eid1204",
                             "msTransformOrigin",
                             0,
                             0,
@@ -548,7 +546,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1085",
+                            "eid1205",
                             "-o-transform-origin",
                             0,
                             0,
@@ -559,7 +557,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1086",
+                            "eid1206",
                             "transform-origin",
                             0,
                             0,
@@ -771,19 +769,19 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.7', '0.7']],
-                            id: 'bocaM',
                             type: 'image',
+                            id: 'bocaM',
                             rect: ['-30px', '-36px', '200px', '240px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.7', '0.7']],
                             fill: ['rgba(0,0,0,0)', 'images/bocaM.png', '0px', '0px']
                         },
                         {
-                            transform: [[], [], [], ['0.7', '0.7']],
                             rect: ['-30px', '-36px', '200px', '240px', 'auto', 'auto'],
-                            display: 'none',
+                            transform: [[], [], [], ['0.7', '0.7']],
+                            type: 'image',
                             id: 'bocaI',
                             opacity: '0',
-                            type: 'image',
+                            display: 'none',
                             fill: ['rgba(0,0,0,0)', 'images/bocaI.png', '0px', '0px']
                         }
                     ],
@@ -883,41 +881,40 @@
                 content: {
                     dom: [
                         {
-                            rect: ['139px', '115px', '99px', '320px', 'auto', 'auto'],
-                            id: 'brazo_susana',
                             transform: [[], ['42'], [], ['0.7', '0.7']],
+                            id: 'brazo_susana',
                             type: 'image',
+                            rect: ['139px', '115px', '99px', '320px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/brazo_susana.png', '0px', '0px']
                         },
                         {
-                            rect: ['141px', '277px', '106px', '295px', 'auto', 'auto'],
-                            id: 'antebrazo2',
                             transform: [[], ['135'], [], ['0.7', '0.7']],
+                            id: 'antebrazo2',
                             type: 'image',
+                            rect: ['141px', '277px', '106px', '295px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/antebrazo.png', '0px', '0px']
                         },
                         {
-                            rect: ['-8px', '310px', '67px', '184px', 'auto', 'auto'],
                             transform: [[], ['114'], [], ['0.7', '0.7']],
+                            rect: ['-8px', '310px', '67px', '184px', 'auto', 'auto'],
                             id: 'mano2_susana',
                             opacity: '1',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/mano2_susana.png', '0px', '0px']
                         },
                         {
-                            rect: ['-82px', '149px', '84px', '163px', 'auto', 'auto'],
                             transform: [[], ['128'], [], ['0.7', '0.7']],
                             type: 'image',
+                            display: 'none',
                             id: 'mano1_susana',
                             opacity: '0.68275862068966',
-                            display: 'none',
+                            rect: ['-82px', '149px', '84px', '163px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/mano1_susana.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '75px', '377px']
+                            rect: [null, null, '75px', '377px']
                         }
                     }
                 },
@@ -1020,7 +1017,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1087",
+                            "eid1207",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -1031,7 +1028,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1088",
+                            "eid1208",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -1042,7 +1039,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1089",
+                            "eid1209",
                             "msTransformOrigin",
                             0,
                             0,
@@ -1053,7 +1050,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1090",
+                            "eid1210",
                             "-o-transform-origin",
                             0,
                             0,
@@ -1064,7 +1061,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid1091",
+                            "eid1211",
                             "transform-origin",
                             0,
                             0,
@@ -1073,6 +1070,182 @@
                             [57,10],
                             [57,10],
                             {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid235",
+                            "rotateZ",
+                            1575,
+                            925,
+                            "easeOutQuart",
+                            "${mano2_susana}",
+                            '110deg',
+                            '82deg'
+                        ],
+                        [
+                            "eid339",
+                            "rotateZ",
+                            3932,
+                            199,
+                            "linear",
+                            "${mano2_susana}",
+                            '82deg',
+                            '114deg'
+                        ],
+                        [
+                            "eid369",
+                            "rotateZ",
+                            4250,
+                            141,
+                            "linear",
+                            "${mano2_susana}",
+                            '114deg',
+                            '133deg'
+                        ],
+                        [
+                            "eid449",
+                            "rotateZ",
+                            8227,
+                            145,
+                            "linear",
+                            "${mano2_susana}",
+                            '133deg',
+                            '114deg'
+                        ],
+                        [
+                            "eid615",
+                            "rotateZ",
+                            11000,
+                            199,
+                            "linear",
+                            "${mano2_susana}",
+                            '114deg',
+                            '82deg'
+                        ],
+                        [
+                            "eid707",
+                            "rotateZ",
+                            11564,
+                            171,
+                            "easeOutQuart",
+                            "${mano2_susana}",
+                            '82deg',
+                            '110deg'
+                        ],
+                        [
+                            "eid196",
+                            "-webkit-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${brazo_susana}",
+                            [47,14],
+                            [47,14],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1212",
+                            "-moz-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${brazo_susana}",
+                            [47,14],
+                            [47,14],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1213",
+                            "-ms-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${brazo_susana}",
+                            [47,14],
+                            [47,14],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1214",
+                            "msTransformOrigin",
+                            0,
+                            0,
+                            "linear",
+                            "${brazo_susana}",
+                            [47,14],
+                            [47,14],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1215",
+                            "-o-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${brazo_susana}",
+                            [47,14],
+                            [47,14],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1216",
+                            "transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${brazo_susana}",
+                            [47,14],
+                            [47,14],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid397",
+                            "opacity",
+                            4312,
+                            79,
+                            "linear",
+                            "${mano1_susana}",
+                            '0.68275862068966',
+                            '1'
+                        ],
+                        [
+                            "eid416",
+                            "opacity",
+                            8095,
+                            79,
+                            "linear",
+                            "${mano1_susana}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid399",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${mano1_susana}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid398",
+                            "display",
+                            4312,
+                            0,
+                            "linear",
+                            "${mano1_susana}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid417",
+                            "display",
+                            8174,
+                            0,
+                            "linear",
+                            "${mano1_susana}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid335",
@@ -1144,7 +1317,7 @@
                             44,
                             "linear",
                             "${mano2_susana}",
-                            [[-32.84, 165.1, 0, 0, 0, 0,0],[-33.83, 199.72, 12.41, 33.28, 12.41, 33.28,34.92]]
+                            [[-32.84, 165.1, 0, 0, 0, 0,0],[-33.83, 199.72, 0, 0, 12.41, 33.28,34.92]]
                         ],
                         [
                             "eid697",
@@ -1153,7 +1326,7 @@
                             68,
                             "linear",
                             "${mano2_susana}",
-                            [[-33.83, 199.72, 8.34, 22.38, 46.76, 125.45,0],[-35.83, 247.72, 12.68, 28.16, 12.68, 28.16,48.26]]
+                            [[-33.83, 199.72, 8.34, 22.38, 0, 0,0],[-35.83, 247.72, 0, 0, 12.68, 28.16,48.26]]
                         ],
                         [
                             "eid698",
@@ -1162,7 +1335,7 @@
                             47,
                             "linear",
                             "${mano2_susana}",
-                            [[-35.83, 247.72, 7.24, 16.08, 58.39, 129.7,0],[-29.83, 283.72, 9.03, 15.07, 9.03, 15.07,36.56]]
+                            [[-35.83, 247.72, 7.24, 16.08, 0, 0,0],[-29.83, 283.72, 0, 0, 9.03, 15.07,36.56]]
                         ],
                         [
                             "eid699",
@@ -1171,7 +1344,7 @@
                             40,
                             "linear",
                             "${mano2_susana}",
-                            [[-29.83, 283.72, 7.05, 11.77, 63.82, 106.49,0],[-22.33, 312.72, 7.88, 9.67, 7.88, 9.67,30.01]]
+                            [[-29.83, 283.72, 7.05, 11.77, 0, 0,0],[-22.33, 312.72, 0, 0, 7.88, 9.67,30.01]]
                         ],
                         [
                             "eid700",
@@ -1180,7 +1353,7 @@
                             41,
                             "linear",
                             "${mano2_susana}",
-                            [[-22.33, 312.72, 8.69, 10.67, 63.4, 77.84,0],[-10.83, 316.72, 9.18, 6.59, 9.18, 6.59,12.38]]
+                            [[-22.33, 312.72, 8.69, 10.67, 0, 0,0],[-10.83, 316.72, 0, 0, 9.18, 6.59,12.38]]
                         ],
                         [
                             "eid701",
@@ -1189,7 +1362,7 @@
                             26,
                             "linear",
                             "${mano2_susana}",
-                            [[-10.83, 316.72, 6.71, 4.81, 57.8, 41.49,0],[-4.19, 319.72, 6.54, 3.35, 6.54, 3.35,7.3]]
+                            [[-10.83, 316.72, 6.71, 4.81, 0, 0,0],[-4.19, 319.72, 0, 0, 6.54, 3.35,7.3]]
                         ],
                         [
                             "eid702",
@@ -1198,7 +1371,7 @@
                             32,
                             "linear",
                             "${mano2_susana}",
-                            [[-4.19, 319.72, 8.73, 4.47, 49.85, 25.5,0],[5.17, 321.72, 8.11, 2.51, 8.11, 2.51,9.61]]
+                            [[-4.19, 319.72, 8.73, 4.47, 0, 0,0],[5.17, 321.72, 0, 0, 8.11, 2.51,9.6]]
                         ],
                         [
                             "eid703",
@@ -1207,7 +1380,7 @@
                             27,
                             "linear",
                             "${mano2_susana}",
-                            [[5.17, 321.72, 7.54, 2.33, 38.16, 11.82,0],[13.17, 322.72, 6.5, 1.33, 6.5, 1.33,8.07]]
+                            [[5.17, 321.72, 7.54, 2.33, 0, 0,0],[13.17, 322.72, 0, 0, 6.5, 1.33,8.07]]
                         ],
                         [
                             "eid704",
@@ -1216,235 +1389,7 @@
                             56,
                             "linear",
                             "${mano2_susana}",
-                            [[13.17, 322.72, 26.42, 5.41, 26.42, 5.41,0],[26.67, 324.75, 0, 0, 0, 0,13.66]]
-                        ],
-                        [
-                            "eid196",
-                            "-webkit-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${brazo_susana}",
-                            [47,14],
-                            [47,14],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1092",
-                            "-moz-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${brazo_susana}",
-                            [47,14],
-                            [47,14],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1093",
-                            "-ms-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${brazo_susana}",
-                            [47,14],
-                            [47,14],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1094",
-                            "msTransformOrigin",
-                            0,
-                            0,
-                            "linear",
-                            "${brazo_susana}",
-                            [47,14],
-                            [47,14],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1095",
-                            "-o-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${brazo_susana}",
-                            [47,14],
-                            [47,14],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1096",
-                            "transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${brazo_susana}",
-                            [47,14],
-                            [47,14],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid212",
-                            "-webkit-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${mano2_susana}",
-                            [51,8],
-                            [51,8],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1097",
-                            "-moz-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${mano2_susana}",
-                            [51,8],
-                            [51,8],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1098",
-                            "-ms-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${mano2_susana}",
-                            [51,8],
-                            [51,8],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1099",
-                            "msTransformOrigin",
-                            0,
-                            0,
-                            "linear",
-                            "${mano2_susana}",
-                            [51,8],
-                            [51,8],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1100",
-                            "-o-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${mano2_susana}",
-                            [51,8],
-                            [51,8],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1101",
-                            "transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${mano2_susana}",
-                            [51,8],
-                            [51,8],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid195",
-                            "-webkit-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${antebrazo2}",
-                            [43,15],
-                            [43,15],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1102",
-                            "-moz-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${antebrazo2}",
-                            [43,15],
-                            [43,15],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1103",
-                            "-ms-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${antebrazo2}",
-                            [43,15],
-                            [43,15],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1104",
-                            "msTransformOrigin",
-                            0,
-                            0,
-                            "linear",
-                            "${antebrazo2}",
-                            [43,15],
-                            [43,15],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1105",
-                            "-o-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${antebrazo2}",
-                            [43,15],
-                            [43,15],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid1106",
-                            "transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${antebrazo2}",
-                            [43,15],
-                            [43,15],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid399",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${mano1_susana}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid398",
-                            "display",
-                            4312,
-                            0,
-                            "linear",
-                            "${mano1_susana}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid417",
-                            "display",
-                            8174,
-                            0,
-                            "linear",
-                            "${mano1_susana}",
-                            'block',
-                            'none'
+                            [[13.17, 322.72, 26.42, 5.41, 0, 0,0],[26.67, 324.75, 0, 0, 0, 0,13.66]]
                         ],
                         [
                             "eid331",
@@ -1485,84 +1430,136 @@
                             [[78.58, 280.25, 0, 0, 0, 0,0],[132.04, 308.54, 77.82, 29.54, 83.95, 31.87,60.59],[186.58, 321.25, 0, 0, 0, 0,116.71]]
                         ],
                         [
-                            "eid397",
-                            "opacity",
-                            4312,
-                            79,
-                            "linear",
-                            "${mano1_susana}",
-                            '0.68275862068966',
-                            '1'
-                        ],
-                        [
-                            "eid416",
-                            "opacity",
-                            8095,
-                            79,
-                            "linear",
-                            "${mano1_susana}",
-                            '1',
-                            '0'
-                        ],
-                        [
-                            "eid235",
-                            "rotateZ",
-                            1575,
-                            925,
-                            "easeOutQuart",
-                            "${mano2_susana}",
-                            '110deg',
-                            '82deg'
-                        ],
-                        [
-                            "eid339",
-                            "rotateZ",
-                            3932,
-                            199,
+                            "eid212",
+                            "-webkit-transform-origin",
+                            0,
+                            0,
                             "linear",
                             "${mano2_susana}",
-                            '82deg',
-                            '114deg'
+                            [51,8],
+                            [51,8],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid369",
-                            "rotateZ",
-                            4250,
-                            141,
+                            "eid1217",
+                            "-moz-transform-origin",
+                            0,
+                            0,
                             "linear",
                             "${mano2_susana}",
-                            '114deg',
-                            '133deg'
+                            [51,8],
+                            [51,8],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid449",
-                            "rotateZ",
-                            8227,
-                            145,
+                            "eid1218",
+                            "-ms-transform-origin",
+                            0,
+                            0,
                             "linear",
                             "${mano2_susana}",
-                            '133deg',
-                            '114deg'
+                            [51,8],
+                            [51,8],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid615",
-                            "rotateZ",
-                            11000,
-                            199,
+                            "eid1219",
+                            "msTransformOrigin",
+                            0,
+                            0,
                             "linear",
                             "${mano2_susana}",
-                            '114deg',
-                            '82deg'
+                            [51,8],
+                            [51,8],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid707",
-                            "rotateZ",
-                            11564,
-                            171,
-                            "easeOutQuart",
+                            "eid1220",
+                            "-o-transform-origin",
+                            0,
+                            0,
+                            "linear",
                             "${mano2_susana}",
-                            '82deg',
-                            '110deg'
+                            [51,8],
+                            [51,8],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1221",
+                            "transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${mano2_susana}",
+                            [51,8],
+                            [51,8],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid195",
+                            "-webkit-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${antebrazo2}",
+                            [43,15],
+                            [43,15],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1222",
+                            "-moz-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${antebrazo2}",
+                            [43,15],
+                            [43,15],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1223",
+                            "-ms-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${antebrazo2}",
+                            [43,15],
+                            [43,15],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1224",
+                            "msTransformOrigin",
+                            0,
+                            0,
+                            "linear",
+                            "${antebrazo2}",
+                            [43,15],
+                            [43,15],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1225",
+                            "-o-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${antebrazo2}",
+                            [43,15],
+                            [43,15],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid1226",
+                            "transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${antebrazo2}",
+                            [43,15],
+                            [43,15],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ]
                     ]
                 }
