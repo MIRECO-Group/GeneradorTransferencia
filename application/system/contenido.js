@@ -97,6 +97,62 @@ var macrorecursos = {
                                                             4: "Rojo"
                                                         },
                                                         elemento: {
+                                                            tipo: "parrafo",
+                                                            estilo: "parrafo_basico",
+                                                            atributos: {
+                                                                parrafos: {
+                                                                    1: "Nombre",
+                                                                    2: "Direccion",
+                                                                    3: "Teléfono"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    2: {
+                                                        respuesta: 2,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
+                                                            tipo: "imagen",
+                                                            estilo: "imagen_basica",
+                                                            atributos: {
+                                                                thumbnail: "img/select1_thumbnail.png",
+                                                                url: "img/select1.png",
+                                                                descripcion: ""
+                                                            }
+                                                        }
+                                                    },
+                                                    3: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
+                                                            tipo: "imagen",
+                                                            estilo: "imagen_basica",
+                                                            atributos: {
+                                                                thumbnail: "img/select1_thumbnail.png",
+                                                                url: "img/select1.png",
+                                                                descripcion: ""
+                                                            }
+                                                        }
+                                                    },
+                                                    4: {
+                                                        respuesta: 4,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
                                                             tipo: "imagen",
                                                             estilo: "imagen_basica",
                                                             atributos: {

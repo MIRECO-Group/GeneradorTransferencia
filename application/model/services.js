@@ -119,6 +119,7 @@
                  */
                 var get_element_page = function (arrTreeId) {
                     var element = null;
+                    //console.log(arrTreeId);
                     $.each(arrTreeId, function (k, v) {
                         if (k === 0) {
                             element = data.page;
@@ -127,12 +128,19 @@
                             element = element.componentes[v];
                         } else if (element.atributos.hasOwnProperty("tabs")) {
                             element = element.atributos.tabs[v];
+                        } else if (element.atributos.hasOwnProperty("preguntas")) {
+                            element = element.atributos.preguntas[v];
                         } else {
                             $log.error("COMPONENTE INEXISTENTE -> ANTERIOR", element);
                             element = null;
                             return false;
                         }
                     });
+                    
+                    if(element.hasOwnProperty("elemento")){
+                        element = element.elemento;
+                    }
+                    
                     return element;
                 };
 

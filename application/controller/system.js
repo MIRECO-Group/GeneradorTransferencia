@@ -26,13 +26,13 @@
                         $(where2Render, "div").empty();
                     }
                     idPage--;
-                    console.log(idPage);
+                    //console.log(idPage);
                     var page = $plantilla.get_obj_pagina(idPage);
                     
                     $contenido.set_obj_pagina(page);
                     var render = $contenido.render_element(page, [idPage]);
                     
-                    console.log(page);
+                    //console.log(page);
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 };
 

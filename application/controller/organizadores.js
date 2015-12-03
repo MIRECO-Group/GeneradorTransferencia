@@ -7,7 +7,7 @@
 
 (function () {
     angular.module("organizadores", [])
-            //<editor-fold defaultstate="collapsed" desc="TABS">
+//<editor-fold defaultstate="collapsed" desc="TABS">
             .directive("ptOrganizadorTabsSuperiores", function () {
                 return{
                     restrict: "A",
@@ -279,6 +279,8 @@
             .controller("imagenController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
+                
+                console.log(element);
 
                 $scope.abrir_pop = function () {
                     $('.blackout, .popup', $element).fadeIn("fast");
@@ -287,7 +289,6 @@
                 $scope.cerrar_pop = function () {
                     $(".blackout, .popup", $element).fadeOut("fast");
                 };
-
                 $scope.atributos = element.atributos;
             })
             //</editor-fold>

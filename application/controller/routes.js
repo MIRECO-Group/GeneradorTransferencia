@@ -8,5 +8,10 @@
 /* global angular */
 
 (function () {
-    angular.module("routes", ["organizadores", "layouts", "actividades"]);
+    angular.module("routes", ["organizadores", "layouts", "actividades"])
+            .filter('shuffle', function () {
+                return function (ary) {
+                    return _.shuffle(ary);
+                };
+            });
 })();
