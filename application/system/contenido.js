@@ -80,11 +80,10 @@ var macrorecursos = {
                                     estilo: "layout_sensibilizacion",
                                     componentes: {
                                         1: {
-                                            tipo: "imagen",
-                                            estilo: "full",
-                                            atributos:{
-                                                url: "img/fondo_portada.jpg",
-                                                descripcion: ""
+                                            tipo: "frame",
+                                            estilo: "basico",
+                                            atributos: {
+                                                url: "media/anim/susana_popup/anim_susana-pop-ups.html"
                                             }
                                         }
                                     }
@@ -97,7 +96,7 @@ var macrorecursos = {
                                         1: {
                                             tipo: "imagen",
                                             estilo: "mitad",
-                                            atributos:{
+                                            atributos: {
                                                 url: "img/fondo_portada.jpg",
                                                 descripcion: ""
                                             }
@@ -112,7 +111,7 @@ var macrorecursos = {
                                         1: {
                                             tipo: "imagen",
                                             estilo: "basica",
-                                            atributos:{
+                                            atributos: {
                                                 thumbnail: "img/fondo_portada.jpg",
                                                 url: "img/fondo_portada.jpg",
                                                 descripcion: ""

@@ -110,6 +110,25 @@ var BASE_DATA = {
             mapa: {
                 tag: "ico-map"
             }
+        },
+        lista:{
+            basica:{
+              tag: "pt-lista-basica"  
+            },
+            numerada:{
+                tag:"pt-lista-numerada"
+            },
+            vineta_redonda:{
+                tag:"pt-lista-vineta-redonda"
+            },
+            vineta_tipografia:{
+                tag:"pt-lista-vineta-tipografia"
+            }
+        },
+        frame:{
+            basico:{
+                tag: "pt-frame"
+            }
         }
     }
 };
