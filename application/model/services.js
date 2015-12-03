@@ -127,16 +127,22 @@
                  * obtenido.
                  * @param {array} arrTreeId Array de elementos que corresponde a
                  * la jerarquía en el que debe ser encontrado el objeto.
+                 * @param {object} page Si este objeto es definido, toma los datos de ese elemento,
+                 * de lo contrario tomará los asignados al inicio del render
                  * @returns {data.page|element.atributos@arr;tabs|element@arr;componentes} 
                  * Corresponde al objeto que debe ser obtenido segun la jerarquía del
                  * arreglo de elementos.
                  */
-                var get_element_page = function (arrTreeId) {
+                var get_element_page = function (arrTreeId, page) {
                     var element = null;
                     //console.log(arrTreeId);
                     $.each(arrTreeId, function (k, v) {
                         if (k === 0) {
-                            element = data.page;
+                            if(page){
+                                element = page;
+                            }else{
+                                element = data.page;
+                            }
                             return true;
                         } else if (element.hasOwnProperty("componentes")) {
                             element = element.componentes[v];
