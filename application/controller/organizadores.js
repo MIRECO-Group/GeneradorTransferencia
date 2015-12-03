@@ -446,5 +446,22 @@
                 $scope.atributos = element.atributos;
             })
             //</editor-fold>
+            ////<editor-fold defaultstate="collapsed" desc="Reproductor">
+            .directive("ptReproductorBoton", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/reproductor/boton/boton_audio.html",
+                    controller: "frameController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .controller("frameController", function ($scope, $contenido, $element) {
+                this.chainId = $scope.ptConstructor;
+                var element = $contenido.get_element_page(this.chainId);
+                $scope.atributos = element.atributos;
+            })
+            //</editor-fold>
             ;
 })(angular);
