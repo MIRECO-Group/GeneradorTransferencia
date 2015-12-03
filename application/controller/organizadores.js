@@ -111,6 +111,17 @@
                     }
                 }
             })
+            .directive("ptOrganizadorTabsAcordeon", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/o_graficos/acordeon.html",
+                    controller: "oTabController",
+                    controllerAs: "organizador",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptOrganizadorTabsLateralIzq", function () {
                 return{
                     restrict: "A",

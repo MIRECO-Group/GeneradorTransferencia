@@ -56,6 +56,9 @@ var BASE_DATA = {
             },
             organizador_tabs_botones_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
+            },
+            organizador_tabs_acordeon: {
+                tag: "pt-organizador-tabs-acordeon"
             }
         },
         titulo: {

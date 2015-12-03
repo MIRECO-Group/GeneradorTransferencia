@@ -2,7 +2,7 @@
 
 (function () {
     angular.module("services", [])
-            .service('$plantilla', function ($log) {
+            .service('$plantilla', function () {
                 var config = {
                     data: generales,
                     pagina_actual: 1,
