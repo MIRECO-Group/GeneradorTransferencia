@@ -1,10 +1,1 @@
-<div class="popup activado">
-    <div class="popup-contenedor">
-        <div class="popup-header">
-            <div class="popup-icono" pt-icono="icono"></div>
-            <div class="popup-titulo">{{titulo}}</div>
-            <div class="popup-btnCerrar" ng-click="cerrar()"></div>
-        </div>
-        <div class="popup-contenido" pt-popup />
-    </div>
-</div>
+<div ng-repeat="(key, val) in popupCtrl.popups" pt-popup="key"></div>

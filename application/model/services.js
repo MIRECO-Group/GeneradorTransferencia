@@ -4,16 +4,32 @@
     angular.module("services", [])
             .service("$scorm", function () {
                 var data = {
-                    suspend_data : {
-                        
-                    },
-                    interactions : {
-                        
-                    }
+                    suspend_data : null,
+                    interactions : null
                 };
+                
+                var read_interactions = function(){
+                    data.interactions = {};
+                };
+                
+                var read_suspendData = function(){
+                    data.suspend_data = {};
+                };
+                
+                read_suspendData();
+                read_interactions();
         
                 var interpretate_interaction = function (){
                     
+                };
+                
+                return {
+                    get_suspendData : function(){
+                        return data.suspend_data;
+                    },
+                    get_interactions : function(){
+                        return data.interactions;
+                    }
                 };
             })
             .service('$plantilla', function ($log) {
@@ -33,8 +49,8 @@
                  * contenidos los elementos que deben ser cargados. Además entrega el 
                  * valor de páginas existente con el fin de tener el contador de páginas
                  * disponible en plantilla.
-                 * @param {type} data
-                 * @returns {undefined}
+                 * @param {object} data Configuracion completa del sistema
+                 * @returns {void}
                  */
                 var read_pages = function (data) {
                     $.each(data, function (k, v) {

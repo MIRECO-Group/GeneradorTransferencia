@@ -36,7 +36,7 @@
                 $scope.atributos = element.atributos;
                 $scope.preguntas = element.atributos.preguntas;
                 
-                console.log($scope.preguntas);
+                //console.log($scope.preguntas);
                 
                 var seleccion = function () {
                     terLD = false;
