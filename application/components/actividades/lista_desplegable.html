@@ -7,6 +7,7 @@
             <div class="elemento" pt-item="pregunta.chain"></div>
             <div class="con_lis">
                 <select name="select1">
+                    <option value=""></option>
                     <option ng-repeat="(key, value) in pregunta.opciones" value="{{key}}">
                         {{value}}{{idP}}
                     </option>
@@ -14,4 +15,6 @@
             </div>
         </div>
     </div>
+    
+    <button ng-click="enviarListaDesplegable()">ENVIAR</button>
 </div>
