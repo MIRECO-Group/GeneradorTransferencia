@@ -339,6 +339,57 @@
                 $scope.atributos = element.atributos;
             })
             //</editor-fold>
+            ////<editor-fold defaultstate="collapsed" desc="Lista">
+            .directive("ptListaBasica", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/lista/basica.html",
+                    controller: "listaController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptListaNumerada", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/lista/numerada.html",
+                    controller: "listaController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptListaVinetaRedonda", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/lista/vinetaR.html",
+                    controller: "listaController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptListaVinetaTipografia", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/lista/vinetaT.html",
+                    controller: "listaController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .controller("listaController", function ($scope, $contenido, $element) {
+                this.chainId = $scope.ptConstructor;
+                var element = $contenido.get_element_page(this.chainId);
+                $scope.atributos = element.atributos;
+                
+                $scope.checkEnunciado = function(){
+                   return $scope.atributos.hasOwnProperty("enunciado") && $scope.atributos.enunciado.trim().length>0; 
+                } ;
+            })
+            //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="PopUp">
             .directive("ptPopup", function () {
                 return{
@@ -366,6 +417,33 @@
 
                     }
                 }
+            })
+            //</editor-fold>
+            ////<editor-fold defaultstate="collapsed" desc="Frame">
+            .directive("ptFrameGrande", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/frame/frame_big.html",
+                    controller: "frameController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptFrameMediano", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/frame/frame_medium.html",
+                    controller: "frameController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .controller("frameController", function ($scope, $contenido, $element) {
+                this.chainId = $scope.ptConstructor;
+                var element = $contenido.get_element_page(this.chainId);
+                $scope.atributos = element.atributos;
             })
             //</editor-fold>
             ;
