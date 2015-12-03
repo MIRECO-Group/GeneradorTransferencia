@@ -83,66 +83,82 @@ var macrorecursos = {
                                     estilo: "layout_sensibilizacion",
                                     componentes: {
                                         1: {
-                                            tipo: "drag_drop",
-                                            estilo: "dragdrop_horizontal",
+                                            tipo: "select",
+                                            estilo: "select_horizontal",
                                             atributos: {
+                                                enunciado: "Enunciado",
                                                 preguntas: {
                                                     1: {
-                                                        enunciado: "",
-                                                        drags: {
-                                                            1: "texto 1",
-                                                            2: "texto 2",
-                                                            3: "texto 3",
-                                                            4: "texto 4"
+                                                        respuesta: 1,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
                                                         },
-                                                        drops: {
-                                                            1: {
-                                                                accepted: [4],
-                                                                elemento: {
-                                                                    tipo: "imagen",
-                                                                    estilo: "imagen_basica",
-                                                                    atributos: {
-                                                                        thumbnail: "img/drop1_thumbnail.png",
-                                                                        url: "img/drop1.png",
-                                                                        descripcion: ""
-                                                                    }
+                                                        elemento: {
+                                                            tipo: "parrafo",
+                                                            estilo: "parrafo_basico",
+                                                            atributos: {
+                                                                parrafos: {
+                                                                    1: "Nombre",
+                                                                    2: "Direccion",
+                                                                    3: "Teléfono"
                                                                 }
-                                                            },
-                                                            2: {
-                                                                accepted: [3],
-                                                                elemento: {
-                                                                    tipo: "imagen",
-                                                                    estilo: "imagen_basica",
-                                                                    atributos: {
-                                                                        thumbnail: "img/drop2_thumbnail.png",
-                                                                        url: "img/drop2.png",
-                                                                        descripcion: ""
-                                                                    }
-                                                                }
-                                                            },
-                                                            3: {
-                                                                accepted: [2],
-                                                                elemento: {
-                                                                    tipo: "imagen",
-                                                                    estilo: "imagen_basica",
-                                                                    atributos: {
-                                                                        thumbnail: "img/drop3_thumbnail.png",
-                                                                        url: "img/drop3.png",
-                                                                        descripcion: ""
-                                                                    }
-                                                                }
-                                                            },
-                                                            4: {
-                                                                accepted: [1],
-                                                                elemento: {
-                                                                    tipo: "imagen",
-                                                                    estilo: "imagen_basica",
-                                                                    atributos: {
-                                                                        thumbnail: "img/drop4_thumbnail.png",
-                                                                        url: "img/drop4.png",
-                                                                        descripcion: ""
-                                                                    }
-                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    2: {
+                                                        respuesta: 2,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
+                                                            tipo: "imagen",
+                                                            estilo: "imagen_basica",
+                                                            atributos: {
+                                                                thumbnail: "img/select1_thumbnail.png",
+                                                                url: "img/select1.png",
+                                                                descripcion: ""
+                                                            }
+                                                        }
+                                                    },
+                                                    3: {
+                                                        respuesta: 3,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
+                                                            tipo: "imagen",
+                                                            estilo: "imagen_basica",
+                                                            atributos: {
+                                                                thumbnail: "img/select1_thumbnail.png",
+                                                                url: "img/select1.png",
+                                                                descripcion: ""
+                                                            }
+                                                        }
+                                                    },
+                                                    4: {
+                                                        respuesta: 4,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
+                                                            tipo: "imagen",
+                                                            estilo: "imagen_basica",
+                                                            atributos: {
+                                                                thumbnail: "img/select1_thumbnail.png",
+                                                                url: "img/select1.png",
+                                                                descripcion: ""
                                                             }
                                                         }
                                                     }
