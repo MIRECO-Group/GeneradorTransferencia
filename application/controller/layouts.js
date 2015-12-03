@@ -9,78 +9,177 @@
 
 (function () {
     angular.module("layouts", [])
-            .directive("layout0", function () {
+            .directive("contextualizacion", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/0.html",
+                    templateUrl: "application/components/layouts/contextualizacion.html",
                     scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .directive("layout1", function () {
+            .directive("organizador1", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/1.html",
+                    templateUrl: "application/components/layouts/organizador1.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })            
+            .directive("organizador2", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/organizador2.html",
                     scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .directive("layout2", function () {
+            .directive("portada", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/2.html",
+                    templateUrl: "application/components/layouts/portada.html",
                     scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .directive("layout3", function () {
+            .directive("sensibilizacion", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/3.html",
+                    templateUrl: "application/components/layouts/sensibilizacion.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })         
+            .directive("actividad1", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/actividad_contenido_1.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })            
+            .directive("actividad2", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/actividad_contenido_2.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })            
+            .directive("actividad3", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/actividad_contenido_3.html",
                     scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .directive("layout4", function () {
+            .directive("actividad4", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/4.html",
+                    templateUrl: "application/components/layouts/actividad_contenido_4.html",
                     scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .directive("layout5", function () {
+            .directive("contenido1", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/5.html",
+                    templateUrl: "application/components/layouts/contenido1.html",
                     scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .directive("layout6", function () {
+            .directive("contenido2", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
                     restrict: "A",
-                    templateUrl: "application/components/layouts/6.html",
+                    templateUrl: "application/components/layouts/contenido2.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("contenido3", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/contenido3.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("contenido4", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/contenido4.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("contenido5", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/contenido5.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("contenido6", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/contenido6.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("contenido7", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/contenido7.html",
                     scope: {
                         'ptConstructor': '='
                     }
@@ -92,14 +191,13 @@
                 var selector = "pt-panel";
 
                 var contPanel = function (numPanel) {
-                    var init = that.chainId.concat([parseInt(numPanel)]);
+                    var init = that.chainId.concat([(numPanel)]);
                     var element = $contenido.get_element_page(init);
 
                     if (element) {
                         var render = $contenido.render_element(element, init);
                         if (render) {
                             var where2Render = $("[" + selector + "='" + numPanel + "']", $element);
-                            console.log(where2Render, render);
                             $render.jQueryCompile(render, where2Render, $compile, $scope);
                         }
                     }
