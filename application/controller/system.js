@@ -17,6 +17,8 @@
                 this.paginas = {};
                 this.actual = parseInt($plantilla.get_pagina());
                 this.final = $plantilla.get_pagina_final();
+                
+                $plantilla.set_paginacion_controller($scope);
 
                 var that = this;
 
