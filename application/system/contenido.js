@@ -74,9 +74,8 @@ var macrorecursos = {
                 componentes: {
                     1: {
                         tipo: "imagen",
-                        estilo: "imagen_basica",
+                        estilo: "full",
                         atributos: {
-                            thumbnail: "img/portada.png",
                             url: "img/portada.png",
                             descripcion: "imagen de portadad del objeto"
                         }

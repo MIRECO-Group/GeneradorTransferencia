@@ -75,6 +75,7 @@ var componente3 = {
 /*
  tag: Texto. Obligatorio. Texto que aparecerá dentro del botón.
  funcion: Texto. Obligatorio. Define la funcionalidad que debe tener el botón.
+ destino: Texto. Opcional. Para botones que dirigen a un popup o link específico, define hacia donde debe dirigirse.
  */
 
 var componente4 = {
@@ -82,7 +83,8 @@ var componente4 = {
     estilo: "submit_actividad",
     atributos: {
         tag: "Enviar",
-        funcion: "iniciar_examen"
+        funcion: "iniciar_examen",
+        destino: "glosario"
     }
 };
 //REPRODUCTOR
