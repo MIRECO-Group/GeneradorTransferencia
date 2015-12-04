@@ -126,19 +126,6 @@ strong{
     font-weight: bold;
 }
 
-p{
-    min-height: 10px;
-    margin-bottom: 5px;
-}
-
-li{
-    margin-bottom: 5px;
-}
-
-img{
-    margin: 0px;
-}
-
 body
 {
     background-color: green;
@@ -179,7 +166,7 @@ header div:nth-child(1) > h1
     font-size: 1.8rem;
     margin: 0.8rem 0px 0.8rem 105px;
 }
-header div:nth-child(1) > input[type="button"] /*Bot?n que activa el men? desplegable*/
+header div:nth-child(1) > input[type="button"] /*Bot�n que activa el men� desplegable*/
 {
 	font-family: 'transferenciaregular';
 	border: none;
@@ -275,7 +262,7 @@ header div:nth-child(2) > p:nth-child(3) /*Barra miga de pan - texto que se mues
     z-index: 1;
     margin-top: -10px;
 }
-header ul:nth-child(3) /* Men? desplegable de la barra superior */
+header ul:nth-child(3) /* Men� desplegable de la barra superior */
 {
     display: none;
     background-color: rgba(0,0,0,0.6);
@@ -294,7 +281,7 @@ header ul:nth-child(3) li:hover
 {
     background-color: rgba(255,255,255,0.3);
 }
-header ul:nth-child(3) li p /* Iconos del men? desplegable */
+header ul:nth-child(3) li p /* Iconos del men� desplegable */
 {
 	color: white;
 	cursor: pointer;
@@ -366,7 +353,7 @@ footer input[type="button"]
 		justify-content: flex-start;
 		align-items: inherit;
 	}
-footer > div#left_buttons > input[type="button"]:nth-child(1) /*Bot?n Portada*/
+footer > div#left_buttons > input[type="button"]:nth-child(1) /*Bot�n Portada*/
 {
 	font-size: 2rem;
 	border-style: none;
@@ -380,7 +367,7 @@ footer > div#left_buttons > input[type="button"]:nth-child(1) /*Bot?n Portada*/
 	background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
 }
-footer > div#left_buttons > input[type="button"]:nth-child(2) /*Bot?n Bibliograf?a*/
+footer > div#left_buttons > input[type="button"]:nth-child(2) /*Bot�n Bibliograf�a*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -393,7 +380,7 @@ footer > div#left_buttons > input[type="button"]:nth-child(2) /*Bot?n Bibliograf
 	background: linear-gradient(to bottom, #4e9d9f 0%,#8dd6dd 50%,#4e9d9f 51%,#5dbdc4 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e9d9f', endColorstr='#5dbdc4',GradientType=0 )
 }
-footer > div#left_buttons > input[type="button"]:nth-child(4) /*Bot?n Glosario*/
+footer > div#left_buttons > input[type="button"]:nth-child(4) /*Bot�n Glosario*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -422,7 +409,7 @@ footer > div#center_buttons
 	width: 0rem;
 	align-items: inherit;
 }
-footer > div#center_buttons > input[type="button"]:nth-child(1)/*Bot?n ir a la izquierda*/
+footer > div#center_buttons > input[type="button"]:nth-child(1)/*Bot�n ir a la izquierda*/
 {
 	font-size: 2rem;
 	background: #004c5e;
@@ -448,7 +435,7 @@ footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que rec
 	height: 2rem;
 	text-align: center;
 }
-footer > div#center_buttons > input[type="button"]:nth-child(3)/*Bot?n ir a la derecha*/
+footer > div#center_buttons > input[type="button"]:nth-child(3)/*Bot�n ir a la derecha*/
 {
 	font-size: 2rem;
 	background: #004c5e;
@@ -497,7 +484,7 @@ footer > div#right_buttons
 	justify-content: flex-end;
 	align-items: inherit;
 }
-footer > div#right_buttons > input[type="button"]:nth-child(1) /*Bot?n Mapa Conceptual*/
+footer > div#right_buttons > input[type="button"]:nth-child(1) /*Bot�n Mapa Conceptual*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -510,7 +497,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(1) /*Bot?n Mapa Conc
 	background: linear-gradient(to bottom, #4e9d9f 0%,#8dd6dd 50%,#4e9d9f 51%,#5dbdc4 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e9d9f', endColorstr='#5dbdc4',GradientType=0 )
 }
-footer > div#right_buttons > input[type="button"]:nth-child(3) /*Bot?n Descargable - PDF*/
+footer > div#right_buttons > input[type="button"]:nth-child(3) /*Bot�n Descargable - PDF*/
 {
 	font-size: 1.8rem;
 	border-style: none;
@@ -538,9 +525,14 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 	border-bottom-right-radius: 5px;
 }
 
+section#popups, .popup-contenedor
+{
+    display:none;
+}
+
 @media (max-width: 701px){ /*************************Tablet***********************/
 
-	header ul:nth-child(3) /*Men? desplegable*/
+	header ul:nth-child(3) /*Men� desplegable*/
 	{		
 		background-color: inherit;
 		padding: 0 0;
@@ -560,7 +552,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
         background-color: rgba(0,0,0,0.7);
     }
 
-	header ul:nth-child(3) li span:nth-child(1) /*Tool tips del men? desplegable*/
+	header ul:nth-child(3) li span:nth-child(1) /*Tool tips del men� desplegable*/
 	{
 		background-color: initial;
 		display: inline-block;
@@ -571,7 +563,7 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 		width: 6rem;
 	}
 
-	header ul:nth-child(3) li p /*iconos del men? desplegable*/
+	header ul:nth-child(3) li p /*iconos del men� desplegable*/
 	{
 		border-radius: 0px;
 		display: inline-block;
@@ -622,4 +614,54 @@ footer > div#right_buttons > input[type="button"]:nth-child(4)
 	{
 		flex-grow: 40;
 	}
+}
+
+.accesibilidad-texto1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 40px 0 20px 0;
+}
+.accesibilidad-texto2 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.accesibilidad-texto2 > b {
+  margin-right: 8px;
+}
+.accesibilidad-imagen {
+  width: 194;
+  height: 181px;
+  background-image: url('../images/pdf_icon.png');
+  background-size: 194px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.pdf-texto1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 40px 0 20px 0;
+}
+.pdf-texto2 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.pdf-texto2 > b {
+  margin-right: 8px;
+}
+.pdf-imagen {
+  width: 194;
+  height: 181px;
+  background-image: url('../images/pdf_icon.png');
+  background-size: 194px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
 }
