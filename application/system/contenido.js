@@ -70,42 +70,46 @@ var macrorecursos = {
         recursos: {
             1: {
                 tipo: "layout",
-                estilo: "layout_sensibilizacion",
+                estilo: "portada",
                 componentes: {
                     1: {
-                        tipo: "organizador",
-                        estilo: "preguntas",
+                        tipo: "imagen",
+                        estilo: "full",
                         atributos: {
                             url: "img/portada.png",
-                            descripcion: "imagen de portadad del objeto"
+                            descripcion: "portada del objeto"
                         }
                     },
                     2: {
-                        tag: "1",
                         tipo: "layout",
-                        estilo: "layout_og_resultados",
+                        estilo: "og_2",
                         componentes: {
                             1: {
                                 tipo: "titulo",
-                                estilo: "titulo_saberes",
+                                estilo: "resultados",
                                 atributos: {
-                                    titulo: "Saberes"
+                                    titulo: "Resultados de Aprendizaje"
                                 }
                             },
                             2: {
                                 tipo: "lista",
-                                estilo: "lista_saberes",
+                                estilo: "vineta_tipografia",
                                 atributos: {
-                                    categoria: "no_numerada",
+                                    enunciado: "",
                                     elementos: {
-                                        1: "Las TIC: Conceptualización.",
-                                        2: "Recursos, herramientas y programas.",
-                                        3: "TIC en educación.",
-                                        4: "Nuevos conceptos.",
-                                        5: "Nuevos competencias."
+                                        1: "elemento 1",
+                                        2: "elemento 2"
                                     }
                                 }
                             }
+                        }
+                    },
+                    3: {
+                        tipo: "boton",
+                        estilo: "portada",
+                        atributos: {
+                            tag: "Enviar",
+                            funcion: "iniciar_examen"
                         }
                     }
                 }

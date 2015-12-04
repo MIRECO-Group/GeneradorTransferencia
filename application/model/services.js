@@ -187,6 +187,7 @@
                 var render_element = function (element, arrTreeId) {
                     var render = null;
                     var strTreeId = JSON.stringify(arrTreeId);
+                    console.log(strTreeId);
                     if (element.hasOwnProperty("tipo")) {
                         switch (element.tipo) {
                             case "layout":
@@ -245,6 +246,8 @@
 
                         objAtributos = merge_options(objAtributos, tag);
                         render = $("<div/>", objAtributos);
+                    }else{
+                        $log.error(object, render, "COMPONENTE INEXISTENTE", object, objAtributos);
                     }
 
                     return render;

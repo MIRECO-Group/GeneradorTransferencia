@@ -107,16 +107,14 @@ var componente = {
 };
 //LISTA
 /*
- categoria: Texto. OBLIGATORIO. Corresponde al tipo de lista a utilizarse (ordenada, no ordenada).
  enunciado: Texto. OPCIONAL. Corresponde a un texto introductorio que precede a la lista.
  elementos: Texto. OBLIGATORIO. Corresponde a los textos a organizarse dentro de la lista.
  */
 
 var componente = {
     tipo: "lista",
-    estilo: "lista_vertical",
+    estilo: "vineta_tipografia",
     atributos: {
-        categoria: "ordenada",
         enunciado: "",
         elementos: {
             1: "elemento 1",

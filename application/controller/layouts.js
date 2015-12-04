@@ -42,7 +42,7 @@
                     }
                 };
             })
-            .directive("portada", function () {
+            .directive("ptPortada", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -193,14 +193,17 @@
                 var contPanel = function (numPanel) {
                     var init = that.chainId.concat([(numPanel)]);
                     var element = $contenido.get_element_page(init);
+                    var where2Render = $("[" + selector + "='" + numPanel + "']", $element);
 
                     if (element) {
                         var render = $contenido.render_element(element, init);
                         if (render) {
-                            var where2Render = $("[" + selector + "='" + numPanel + "']", $element);
                             $render.jQueryCompile(render, where2Render, $compile, $scope);
                         }
+                        console.log(numPanel, element, where2Render, render);
                     }
+                    
+                    
                 };
 
                 $("[" + selector + "]", $element).each(function () {

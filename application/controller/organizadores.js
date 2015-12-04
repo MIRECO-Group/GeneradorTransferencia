@@ -214,6 +214,16 @@
                     }
                 };
             })
+            .directive("ptTituloResultados", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/titulo/simple.html",
+                    controller: "tituloController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .controller("tituloController", function ($scope, $contenido) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
@@ -326,10 +336,20 @@
             })
             //</editor-fold>
             ////<editor-fold defaultstate="collapsed" desc="Botón">
-            .directive("ptBoton", function () {
+            .directive("ptBotonActividad", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/botones/simple.html",
+                    templateUrl: "application/components/simples/botones/actividad.html",
+                    controller: "botonController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptBotonPortada", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/botones/portada.html",
                     controller: "botonController",
                     scope: {
                         'ptConstructor': '='

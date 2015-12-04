@@ -251,6 +251,20 @@ div#content_container div.title_subtitle_text
 	font-size: 1.5rem;
 }
 
+/*añadido luis*/
+
+div#content_container div.title_container_result
+{
+    background-color: #0182A2;
+}
+
+div#content_container div.title_container_result .title_title_text
+{
+    color: white;
+}
+
+/* añadido luis*/
+
 div#content_container .button_portada
 {
 	border-style: none;
