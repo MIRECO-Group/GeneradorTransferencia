@@ -9,7 +9,7 @@
 
 (function () {
     angular.module("layouts", [])
-            .directive("contextualizacion", function () {
+            .directive("ptContextualizacion", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -20,7 +20,7 @@
                     }
                 };
             })
-            .directive("organizador1", function () {
+            .directive("ptOrganizador1", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -31,7 +31,7 @@
                     }
                 };
             })            
-            .directive("organizador2", function () {
+            .directive("ptOrganizador2", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -53,7 +53,7 @@
                     }
                 };
             })
-            .directive("sensibilizacion", function () {
+            .directive("ptSensibilizacion", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -64,7 +64,7 @@
                     }
                 };
             })         
-            .directive("actividad1", function () {
+            .directive("ptActividad1", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -75,7 +75,7 @@
                     }
                 };
             })            
-            .directive("actividad2", function () {
+            .directive("ptActividad2", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -86,7 +86,7 @@
                     }
                 };
             })            
-            .directive("actividad3", function () {
+            .directive("ptActividad3", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -97,7 +97,7 @@
                     }
                 };
             })
-            .directive("actividad4", function () {
+            .directive("ptActividad4", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -108,7 +108,7 @@
                     }
                 };
             })
-            .directive("contenido1", function () {
+            .directive("ptContenido1", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -119,7 +119,7 @@
                     }
                 };
             })
-            .directive("contenido2", function () {
+            .directive("ptContenido2", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -130,7 +130,7 @@
                     }
                 };
             })
-            .directive("contenido3", function () {
+            .directive("ptContenido3", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -141,7 +141,7 @@
                     }
                 };
             })
-            .directive("contenido4", function () {
+            .directive("ptContenido4", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -152,7 +152,7 @@
                     }
                 };
             })
-            .directive("contenido5", function () {
+            .directive("ptContenido5", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -163,7 +163,7 @@
                     }
                 };
             })
-            .directive("contenido6", function () {
+            .directive("ptContenido6", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",
@@ -174,7 +174,7 @@
                     }
                 };
             })
-            .directive("contenido7", function () {
+            .directive("ptContenido7", function () {
                 return{
                     controller: "LayoutController",
                     controllerAs: "layout",

@@ -130,7 +130,7 @@ var macrorecursos = {
                 componentes: {
                     1: {
                         tipo: "reproductor",
-                        estilo: "reproductor_completo",
+                        estilo: "completo",
                         atributos: {
                             1: {
                                 tipo: "video",

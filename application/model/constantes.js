@@ -10,49 +10,49 @@ var BASE_DATA = {
             tag: "pt-portada"
         },
         og_1: {
-            tag: "organizador1"
+            tag: "pt-organizador1"
         },
         og_2: {
-            tag: "organizador2"
+            tag: "pt-organizador2"
         },
-        layout_sensibilizacion: {
-            tag: "sensibilizacion"
+        sensibilizacion: {
+            tag: "pt-sensibilizacion"
         },
         contextualizacion: {
-            tag: "contextualizacion"
+            tag: "pt-contextualizacion"
         },
         actividad_contenido_1: {
-            tag: "actividad1"
+            tag: "pt-actividad1"
         },
         actividad_contenido_2: {
-            tag: "actividad2"
+            tag: "pt-actividad2"
         },
         actividad_contenido_3: {
-            tag: "actividad3"
+            tag: "pt-actividad3"
         },
         actividad_contenido_4: {
-            tag: "actividad4"
+            tag: "pt-actividad4"
         },
         contenido_1: {
-            tag: "contenido1"
+            tag: "pt-contenido1"
         },
         contenido_2: {
-            tag: "contenido2"
+            tag: "pt-contenido2"
         },
         contenido_3: {
-            tag: "contenido3"
+            tag: "pt-contenido3"
         },
         contenido_4: {
-            tag: "contenido4"
+            tag: "pt-contenido4"
         },
         contenido_5: {
-            tag: "contenido5"
+            tag: "pt-contenido5"
         },
         contenido_6: {
-            tag: "contenido6"
+            tag: "pt-contenido6"
         },
         contenido_7: {
-            tag: "contenido7"
+            tag: "pt-contenido7"
         },
         examen: {
             tag: ""
@@ -80,7 +80,8 @@ var BASE_DATA = {
             }
         },
         preguntas: {
-            tag: "pt-organizador-preguntas"},
+            tag: "pt-organizador-preguntas"
+        },
         tabs_acordeon: {
             tag: "pt-organizador-tabs-acordeon"
         },
@@ -170,12 +171,13 @@ var BASE_DATA = {
         reproductor: {
             boton: {
                 tag: "pt-reproductor-boton"
-            },
-            select: {
-                select_horizontal: {
-                    tag: "pt-lista-desplegable"
-                }
+            }
+        },
+        select: {
+            select_horizontal: {
+                tag: "pt-lista-desplegable"
             }
         }
+
     }
 };
