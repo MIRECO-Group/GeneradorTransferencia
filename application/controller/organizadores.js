@@ -315,12 +315,12 @@
                 var abrir_popup = function () {
                     var where2Render = $("body");
                     var element = extras[that.popup];
-                    $contenido.set_obj_pagina(element);                    
+                    $contenido.set_obj_pagina(element);
 
                     if (element) {
                         var render = $("<div/>", {
-                            "pt-constructor" : JSON.stringify([that.popup]),
-                            "pt-opopup" : ""
+                            "pt-constructor": JSON.stringify([that.popup]),
+                            "pt-opopup": ""
                         });
                         //$contenido.render_element(element, [that.popup]);
                         if (render) {
@@ -351,11 +351,56 @@
                     controller: "popUpController",
                     controllerAs: "popupCtrl",
                     scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptPopup", function () {
+                return{
+                    restrict: "A",
+                    //templateUrl: "application/components/pops/popup.html",
+                    controller: "rPopupController",
+                    scope: {
                         'ptPopup': '='
                     }
                 };
             })
-            
+            .controller("popUpController", function ($scope, $element) {
+                this.popups = extras;
+                $scope.cerrar = function () {
+                    $element.empty();
+                };
+            })
+            .controller("rPopupController", function ($scope, $contenido, $render, $compile, $element) {
+                console.log($scope.ptPopup, $element);
+                var where2Render = $element;
+                this.chainId = $scope.ptPopup;
+                this.popup = extras[this.chainId];
+                var selector = "pt-panel";
+                this.chainId = [this.chainId];
+
+                var that = this;
+                $contenido.set_obj_pagina(this.popup);
+
+                var contPanel = function () {
+                    var init = that.chainId;
+                    var element = $contenido.get_element_page(init);
+
+                    if (element) {
+                        var render = $contenido.render_element(element, init);
+                        if (render) {
+                            console.warn(where2Render, render);
+                            $render.jQueryCompile(render, where2Render, $compile, $scope);
+                        }
+                    } else {
+                        console.error(element);
+                    }
+                };
+
+                contPanel();
+
+                //console.log(this.popup);
+            })
             //</editor-fold>
             ;
 })(angular);

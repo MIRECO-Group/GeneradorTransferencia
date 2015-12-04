@@ -10,15 +10,12 @@ var extras = {
         },
         componentes: {
             1: {
-                tipo: "lista",
-                estilo: "lista_vertical",
+                tipo: "boton",
+                estilo: "submit_actividad",
                 atributos: {
-                    categoria: "no_ordenada",
-                    elementos: {
-                        1: "<b>Nombre:</b> Lorem Ipsum.",
-                        2: "<b>Nombre:</b> Lorem Ipsum.",
-                        3: "<b>Nombre:</b> Lorem Ipsum."
-                    }
+                    tag: "Enviar",
+                    funcion: "iniciar_examen",
+                    popup: "1"
                 }
             }
         }
