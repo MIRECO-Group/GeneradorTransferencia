@@ -240,24 +240,6 @@
                     }
                 };
             })
-            .directive("icoApertura", function () {
-                return{
-                    restrict: "A",
-                    templateUrl: "application/components/iconos/sensibilizacion_apertura.html",
-                    scope: {
-                        'ptConstructor': '='
-                    }
-                };
-            })
-            .directive("icoPreguntas", function () {
-                return{
-                    restrict: "A",
-                    templateUrl: "application/components/iconos/conocimiento.html",
-                    scope: {
-                        'ptConstructor': '='
-                    }
-                };
-            })
             .controller("iconoController", function ($scope, $contenido, $render, $compile, $element) {
                 this.ptIcono = $scope.ptIcono;
                 var element = {tipo: "icono", estilo: this.ptIcono};
@@ -269,6 +251,31 @@
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 }
             })
+            .directive("icoApertura", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/sensibilizacion_apertura.html"
+                };
+            })
+            .directive("icoPreguntas", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/conocimiento.html"
+                };
+            })
+            .directive("icoContenido", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/conocimiento.html"
+                };
+            })
+            .directive("icoPortada", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/sensibilizacion_cierre.html"
+                };
+            })
+            
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Parrafo">
             .directive("ptParrafo", function () {

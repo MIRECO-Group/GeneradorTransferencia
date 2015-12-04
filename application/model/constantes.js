@@ -77,7 +77,7 @@ var BASE_DATA = {
             },
             tabs_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
-            },
+            }
         },
         preguntas: {
             tag: "pt-organizador-preguntas"},

@@ -71,12 +71,14 @@ var macrorecursos = {
             1: {
                 tipo: "layout",
                 estilo: "portada",
+                especiales: ["no-controles"],
+                background: "img/fondo_portada.jpg",
                 componentes: {
                     1: {
                         tipo: "imagen",
                         estilo: "full",
                         atributos: {
-                            url: "img/fondo_portada.jpg",
+                            url: "img/banner_portada.jpg",
                             descripcion: "portada del objeto"
                         }
                     },

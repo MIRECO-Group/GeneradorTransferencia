@@ -16,61 +16,6 @@
     font-style:normal;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-a:focus, a:active, 
-button::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-select::-moz-focus-inner,
-input[type="file"] > input[type="button"]::-moz-focus-inner {
-    border: 0;
-    outline : 0;
-}
-
 input[type="button"]
 {
 	cursor: pointer;
@@ -251,7 +196,7 @@ div#content_container div.title_subtitle_text
 	font-size: 1.5rem;
 }
 
-/*a�adido luis*/
+/*a?adido luis*/
 
 div#content_container div.title_container_result
 {
@@ -266,20 +211,66 @@ div#content_container div.title_container_result .title_title_text
     color: white;
 }
 
-/* a�adido luis*/
+/* a?adido luis*/
 
 div#content_container .button_portada
 {
 	border-style: none;
 	color: blue;
-	/* height: 45px; */
-	/* width: 45%; */
-	position: absolute;
+	height: 45px;
+	width: 45%;
+	/* position: absolute; */
 	right: 0px;
-	margin-top: 15px;
-	background: #b3b3b3;
-	background: -moz-linear-gradient(top, #b3b3b3 0%, #ffffff 71%);
-	background: -webkit-linear-gradient(top, #b3b3b3 0%,#ffffff 71%);
+	/* margin-top: 15px; */
+	/* background: #b3b3b3; */
+	background: 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	-moz-linear-gradient(top, #b3b3b3 0%, #ffffff 71%);
+	background: 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	-webkit-linear-gradient(top, #b3b3b3 0%,#ffffff 71%);
 	background: linear-gradient(to bottom, #b3b3b3 0%,#ffffff 71%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#ffffff',GradientType=0 );
 }
@@ -299,6 +290,7 @@ div#content_container .button_simple
 	font-size: 2rem;
 }
 
+/*
 div#content_container .button_portada::after
 {
 	font-family: 'transferenciaregular';
@@ -316,8 +308,12 @@ div#content_container .button_portada::after
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	background: #437678;
-	background: -moz-radial-gradient(center, ellipse cover, #437678 50%, #142438 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #437678 50%,#142438 100%);
+	background: 
+	
+	-moz-radial-gradient(center, ellipse cover, #437678 50%, #142438 100%);
+	background: 
+	
+	-webkit-radial-gradient(center, ellipse cover, #437678 50%,#142438 100%);
 	background: radial-gradient(ellipse at center, #437678 50%,#142438 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#437678', endColorstr='#142438',GradientType=1 );
 	padding: 0.5rem;
@@ -326,7 +322,7 @@ div#content_container .button_portada::after
 	position: absolute;
 	left: -50px;
 	top: -10px;
-}
+}*/
 
 .icon_style_sensibilizacion_apertura
 {

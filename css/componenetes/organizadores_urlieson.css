@@ -1,3 +1,74 @@
+
+.transfe_font
+{
+	font-family: "transferenciaregular";
+}
+
+.icon_style_contextualizacion
+{
+	color: white;
+	font-size: 3rem;
+	padding: 10px;
+	border-radius: 40px;
+	background: #437678;
+	background: -moz-radial-gradient(center, ellipse cover, #d43209 50%, #490700 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #d43209 50%,#490700 100%);
+	background: radial-gradient(ellipse at center, #d43209 50%,#490700 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d43209', endColorstr='#490700',GradientType=1 );
+}
+
+.icon_style_recordemos
+{
+	color: white;
+	font-size: 3rem;
+	padding: 10px;
+	border-radius: 40px;
+	background: #437678;
+	background: -moz-radial-gradient(center, ellipse cover, #26435a 50%, #09141f 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #26435a 50%,#09141f 100%);
+	background: radial-gradient(ellipse at center, #26435a 50%,#09141f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26435a', endColorstr='#09141f',GradientType=1 );
+}
+
+.icon_style_preguntas_conocimiento
+{
+	color: white;
+	font-size: 3rem;
+	padding: 10px;
+	border-radius: 40px;
+	background: #437678;
+	background: -moz-radial-gradient(center, ellipse cover, #2e5225 50%, #071208 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #2e5225 50%,#071208 100%);
+	background: radial-gradient(ellipse at center, #2e5225 50%,#071208 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e5225', endColorstr='#071208',GradientType=1 );
+}
+
+.icon_style_sensibilizacion_cierre
+{
+	color: white;
+	font-size: 3rem;
+	padding: 10px;
+	border-radius: 40px;
+	background: #437678;
+	background: -moz-radial-gradient(center, ellipse cover, #76a62d 50%, #20340a 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #76a62d 50%,#20340a 100%);
+	background: radial-gradient(ellipse at center, #76a62d 50%,#20340a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76a62d', endColorstr='#20340a',GradientType=1 );
+}
+
+.icon_style_contenidos
+{
+	color: white;
+	font-size: 3rem;
+	padding: 10px;
+	border-radius: 40px;
+	background: #437678;
+	background: -moz-radial-gradient(center, ellipse cover, #730565 50%, #17001b 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #730565 50%,#17001b 100%);
+	background: radial-gradient(ellipse at center, #730565 50%,#17001b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#730565', endColorstr='#17001b',GradientType=1 );
+}
+
 .org_pes_lat{
   margin: 0 auto;
   max-width: 700px;
