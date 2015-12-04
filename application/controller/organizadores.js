@@ -356,21 +356,37 @@
                     }
                 };
             })
-            .controller("botonController", function ($scope, $contenido, $compile, $render) {
+            .controller("botonController", function ($scope, $contenido, $compile, $render, $plantilla) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
-                var that = this;
-                that.popup = $scope.atributos.popup;
 
-                var abrir_popup = function () {
+                $scope.funcion = function () {
+                    switch ($scope.atributos.funcion) {
+                        case "iniciar_examen":
+                            abrir_popup($scope.atributos.destino);
+                            break;
+                        case "ir_a":
+                            cambiar_pagina($scope.atributos.destino);
+                            break;
+                        default:
+                            console.warn("Funcion de botón no definida",
+                                    $scope.atributos.funcion, $scope.atributos);
+                            break;
+                    }
+                };
+                
+                /*
+                 * Abre un popup basado en el atributo Destino configurado
+                 */
+                var abrir_popup = function (destino) {
                     var where2Render = $("body");
-                    var element = extras[that.popup];
+                    var element = extras[destino];
                     $contenido.set_obj_pagina(element);
 
                     if (element) {
                         var render = $("<div/>", {
-                            "pt-constructor": JSON.stringify([that.popup]),
+                            "pt-constructor": JSON.stringify([destino]),
                             "pt-opopup": ""
                         });
                         //$contenido.render_element(element, [that.popup]);
@@ -378,19 +394,14 @@
                             $render.jQueryCompile(render, where2Render, $compile, $scope);
                         }
                     }
-
                 };
-
-                $scope.funcion = function () {
-                    switch ($scope.atributos.funcion) {
-                        case "iniciar_examen":
-                            abrir_popup();
-                            break;
-                        default:
-                            console.warn("Funcion de botón no definida",
-                                    $scope.atributos.funcion, $scope.atributos);
-                            break;
-                    }
+                
+                /*
+                 * Cambiar de página según el atributo Destino configurado
+                 */
+                var cambiar_pagina = function(destino){
+                    console.log(destino);
+                    $plantilla.get_paginacion_controller().cambiar_pagina(destino);
                 };
             })
             //</editor-fold>

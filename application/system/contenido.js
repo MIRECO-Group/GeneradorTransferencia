@@ -108,7 +108,8 @@ var macrorecursos = {
                         estilo: "portada",
                         atributos: {
                             tag: "Enviar",
-                            funcion: "iniciar_examen"
+                            funcion: "ir_a",
+                            destino: "2"
                         }
                     }
                 }
