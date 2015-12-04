@@ -376,7 +376,6 @@
                 var where2Render = $element;
                 this.chainId = $scope.ptPopup;
                 this.popup = extras[this.chainId];
-                var selector = "pt-panel";
                 this.chainId = [this.chainId];
 
                 var that = this;
