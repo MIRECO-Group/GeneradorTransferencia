@@ -194,7 +194,7 @@
                 var render_element = function (element, arrTreeId) {
                     var render = null;
                     var strTreeId = JSON.stringify(arrTreeId);
-                    console.log(strTreeId);
+                    //console.log(strTreeId);
                     if (element.hasOwnProperty("tipo")) {
                         switch (element.tipo) {
                             case "layout":
@@ -265,7 +265,7 @@
                  */
                 var interface = {
                     set_obj_pagina: function (objPage) {
-                        //console.log(objPage);
+                        console.log(objPage);
                         data.page = objPage;
                         if(objPage.hasOwnProperty("padre")){
                             data.padre_page = objPage.padre;

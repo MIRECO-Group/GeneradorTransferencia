@@ -200,7 +200,7 @@
                         if (render) {
                             $render.jQueryCompile(render, where2Render, $compile, $scope);
                         }
-                        console.log(numPanel, element, where2Render, render);
+                        //console.log(numPanel, element, where2Render, render);
                     }
                     
                     

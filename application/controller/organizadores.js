@@ -407,7 +407,6 @@
                  * Cambiar de página según el atributo Destino configurado
                  */
                 var cambiar_pagina = function(destino){
-                    console.log(destino);
                     $plantilla.get_paginacion_controller().cambiar_pagina(destino);
                 };
             })

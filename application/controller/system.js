@@ -48,9 +48,10 @@
                 //$element.
 
                 $scope.cambiar_pagina = function (idPage) {
+                    console.log(idPage);
                     that.actual = idPage;
-                    $plantilla.set_pagina(this.actual);
-                    render_content(this.actual);
+                    $plantilla.set_pagina(that.actual);
+                    render_content(that.actual);
                 };
 
                 $scope.sgte_pagina = function () {
