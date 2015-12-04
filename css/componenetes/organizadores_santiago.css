@@ -94,6 +94,7 @@ body
 
 div.img_container
 {
+        display: flex;
 	position: relative;
 	width: 80%;
 	border: solid 1px black;
@@ -102,10 +103,31 @@ div.img_container
 	margin: 0 auto;
 }
 
-div.img_container img
+div.img_mitad
 {
-	width: 100%;
-	margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+	margin-left: 25%;
+        margin-right: 25%;
+        overflow: hidden;
+}
+
+div.img_full
+{
+	display: flex;
+        flex-direction: row;
+        flex: 1;
+        overflow: hidden;
+}
+
+div.img_container img, div.img_full img, div.img_mitad img
+{
+        flex: 1;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
 }
 
 div.img_container button

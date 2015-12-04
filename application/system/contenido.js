@@ -73,8 +73,8 @@ var macrorecursos = {
                 estilo: "layout_sensibilizacion",
                 componentes: {
                     1: {
-                        tipo: "imagen",
-                        estilo: "full",
+                        tipo: "organizador",
+                        estilo: "preguntas",
                         atributos: {
                             url: "img/portada.png",
                             descripcion: "imagen de portadad del objeto"

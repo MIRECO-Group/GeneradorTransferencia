@@ -7,28 +7,52 @@
 var BASE_DATA = {
     layouts: {
         layout_portada: {
-            tag: "layout4"
+            tag: "portada"
         },
-        layout_og_saberes: {
-            tag: "layout2"
+        layout_og_1: {
+            tag: "organizador1"
+        },
+        layout_og_2: {
+            tag: "organizador2"
         },
         layout_sensibilizacion: {
-            tag: "layout5"
+            tag: "sensibilizacion"
         },
         layout_contextualizacion: {
-            tag: "layout0"
+            tag: "contextualizacion"
         },
-        layout_subportada: {
-            tag: ""
+        layout_actividad_contenido_1: {
+            tag: "actividad1"
         },
-        layout_og_subportada_1: {
-            tag: ""
+        layout_actividad_contenido_2: {
+            tag: "actividad2"
         },
-        layout_recurso_1: {
-            tag: "layout03"
+        layout_actividad_contenido_3: {
+            tag: "actividad3"
         },
-        layout_recordemos: {
-            tag: ""
+        layout_actividad_contenido_4: {
+            tag: "actividad4"
+        },
+        layout_contenido_1: {
+            tag: "contenido1"
+        },
+        layout_contenido_2: {
+            tag: "contenido2"
+        },
+        layout_contenido_3: {
+            tag: "contenido3"
+        },
+        layout_contenido_4: {
+            tag: "contenido4"
+        },
+        layout_contenido_5: {
+            tag: "contenido5"
+        },
+        layout_contenido_6: {
+            tag: "contenido6"
+        },
+        layout_contenido_7: {
+            tag: "contenido7"
         },
         layout_examen: {
             tag: ""
@@ -39,86 +63,119 @@ var BASE_DATA = {
     },
     componentes: {
         organizador: {
-            organizador_saberes: {
+            tabs_superior: {
                 tag: "pt-organizador-tabs-superiores"
             },
-            organizador_tabs_izquierda: {
+            tabs_lateral: {
                 tag: "pt-organizador-tabs-lateral-izq"
             },
-            organizador_tabs_num_superior: {
+            tabs_num_superior: {
                 tag: "pt-organizador-tabs-numero-superior"
             },
-            organizador_linea_de_tiempo: {
-                tag: "pt-organizador-linea-de-tiempo"
-            },
-            organizador_tabs_num_izquierda: {
+            tabs_num_lateral: {
                 tag: "pt-organizador-tabs-num-izq"
             },
-            organizador_tabs_botones_flechas: {
+            linea_de_tiempo: {
+                tag: "pt-organizador-linea-de-tiempo"
+            },
+            tabs_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
             },
             organizador_preguntas: {
+                tag: "pt-organizador-preguntas"},
+            organizador_tabs_acordeon: {
+                tag: "pt-organizador-tabs-acordeon"
+            },
+            preguntas: {
                 tag: "pt-organizador-preguntas"
-            }
-        },
-        titulo: {
-            titulo_saberes: {
-                tag: "pt-titulo"
-            }
-        },
-        parrafo: {
-            parrafo_basico: {
-                tag: "pt-parrafo"
-            }
-        },
-        imagen: {
-            imagen_basica: {
-                tag: "pt-imagen"
-            }
-        },
-        boton :{
-            submit_actividad : {
-                tag : "pt-boton"
-            }
-        },
-        //<editor-fold defaultstate="collapsed" desc="Iconos">
-        icono: {
-            saberes: {
-                tag: "ico-saberes"
             },
-            portada: {
-                tag: "ico-portada"
+            titulo: {
+                titulo_saberes: {
+                    tag: "pt-titulo"
+                }
             },
-            sensibilizacion_apertura: {
-                tag: "ico-apertura"
+            parrafo: {
+                basico: {
+                    tag: "pt-parrafo"
+                }
             },
-            contextualizacion: {
-                tag: "ico-context"
+            imagen: {
+                basica: {
+                    tag: "pt-imagen"
+                },
+                full: {
+                    tag: "pt-imagen-full"
+                },
+                mitad: {
+                    tag: "pt-imagen-mitad"
+                }
             },
-            contenido: {
-                tag: "ico-contenido"
+            boton: {
+                submit_actividad: {
+                    tag: "pt-boton"
+                }
             },
-            recordemos: {
-                tag: "ico-recordemos"
+            icono: {
+                saberes: {
+                    tag: "ico-saberes"
+                },
+                portada: {
+                    tag: "ico-portada"
+                },
+                sensibilizacion_apertura: {
+                    tag: "ico-apertura"
+                },
+                contextualizacion: {
+                    tag: "ico-context"
+                },
+                contenido: {
+                    tag: "ico-contenido"
+                },
+                recordemos: {
+                    tag: "ico-recordemos"
+                },
+                sensibilizacion_cierre: {
+                    tag: "ico-cierre"
+                },
+                preguntas_conocimiento: {
+                    tag: "ico-preguntas"
+                },
+                mapa: {
+                    tag: "ico-map"
+                }
             },
-            sensibilizacion_cierre: {
-                tag: "ico-cierre"
+            lista: {
+                basica: {
+                    tag: "pt-lista-basica"
+                },
+                numerada: {
+                    tag: "pt-lista-numerada"
+                },
+                vineta_redonda: {
+                    tag: "pt-lista-vineta-redonda"
+                },
+                vineta_tipografia: {
+                    tag: "pt-lista-vineta-tipografia"
+                }
             },
-            preguntas_conocimiento: {
-                tag: "ico-preguntas"
+            frame: {
+                grande: {
+                    tag: "pt-frame-grande"
+                },
+                mediano: {
+                    tag: "pt-frame-mediano"
+                }
             },
-            mapa: {
-                tag: "ico-map"
-            }
-        },
-        //</editor-fold>
-        //<editor-fold defaultstate="collapsed" desc="Actividades">
-        select: {
-            select_horizontal: {
-                tag: "pt-lista-desplegable"
+            reproductor: {
+                boton: {
+                    tag: "pt-reproductor-boton"
+                },
+                select: {
+                    select_horizontal: {
+                        tag: "pt-lista-desplegable"
+                    }
+                }
             }
         }
-        //</editor-fold>
-
     }
 };

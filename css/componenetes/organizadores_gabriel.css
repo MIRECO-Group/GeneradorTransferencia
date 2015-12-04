@@ -278,7 +278,6 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 }
 
 /*--------------------------- org_aco ------------------------------  */
-
 /*Contenedor principal*/
 .org_aco-content {
   max-width: 1024px;
@@ -296,10 +295,19 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background-color: #eae9e9;
   margin: 0 auto;
   position: relative;
-  -ms-display: flex;
-  -webkit-display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
   display: flex;
   border: 2px solid #c9eff1;
+  width: 100%;
+}
+.acordeon-contenBtnContainer {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
 }
 .acordeon-btn {
   background-color: #01b3be;
@@ -313,6 +321,9 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -ms-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
 }
 .acordeon-btn-text {
   display: block;
@@ -321,8 +332,8 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   text-align: center;
   transform: rotate(270deg) translateY(-50%);
   transform-origin: left top 0;
-  z-index: 2;
   color: white;
+  z-index: 2;
 }
 /**/
 .acordeon          { height: 300px; }
@@ -342,11 +353,11 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   -webkit-display: flex;
   display: flex;
   max-width: 0;
-  -moz-transition: all 0.1s linear;
-  -ms-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -moz-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
   opacity: 0;
 }
 .acordeon-container-info {
@@ -377,16 +388,25 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
     display: block;
     height: auto;
   }
+  .acordeon-contenBtnContainer {
+    display: block;
+    /*display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-grow: 0;
+    -webkit-flex-grow: 0;
+    flex-grow: 0;*/
+  }
   .acordeon-btn {
     width: auto;
     height: auto;
     padding: 20px 0;
     border-bottom: 2px solid #c9eff1;
   }
-  .acordeon-btn.seleccionado {
+  .acordeon-btn.active {
     background-color: #004b5e;
   }
-  .acordeon-btn.seleccionado + .acordeon-container {
+  .acordeon-btn.active + .acordeon-container {
     max-height: 100%;
     opacity: 1;
   }
@@ -404,6 +424,8 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
     max-width: 100%;
   }
   .acordeon-container-info {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin: 0 auto;
     max-width: 540px;
@@ -414,10 +436,12 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   }
 }
 @media screen and (min-width: 768px) {
-  .acordeon-btn.seleccionado {
-    background-color: #004b5e;
+  .acordeon-btn.active {
+    -ms-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
   }
-  .acordeon-btn.seleccionado + .acordeon-container {
+  .acordeon-btn.active + .acordeon-container {
     max-width: 100%; 
     opacity: 1;
   }

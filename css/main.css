@@ -126,6 +126,19 @@ strong{
     font-weight: bold;
 }
 
+p{
+    min-height: 10px;
+    margin-bottom: 5px;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+img{
+    margin: 0px;
+}
+
 body
 {
     background-color: green;

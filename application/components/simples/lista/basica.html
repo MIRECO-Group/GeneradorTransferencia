@@ -1,0 +1,6 @@
+<div class="lista_container">
+    <p ng-show="checkEnunciado()">{{atributos.enunciado}}</p><br>
+    <ul class="lista_numerada">
+        <li ng-repeat="(key, el) in atributos.elementos"><span class="lista_texto">{{el}}</span></li>
+    </ul>
+</div>
