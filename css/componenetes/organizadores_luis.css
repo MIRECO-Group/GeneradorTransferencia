@@ -248,6 +248,10 @@ ul.lista_vineta_tipografia span.transfe_font{
     color: #f4e62e;
 }
 
+ul.lista_vineta_tipografia .lista_texto{
+    color: white;
+}
+
 /*----------------------------------- FRAME -----------------------------------*/
 
 .frame{
