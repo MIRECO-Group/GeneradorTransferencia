@@ -193,10 +193,10 @@ html, body{
 }
 
 .og_preguntas div.cont_preguntas>div.botonera>div div.paginacion > div.conteo{
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5px;
 }
 
 .og_preguntas div.cont_preguntas>div.botonera>div div.paginacion > div.conteo span{
@@ -213,7 +213,7 @@ div.lista_container{
 }
 
 div.lista_container span.lista_texto{
-    
+
 }
 
 ol.lista_numerada{
@@ -259,3 +259,24 @@ ul.lista_vineta_tipografia span.transfe_font{
     margin-right: 25%;
 }
 
+/*----------------------------------- BOTON AUDIO -----------------------------------*/
+
+div.boton_audio{
+    display: flex;
+    width:80px;
+    height: 80px;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 100%;
+    border: solid 5px #1D405D;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #aaaaaa 67%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#aaaaaa 67%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#aaaaaa 67%);
+}
+
+div.boton_audio span{
+    font-size: 3rem;
+    margin: 0 auto;
+    color: #1D405D;
+}

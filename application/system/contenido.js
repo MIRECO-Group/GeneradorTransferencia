@@ -67,51 +67,59 @@ var macrorecursos = {
         recursos: {
             1: {
                 tipo: "layout",
-                estilo: "layout_portada",
+                estilo: "layout_sensibilizacion",
                 componentes: {
                     1: {
-                        tipo: "imagen",
-                        estilo: "imagen_basica",
+                        tipo: "organizador",
+                        estilo: "preguntas",
                         atributos: {
-                            thumbnail: "img/portada.png",
-                            url: "img/portada.png",
-                            descripcion: "imagen de portadad del objeto"
-                        }
-                    },
-                    2: {
-                        tag: "1",
-                        tipo: "layout",
-                        estilo: "layout_og_resultados",
-                        componentes: {
-                            1: {
-                                tipo: "titulo",
-                                estilo: "titulo_saberes",
-                                atributos: {
-                                    titulo: "Saberes"
-                                }
-                            },
-                            2: {
-                                tipo: "lista",
-                                estilo: "lista_saberes",
-                                atributos: {
-                                    categoria: "no_numerada",
-                                    elementos: {
-                                        1: "Las TIC: Conceptualización.",
-                                        2: "Recursos, herramientas y programas.",
-                                        3: "TIC en educación.",
-                                        4: "Nuevos conceptos.",
-                                        5: "Nuevos competencias."
+                            tabs: {
+                                1: {
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "frame",
+                                            estilo: "mediano",
+                                            atributos: {
+                                                url: "media/anim/susana_popup/anim_susana-pop-ups.html"
+                                            }
+                                        }
+                                    }
+                                },
+                                2: {
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "reproductor",
+                                            estilo: "boton",
+                                            atributos: {
+                                                url: "img/fondo_portada.jpg",
+                                                descripcion: ""
+                                            }
+                                        }
+                                    }
+                                },
+                                3: {
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "layout_sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "imagen",
+                                            estilo: "basica",
+                                            atributos: {
+                                                thumbnail: "img/fondo_portada.jpg",
+                                                url: "img/fondo_portada.jpg",
+                                                descripcion: ""
+                                            }
+                                        }
                                     }
                                 }
                             }
-                        }
-                    },
-                    3: {
-                        tipo: "boton",
-                        estilo: "boton_portada",
-                        atributos: {
-                            tag: "Iniciemos",
-                            funcion: "iniciar_objeto"
                         }
                     }
                 }

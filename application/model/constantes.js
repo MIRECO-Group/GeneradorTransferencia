@@ -159,6 +159,11 @@ var BASE_DATA = {
             mediano:{
                 tag: "pt-frame-mediano"
             }
+        },
+        reproductor:{
+            boton:{
+                tag: "pt-reproductor-boton"
+            }
         }
     }
 };
