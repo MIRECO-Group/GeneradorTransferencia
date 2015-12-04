@@ -41,7 +41,8 @@
                     pagina_inicial: generales.generales.pagina_inicial,
                     configuracion: generales.generales,
                     pages: [],
-                    contenedor_principal: $("#content_container")
+                    contenedor_principal: $("#content_container"),
+                    paginacion: null
                 };
 
                 /*
@@ -92,7 +93,13 @@
                         }
                         return config.pagina_final;
                     },
-                    base_container: config.contenedor_principal
+                    base_container: config.contenedor_principal,
+                    get_paginacion_controller: function(){
+                        return config.paginacion;
+                    },
+                    set_paginacion_controller: function(scope_paginacion){
+                        config.paginacion = scope_paginacion;
+                    }
                 };
                 return interfaz;
             })
