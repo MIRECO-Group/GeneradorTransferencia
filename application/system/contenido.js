@@ -76,7 +76,7 @@ var macrorecursos = {
                         tipo: "imagen",
                         estilo: "full",
                         atributos: {
-                            url: "img/portada.png",
+                            url: "img/fondo_portada.jpg",
                             descripcion: "portada del objeto"
                         }
                     },
@@ -97,8 +97,7 @@ var macrorecursos = {
                                 atributos: {
                                     enunciado: "",
                                     elementos: {
-                                        1: "elemento 1",
-                                        2: "elemento 2"
+                                        1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                                     }
                                 }
                             }

@@ -251,11 +251,14 @@ div#content_container div.title_subtitle_text
 	font-size: 1.5rem;
 }
 
-/*añadido luis*/
+/*a�adido luis*/
 
 div#content_container div.title_container_result
 {
     background-color: #0182A2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 div#content_container div.title_container_result .title_title_text
@@ -263,14 +266,14 @@ div#content_container div.title_container_result .title_title_text
     color: white;
 }
 
-/* añadido luis*/
+/* a�adido luis*/
 
 div#content_container .button_portada
 {
 	border-style: none;
 	color: blue;
-	height: 45px;
-	width: 45%;
+	/* height: 45px; */
+	/* width: 45%; */
 	position: absolute;
 	right: 0px;
 	margin-top: 15px;

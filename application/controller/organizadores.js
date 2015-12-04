@@ -217,7 +217,7 @@
             .directive("ptTituloResultados", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/titulo/simple.html",
+                    templateUrl: "application/components/simples/titulo/resultados.html",
                     controller: "tituloController",
                     scope: {
                         'ptConstructor': '='
