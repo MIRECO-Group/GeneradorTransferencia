@@ -124,7 +124,31 @@ $(document).ready(function ()
         $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value', '-');
         $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('q');
     }
-
+    
+    /*Acción: mostrar pop-up de PDF*/
+    $("footer > div#right_buttons > input[type='button']:nth-child(3), footer > div#center_buttons > ul#smart_menu li:nth-child(1)").click(function()
+    {
+        $("section#popups, #popup_pdf").show();
+    });
+    
+    /*Acción: mostrar pop-up de mapa conceptual*/
+    $("footer > div#right_buttons > input[type='button']:nth-child(1)").click(function()
+    {
+        $("section#popups, #popup_mapa_conceptual").show();
+    });
+    
+    $("header ul:nth-child(3) > li:nth-child(2)").click(function()
+    {
+        console.log($("#popup_pdf").length);
+        $("section#popups, #popup_pdf").show();
+    });
+    
+    $(".popup-btnCerrar").click(function()
+    {
+       $(this).parent().parent().hide();
+       $("section#popups").hide();
+    });
+    
 });
 
 function merge_options(obj1, obj2) {
