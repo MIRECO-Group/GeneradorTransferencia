@@ -115,7 +115,6 @@ var BASE_DATA = {
                     tag: "pt-boton"
                 }
             },
-            //<editor-fold defaultstate="collapsed" desc="Iconos">
             icono: {
                 saberes: {
                     tag: "ico-saberes"
@@ -169,16 +168,12 @@ var BASE_DATA = {
             },
             reproductor: {
                 boton: {
-                    tag: "pt-reproductor-boton"},
-                //</editor-fold>
-                //<editor-fold defaultstate="collapsed" desc="Actividades">
+                    tag: "pt-reproductor-boton"
+                },
                 select: {
                     select_horizontal: {
                         tag: "pt-lista-desplegable"
                     }
-
-                    //</editor-fold>
-
                 }
             }
         }
