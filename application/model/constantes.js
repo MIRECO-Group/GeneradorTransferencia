@@ -76,6 +76,11 @@ var BASE_DATA = {
                 tag: "pt-imagen"
             }
         },
+        boton :{
+            submit_actividad : {
+                tag : "pt-boton"
+            }
+        },
         //<editor-fold defaultstate="collapsed" desc="Iconos">
         icono: {
             saberes: {

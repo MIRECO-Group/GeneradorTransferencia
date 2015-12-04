@@ -305,10 +305,42 @@
                     }
                 };
             })
-            .controller("botonController", function ($scope, $contenido, $element) {
+            .controller("botonController", function ($scope, $contenido, $compile, $render) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
+                var that = this;
+                that.popup = $scope.atributos.popup;
+
+                var abrir_popup = function () {
+                    var where2Render = $("body");
+                    var element = extras[that.popup];
+                    $contenido.set_obj_pagina(element);                    
+
+                    if (element) {
+                        var render = $("<div/>", {
+                            "pt-constructor" : JSON.stringify([that.popup]),
+                            "pt-opopup" : ""
+                        });
+                        //$contenido.render_element(element, [that.popup]);
+                        if (render) {
+                            $render.jQueryCompile(render, where2Render, $compile, $scope);
+                        }
+                    }
+
+                };
+
+                $scope.funcion = function () {
+                    switch ($scope.atributos.funcion) {
+                        case "iniciar_examen":
+                            abrir_popup();
+                            break;
+                        default:
+                            console.warn("Funcion de botón no definida",
+                                    $scope.atributos.funcion, $scope.atributos);
+                            break;
+                    }
+                };
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="PopUp">
@@ -323,54 +355,7 @@
                     }
                 };
             })
-            .directive("ptPopup", function () {
-                return{
-                    restrict: "A",
-                    //templateUrl: "application/components/pops/popup.html",
-                    controller: "rPopupController",
-                    scope: {
-                        'ptPopup': '='
-                    }
-                };
-            })
-
-            .controller("popUpController", function () {
-                this.popups = extras;
-            })
-            .controller("rPopupController", function ($scope, $contenido, $render, $compile, $element) {
-                console.log($scope.ptPopup);
-                var where2Render = $element;
-                this.chainId = $scope.ptPopup;
-                this.popup = extras[this.chainId];
-                var selector = "pt-panel";
-                this.chainId = [this.chainId];
-
-
-
-                var that = this;
-
-                $contenido.set_obj_pagina(this.popup);
-
-                var contPanel = function (numPanel) {
-                    var init = that.chainId.concat([(numPanel)]);
-                    var element = $contenido.get_element_page(init);
-
-                    if (element) {
-                        var render = $contenido.render_element(element, init);
-                        if (render) {
-                            console.warn(where2Render);
-                            $render.jQueryCompile(render, where2Render, $compile, $scope);
-                        }
-                    }
-                };
-
-                $("[" + selector + "]", $element).each(function () {
-                    console.log(this);
-                    contPanel($(this).attr(selector));
-                });
-
-                //console.log(this.popup);
-            })
+            
             //</editor-fold>
             ;
 })(angular);

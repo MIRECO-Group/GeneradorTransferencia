@@ -3,7 +3,7 @@ var extras = {
     1: {
         id: "glosario",
         tipo: "layout",
-        estilo: "layout_glosario",
+        estilo: "layout_sensibilizacion",
         atributos: {
             titulo: "Glosario",
             icono: "glosario"
