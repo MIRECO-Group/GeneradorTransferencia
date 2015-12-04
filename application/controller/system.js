@@ -17,22 +17,22 @@
                 this.paginas = {};
                 this.actual = parseInt($plantilla.get_pagina());
                 this.final = $plantilla.get_pagina_final();
-                
+
                 var that = this;
 
                 var render_content = function (idPage) {
                     var where2Render = $plantilla.base_container;
-                    if($contenido.get_obj_pagina()){
+                    if ($contenido.get_obj_pagina()) {
                         $(where2Render, "div").empty();
                     }
                     idPage--;
-                    console.log(idPage);
+                    //console.log(idPage);
                     var page = $plantilla.get_obj_pagina(idPage);
-                    
+
                     $contenido.set_obj_pagina(page);
                     var render = $contenido.render_element(page, [idPage]);
-                    
-                    console.log(page);
+
+                    //console.log(page);
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 };
 
@@ -52,7 +52,7 @@
                 };
 
                 $scope.sgte_pagina = function () {
-                    if(that.actual + 1 > that.final){
+                    if (that.actual + 1 > that.final) {
                         return;
                     }
                     that.actual++;
@@ -61,13 +61,13 @@
                 };
 
                 $scope.ant_pagina = function () {
-                    if(that.actual - 1 < 1){
+                    if (that.actual - 1 < 1) {
                         return;
                     }
                     that.actual--;
                     $plantilla.set_pagina(that.actual);
                     render_content(that.actual);
-                };
+                };               
 
                 /* <div dummy-layout pt-constructor="[1]"></div> */
             });

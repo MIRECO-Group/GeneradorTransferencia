@@ -53,7 +53,7 @@ var BASE_DATA = {
         },
         layout_contenido_7: {
             tag: "contenido7"
-        },        
+        },
         layout_examen: {
             tag: ""
         },
@@ -81,88 +81,105 @@ var BASE_DATA = {
             tabs_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
             },
+            organizador_preguntas: {
+                tag: "pt-organizador-preguntas"},
             organizador_tabs_acordeon: {
                 tag: "pt-organizador-tabs-acordeon"
             },
-            preguntas :{
-                tag : "pt-organizador-preguntas"
-            }
-        },
-        titulo: {
-            titulo_saberes: {
-                tag: "pt-titulo"
-            }
-        },
-        parrafo: {
-            basico: {
-                tag: "pt-parrafo"
-            }
-        },
-        imagen: {
-            basica: {
-                tag: "pt-imagen"
+            preguntas: {
+                tag: "pt-organizador-preguntas"
             },
-            full:{
-                tag: "pt-imagen-full"
+            titulo: {
+                titulo_saberes: {
+                    tag: "pt-titulo"
+                }
             },
-            mitad:{
-                tag: "pt-imagen-mitad"
-            }
-        },
-        icono: {
-            saberes: {
-                tag: "ico-saberes"
+            parrafo: {
+                basico: {
+                    tag: "pt-parrafo"
+                }
             },
-            portada: {
-                tag: "ico-portada"
+            imagen: {
+                basica: {
+                    tag: "pt-imagen"
+                },
+                full: {
+                    tag: "pt-imagen-full"
+                },
+                mitad: {
+                    tag: "pt-imagen-mitad"
+                }
             },
-            sensibilizacion_apertura: {
-                tag: "ico-apertura"
+            boton: {
+                submit_actividad: {
+                    tag: "pt-boton"
+                }
             },
-            contextualizacion: {
-                tag: "ico-context"
+            //<editor-fold defaultstate="collapsed" desc="Iconos">
+            icono: {
+                saberes: {
+                    tag: "ico-saberes"
+                },
+                portada: {
+                    tag: "ico-portada"
+                },
+                sensibilizacion_apertura: {
+                    tag: "ico-apertura"
+                },
+                contextualizacion: {
+                    tag: "ico-context"
+                },
+                contenido: {
+                    tag: "ico-contenido"
+                },
+                recordemos: {
+                    tag: "ico-recordemos"
+                },
+                sensibilizacion_cierre: {
+                    tag: "ico-cierre"
+                },
+                preguntas_conocimiento: {
+                    tag: "ico-preguntas"
+                },
+                mapa: {
+                    tag: "ico-map"
+                }
             },
-            contenido: {
-                tag: "ico-contenido"
+            lista: {
+                basica: {
+                    tag: "pt-lista-basica"
+                },
+                numerada: {
+                    tag: "pt-lista-numerada"
+                },
+                vineta_redonda: {
+                    tag: "pt-lista-vineta-redonda"
+                },
+                vineta_tipografia: {
+                    tag: "pt-lista-vineta-tipografia"
+                }
             },
-            recordemos: {
-                tag: "ico-recordemos"
+            frame: {
+                grande: {
+                    tag: "pt-frame-grande"
+                },
+                mediano: {
+                    tag: "pt-frame-mediano"
+                }
             },
-            sensibilizacion_cierre: {
-                tag: "ico-cierre"
-            },
-            preguntas_conocimiento: {
-                tag: "ico-preguntas"
-            },
-            mapa: {
-                tag: "ico-map"
-            }
-        },
-        lista:{
-            basica:{
-              tag: "pt-lista-basica"  
-            },
-            numerada:{
-                tag:"pt-lista-numerada"
-            },
-            vineta_redonda:{
-                tag:"pt-lista-vineta-redonda"
-            },
-            vineta_tipografia:{
-                tag:"pt-lista-vineta-tipografia"
-            }
-        },
-        frame:{
-            grande:{
-                tag: "pt-frame-grande"
-            },
-            mediano:{
-                tag: "pt-frame-mediano"
-            }
-        },
-        reproductor:{
-            boton:{
-                tag: "pt-reproductor-boton"
+            reproductor: {
+                boton: {
+                    tag: "pt-reproductor-boton"},
+                //</editor-fold>
+                //<editor-fold defaultstate="collapsed" desc="Actividades">
+                select: {
+                    select_horizontal: {
+                        tag: "pt-lista-desplegable"
+                    }
+
+                    //</editor-fold>
+
+                }
             }
         }
     }
