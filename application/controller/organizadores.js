@@ -368,11 +368,11 @@
             .controller("popUpController", function ($scope, $element) {
                 this.popups = extras;
                 $scope.cerrar = function () {
-                    $element.empty();
+                    $element.remove();
                 };
             })
             .controller("rPopupController", function ($scope, $contenido, $render, $compile, $element) {
-                console.log($scope.ptPopup, $element);
+                //console.log($scope.ptPopup, $element);
                 var where2Render = $element;
                 this.chainId = $scope.ptPopup;
                 this.popup = extras[this.chainId];
@@ -388,7 +388,7 @@
                     if (element) {
                         var render = $contenido.render_element(element, init);
                         if (render) {
-                            console.warn(where2Render, render);
+                            //console.warn(where2Render, render);
                             $render.jQueryCompile(render, where2Render, $compile, $scope);
                         }
                     } else {
