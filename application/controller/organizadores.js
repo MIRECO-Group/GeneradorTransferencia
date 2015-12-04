@@ -5,6 +5,8 @@
  */
 
 
+/* global extras */
+
 (function () {
     angular.module("organizadores", [])
             //<editor-fold defaultstate="collapsed" desc="TABS">
@@ -56,29 +58,29 @@
                 {
                     return $scope.tab <= $scope.cantTabs && $scope.tab > 1;
                 };
-                
+
                 //aumentar o reducir tabs
-                
+
                 $scope.setTab = function (newTab) {
                     $scope.tab = parseInt(newTab);
                 };
-                
+
                 $scope.addTab = function () {
                     if ($scope.tab < cantTabs && $scope.tab >= 1) {
-                        console.log("flagging " + $scope.tab + " !! " + cantTabs);
+                        //log("flagging " + $scope.tab + " !! " + cantTabs);
                         $scope.tab = $scope.tab + 1;
                     }
                 };
 
                 $scope.subtractTab = function () {
                     if ($scope.tab <= cantTabs && $scope.tab > 1) {
-                        console.log("flagging " + $scope.tab + " !! " + cantTabs);
+                        //console.log("flagging " + $scope.tab + " !! " + cantTabs);
                         $scope.tab = $scope.tab - 1;
                     }
                 };
-                
+
                 //añadir clases
-                
+
                 $scope.setActive = function (tab) {
                     if ($scope.isSet(tab)) {
                         return "active";
@@ -90,8 +92,8 @@
                         return "active";
                     }
                 };
-                
-                 $scope.setPrevArrowActive = function () {
+
+                $scope.setPrevArrowActive = function () {
                     if ($scope.checkLess()) {
                         return "active";
                     }
@@ -117,7 +119,7 @@
 
                     if (render) {
                         var where2Render = $element;
-                        console.log(where2Render, render);
+                        //console.log(where2Render, render);
                         $render.jQueryCompile(render, where2Render, $compile, $scope);
 
                     }
@@ -242,7 +244,7 @@
                 var render = $contenido.render_element(element, []);
                 if (render) {
                     var where2Render = $element;
-                    console.log(where2Render, render);
+                    //console.log(where2Render, render);
                     $render.jQueryCompile(render, where2Render, $compile, $scope);
                 }
             })
@@ -262,7 +264,7 @@
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
-                console.log(element);
+                //console.log(element);
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Imagen">
@@ -280,6 +282,8 @@
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
 
+                //console.log(element);
+
                 $scope.abrir_pop = function () {
                     $('.blackout, .popup', $element).fadeIn("fast");
                 };
@@ -287,7 +291,6 @@
                 $scope.cerrar_pop = function () {
                     $(".blackout, .popup", $element).fadeOut("fast");
                 };
-
                 $scope.atributos = element.atributos;
             })
             //</editor-fold>
@@ -302,39 +305,100 @@
                     }
                 };
             })
-            .controller("botonController", function ($scope, $contenido, $element) {
+            .controller("botonController", function ($scope, $contenido, $compile, $render) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
+                var that = this;
+                that.popup = $scope.atributos.popup;
+
+                var abrir_popup = function () {
+                    var where2Render = $("body");
+                    var element = extras[that.popup];
+                    $contenido.set_obj_pagina(element);
+
+                    if (element) {
+                        var render = $("<div/>", {
+                            "pt-constructor": JSON.stringify([that.popup]),
+                            "pt-opopup": ""
+                        });
+                        //$contenido.render_element(element, [that.popup]);
+                        if (render) {
+                            $render.jQueryCompile(render, where2Render, $compile, $scope);
+                        }
+                    }
+
+                };
+
+                $scope.funcion = function () {
+                    switch ($scope.atributos.funcion) {
+                        case "iniciar_examen":
+                            abrir_popup();
+                            break;
+                        default:
+                            console.warn("Funcion de botón no definida",
+                                    $scope.atributos.funcion, $scope.atributos);
+                            break;
+                    }
+                };
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="PopUp">
-            .directive("ptPopup", function () {
+            .directive("ptOpopup", function () {
                 return{
                     restrict: "A",
                     templateUrl: "application/components/pops/popup.html",
                     controller: "popUpController",
+                    controllerAs: "popupCtrl",
                     scope: {
                         'ptConstructor': '='
                     }
                 };
             })
-            .controller("popUpController", function ($scope, $contenido, $render, $compile, $element) {
-                this.chainId = $scope.ptConstructor;
-                var init = JSON.parse($scope.ptConstructor);
-
-                var element = $contenido.get_element_page(init);
-
-                if (element) {
-                    var render = $contenido.render_element(element, init);
-
-                    if (render) {
-                        var where2Render = $element;
-                        console.log(where2Render, render);
-                        $render.jQueryCompile(render, where2Render, $compile, $scope);
-
+            .directive("ptPopup", function () {
+                return{
+                    restrict: "A",
+                    //templateUrl: "application/components/pops/popup.html",
+                    controller: "rPopupController",
+                    scope: {
+                        'ptPopup': '='
                     }
-                }
+                };
+            })
+            .controller("popUpController", function ($scope, $element) {
+                this.popups = extras;
+                $scope.cerrar = function () {
+                    $element.remove();
+                };
+            })
+            .controller("rPopupController", function ($scope, $contenido, $render, $compile, $element) {
+                //console.log($scope.ptPopup, $element);
+                var where2Render = $element;
+                this.chainId = $scope.ptPopup;
+                this.popup = extras[this.chainId];
+                this.chainId = [this.chainId];
+
+                var that = this;
+                $contenido.set_obj_pagina(this.popup);
+
+                var contPanel = function () {
+                    var init = that.chainId;
+                    var element = $contenido.get_element_page(init);
+
+                    if (element) {
+                        var render = $contenido.render_element(element, init);
+                        if (render) {
+                            //console.warn(where2Render, render);
+                            $render.jQueryCompile(render, where2Render, $compile, $scope);
+                        }
+                    } else {
+                        console.error(element);
+                    }
+                };
+
+                contPanel();
+
+                //console.log(this.popup);
             })
             //</editor-fold>
             ;

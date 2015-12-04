@@ -73,15 +73,37 @@ var macrorecursos = {
                 estilo: "layout_sensibilizacion",
                 componentes: {
                     1: {
-                        tipo: "organizador",
-                        estilo: "organizador_preguntas",
+                        tipo: "imagen",
+                        estilo: "full",
                         atributos: {
-                            tabs: {
-                                1: {
-                                    tag: "1",
-                                    tipo: "layout",
-                                    estilo: "layout_og1_1",
-                                    componentes: {}
+                            url: "img/portada.png",
+                            descripcion: "imagen de portadad del objeto"
+                        }
+                    },
+                    2: {
+                        tag: "1",
+                        tipo: "layout",
+                        estilo: "layout_og_resultados",
+                        componentes: {
+                            1: {
+                                tipo: "titulo",
+                                estilo: "titulo_saberes",
+                                atributos: {
+                                    titulo: "Saberes"
+                                }
+                            },
+                            2: {
+                                tipo: "lista",
+                                estilo: "lista_saberes",
+                                atributos: {
+                                    categoria: "no_numerada",
+                                    elementos: {
+                                        1: "Las TIC: Conceptualización.",
+                                        2: "Recursos, herramientas y programas.",
+                                        3: "TIC en educación.",
+                                        4: "Nuevos conceptos.",
+                                        5: "Nuevos competencias."
+                                    }
                                 }
                             }
                         }

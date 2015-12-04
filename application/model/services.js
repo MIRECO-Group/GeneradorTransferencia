@@ -2,6 +2,36 @@
 
 (function () {
     angular.module("services", [])
+            .service("$scorm", function () {
+                var data = {
+                    suspend_data : null,
+                    interactions : null
+                };
+                
+                var read_interactions = function(){
+                    data.interactions = {};
+                };
+                
+                var read_suspendData = function(){
+                    data.suspend_data = {};
+                };
+                
+                read_suspendData();
+                read_interactions();
+        
+                var interpretate_interaction = function (){
+                    
+                };
+                
+                return {
+                    get_suspendData : function(){
+                        return data.suspend_data;
+                    },
+                    get_interactions : function(){
+                        return data.interactions;
+                    }
+                };
+            })
             .service('$plantilla', function ($log) {
                 var config = {
                     data: generales,
@@ -11,7 +41,7 @@
                     pagina_inicial: generales.generales.pagina_inicial,
                     configuracion: generales.generales,
                     pages: [],
-                    contenedor_principal : $("#content_container")
+                    contenedor_principal: $("#content_container")
                 };
 
                 /*
@@ -19,8 +49,8 @@
                  * contenidos los elementos que deben ser cargados. Además entrega el 
                  * valor de páginas existente con el fin de tener el contador de páginas
                  * disponible en plantilla.
-                 * @param {type} data
-                 * @returns {undefined}
+                 * @param {object} data Configuracion completa del sistema
+                 * @returns {void}
                  */
                 var read_pages = function (data) {
                     $.each(data, function (k, v) {
@@ -113,12 +143,15 @@
                  * obtenido.
                  * @param {array} arrTreeId Array de elementos que corresponde a
                  * la jerarquía en el que debe ser encontrado el objeto.
+                 * @param {object} page Si este objeto es definido, toma los datos de ese elemento,
+                 * de lo contrario tomará los asignados al inicio del render
                  * @returns {data.page|element.atributos@arr;tabs|element@arr;componentes} 
                  * Corresponde al objeto que debe ser obtenido segun la jerarquía del
                  * arreglo de elementos.
                  */
                 var get_element_page = function (arrTreeId) {
                     var element = null;
+                    //console.log(arrTreeId);
                     $.each(arrTreeId, function (k, v) {
                         if (k === 0) {
                             element = data.page;
@@ -127,12 +160,19 @@
                             element = element.componentes[v];
                         } else if (element.atributos.hasOwnProperty("tabs")) {
                             element = element.atributos.tabs[v];
+                        } else if (element.atributos.hasOwnProperty("preguntas")) {
+                            element = element.atributos.preguntas[v];
                         } else {
                             $log.error("COMPONENTE INEXISTENTE -> ANTERIOR", element);
                             element = null;
                             return false;
                         }
                     });
+
+                    if (element.hasOwnProperty("elemento")) {
+                        element = element.elemento;
+                    }
+
                     return element;
                 };
 
@@ -174,7 +214,7 @@
                     if (BASE_DATA.layouts.hasOwnProperty(estilo) && BASE_DATA.layouts[estilo].tag) {
                         var tag = {};
                         tag[BASE_DATA.layouts[estilo].tag] = "";
-                        
+
                         //console.log(object, tag, objAtributos);
 
                         objAtributos = merge_options(objAtributos, tag);
@@ -215,10 +255,16 @@
                  */
                 var interface = {
                     set_obj_pagina: function (objPage) {
+                        //console.log(objPage);
                         data.page = objPage;
-                        data.padre_page = objPage.padre;
+                        if(objPage.hasOwnProperty("padre")){
+                            data.padre_page = objPage.padre;
+                            delete data.page.padre;
+                        }else{
+                            data.padre = null;
+                        }
                         read_page();
-                        delete data.page.padre;
+                        
                     },
                     get_obj_pagina: function () {
                         return data.page;
@@ -242,9 +288,9 @@
                     //$("#content_container")
                     jQueryContainer.append(compiledeHTML);
                 };
-                
+
                 return {
-                    jQueryCompile : function (render, jQueryContainer, $compile, $scope) {
+                    jQueryCompile: function (render, jQueryContainer, $compile, $scope) {
                         compile(render, jQueryContainer, $compile, $scope);
                     }
                 };
