@@ -265,7 +265,7 @@
                  */
                 var interface = {
                     set_obj_pagina: function (objPage) {
-                        console.log(objPage);
+                        //console.log(objPage);
                         data.page = objPage;
                         if(objPage.hasOwnProperty("padre")){
                             data.padre_page = objPage.padre;

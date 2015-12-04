@@ -48,7 +48,7 @@
                 //$element.
 
                 $scope.cambiar_pagina = function (idPage) {
-                    console.log(idPage);
+                    //console.log(idPage);
                     that.actual = idPage;
                     $plantilla.set_pagina(that.actual);
                     render_content(that.actual);
