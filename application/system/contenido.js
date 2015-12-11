@@ -126,17 +126,50 @@ var macrorecursos = {
         recursos: {
             1: {
                 tipo: "layout",
-                estilo: "layout_sensibilizacion",
+                estilo: "contenido_1",
                 componentes: {
                     1: {
-                        tipo: "reproductor",
-                        estilo: "completo",
+                        tipo: "parrafo",
+                        estilo: "basico",
                         atributos: {
-                            1: {
-                                tipo: "video",
-                                url: "media/video/sapertura.mp4",
-                                imagen_reproductor: "img/sapertura.png",
-                                descripcion: "marco en el aeropuerto"
+                            parrafos: {
+                                1: "regardless"
+                            }
+                        }
+                    },
+                    2:{
+                        tipo: "imagen",
+                        estilo: "full",
+                        atributos: {
+                            url: "img/banner_portada.jpg",
+                            descripcion: "portada del objeto"
+                        }
+                    },
+                    3:{
+                        tipo: "parrafo",
+                        estilo: "basico",
+                        atributos:{
+                            parrafos: {
+                                1: "dress me"
+                            }
+                            
+                        }
+                    },
+                    4:{
+                        tipo: "sortable",
+                        estilo: "sortable_vertical",
+                        atributos: {
+                            preguntas: {
+                                1: {
+                                enunciado: "",
+                                orden: [1, 3, 2, 4],
+                                elementos: {
+                                    1: "Despertar",
+                                    2: "Comer",
+                                    3: "Cocinar",
+                                    4: "Cepillar"
+                                    }
+                                }
                             }
                         }
                     }
@@ -152,36 +185,43 @@ var macrorecursos = {
         recursos: {
             1: {
                 tipo: "layout",
-                estilo: "layout_contextualizacion",
+                estilo: "contenido_4",
                 componentes: {
                     1: {
-                        tipo: "titulo",
-                        estilo: "titulo_recurso",
-                        atributos: {
-                            titulo: "Contextualización",
-                            icono: "contextualizacion"
-                        }
-                    },
-                    2: {
                         tipo: "parrafo",
-                        estilo: "parrafo_basico",
+                        estilo: "basico",
                         atributos: {
                             parrafos: {
-                                1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                                2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                1: "regardless"
                             }
                         }
                     },
-                    3: {
-                        tipo: "reproductor",
-                        estilo: "reproductor_basico",
+                    2:{
+                        tipo: "imagen",
+                        estilo: "full",
                         atributos: {
-                            1: {
-                                tipo: "video",
-                                url: "media/video/contextualizacion.mp4",
-                                imagen_reproductor: "img/contextualizacion.png",
-                                descripcion: "video contextualización"
+                            url: "img/banner_portada.jpg",
+                            descripcion: "portada del objeto"
+                        }
+                    },
+                    3:{
+                        tipo: "parrafo",
+                        estilo: "basico",
+                        atributos:{
+                            parrafos: {
+                                1: "non me"
                             }
+                            
+                        }
+                    },
+                    4:{
+                        tipo: "parrafo",
+                        estilo: "basico",
+                        atributos:{
+                            parrafos: {
+                                1: "dress me"
+                            }
+                            
                         }
                     }
                 }

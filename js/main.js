@@ -125,22 +125,59 @@ $(document).ready(function ()
         $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('q');
     }
     
-    /*Acción: mostrar pop-up de PDF*/
-    $("footer > div#right_buttons > input[type='button']:nth-child(3), footer > div#center_buttons > ul#smart_menu li:nth-child(1)").click(function()
+    /*Acción: realizar el fullscreen*/
+    $(".fullScreen_off").click(function()
     {
-        $("section#popups, #popup_pdf").show();
+        $("header ul:nth-child(3) li:nth-child(1)").removeClass("fullScreen_off").addClass("fullScreen_on");
+        $(".fullScreen_on").bind("click",hideFullScreen);
+        showFullScreen();
+        return false;
     });
     
-    /*Acción: mostrar pop-up de mapa conceptual*/
-    $("footer > div#right_buttons > input[type='button']:nth-child(1)").click(function()
+    
+    function showFullScreen()
+    {
+        $('body').fullscreen();
+    }
+    
+    function hideFullScreen()
+    {
+        $.fullscreen.exit();
+    }
+    /*Acción: mostrar pop-up de Mapa Conceptual*/
+    $("footer > div#right_buttons > input[type='button']:nth-child(1), footer > div#center_buttons > ul#smart_menu li:nth-child(2)").click(function()
     {
         $("section#popups, #popup_mapa_conceptual").show();
     });
     
+    /*Acción: mostrar pop-up de Accesibilidad*/
+    $("header ul:nth-child(3) li:nth-child(5)").click(function()
+    {
+        $("section#popups, #popup_accesibilidad").show();
+    });
+    
+    /*Acción: mostrar pop-up de Glosario*/
+    $("footer > div#left_buttons > input[type='button']:nth-child(4), footer > div#center_buttons > ul#smart_menu li:nth-child(3)").click(function()
+    {
+        $("section#popups, #popup_glosario").show();
+    });
+    
+    /*Acción: mostrar pop-up de Créditos*/
     $("header ul:nth-child(3) > li:nth-child(2)").click(function()
     {
-        console.log($("#popup_pdf").length);
-        $("section#popups, #popup_pdf").show();
+        $("section#popups, #popup_creditos").show();
+    });
+    
+     /*Acción: mostrar pop-up de ayuda*/
+    $("header ul:nth-child(3) > li:nth-child(3)").click(function()
+    {
+        $("section#popups, #popup_ayuda").show();
+    });
+    
+     /*Acción: mostrar pop-up de información*/
+    $("header ul:nth-child(3) > li:nth-child(5)").click(function()
+    {
+        $("section#popups, #popup_pdf_ayuda").show();
     });
     
     $(".popup-btnCerrar").click(function()

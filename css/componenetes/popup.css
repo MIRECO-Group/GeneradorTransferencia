@@ -67,15 +67,13 @@ html, body {
 }
 .popup-icono {
     width: 40px;
-    height: 100%;
+    height: 75%;
     -ms-flex-grow: 0;
     -webkit-flex-grow: 0;
     flex-grow: 0;
-    margin-left: 40px;
-    background-image: url('../images/popup-icono.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 28px auto;
+    margin-left: 20px;
+    color: #f4e62e;
+    font-size: 3rem;
 }
 .popup-titulo {
     color: white;
@@ -88,17 +86,26 @@ html, body {
     font-weight: bold;
 }
 .popup-btnCerrar {
-    width: 40px;
-    height: 100%;
+    color: white;
+    width: 16px;
+    height: 25%;
     -ms-flex-grow: 0;
     -webkit-flex-grow: 0;
     flex-grow: 0;
     margin-right: 20px;
-    background-image: url('../images/popup-cerrar.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 24px auto;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff5247+0,a1161a+100 */
+    background: #ff5247; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #ff5247 0%, #a1161a 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #ff5247 0%,#a1161a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #ff5247 0%,#a1161a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5247', endColorstr='#a1161a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     cursor: pointer;
+    font-size: 1rem;
+    border-radius: 30px;
+    padding: 5px;
+    border-style: solid;
+    border-color: #ff5247;
+    border-width: 2px;
 }
 /*contenido popup*/
 .popup-contenido {
