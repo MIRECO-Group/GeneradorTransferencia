@@ -146,6 +146,7 @@ header
 	padding: 10px 10px 0 10px;
 	flex: 1 0 auto;
 	border-radius: 5px;
+        z-index: 1;
 }
 header div:nth-child(1) /*Cabecera azul*/
 {
@@ -307,14 +308,15 @@ header > img:nth-child(4) /*Logo del sena*/
 
 div#content_container
 {
-	background-color: rgba(255,255,255,0.85);
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	overflow: auto;
-	margin: 0px 10px;
-	height: 100%;
-	flex: 5 1 80%;
-	display: flex;
+    background-color: rgba(255,255,255,0.85);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: auto;
+    margin: -15px 10px 0px;
+    height: 100%;
+    flex: 5 1 80%;
+    display: flex;
+    padding: 20px 5px 5px;
 }
 
 footer
@@ -396,70 +398,72 @@ footer > div#left_buttons > input[type="button"]:nth-child(4) /*Bot�n Glosario
 }
 footer > div#center_buttons
 {
-	flex-grow: 1.5;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	background: #004c5e;
-	background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
-	background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
-	border-radius: 5px;
-	width: 0rem;
-	align-items: inherit;
+    flex-grow: 1.5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background: #004c5e;
+    background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
+    background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
+    border-radius: 5px;
+    width: 0rem;
+    align-items: inherit;
 }
 footer > div#center_buttons > input[type="button"]:nth-child(1)/*Bot�n ir a la izquierda*/
 {
-	font-size: 2rem;
-	background: #004c5e;
-	background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
-	background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
-	border-style: none;
-	font-weight: bold;
-	color: #FFFFFF;
-	margin-right: -1px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+    font-size: 2rem;
+    background: #004c5e;
+    background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
+    background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
+    border-style: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-right: -1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    flex: 1;
 }
 footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que recurso va*/
 {
-	font-size: 1.8rem;
-	background-color: #FFFFFF;
-	border-style: none;
-	color: #00435A;
-	padding: 15px 15px;
-	width: 15rem;
-	height: 2rem;
-	text-align: center;
+    font-size: 1.8rem;
+    background-color: #FFFFFF;
+    border-style: none;
+    color: #00435A;
+    padding: 15px 15px;
+    flex: 2;
+    text-align: center;
+    align-self: inherit;
 }
 footer > div#center_buttons > input[type="button"]:nth-child(3)/*Bot�n ir a la derecha*/
 {
-	font-size: 2rem;
-	background: #004c5e;
-	background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
-	background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
-	border-style: none;
-	font-weight: bold;
-	color: #FFFFFF;
-	margin-left: -1px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+    font-size: 2rem;
+    background: #004c5e;
+    background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
+    background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
+    border-style: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: -1px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    flex: 1;
 }
 footer > div#center_buttons > ul#smart_menu
 {
-	display: none;
-	bottom: 80px;
-	right: 10px;
-	color: #FFFFFF;
-	position: absolute;
-	width: 130px;
-	z-index: 1;
+    display: none;
+    bottom: 80px;
+    right: 10px;
+    color: #FFFFFF;
+    position: absolute;
+    width: 130px;
+    z-index: 1;
 }
 footer > div#center_buttons > ul#smart_menu li
 {
@@ -479,12 +483,12 @@ footer > div#center_buttons > ul#smart_menu li p
 }
 footer > div#right_buttons
 {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: inherit;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: inherit;
 }
 footer > div#right_buttons > input[type="button"]:nth-child(1) /*Bot�n Mapa Conceptual*/
 {

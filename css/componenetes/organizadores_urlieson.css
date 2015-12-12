@@ -367,16 +367,6 @@ html, body{
 	}
 }
 
-*{
-	margin: 0;
-	padding: 0;
-}
-
-html, body{
-  display: flex;
-  width: 100%;
-}
-
 .org_bot_num{
   margin: 0 auto;
   max-width: 700px;
@@ -438,16 +428,6 @@ html, body{
 	.org_bot_num>div {
   	margin-left: 10px;
 	}
-}
-
-*{
-	margin: 0;
-	padding: 0;
-}
-
-html, body{
-  display: flex;
-  width: 100%;
 }
 
 .org_int_sli_est{

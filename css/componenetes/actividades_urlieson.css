@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    display: flex;
+    width: 100%;
+}
+
+
+/* Actividad de Drag and Drop*/
+
+.act_dra_dro{
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.act_dra_dro>div {
+    border-radius: 20px;
+    border: 2px solid #E2DDEB;
+    padding: 60px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-self: center;
+}
+
+.act_dra_dro>div h1 {
+    border-bottom: 2px solid #C9EFF1;
+    color: #357181;
+    margin-bottom: 30px;
+    padding-bottom: 4px;
+    text-align: left;
+}
+
+.act_dra_dro>div h3 {
+    color: #357181;
+    text-align: right;
+}
+
+.act_dra_dro>div>div>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 60px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.act_dra_dro>div>div>div>div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.act_dra_dro>div>div>div>div div.elemento {
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 100px;
+}
+
+.act_dra_dro>div>div>div>div div.drop {
+    border: 1px dashed #ccc;
+    height: 30px;
+    width: 100px;
+}
+
+.act_dra_dro>div>div>div>div div.drag {
+    border: 1px solid #C9EFF1;
+    height: 30px;
+    width: 100px;
+    background-color: #01B3BE;
+}
+.con_drag_drop_hov{
+    background: #01B3BE;
+}
+
+.act_dra_dro>div>div>div>div div.drag.ui-draggable-dragging {
+    background-color: #004B5E; 
+    border-color: #004B5E;
+}
+
+.act_dra_dro>div div.con_enviardp{
+    justify-content: center;
+}
+
+.act_dra_dro>div div.con_enviardp span{
+    background-color: #004B5E;
+    border-color: #004B5E;
+    width: 100px;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.act_dra_dro>div div.con_enviardp span.disable{
+    opacity: .2;
+}
+
+.act_dra_dro>div div.con_enviardp span.enable{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.act_dra_dro>div div.con_enviardp span.enable:hover{
+    background-color: #01B3BE;
+    border-color: #C9EFF1;
+}
+
+.con_tex_ret {
+    text-align: left;
+    color: white;
+    margin: 10px 0;
+}
+
+.con_tex_ret.correcta {
+    padding: 10px;
+    background-color: green;
+}
+
+.con_tex_ret.incorrecta {
+    padding: 10px;
+    background-color: red;
+}
+
+.drag1{
+    background: yellow !important;
+}
+
+.drag2{
+    background: blue !important;
+}
+
+.drag3{
+    background: red !important;
+}
+
+
+@media screen and (max-width: 600px) {
+
+}
+
+/* Actividad de Lista Desplegable */
+
+.act_lis_des{
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.act_lis_des>div {
+    border-radius: 20px;
+    border: 2px solid #E2DDEB;
+    padding: 60px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-self: center;
+}
+
+.act_lis_des>div h1 {
+    border-bottom: 2px solid #C9EFF1;
+    color: #357181;
+    margin-bottom: 30px;
+    padding-bottom: 4px;
+    text-align: left;
+}
+
+.act_lis_des>div h3 {
+    color: #357181;
+    text-align: right;
+}
+
+.act_lis_des>div>div>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 60px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.act_lis_des>div>div>div>div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.act_lis_des>div>div>div>div div.elemento {
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 100px;
+}
+
+.act_lis_des>div>div>div>div div.con_lis {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 30px;
+    width: 100px;
+    padding-top: 10px;
+}
+
+.act_lis_des>div div.con_enviarld{
+    justify-content: center;
+}
+
+.act_lis_des>div div.con_enviarld span{
+    background-color: #004B5E;
+    border-color: #004B5E;
+    width: 100px;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.act_lis_des>div div.con_enviarld span.disable{
+    opacity: .2;
+}
+
+.act_lis_des>div div.con_enviarld span.enable{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.act_lis_des>div div.con_enviarld span.enable:hover{
+    background-color: #01B3BE;
+    border-color: #C9EFF1;
+}
+
+.con_tex_ret {
+    text-align: left;
+    color: white;
+    margin: 10px 0;
+}
+
+.con_tex_ret.correcta {
+    padding: 10px;
+    background-color: green;
+}
+
+.con_tex_ret.incorrecta {
+    padding: 10px;
+    background-color: red;
+}
+
+/* Actividad Sortable */
+
+.act_list_sor{
+    margin: 0 auto;
+    width: 700px;
+    text-align: center;
+}
+
+.act_list_sor>div {
+    border-radius: 20px;
+    border: 2px solid #E2DDEB;
+    padding: 60px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.act_list_sor>div h1 {
+    border-bottom: 2px solid #C9EFF1;
+    color: #357181;
+    margin-bottom: 30px;
+    padding-bottom: 4px;
+    text-align: left;
+}
+
+.act_list_sor>div h3 {
+    color: #357181;
+    text-align: right;
+}
+
+.act_list_sor>div>div ul{
+    list-style: none;
+}
+
+.act_list_sor>div>div ul li {
+    padding: 10px;
+    height: 20px;
+    background-color: #C9EFF1;
+    margin: 5px 0;
+}
+
+.act_list_sor>div div.con_enviars{
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.act_list_sor>div div.con_enviars span{
+    background-color: #004B5E;
+    border-color: #004B5E;
+    width: 100px;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.act_list_sor>div div.con_enviars span.disable{
+    opacity: .2;
+}
+
+.act_list_sor>div div.con_enviars span.enable{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.act_list_sor>div div.con_enviars span.enable:hover{
+    background-color: #01B3BE;
+    border-color: #C9EFF1;
+}
+
+.ui-sortable-placeholder {
+    border: 3px dashed #ddd;
+    background: transparent !important;
+}
+
+.con_tex_ret {
+    text-align: left;
+    color: white;
+    margin: 10px 0;
+}
+
+.con_tex_ret.correcta {
+    padding: 10px;
+    background-color: green;
+}
+
+.con_tex_ret.incorrecta {
+    padding: 10px;
+    background-color: red;
+}
+
+
+@media screen and (max-width: 600px) {
+    .act_list_sor{
+        max-width: 700px;
+    }
+}

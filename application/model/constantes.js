@@ -77,13 +77,13 @@ var BASE_DATA = {
             },
             tabs_flechas: {
                 tag: "pt-organizador-tabs-botones-flechas"
-            }
-        },
-        preguntas: {
-            tag: "pt-organizador-preguntas"
-        },
-        tabs_acordeon: {
-            tag: "pt-organizador-tabs-acordeon"
+            },
+            preguntas: {
+                tag: "pt-organizador-preguntas"
+            },
+            tabs_acordeon: {
+                tag: "pt-organizador-tabs-acordeon"
+            },
         },
         titulo: {
             recurso: {
@@ -177,7 +177,16 @@ var BASE_DATA = {
             select_horizontal: {
                 tag: "pt-lista-desplegable"
             }
+        },
+        sortable: {
+            sortable_vertical: {
+                tag: "pt-sortable"
+            }
+        },
+        drag_drop: {
+            dragdrop_horizontal: {
+                tag: "pt-drag_drop"
+            }
         }
-
     }
 };

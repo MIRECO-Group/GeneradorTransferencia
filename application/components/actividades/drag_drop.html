@@ -1,5 +1,25 @@
-<div>
-    <div ng-repeat="(key, pregunta) in preguntas">
-        
+<div class="act_dra_dro">
+    <div>
+      	<div>
+            <p>{{preguntas.enunciado}}</p>
+        </div>
+				<div class="con_drag_drop">
+					<div>
+						<div ng-repeat="(idP, pregunta) in drops">
+							<!--<div>-->
+								<div class="elemento"></div>
+								<div class="drop drop{{idP}}" droppable data-numero="{{pregunta.accepted[0]}}" data-drag="{{idP}}"></div>
+							<!--</div>-->
+						</div>
+					</div>
+					<div class="cnt_dra">
+						<div ng-repeat="(idP, pregunta) in drags">
+							<!--<div>-->
+								<div class="drag drag{{idP}}" draggable data-numero="{{idP}}"></div>
+							<!--</div>-->
+						</div>                             
+					</div>
+					<div class="con_enviardp" ng-click="">Enviar</div>
+				</div>
     </div>
 </div>

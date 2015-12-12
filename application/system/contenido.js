@@ -137,7 +137,7 @@ var macrorecursos = {
                             }
                         }
                     },
-                    2:{
+                    2: {
                         tipo: "imagen",
                         estilo: "full",
                         atributos: {
@@ -145,29 +145,70 @@ var macrorecursos = {
                             descripcion: "portada del objeto"
                         }
                     },
-                    3:{
+                    3: {
                         tipo: "parrafo",
                         estilo: "basico",
-                        atributos:{
+                        atributos: {
                             parrafos: {
                                 1: "dress me"
                             }
-                            
+
                         }
                     },
-                    4:{
-                        tipo: "sortable",
-                        estilo: "sortable_vertical",
+                    4: {
+                        tipo: "organizador",
+                        estilo: "tabs_superior",
                         atributos: {
-                            preguntas: {
+                            tabs: {
                                 1: {
-                                enunciado: "",
-                                orden: [1, 3, 2, 4],
-                                elementos: {
-                                    1: "Despertar",
-                                    2: "Comer",
-                                    3: "Cocinar",
-                                    4: "Cepillar"
+                                    tag: "1",
+                                    tipo: "layout",
+                                    estilo: "sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "parrafo",
+                                            estilo: "basico",
+                                            atributos: {
+                                                parrafos: {
+                                                    1: "regardless",
+                                                    2: "my touch is black and poisonouss"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                2: {
+                                    tag: "act",
+                                    tipo: "layout",
+                                    estilo: "sensibilizacion",
+                                    componentes: {
+                                        1: {
+                                            tipo: "select",
+                                            estilo: "select_horizontal",
+                                            atributos: {
+                                                enunciado: "test",
+                                                preguntas: {
+                                                    1: {
+                                                        respuesta: 1,
+                                                        opciones: {
+                                                            1: "Blanco",
+                                                            2: "Verde",
+                                                            3: "Amarillo",
+                                                            4: "Rojo"
+                                                        },
+                                                        elemento: {
+                                                            tipo: "imagen",
+                                                            estilo: "imagen_basica",
+                                                            atributos: {
+                                                                thumbnail: "img/select1_thumbnail.png",
+                                                                url: "img/select1.png",
+                                                                descripcion: ""
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -180,49 +221,110 @@ var macrorecursos = {
     //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="CONTEXTUALIZACION">
     3: {
-        id: "contextualizacion",
-        nombre: "contextualización",
+        id: "sensibilizacion_apertura",
+        nombre: "sensibilización de apertura",
         recursos: {
             1: {
                 tipo: "layout",
-                estilo: "contenido_4",
+                estilo: "contenido_1",
                 componentes: {
                     1: {
-                        tipo: "parrafo",
-                        estilo: "basico",
+                        tipo: "drag_drop",
+                        estilo: "dragdrop_horizontal",
                         atributos: {
-                            parrafos: {
-                                1: "regardless"
+                            preguntas: {
+                                1: {
+                                    enunciado: "",
+                                    drags: {
+                                        1: "texto 1",
+                                        2: "texto 2",
+                                        3: "texto 3",
+                                        4: "texto 4"
+                                    },
+                                    drops: {
+                                        1: {
+                                            accepted: [4],
+                                            elemento: {
+                                                tipo: "imagen",
+                                                estilo: "imagen_basica",
+                                                atributos: {
+                                                    thumbnail: "img/drop1_thumbnail.png",
+                                                    url: "img/drop1.png",
+                                                    descripcion: ""
+                                                }
+                                            }
+                                        },
+                                        2: {
+                                            accepted: [3],
+                                            elemento: {
+                                                tipo: "imagen",
+                                                estilo: "imagen_basica",
+                                                atributos: {
+                                                    thumbnail: "img/drop2_thumbnail.png",
+                                                    url: "img/drop2.png",
+                                                    descripcion: ""
+                                                }
+                                            }
+                                        },
+                                        3: {
+                                            accepted: [2],
+                                            elemento: {
+                                                tipo: "imagen",
+                                                estilo: "imagen_basica",
+                                                atributos: {
+                                                    thumbnail: "img/drop3_thumbnail.png",
+                                                    url: "img/drop3.png",
+                                                    descripcion: ""
+                                                }
+                                            }
+                                        },
+                                        4: {
+                                            accepted: [1],
+                                            elemento: {
+                                                tipo: "imagen",
+                                                estilo: "imagen_basica",
+                                                atributos: {
+                                                    thumbnail: "img/drop4_thumbnail.png",
+                                                    url: "img/drop4.png",
+                                                    descripcion: ""
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     },
-                    2:{
-                        tipo: "imagen",
-                        estilo: "full",
-                        atributos: {
-                            url: "img/banner_portada.jpg",
-                            descripcion: "portada del objeto"
+                    2: {
+                        tipo: "layout",
+                        estilo: "contenido_4",
+                        componentes: {
+                            1: {
+                                tipo: "parrafo",
+                                estilo: "basico",
+                                atributos: {
+                                    parrafos: {
+                                        1: "<b>Instrucción:</b> En el campo de la educación podemos mencionar las siguientes aplicaciones. Haga clic sobre los botones listados a la izquierda."
+                                    }
+                                }
+                            },
+                            2:{
+                                
+                            },
+                            3:{
+                                
+                            },
+                            4:{
+                                
+                            }
                         }
+                        
                     },
                     3:{
-                        tipo: "parrafo",
-                        estilo: "basico",
-                        atributos:{
-                            parrafos: {
-                                1: "non me"
-                            }
-                            
-                        }
+                        
                     },
                     4:{
-                        tipo: "parrafo",
-                        estilo: "basico",
-                        atributos:{
-                            parrafos: {
-                                1: "dress me"
-                            }
-                            
-                        }
+                        
                     }
                 }
             }
@@ -894,5 +996,3 @@ var macrorecursos = {
     }
     //</editor-fold>
 };
-
-
