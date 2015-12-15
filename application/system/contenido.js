@@ -109,7 +109,7 @@ var macrorecursos = {
                         tipo: "boton",
                         estilo: "portada",
                         atributos: {
-                            tag: "Enviar",
+                            tag: "Iniciar",
                             funcion: "ir_a",
                             destino: "2"
                         }
@@ -133,7 +133,7 @@ var macrorecursos = {
                         estilo: "basico",
                         atributos: {
                             parrafos: {
-                                1: "regardless"
+                                1: "mensaje de prueba"
                             }
                         }
                     },
@@ -170,8 +170,8 @@ var macrorecursos = {
                                             estilo: "basico",
                                             atributos: {
                                                 parrafos: {
-                                                    1: "regardless",
-                                                    2: "my touch is black and poisonouss"
+                                                    1: "mensaje de prueba 1",
+                                                    2: "mensaje de prueba 2"
                                                 }
                                             }
                                         }
