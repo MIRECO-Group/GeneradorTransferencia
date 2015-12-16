@@ -558,6 +558,16 @@
                     }
                 };
             })
+            .directive("ptReproductorVideo", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/reproductor/video/repro_video.html",
+                    controller: "frameController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .controller("frameController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);

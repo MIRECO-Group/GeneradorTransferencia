@@ -1,10 +1,11 @@
-<div class="org_aco-content">
-	<div class="acordeon">
-		<div class="contenBtnContainer" ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" style="display:flex; flex:1">
-			<div class="acordeon-btn" tabindex="0" ng-class="setActive(key)">
-				<div class="acordeon-btn-text">{{tab.tag}}</div>
+<div class="org_aco-contenedor">
+	<div class="org_aco-acordeon">
+		<div class="org_aco-acordeon-contenBtnContainer" ng-repeat="(key, tab) in tabs" ng-click="setTab(key)" ng-class="setActive(key)">
+			<div class="org_aco-acordeon-btn" ng-class="setActive(key)">
+				<div class="org_aco-acordeon-btn-text">{{tab.tag}}</div>
 			</div>
-			<div class="acordeon-container" pt-new-tab="tab.chain" ng-class="setActive(key)">
+			<div class="org_aco-acordeon-container" pt-new-tab="tab.chain" ng-class="setActive(key)">
+				
 			</div>
 		</div>
 	</div>

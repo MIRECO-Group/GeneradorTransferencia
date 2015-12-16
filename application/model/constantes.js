@@ -171,6 +171,9 @@ var BASE_DATA = {
         reproductor: {
             boton: {
                 tag: "pt-reproductor-boton"
+            },
+            video:{
+                tag: "pt-reproductor-video"
             }
         },
         select: {
