@@ -257,6 +257,24 @@
                     templateUrl: "application/components/iconos/sensibilizacion_apertura.html"
                 };
             })
+            .directive("icoCierre", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/sensibilizacion_cierre.html"
+                };
+            })
+            .directive("icoContext", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/contextualizacion.html"
+                };
+            })
+            .directive("icoRecordemos", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/recordemos.html"
+                };
+            })
             .directive("icoPreguntas", function () {
                 return{
                     restrict: "A",
@@ -266,7 +284,7 @@
             .directive("icoContenido", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/iconos/conocimiento.html"
+                    templateUrl: "application/components/iconos/contenidos.html"
                 };
             })
             .directive("icoPortada", function () {
@@ -282,6 +300,16 @@
                 return{
                     restrict: "A",
                     templateUrl: "application/components/simples/texto/simple.html",
+                    controller: "parrafoController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptParrafoCentrado", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/texto/centrado.html",
                     controller: "parrafoController",
                     scope: {
                         'ptConstructor': '='

@@ -6,67 +6,67 @@
 
 .icon_style_contextualizacion
 {
-	color: white;
-	font-size: 3rem;
-	padding: 10px;
-	border-radius: 40px;
-	background: #437678;
-	background: -moz-radial-gradient(center, ellipse cover, #d43209 50%, #490700 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #d43209 50%,#490700 100%);
-	background: radial-gradient(ellipse at center, #d43209 50%,#490700 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d43209', endColorstr='#490700',GradientType=1 );
+    color: white;
+    font-size: 3rem;
+    padding: 10px;
+    border-radius: 40px;
+    background: #f52700;
+    background: -moz-radial-gradient(center, ellipse cover, #f52700 40%, #540300 70%);
+    background: -webkit-radial-gradient(center, ellipse cover, #f52700 40%,#540300 70%);
+    background: radial-gradient(ellipse at center, #f52700 40%,#540300 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f52700', endColorstr='#540300',GradientType=1 );
 }
 
 .icon_style_recordemos
 {
-	color: white;
-	font-size: 3rem;
-	padding: 10px;
-	border-radius: 40px;
-	background: #437678;
-	background: -moz-radial-gradient(center, ellipse cover, #26435a 50%, #09141f 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #26435a 50%,#09141f 100%);
-	background: radial-gradient(ellipse at center, #26435a 50%,#09141f 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26435a', endColorstr='#09141f',GradientType=1 );
+    color: white;
+    font-size: 3rem;
+    padding: 10px;
+    border-radius: 40px;
+    background: #01415c;
+    background: -moz-radial-gradient(center, ellipse cover, #01415c 40%, #000c1a 80%);
+    background: -webkit-radial-gradient(center, ellipse cover, #01415c 40%,#000c1a 80%);
+    background: radial-gradient(ellipse at center, #01415c 40%,#000c1a 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01415c', endColorstr='#000c1a',GradientType=1 );
 }
 
 .icon_style_preguntas_conocimiento
 {
-	color: white;
-	font-size: 3rem;
-	padding: 10px;
-	border-radius: 40px;
-	background: #437678;
-	background: -moz-radial-gradient(center, ellipse cover, #2e5225 50%, #071208 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #2e5225 50%,#071208 100%);
-	background: radial-gradient(ellipse at center, #2e5225 50%,#071208 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e5225', endColorstr='#071208',GradientType=1 );
+    color: white;
+    font-size: 2.5rem;
+    padding: 15px;
+    border-radius: 40px;
+    background: #01511c;
+    background: -moz-radial-gradient(center, ellipse cover, #01511c 50%, #010a02 75%);
+    background: -webkit-radial-gradient(center, ellipse cover, #01511c 50%,#010a02 75%);
+    background: radial-gradient(ellipse at center, #01511c 50%,#010a02 75%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01511c', endColorstr='#010a02',GradientType=1 );
 }
 
 .icon_style_sensibilizacion_cierre
 {
-	color: white;
-	font-size: 3rem;
-	padding: 10px;
-	border-radius: 40px;
-	background: #437678;
-	background: -moz-radial-gradient(center, ellipse cover, #76a62d 50%, #20340a 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #76a62d 50%,#20340a 100%);
-	background: radial-gradient(ellipse at center, #76a62d 50%,#20340a 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76a62d', endColorstr='#20340a',GradientType=1 );
+    color: white;
+    font-size: 3rem;
+    padding: 10px;
+    border-radius: 40px;
+    background: #5aa814;
+    background: -moz-radial-gradient(center, ellipse cover, #5aa814 50%, #073101 75%);
+    background: -webkit-radial-gradient(center, ellipse cover, #5aa814 50%,#073101 75%);
+    background: radial-gradient(ellipse at center, #5aa814 50%,#073101 75%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5aa814', endColorstr='#073101',GradientType=1 );
 }
 
 .icon_style_contenidos
 {
-	color: white;
-	font-size: 3rem;
-	padding: 10px;
-	border-radius: 40px;
-	background: #437678;
-	background: -moz-radial-gradient(center, ellipse cover, #730565 50%, #17001b 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #730565 50%,#17001b 100%);
-	background: radial-gradient(ellipse at center, #730565 50%,#17001b 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#730565', endColorstr='#17001b',GradientType=1 );
+    color: white;
+    font-size: 2.8rem;
+    padding: 13px;
+    border-radius: 40px;
+    background: #880167;
+    background: -moz-radial-gradient(center, ellipse cover, #880167 50%, #140014 75%);
+    background: -webkit-radial-gradient(center, ellipse cover, #880167 50%,#140014 75%);
+    background: radial-gradient(ellipse at center, #880167 50%,#140014 75%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880167', endColorstr='#140014',GradientType=1 );
 }
 
 .org_pes_lat{

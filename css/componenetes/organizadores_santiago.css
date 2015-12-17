@@ -50,13 +50,12 @@ div.img_container
 
 div.img_mitad
 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex: 1;
-	margin-left: 25%;
-        margin-right: 25%;
-        overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-left: 25%;
+    margin-right: 25%;
+    overflow: hidden;
 }
 
 div.img_full
@@ -80,8 +79,8 @@ div.img_container button
 	font-family: 'transferenciaregular';
 	color: white;
 	position: absolute;
-	bottom: 50px;
-	right: 50px;
+	bottom: 2%;
+	right: 2%;
 	background: #49819f;
 	background: -moz-radial-gradient(center, ellipse cover, #49819f 0%, #00435a 85%);
 	background: -webkit-radial-gradient(center, ellipse cover, #49819f 0%,#00435a 85%);
@@ -126,7 +125,8 @@ div.popup
 div.popup img
 {
 	display: block;
-	margin: 0 auto;
+	margin: 50px auto;
+        height: 90%;
 	width: 80%;
 }
 div.popup button
@@ -134,8 +134,8 @@ div.popup button
 	font-family: 'transferenciaregular';
 	position: absolute;
 	color: white;
-	right: 8%;
-	top: 17%;
+	right: 4%;
+	top: 5%;
 	font-size: 20px;
 	padding: 5px 3px;
 	cursor: pointer;
@@ -154,16 +154,17 @@ div.popup button
 
 .transfe_font
 {
-	font-family: "transferenciaregular"
+    font-family: "transferenciaregular"
 }
 
 div#content_container div.title_container
 {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	height: 100%;
-	width: 100%;
+    padding-left:25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 div#content_container div.title_title_icon
@@ -211,6 +212,22 @@ div#content_container div.title_container_result .title_title_text
     color: white;
 }
 
+/*Organizador gráfico / Componente - Párrafo*/
+div#content_container div.text_container
+{
+    flex:1;
+}
+
+div#content_container div.text_container .text_text
+{
+    padding: 5px 5px;
+}
+/* Párrafo centrado */
+div#content_container div.text_container .text_text_center
+{
+    text-align: center;
+    padding: 5px 0;
+}
 /* a?adido luis*/
 
 div#content_container .button_portada
@@ -326,13 +343,13 @@ div#content_container .button_portada::after
 
 .icon_style_sensibilizacion_apertura
 {
-	color: white;
-	font-size: 3rem;
-	padding: 10px;
-	border-radius: 40px;
-	background: #437678;
-	background: -moz-radial-gradient(center, ellipse cover, #437678 50%, #142438 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #437678 50%,#142438 100%);
-	background: radial-gradient(ellipse at center, #437678 50%,#142438 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#437678', endColorstr='#142438',GradientType=1 );
+    color: white;
+    font-size: 3rem;
+    padding: 10px;
+    border-radius: 40px;
+    background: #04777a;
+    background: -moz-radial-gradient(center, ellipse cover,  #04777a 50%, #011f37 70%);
+    background: -webkit-radial-gradient(center, ellipse cover,  #04777a 50%,#011f37 70%);
+    background: radial-gradient(ellipse at center,  #04777a 50%,#011f37 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04777a', endColorstr='#011f37',GradientType=1 );
 }

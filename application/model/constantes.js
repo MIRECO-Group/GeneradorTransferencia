@@ -96,6 +96,9 @@ var BASE_DATA = {
         parrafo: {
             basico: {
                 tag: "pt-parrafo"
+            },
+            centrado: {
+                tag: "pt-parrafo-centrado"
             }
         },
         imagen: {
