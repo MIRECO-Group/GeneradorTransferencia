@@ -15,6 +15,9 @@ var BASE_DATA = {
         og_2: {
             tag: "pt-organizador2"
         },
+        og_3: {
+            tag: "pt-organizador3"
+        },
         sensibilizacion: {
             tag: "pt-sensibilizacion"
         },

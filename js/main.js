@@ -175,10 +175,24 @@ $(document).ready(function ()
     });
     
      /*Acción: mostrar pop-up de información*/
-    $("header ul:nth-child(3) > li:nth-child(5)").click(function()
+    $("header ul:nth-child(3) > li:nth-child(4)").click(function()
     {
-        $("section#popups, #popup_pdf_ayuda").show();
+        $("section#popups, #popup_informacion").show();
     });
+    
+    
+    $("footer > div#right_buttons > input[type='button']:nth-child(3)").click(function()
+    {
+        $("section#popups, #popup_PDF").show();
+    });
+    
+    
+     /*Acción: mostrar pop-up de Bibliografía*/
+    $("footer > div#left_buttons > input[type='button']:nth-child(2)").click(function()
+    {
+        $("section#popups, #popup_bibliografia").show();
+    });
+    
     
     $(".popup-btnCerrar").click(function()
     {

@@ -42,6 +42,17 @@
                     }
                 };
             })
+            .directive("ptOrganizador3", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/organizador3.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptPortada", function () {
                 return{
                     controller: "LayoutController",

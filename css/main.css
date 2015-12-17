@@ -128,7 +128,6 @@ strong{
 
 body
 {
-    background-color: green;
     height: 100%;
     width: 100%;
     display: flex;
@@ -295,6 +294,8 @@ header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
     right: 3.5rem;
     margin-top: 0.4rem;
     padding: 5% 30%;
+    text-align: center;
+    width: 5rem;
 }
 header > img:nth-child(4) /*Logo del sena*/
 {

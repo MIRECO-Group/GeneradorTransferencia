@@ -60,39 +60,39 @@ div.img_mitad
 
 div.img_full
 {
-	display: flex;
-        flex-direction: row;
-        flex: 1;
-        overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
 }
 
 div.img_container img, div.img_full img, div.img_mitad img
 {
-        flex: 1;
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
+    flex: 1;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 }
 
 div.img_container button
 {
-	font-family: 'transferenciaregular';
-	color: white;
-	position: absolute;
-	bottom: 2%;
-	right: 2%;
-	background: #49819f;
-	background: -moz-radial-gradient(center, ellipse cover, #49819f 0%, #00435a 85%);
-	background: -webkit-radial-gradient(center, ellipse cover, #49819f 0%,#00435a 85%);
-	background: radial-gradient(ellipse at center, #49819f 0%,#00435a 85%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#00435a',GradientType=1 );
-	border-style: solid;
-	border-width: 3px;
-	border-color: #C48800;
-	border-radius: 40px;
-	font-size: 45px;
-	padding: 10px;
-	cursor: pointer;
+    font-family: 'transferenciaregular';
+    color: white;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    background: #49819f;
+    background: -moz-radial-gradient(center, ellipse cover, #49819f 0%, #00435a 85%);
+    background: -webkit-radial-gradient(center, ellipse cover, #49819f 0%,#00435a 85%);
+    background: radial-gradient(ellipse at center, #49819f 0%,#00435a 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#00435a',GradientType=1 );
+    border-style: solid;
+    border-width: 3px;
+    border-color: #04BCC8;
+    border-radius: 40px;
+    font-size: 40px;
+    padding: 15px;
+    cursor: pointer;
 }
 
 /* ----- Secci?n del popup ----- */
@@ -124,30 +124,30 @@ div.popup
 }
 div.popup img
 {
-	display: block;
-	margin: 50px auto;
-        height: 90%;
-	width: 80%;
+    display: block;
+    margin: 45px auto;
+    height: 90%;
+    width: 90%;
 }
 div.popup button
 {
-	font-family: 'transferenciaregular';
-	position: absolute;
-	color: white;
-	right: 4%;
-	top: 5%;
-	font-size: 20px;
-	padding: 5px 3px;
-	cursor: pointer;
-	border-style: solid;
-	border-width: 3px;
-	border-color: #A1161A;
-	border-radius: 40px;
-	background: #ff5247;
-	background: -moz-radial-gradient(center, ellipse cover, #ff5247 0%, #e32221 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, #ff5247 0%,#e32221 100%);
-	background: radial-gradient(ellipse at center, #ff5247 0%,#e32221 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5247', endColorstr='#e32221',GradientType=1 );
+    font-family: 'transferenciaregular';
+    position: absolute;
+    color: white;
+    right: 10%;
+    bottom: 10%;
+    font-size: 40px;
+    padding: 15px;
+    cursor: pointer;
+    background: #49819f;
+    background: -moz-radial-gradient(center, ellipse cover, #49819f 0%, #00435a 85%);
+    background: -webkit-radial-gradient(center, ellipse cover, #49819f 0%,#00435a 85%);
+    background: radial-gradient(ellipse at center, #49819f 0%,#00435a 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49819f', endColorstr='#00435a',GradientType=1 );
+    border-style: solid;
+    border-width: 3px;
+    border-color: #04BCC8;
+    border-radius: 40px;
 }
 
 /*-------------------SECCI?N DEL ORGANIZADOR GR?FICO: T?TULO--------------------------------*/
@@ -220,7 +220,7 @@ div#content_container div.text_container
 
 div#content_container div.text_container .text_text
 {
-    padding: 5px 5px;
+    padding: 5px 5px 5px 15px;
 }
 /* Párrafo centrado */
 div#content_container div.text_container .text_text_center

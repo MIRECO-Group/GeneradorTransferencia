@@ -98,7 +98,7 @@ var componente = {
     estilo: "reproductor_basico",
     atributos: {
         1: {
-            tipo: "audio",
+            tipo: "audio/video",
             url: "media/audio/melones.mp3",
             imagen_reproductor: "img/melon.png",
             descripcion: ""
