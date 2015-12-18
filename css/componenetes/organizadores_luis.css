@@ -237,8 +237,9 @@ ol.lista_numerada li:before {
 }
 
 ul.lista_vineta_redonda{
-    list-style: disc;
+    list-style: inside;
     list-style-type: disc;
+    text-align: left;
 }
 
 ul.lista_vineta_redonda li{

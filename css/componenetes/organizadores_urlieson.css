@@ -156,11 +156,6 @@
 	}
 }
 
-*{
-	margin: 0;
-	padding: 0;
-}
-
 html, body{
   display: flex;
   width: 100%;
@@ -493,7 +488,7 @@ html, body{
 
 .org_int_sli_est>div {
   border-radius: 20px;
-  border: 2px solid #E2DDEB;
+  border: 2px solid rgba(128, 128, 128, 0.55);
   padding: 60px 30px 30px 30px;
 	display: flex;
   flex-direction: column;

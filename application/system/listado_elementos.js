@@ -97,12 +97,10 @@ var componente = {
     tipo: "reproductor",
     estilo: "reproductor_basico",
     atributos: {
-        1: {
-            tipo: "audio/video",
-            url: "media/audio/melones.mp3",
-            imagen_reproductor: "img/melon.png",
-            descripcion: ""
-        }
+        tipo: "audio/video",
+        url: "media/audio/melones.mp3",
+        imagen_reproductor: "img/melon.png",
+        descripcion: ""
     }
 };
 //LISTA

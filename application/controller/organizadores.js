@@ -600,7 +600,7 @@
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
-                $scope.url = element.atributos[1].url;
+                /*$scope.url = element.atributos[1].url;*/
             })
             //</editor-fold>
             ;
