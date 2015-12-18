@@ -478,3 +478,71 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 #content_container .vjs-fullscreen-control {
     background-color: #003249 !important;
 }
+
+/* ORGANIZADORES DE AUDIO */
+.contenedorAudio {
+    text-align: center;
+    margin-top: 20px;
+}
+/*componente audio*/
+.audiojs {
+    display: inline-block;
+    height: 40px;
+    margin: 0;
+    width: 40px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 50%;
+    background-color: #023e56;
+    margin: 20px auto;
+}
+/*Contenedor de los botones play y pause*/
+.play-pause {
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    float: none;
+    margin: 0;
+}
+/*botón play*/
+.audiojs .play {
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-image: url("../../img/audio/audio-detenido.png") !important;
+    background-position: 0 0 !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto;
+}
+/*botón pause*/
+.audiojs .pause {
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-image: url("../../img/audio/audio-sonando.png") !important;
+    background-position: 0 0 !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto;
+}
+/*Ocultando partes del cuerpo*/
+.scrubber {
+    display: none;
+}
+.time {
+    display: none;
+}
+/*Ocultando otros elementos*/
+.audiojs .loading {
+    display: none;
+}
+.audiojs .error {
+    display: none;
+}
+
+/*Observaciones:
+1) Para modificar el tamaño del reproductor de audio
+modificar el widht y el height del selector .audiojs.
+
+2) Para cambiar los íconos de play y pause, modificar 
+las url de los background-image en los selectores .audiojs .play y
+.audiojs .pause 
+*/

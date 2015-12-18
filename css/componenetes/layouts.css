@@ -69,12 +69,12 @@ img{
     overflow: auto;
 }
 
-.dummy_layout .c1{
+.dummy_layout > .c1{
     flex-grow: 1;
     width: 100%;
 }
 
-.dummy_layout .contenedor_1{
+.dummy_layout > .contenedor_1{
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -82,16 +82,16 @@ img{
     width: 100%;
 }
 
-.dummy_layout .contenedor_1 .c2{
+.dummy_layout > .contenedor_1 > .c2{
     flex: 1 0 30%;
 }
 
-.dummy_layout .contenedor_1 .c3{
+.dummy_layout > .contenedor_1 > .c3{
     flex: 3 0 70%;
 }
 
 @media (max-width: 600px) { 
-    .dummy_layout .contenedor_1{
+    .dummy_layout > .contenedor_1{
         flex-direction: column;
     }
 }

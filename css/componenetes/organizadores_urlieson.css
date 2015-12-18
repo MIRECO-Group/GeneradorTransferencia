@@ -1,7 +1,7 @@
 
 .transfe_font
 {
-	font-family: "transferenciaregular";
+    font-family: "transferenciaregular";
 }
 
 .icon_style_contextualizacion
@@ -69,13 +69,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880167', endColorstr='#140014',GradientType=1 );
 }
 
-.org_pes_lat{
-  margin: 0 auto;
-  max-width: 700px;
-  text-align: center;
-	display: flex;
-  flex-direction: row;
-  width: 100%;
+.org_pes_lat
+{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    width: 100%;
 }
 .org_pes_lat>ul {
 	list-style: none;
@@ -110,18 +111,15 @@
 	background-color: #004B5E; 
   border-color: #004B5E; 
 }
-.org_pes_lat>div.tipoa {
-  border-radius: 20px;
-  border: 2px solid #E2DDEB;
-  padding: 20px;
-	height: auto;
-	display: flex;
-	align-items: center;
-	width: 100%;
-}
-
-.org_pes_lat>div div{
-	align-self: center;
+.org_pes_lat>div.tipoa
+{
+    border-radius: 20px;
+    border: 2px solid gray;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .org_pes_lat>div>div p {
@@ -367,13 +365,14 @@ html, body{
 	}
 }
 
-.org_bot_num{
-  margin: 0 auto;
-  max-width: 700px;
-  text-align: center;
-	display: flex;
-  flex-direction: row;
-  width: 100%;
+.org_bot_num
+{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+    width: 100%;
 }
 .org_bot_num>ul {
 	list-style: none;
@@ -398,15 +397,16 @@ html, body{
 		background-color: #004B5E; 
     border-color: #004B5E; 
 }
-.org_bot_num>div {
-  border-radius: 20px;
-  border: 2px solid #E2DDEB;
-  margin-left: 50px;
-  padding: 20px;
-	display: flex;
-  flex-direction: column;
-	height: auto;
-	width: 100%;
+.org_bot_num>div
+{
+    border-radius: 20px;
+    border: 2px solid gray;
+    margin-left: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
 }
 
 .org_bot_num>div>div h1 {

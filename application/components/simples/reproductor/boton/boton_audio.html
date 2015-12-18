@@ -1,3 +1,6 @@
-<div class="boton_audio">
-    <span class="transfe_font">P</span>
-</div>
+<audio src="{{url}}" preload="auto"/>
+<script>
+	audiojs.events.ready(function() {
+		var as = audiojs.createAll();
+	});
+</script>
