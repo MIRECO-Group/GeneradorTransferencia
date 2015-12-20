@@ -576,10 +576,30 @@
             })
             //</editor-fold>
             ////<editor-fold defaultstate="collapsed" desc="Reproductor">
-            .directive("ptReproductorBoton", function () {
+            .directive("ptReproductorBotonPequeno", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/reproductor/boton/boton_audio.html",
+                    templateUrl: "application/components/simples/reproductor/boton/boton_audio_pequeno.html",
+                    controller: "frameController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptReproductorBotonMediano", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/reproductor/boton/boton_audio_mediano.html",
+                    controller: "frameController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptReproductorBotonRecuadro", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/reproductor/boton/boton_audio_recuadro.html",
                     controller: "frameController",
                     scope: {
                         'ptConstructor': '='

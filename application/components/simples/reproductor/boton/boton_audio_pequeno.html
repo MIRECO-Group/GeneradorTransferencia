@@ -1,0 +1,8 @@
+<div class="btn_audio_pequeno">
+    <audio src="{{atributos.url}}" preload="auto"/>
+    <script>
+	audiojs.events.ready(function() {
+		var as = audiojs.createAll();
+	});
+    </script>
+<div>

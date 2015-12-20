@@ -175,8 +175,14 @@ var BASE_DATA = {
             }
         },
         reproductor: {
-            boton: {
-                tag: "pt-reproductor-boton"
+            boton_pequeno: {
+                tag: "pt-reproductor-boton-pequeno"
+            },
+            boton_mediano: {
+                tag: "pt-reproductor-boton-mediano"
+            },
+            boton_recuadro:{
+                tag: "pt-reproductor-boton-recuadro"
             },
             video:{
                 tag: "pt-reproductor-video"

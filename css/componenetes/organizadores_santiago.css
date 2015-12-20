@@ -90,8 +90,8 @@ div.img_container button
     border-width: 3px;
     border-color: #04BCC8;
     border-radius: 40px;
-    font-size: 40px;
-    padding: 15px;
+    font-size: 30px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -136,8 +136,8 @@ div.popup button
     color: white;
     right: 10%;
     bottom: 10%;
-    font-size: 40px;
-    padding: 15px;
+    font-size: 30px;
+    padding: 10px;
     cursor: pointer;
     background: #49819f;
     background: -moz-radial-gradient(center, ellipse cover, #49819f 0%, #00435a 85%);
@@ -234,64 +234,30 @@ div#content_container .button_portada
 {
 	border-style: none;
 	color: blue;
-	height: 45px;
-	width: 45%;
+	
 	/* position: absolute; */
-	right: 0px;
 	/* margin-top: 15px; */
 	/* background: #b3b3b3; */
-	background: 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	-moz-linear-gradient(top, #b3b3b3 0%, #ffffff 71%);
-	background: 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	-webkit-linear-gradient(top, #b3b3b3 0%,#ffffff 71%);
+
+	/*
+	right: 0px;
+	background: -moz-linear-gradient(top, #b3b3b3 0%, #ffffff 71%);
+	background: -webkit-linear-gradient(top, #b3b3b3 0%,#ffffff 71%);
 	background: linear-gradient(to bottom, #b3b3b3 0%,#ffffff 71%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#ffffff',GradientType=0 );
+	
+	height: 45px;
+	width: 45%;
+	*/
+	background-color: transparent;
+    width: 260px;
+    margin-left: auto;
 }
-
+div#content_container .button_portada-icono {
+	float: left;
+	margin-right: -5px;
+} 
 div#content_container .button_simple
 {
     background-color: #0182A2;
@@ -304,7 +270,21 @@ div#content_container .button_simple
 
  div#content_container .button_portada_text
 {
-	font-size: 2rem;
+	background-color: white;
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 4px 28px 4px 0;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#aaaaaa+13,f0f0f0+57,ffffff+100 */
+background: #aaaaaa; /* Old browsers */
+background: -moz-linear-gradient(top,  #aaaaaa 13%, #f0f0f0 57%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #aaaaaa 13%,#f0f0f0 57%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #aaaaaa 13%,#f0f0f0 57%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+
 }
 
 /*
