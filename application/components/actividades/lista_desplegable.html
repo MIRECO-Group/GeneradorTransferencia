@@ -1,19 +1,19 @@
-<div>
+<div class="act_lis_des">
     <div>
+        <h1>{{atributos.enunciado}}</h1>
         <div>
-            <p class="con_tex_ret">{{atributos.enunciado}}</p>
-        </div>
-        <div ng-repeat="(idP, pregunta) in preguntas">
-            <div class="elemento" pt-item="pregunta.chain"></div>
-            <div class="con_lis">
-                <select name="select1">
-                    <option ng-repeat="(key, value) in pregunta.opciones" value="{{key}}">
-                        {{value}}
-                    </option>
-                </select>
+            <div>
+                <div ng-repeat="(idP, pregunta) in preguntas">
+                    <div class="elemento" pt-item="pregunta.chain"></div>
+                    <select ng-model="modelo" name="select{{idP}}" ng-change="change(this)">
+                        <option value="" selected></option>
+                        <option ng-repeat="(key, value) in pregunta.opciones" value="{{key}}">
+                            {{value}}
+                        </option>
+                    </select>
+                </div> 
             </div>
-        </div>
+        </div> 
+        <div class="btnEnviar hvr-float-shadow" ng-click="enviarListaDesplegable(this)" ng-show="muestrabtnEnviar">Enviar</div>
     </div>
-    
-    <button ng-click="enviarListaDesplegable()">ENVIAR</button>
 </div>

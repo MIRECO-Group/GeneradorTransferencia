@@ -58,7 +58,7 @@ var BASE_DATA = {
             tag: "pt-contenido7"
         },
         examen: {
-            tag: ""
+            tag: "pt-examen"
         }
     },
     componentes: {
@@ -201,6 +201,11 @@ var BASE_DATA = {
         drag_drop: {
             dragdrop_horizontal: {
                 tag: "pt-drag_drop"
+            }
+        },
+        pick_many: {
+            pickmany_horizontal: {
+                tag: "pt-pickmany_horizontal"
             }
         }
     }

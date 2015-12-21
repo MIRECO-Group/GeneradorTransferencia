@@ -1,14 +1,9 @@
-<div class="act_list_sor">
-    <div>
-      	<div>
-            <p>{{elementos.enunciado}}</p>
-        </div>
-			<div class="con_lis_sor">
-				<ul sortable>
-					<li ng-repeat="(idP, item) in elementos" class="elementos elemento{{vectorInicial[idP]}}" numero="{{vectorInicial[idP]}}">{{item}}</li>
-				</ul>
-					
-				<div class="con_enviardp" ng-click="">Enviar</div>
-			</div>
-    </div>
+<div class="sortable-contenedor">
+	<div class="sortable-texto1">
+		{{preguntas.enunciado}}
+	</div>
+	<ul sortable class="sortable-items">
+		<li ng-repeat="(idP, item) in elementos" class="sortable-item elementos elemento{{vectorInicial[idP]}}" numero="{{vectorInicial[idP]}}">{{item}}</li>
+	</ul>
+	<div class="sortable-btnEnviar hvr-float-shadow" ng-click="enviarSortable(this)">Enviar</div>
 </div>

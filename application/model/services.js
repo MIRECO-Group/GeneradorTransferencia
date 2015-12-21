@@ -169,6 +169,10 @@
                             element = element.atributos.tabs[v];
                         } else if (element.atributos.hasOwnProperty("preguntas")) {
                             element = element.atributos.preguntas[v];
+                        } else if (element.atributos.hasOwnProperty("picks")) {
+                            element = element.atributos.picks[v];
+                        } else if (element.atributos.hasOwnProperty("drops")) {
+                            element = element.atributos.drops[v];
                         } else {
                             $log.error("COMPONENTE INEXISTENTE -> ANTERIOR", element);
                             element = null;

@@ -71,7 +71,6 @@
                     $plantilla.set_pagina(that.actual);
                     render_content(that.actual);
                 };               
-
                 /* <div dummy-layout pt-constructor="[1]"></div> */
             });
 })();

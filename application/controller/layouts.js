@@ -196,6 +196,17 @@
                     }
                 };
             })
+            .directive("ptExamen", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/examen.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .controller("LayoutController", function ($scope, $compile, $contenido, $render, $element) {
                 this.chainId = $scope.ptConstructor;
                 var that = this;
