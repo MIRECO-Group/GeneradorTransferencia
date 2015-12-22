@@ -121,6 +121,22 @@ var componente = {
         }
     }
 };
+
+//FRAME
+/*
+ url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra la versión grande de la imagen a mostrar.
+ descripcion: Texto. OPCIONAL. Contenido a mostrarse al ubicar el cursor sobre la imagen (pequeña descripción).
+ */
+
+var componente = {
+    tipo: "frame",
+    estilo: "mediano",
+    atributos: {
+        url: "media/anim/animacion.html",
+        descripcion: ""
+    }
+};
+
 //ORGANIZADOR GRAFICO
 /*
  *  tabs : Objeto. OBLIGATORIO. Corresponde a los contenidos del organizador. 
@@ -278,42 +294,44 @@ var componente = {
         preguntas: {
             1: {
                 enunciado: "¿De qué color es la nieve?",
-                respuesta: [2],
-                picks: {
-                    1: {
-                        tipo: "imagen",
-                        estilo: "imagen_basica",
-                        atributos: {
-                            thumbnail: "img/pick1_thumbnail.png",
-                            url: "img/pick1.png",
-                            descripcion: ""
-                        }
-                    },
-                    2: {
-                        tipo: "imagen",
-                        estilo: "imagen_basica",
-                        atributos: {
-                            thumbnail: "img/pick2_thumbnail.png",
-                            url: "img/pick2.png",
-                            descripcion: ""
-                        }
-                    },
-                    3: {
-                        tipo: "imagen",
-                        estilo: "imagen_basica",
-                        atributos: {
-                            thumbnail: "img/pick3_thumbnail.png",
-                            url: "img/pick3.png",
-                            descripcion: ""
-                        }
-                    },
-                    4: {
-                        tipo: "imagen",
-                        estilo: "imagen_basica",
-                        atributos: {
-                            thumbnail: "img/pick4_thumbnail.png",
-                            url: "img/pick4.png",
-                            descripcion: ""
+                respuesta: [2],/*[2,3]*/
+                atributos: {
+                    picks: {
+                        1: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/pick1_thumbnail.png",
+                                url: "img/pick1.png",
+                                descripcion: ""
+                            }
+                        },
+                        2: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/pick2_thumbnail.png",
+                                url: "img/pick2.png",
+                                descripcion: ""
+                            }
+                        },
+                        3: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/pick3_thumbnail.png",
+                                url: "img/pick3.png",
+                                descripcion: ""
+                            }
+                        },
+                        4: {
+                            tipo: "imagen",
+                            estilo: "imagen_basica",
+                            atributos: {
+                                thumbnail: "img/pick4_thumbnail.png",
+                                url: "img/pick4.png",
+                                descripcion: ""
+                            }
                         }
                     }
                 }

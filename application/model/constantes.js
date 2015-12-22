@@ -97,6 +97,9 @@ var BASE_DATA = {
             },
             basico:{
                 tag: "pt-titulo-basico"
+            },
+            parrafo_negrilla_subrayado_centrado:{
+                tag: "pt-titulo-parrafo-negrilla-subrayado-centrado"
             }
         },
         parrafo: {

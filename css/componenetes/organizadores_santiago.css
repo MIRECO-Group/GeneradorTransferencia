@@ -199,10 +199,8 @@ div#content_container div.title_subtitle_text
 
 
 /*Estilo del título básico*/
-
 div#content_container div.title_basic
 {
-    text-align: center;
     height: 100%;
     width: 100%;
 }
@@ -214,6 +212,17 @@ div#content_container div.title_basic_title
     padding: 1% 0;
     color: #407389;
 }
+
+/*Estilo del título de párrafo con negrilla, subrayado y centrado*/
+div#content_container div.title_paragraph_bold_underline_center_text
+{
+    margin: 0 15px;
+    text-decoration: underline;
+    color: #407389;
+    text-align: center;
+    width: 100%;
+}
+
 
 /*a?adido luis*/
 
@@ -251,7 +260,7 @@ div#content_container div.text_container .text_text_center
 div#content_container div.text_container .text_text_bold
 {
     font-weight: bold;
-    padding: 5px 0;
+    padding: 5px 5px 5px 15px;
 }
 
 /* Párrafo en negrilla bold */
@@ -259,7 +268,7 @@ div#content_container div.text_container .text_text_bold_center
 {
     text-align: center;
     font-weight: bold;
-    padding: 5px 0;
+    padding: 5px 5px 5px 15px;
 }
 /* a?adido luis*/
 

@@ -234,6 +234,16 @@
                     }
                 };
             })
+            .directive("ptTituloParrafoNegrillaSubrayadoCentrado", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/titulo/tparrafo_negrilla_subrayado_centrado.html",
+                    controller: "tituloController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .controller("tituloController", function ($scope, $contenido) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);

@@ -245,6 +245,7 @@ ul.lista_vineta_redonda{
 
 ul.lista_vineta_redonda li{
     display: list-item;
+    padding: 8px 0px;
 }
 
 ul.lista_vineta_tipografia span.transfe_font{
