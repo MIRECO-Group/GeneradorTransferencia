@@ -155,7 +155,7 @@ header div:nth-child(1) /*Cabecera azul*/
 	border-radius: 5px;
 	display: flex;
 	justify-content: space-between;
-	height: auto;
+	height: 60%;
 	position: relative;
 	/* z-index: 3; */
 	align-items: inherit;
@@ -171,7 +171,6 @@ header div:nth-child(1) > input[type="button"] /*Bot�n que activa el men� de
     font-family: 'transferenciaregular';
     border: none;
     color: #004C5E;
-
     background: #1fb5ae;
     background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
@@ -180,9 +179,9 @@ header div:nth-child(1) > input[type="button"] /*Bot�n que activa el men� de
     background: -ms-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: linear-gradient(to bottom, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
-
     font-size: 2rem;
     border-top-right-radius: 3px;
+    height: 100%;
     width: 3rem;
 }
 

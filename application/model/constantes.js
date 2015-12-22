@@ -94,6 +94,9 @@ var BASE_DATA = {
             },
             resultados: {
                 tag: "pt-titulo-resultados"
+            },
+            basico:{
+                tag: "pt-titulo-basico"
             }
         },
         parrafo: {
@@ -102,6 +105,12 @@ var BASE_DATA = {
             },
             centrado: {
                 tag: "pt-parrafo-centrado"
+            },
+            negrilla: {
+                tag: "pt-parrafo-negrilla"
+            },
+            negrilla_centrado: {
+                tag: "pt-parrafo-negrilla-centrado"
             }
         },
         imagen: {

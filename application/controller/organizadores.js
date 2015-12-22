@@ -224,6 +224,16 @@
                     }
                 };
             })
+            .directive("ptTituloBasico", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/titulo/basico.html",
+                    controller: "tituloController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .controller("tituloController", function ($scope, $contenido) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
@@ -300,6 +310,26 @@
                 return{
                     restrict: "A",
                     templateUrl: "application/components/simples/texto/simple.html",
+                    controller: "parrafoController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptParrafoNegrilla", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/texto/negrilla.html",
+                    controller: "parrafoController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptParrafoNegrillaCentrado", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/texto/negrilla_centrado.html",
                     controller: "parrafoController",
                     scope: {
                         'ptConstructor': '='

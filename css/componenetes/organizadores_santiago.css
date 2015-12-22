@@ -187,14 +187,32 @@ div#content_container div.title_title_icon
 
 div#content_container div.title_title_text
 {
-	margin: 0 15px;
-	font-size: 2rem;
-        color: #407389;
+    margin: 0 15px;
+    font-size: 2rem;
+    color: #407389;
 }
 
 div#content_container div.title_subtitle_text
 {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
+}
+
+
+/*Estilo del título básico*/
+
+div#content_container div.title_basic
+{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+div#content_container div.title_basic_title
+{
+    margin: 0 15px;
+    font-size: 2rem;
+    padding: 1% 0;
+    color: #407389;
 }
 
 /*a?adido luis*/
@@ -226,6 +244,21 @@ div#content_container div.text_container .text_text
 div#content_container div.text_container .text_text_center
 {
     text-align: center;
+    padding: 5px 0;
+}
+
+/* Párrafo en negrilla */
+div#content_container div.text_container .text_text_bold
+{
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Párrafo en negrilla bold */
+div#content_container div.text_container .text_text_bold_center
+{
+    text-align: center;
+    font-weight: bold;
     padding: 5px 0;
 }
 /* a?adido luis*/

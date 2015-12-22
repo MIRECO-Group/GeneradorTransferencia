@@ -215,7 +215,6 @@ html, body{
     text-align: left;
 }
 .org_bot_num_bol>div>div p {
-    color: #5B606E;
     line-height: 25px;
     text-align: justify;
 }
@@ -408,7 +407,6 @@ html, body{
     text-align: left;
 }
 .org_bot_num>div>div p {
-    color: #5B606E;
     line-height: 28px;
     margin-bottom: 60px;
     padding-left: 12px;
@@ -499,7 +497,6 @@ html, body{
     text-align: left;
 }
 .org_int_sli_est>div>div p {
-    color: #5B606E;
     line-height: 25px;
     text-align: justify;
 }
