@@ -226,6 +226,7 @@ ol.lista_numerada{
 
 ol.lista_numerada li {
     list-style-type:none;
+    padding: 8px 0;
 } 
 
 /* estilo de los numeros */

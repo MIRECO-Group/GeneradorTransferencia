@@ -122,6 +122,7 @@
 }
 
 .org_pes_lat>div>div p {
+    color: #5B606E;
     text-align: justify;	
 }
 
@@ -426,7 +427,7 @@ html, body{
     width: 100%;
 }
 
-.org_int_sli_est>span{
+.org_int_sli_est>button{
     background-color: #01B3BE;
     border-style: solid;
     border-color: #C9EFF1;
@@ -437,18 +438,21 @@ html, body{
     font-weight: bold;
     align-self: center;
 }
-
-.org_int_sli_est>span.left{
+.org_int_sli_est>button:disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+.org_int_sli_est>button.left{
     border-radius: 8px 0 0 8px;
     border-width: 3px 0 3px 3px;
 }
 
-.org_int_sli_est>span.right{
+.org_int_sli_est>button.right{
     border-radius: 0 8px 8px 0;
     border-width: 3px 3px 3px 0;
 }
 
-.org_int_sli_est>span:hover, .org_int_sli_est>span.active{
+.org_int_sli_est>button:not(:disabled):hover, .org_int_sli_est>button:not(:disabled).active{
     background-color: #004B5E; 
     border-color: #004B5E; 
 }

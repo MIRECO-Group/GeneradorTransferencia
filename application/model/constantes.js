@@ -6,6 +6,7 @@
 
 var BASE_DATA = {
     layouts: {
+        //<editor-fold defaultstate="collapsed" desc="Layouts">
         portada: {
             tag: "pt-portada"
         },
@@ -60,9 +61,10 @@ var BASE_DATA = {
         examen: {
             tag: "pt-examen"
         }
+        //</editor-fold>
     },
-    componentes: {
-        organizador: {
+    componentes: {        
+        organizador: {            
             tabs_superior: {
                 tag: "pt-organizador-tabs-superiores"
             },
@@ -86,8 +88,8 @@ var BASE_DATA = {
             },
             tabs_acordeon: {
                 tag: "pt-organizador-tabs-acordeon"
-            },
-        },
+            }
+        },        
         titulo: {
             recurso: {
                 tag: "pt-titulo"

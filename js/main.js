@@ -29,8 +29,9 @@ $(document).ready(function ()
         $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('-');
     }
 
+    /*Funcionalidad del botón de contenido*/
     $("footer > div#right_buttons > input[type='button']:nth-child(4)").click(function ()
-    {
+    {        
         if (!$("footer > div#right_buttons > input[type='button']:nth-child(1)").is(":visible"))
         {
             if ($("footer > div#right_buttons > input[type='button']:nth-child(4)").hasClass('closed'))
@@ -48,10 +49,12 @@ $(document).ready(function ()
         }
         else
         {
+            $("section#popups, #popup_tabla_de_contenido").show();
             $("ul#smart_menu").hide();
             $("ul#smart_menu").removeClass('opened').addClass('closed');
         }
 
+        /*Esconde el menú desplegable de la plantilla en la parte superior si este está visible.*/
         if ($("header > ul:nth-child(3)").is(":visible"))
         {
             $("header > ul:nth-child(3)").slideUp("slow");
@@ -59,6 +62,11 @@ $(document).ready(function ()
             $("header > div:nth-child(1) > input[type='button']").addClass('closed');
         }
 
+    });
+    
+    $("footer > div#center_buttons > ul#smart_menu li:nth-child(5)").click(function()
+    {
+        $("section#popups, #popup_tabla_de_contenido").show();
     });
 
     $("header > ul:nth-child(3) > li p").mouseenter(function ()
@@ -133,8 +141,7 @@ $(document).ready(function ()
         showFullScreen();
         return false;
     });
-    
-    
+        
     function showFullScreen()
     {
         $('body').fullscreen();
@@ -180,15 +187,15 @@ $(document).ready(function ()
         $("section#popups, #popup_informacion").show();
     });
     
-    
-    $("footer > div#right_buttons > input[type='button']:nth-child(3)").click(function()
+    /*Acción: mostrar pop-up de PDF*/
+    $("footer > div#right_buttons > input[type='button']:nth-child(3), footer > div#center_buttons > ul#smart_menu li:nth-child(1)").click(function()
     {
         $("section#popups, #popup_PDF").show();
     });
     
     
      /*Acción: mostrar pop-up de Bibliografía*/
-    $("footer > div#left_buttons > input[type='button']:nth-child(2)").click(function()
+    $("footer > div#left_buttons > input[type='button']:nth-child(2), footer > div#center_buttons > ul#smart_menu li:nth-child(4)").click(function()
     {
         $("section#popups, #popup_bibliografia").show();
     });
