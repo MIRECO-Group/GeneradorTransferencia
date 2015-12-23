@@ -215,52 +215,54 @@ var componente = {
                     3: "texto 3",
                     4: "texto 4"
                 },
-                drops: {
-                    1: {
-                        accepted: [4],
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/drop1_thumbnail.png",
-                                url: "img/drop1.png",
-                                descripcion: ""
+                atributos: {
+                    drops: {
+                        1: {
+                            accepted: [4],
+                            elemento: {
+                                tipo: "imagen",
+                                estilo: "basica",
+                                atributos: {
+                                    thumbnail: "img/drop1_thumbnail.png",
+                                    url: "img/drop1.png",
+                                    descripcion: ""
+                                }
                             }
-                        }
-                    },
-                    2: {
-                        accepted: [3],
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/drop2_thumbnail.png",
-                                url: "img/drop2.png",
-                                descripcion: ""
+                        },
+                        2: {
+                            accepted: [3],
+                            elemento: {
+                                tipo: "imagen",
+                                estilo: "imagen_basica",
+                                atributos: {
+                                    thumbnail: "img/drop2_thumbnail.png",
+                                    url: "img/drop2.png",
+                                    descripcion: ""
+                                }
                             }
-                        }
-                    },
-                    3: {
-                        accepted: [2],
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/drop3_thumbnail.png",
-                                url: "img/drop3.png",
-                                descripcion: ""
+                        },
+                        3: {
+                            accepted: [2],
+                            elemento: {
+                                tipo: "imagen",
+                                estilo: "imagen_basica",
+                                atributos: {
+                                    thumbnail: "img/drop3_thumbnail.png",
+                                    url: "img/drop3.png",
+                                    descripcion: ""
+                                }
                             }
-                        }
-                    },
-                    4: {
-                        accepted: [1],
-                        elemento: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/drop4_thumbnail.png",
-                                url: "img/drop4.png",
-                                descripcion: ""
+                        },
+                        4: {
+                            accepted: [1],
+                            elemento: {
+                                tipo: "imagen",
+                                estilo: "imagen_basica",
+                                atributos: {
+                                    thumbnail: "img/drop4_thumbnail.png",
+                                    url: "img/drop4.png",
+                                    descripcion: ""
+                                }
                             }
                         }
                     }

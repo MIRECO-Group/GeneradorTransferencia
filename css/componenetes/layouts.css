@@ -1349,6 +1349,17 @@ div.layout_contenido_7
     flex: 2;
 }
 
+/*----------------------- LAYOUT_EXAMEN ---------------------------*/
+.layout_examen{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.layout_examen > .c1{
+    flex: 1;
+}
+
 
 @media (max-width: 750px) {  
     .layout_og_3{
