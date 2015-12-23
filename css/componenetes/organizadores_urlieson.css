@@ -122,7 +122,6 @@
 }
 
 .org_pes_lat>div>div p {
-    color: #5B606E;
     text-align: justify;	
 }
 
@@ -401,14 +400,11 @@ html, body{
 .org_bot_num>div>div h1 {
     border-bottom: 2px solid #C9EFF1;
     color: #357181;
-    margin-bottom: 30px;
     padding-bottom: 4px;
     text-align: left;
 }
 .org_bot_num>div>div p {
     line-height: 28px;
-    margin-bottom: 60px;
-    padding-left: 12px;
     text-align: justify;
 }
 

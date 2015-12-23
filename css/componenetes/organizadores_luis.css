@@ -216,12 +216,13 @@ div.lista_container{
 }
 
 div.lista_container span.lista_texto{
-
+    line-height: 25px;
 }
 
 ol.lista_numerada{
     counter-reset: item; 
     padding-left:20px;
+    text-align: left;
 }
 
 ol.lista_numerada li {

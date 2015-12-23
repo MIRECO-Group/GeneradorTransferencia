@@ -243,6 +243,9 @@ div#content_container div.title_container_result .title_title_text
 div#content_container div.text_container
 {
     flex:1;
+    display:flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 div#content_container div.text_container .text_text
