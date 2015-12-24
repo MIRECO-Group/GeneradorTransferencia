@@ -21,14 +21,14 @@
   text-align: left;
   padding: 10px;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
 .act_dra_dro>div>div>div {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 60px 0 30px 0;
-    flex-wrap: wrap;
+    padding: 30px 0;
 }
 
 .act_dra_dro>div>div>div>div {
@@ -46,12 +46,20 @@
 
 
 .act_dra_dro>div>div>div>div div.elemento .img_container {
-    width: 100%;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border: 3px solid #005573;
     box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
+
+.act_dra_dro>div>div>div>div div.elemento .img_container img{
+    width: 100%;
+    height: 100%;
+}
+
 
 .act_dra_dro>div>div>div>div div.drop {
     background-color: rgba(0,62,86,.8);
@@ -91,8 +99,10 @@
 }
 
 
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 768px) {
+  .act_dra_dro > div > div > div {
+    flex-direction: column;
+  }
 }
 
 /* Actividad de Lista Desplegable */
@@ -119,14 +129,14 @@
     text-align: left;
     padding: 10px;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .act_lis_des>div>div>div {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 60px 0 30px 0;
-    flex-wrap: wrap;
+    padding: 30px 0;
 }
 
 .act_lis_des>div>div>div>div {
@@ -143,11 +153,18 @@
 }
 
 .act_lis_des>div>div>div>div div.elemento .img_container {
+    display: block;
     width: 100%;
+    height: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border: 3px solid #005573;
     box-sizing: border-box;
+}
+
+.act_lis_des>div>div>div>div div.elemento .img_container img{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -188,6 +205,12 @@
   cursor: pointer;
   width: 100px;
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .act_lis_des > div > div > div {
+    flex-direction: column;
+  }
 }
 
 /* Actividad Sortable */
