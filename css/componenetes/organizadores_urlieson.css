@@ -401,6 +401,7 @@ html, body{
     border-bottom: 2px solid #C9EFF1;
     color: #357181;
     padding-bottom: 4px;
+    text-align: left;
 }
 .org_bot_num>div>div p {
     line-height: 28px;
@@ -491,124 +492,12 @@ html, body{
     color: #357181;
     margin-bottom: 30px;
     padding-bottom: 4px;
+    text-align: left;
 }
 .org_int_sli_est>div>div p {
     line-height: 25px;
     text-align: justify;
 }
-
-@media screen and (max-width: 600px) {
-
-}
-
-.act_lis_des{
-    margin: 0 auto;
-    max-width: 700px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.act_lis_des>div {
-    border-radius: 20px;
-    border: 2px solid #E2DDEB;
-    padding: 60px 30px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    align-self: center;
-}
-
-.act_lis_des>div h1 {
-    border-bottom: 2px solid #C9EFF1;
-    color: #357181;
-    margin-bottom: 30px;
-    padding-bottom: 4px;
-    text-align: left;
-}
-
-.act_lis_des>div h3 {
-    color: #357181;
-    text-align: right;
-}
-
-.act_lis_des>div>div>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 60px 0 30px 0;
-    flex-wrap: wrap;
-}
-
-.act_lis_des>div>div>div>div {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.act_lis_des>div>div>div>div div.elemento {
-    border: 1px solid #ccc;
-    height: 100px;
-    width: 100px;
-}
-
-.act_lis_des>div>div>div>div div.con_lis {
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    height: 30px;
-    width: 100px;
-    padding-top: 10px;
-}
-
-.act_lis_des>div div.con_enviarld{
-    justify-content: center;
-}
-
-.act_lis_des>div div.con_enviarld span{
-    background-color: #004B5E;
-    border-color: #004B5E;
-    width: 100px;
-    padding: 10px;
-    color: white;
-    border-radius: 6px;
-    -webkit-user-select: none;  
-    -moz-user-select: none;    
-    -ms-user-select: none;      
-    user-select: none;
-}
-
-.act_lis_des>div div.con_enviarld span.disable{
-    opacity: .2;
-}
-
-.act_lis_des>div div.con_enviarld span.enable{
-    opacity: 1;
-    cursor: pointer;
-}
-
-.act_lis_des>div div.con_enviarld span.enable:hover{
-    background-color: #01B3BE;
-    border-color: #C9EFF1;
-}
-
-.con_tex_ret {
-    text-align: left;
-    color: white;
-    margin: 10px 0;
-}
-
-.con_tex_ret.correcta {
-    padding: 10px;
-    background-color: green;
-}
-
-.con_tex_ret.incorrecta {
-    padding: 10px;
-    background-color: red;
-}
-
 
 @media screen and (max-width: 600px) {
 
