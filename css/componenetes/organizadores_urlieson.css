@@ -112,6 +112,7 @@
 }
 .org_pes_lat>div.tipoa
 {
+    background-color: white;
     border-radius: 20px;
     border: 2px solid gray;
     padding: 20px;
@@ -119,6 +120,12 @@
     display: flex;
     align-items: center;
     width: 100%;
+}
+
+.org_pes_lat>div.tipoa h1
+{
+    border-bottom: 2px solid #C9EFF1;
+    padding: 5px 0;
 }
 
 .org_pes_lat>div>div p {
@@ -165,6 +172,7 @@ html, body{
     display: flex;
     flex-direction: column;
     flex: 1;
+    background-color: white;
 }
 
 .org_bot_num_bol>ul {
@@ -387,6 +395,7 @@ html, body{
 }
 .org_bot_num>div
 {
+    background-color: white;
     border-radius: 20px;
     border: 2px solid rgba(128, 128, 128, 0.5);
     margin-left: 50px;
@@ -478,6 +487,7 @@ html, body{
 
 
 .org_int_sli_est>div {
+    background-color: white;
     border-radius: 20px;
     border: 2px solid rgba(128, 128, 128, 0.55);
     padding: 60px 30px 30px 30px;

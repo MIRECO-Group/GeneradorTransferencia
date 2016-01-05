@@ -64,7 +64,8 @@ var BASE_DATA = {
         //</editor-fold>
     },
     componentes: {        
-        organizador: {            
+        organizador: {
+            //<editor-fold defaultstate="collapsed" desc="Organizadores">
             tabs_superior: {
                 tag: "pt-organizador-tabs-superiores"
             },
@@ -89,8 +90,10 @@ var BASE_DATA = {
             tabs_acordeon: {
                 tag: "pt-organizador-tabs-acordeon"
             }
+            //</editor-fold>
         },        
         titulo: {
+            //<editor-fold defaultstate="collapsed" desc="Títulos">
             recurso: {
                 tag: "pt-titulo"
             },
@@ -103,8 +106,10 @@ var BASE_DATA = {
             parrafo_negrilla_subrayado_centrado:{
                 tag: "pt-titulo-parrafo-negrilla-subrayado-centrado"
             }
+            //</editor-fold>
         },
         parrafo: {
+            //<editor-fold defaultstate="collapsed" desc="Parrafos">
             basico: {
                 tag: "pt-parrafo"
             },
@@ -117,6 +122,7 @@ var BASE_DATA = {
             negrilla_centrado: {
                 tag: "pt-parrafo-negrilla-centrado"
             }
+            //</editor-fold>
         },
         imagen: {
             basica: {

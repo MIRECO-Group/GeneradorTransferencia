@@ -302,6 +302,10 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   border: 2px solid #c9eff1;
   width: 100%;
 }
+.org_aco-acordeon h1{
+    border-bottom: 2px solid #C9EFF1;
+    padding: 5px 0;
+}
 .org_aco-acordeon-contenBtnContainer {
   display: -ms-flex;
   display: -webkit-flex;
@@ -338,11 +342,11 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 }
 /**/
 .org_aco-acordeon          { height: 300px; }
-.org_aco-acordeon-btn-text { bottom: -300px; width: 300px; }
+.org_aco-acordeon-btn-text { bottom: -300px; width: 300px; font-weight: bold;}
 /**/
 /*Contenedor de información*/
 .org_aco-acordeon-container {
-  background-color: #eae9e9;
+  background-color: #FFFFFF;
   height: inherit;
   justify-content: center;
   align-items: center;

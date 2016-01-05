@@ -28,6 +28,11 @@ html, body{
     height: 100%;
 }
 
+.og_tabs_superiores h1 {
+    border-bottom: 2px solid #C9EFF1;
+    padding: 5px 0;
+}
+
 .og_tabs_superiores .tabs{
     display: flex;
     width: 100%;
