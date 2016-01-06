@@ -1326,6 +1326,42 @@ div.layout_contenido_7
     }
 }
 
+/*----------------------- LAYOUT_CONTENIDO_8 ---------------------------*/
+div.layout_contenido_8
+{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.layout_contenido_8 > div.container_1
+{
+    background-color: red;
+    display: flex;
+    width: 100%;
+    flex: 1 0 auto;
+    margin: 0 auto;
+}
+
+.layout_contenido_8 > div.container_2
+{
+    background-color: green;
+    display: flex;
+    width: 100%;
+    flex: 3 0 auto;
+    margin: 0 auto;
+}
+
+.layout_contenido_8 > div.container_3
+{
+    background-color: yellow;
+    display: flex;
+    width: 100%;
+    flex: 6 0 auto;
+    margin: 0 auto;
+}
+
 /*----------------------- LAYOUT_ORGANIZADOR_3 ---------------------------*/
 .layout_og_3{
     display: flex;

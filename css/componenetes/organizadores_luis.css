@@ -71,8 +71,7 @@ html, body{
 }
 
 .og_tabs_superiores .contenido {
-    background-color: white;
-    border: 2px solid #8669ab;
+    border: 2px solid rgba(128, 128, 128, 0.5);
     width: 99%;
     margin: 0 auto;
     display: flex;

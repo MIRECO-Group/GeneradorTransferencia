@@ -394,6 +394,16 @@
                     }
                 };
             })
+            .directive("ptImagenSimpleOrganizador", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/imagen/simple_organizador.html",
+                    controller: "imagenController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .controller("imagenController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);

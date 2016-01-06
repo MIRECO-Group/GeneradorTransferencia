@@ -39,13 +39,13 @@ body
 
 div.img_container
 {
-        display: flex;
-	position: relative;
-	width: 80%;
-	border: solid 1px black;
-	border-radius: 10px;
-	overflow: hidden;
-	margin: 0 auto;
+    display: flex;
+    position: relative;
+    width: 80%;
+    border: solid 2px rgba(128, 128, 128, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 div.img_mitad
@@ -66,7 +66,18 @@ div.img_full
     overflow: hidden;
 }
 
-div.img_container img, div.img_full img, div.img_mitad img
+div.img_simple_org
+{
+    display: flex;
+    position: relative;
+    width: 80%;
+    border: solid 2px rgba(128, 128, 128, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+div.img_container img, div.img_full img, div.img_mitad, div.img_simple_org img
 {
     flex: 1;
     max-width: 100%;
@@ -74,7 +85,7 @@ div.img_container img, div.img_full img, div.img_mitad img
     height: auto;
 }
 
-div.img_container button
+div.img_container button, div.img_simple_org button
 {
     font-family: 'transferenciaregular';
     color: white;

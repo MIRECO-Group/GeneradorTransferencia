@@ -112,9 +112,8 @@
 }
 .org_pes_lat>div.tipoa
 {
-    background-color: white;
-    border-radius: 20px;
-    border: 2px solid gray;
+    border-radius: 15px;
+    border: 2px solid rgba(128, 128, 128, 0.55);
     padding: 20px;
     height: auto;
     display: flex;
@@ -172,7 +171,6 @@ html, body{
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: white;
 }
 
 .org_bot_num_bol>ul {
@@ -204,7 +202,7 @@ html, body{
 
 .org_bot_num_bol>div {
     margin-top: -18px;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 2px solid rgba(128, 128, 128, 0.5);
     padding: 60px 30px 30px 30px;
     display: flex;
@@ -395,8 +393,7 @@ html, body{
 }
 .org_bot_num>div
 {
-    background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 2px solid rgba(128, 128, 128, 0.5);
     margin-left: 50px;
     padding: 20px;
@@ -487,7 +484,6 @@ html, body{
 
 
 .org_int_sli_est>div {
-    background-color: white;
     border-radius: 20px;
     border: 2px solid rgba(128, 128, 128, 0.55);
     padding: 60px 30px 30px 30px;

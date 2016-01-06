@@ -293,13 +293,13 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 }
 /*Acordeón y botones acordeón*/
 .org_aco-acordeon {
-  background-color: #eae9e9;
+  /*background-color: #eae9e9;*/
   margin: 0 auto;
   position: relative;
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
-  border: 2px solid #c9eff1;
+  border: 2px solid rgba(128, 128, 128, 0.55);
   width: 100%;
 }
 .org_aco-acordeon h1{
@@ -346,7 +346,6 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 /**/
 /*Contenedor de información*/
 .org_aco-acordeon-container {
-  background-color: #FFFFFF;
   height: inherit;
   justify-content: center;
   align-items: center;

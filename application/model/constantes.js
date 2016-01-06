@@ -58,6 +58,9 @@ var BASE_DATA = {
         contenido_7: {
             tag: "pt-contenido7"
         },
+        contenido_8: {
+            tag: "pt-contenido8"
+        },
         examen: {
             tag: "pt-examen"
         }
@@ -133,6 +136,9 @@ var BASE_DATA = {
             },
             mitad: {
                 tag: "pt-imagen-mitad"
+            },
+            basica_organizador: {
+                tag: "pt-imagen-simple-organizador"
             }
         },
         boton: {
