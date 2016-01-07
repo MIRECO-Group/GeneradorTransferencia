@@ -234,6 +234,16 @@
                     }
                 };
             })
+            .directive("ptTituloBasicoCentrado", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/titulo/basico_centrado.html",
+                    controller: "tituloController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptTituloParrafoNegrillaSubrayadoCentrado", function () {
                 return{
                     restrict: "A",

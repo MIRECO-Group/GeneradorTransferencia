@@ -48,12 +48,12 @@
 
         <footer ng-controller="Paginacion as pag">
             <div id="left_buttons">
-                <input type="button" value="a">                
+                <input type="button" value="a" ng-click="cambiar_pagina(1)">                
                 <input type="button" value="g">
                 <span class="divition_bot_span"></span>
                 <input type="button" value="i">
             </div>
-            <div id="center_buttons">
+            <div id="center_buttons" ng-show="{{pag.actual>=1}}">
                 <input type="button" value="<" ng-click="ant_pagina()">
                 <p>{{pag.actual}}</p>
                 <input type="button" value=">" ng-click="sgte_pagina()">

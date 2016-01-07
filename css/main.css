@@ -102,20 +102,20 @@ button:hover{
 
 .divition_bot_span
 {
-	display: inline-block;
-	width: 0px;
-	height: 45px;
-	border-left: 1px solid #004C5E;
-	border-right: 1px solid #004C5E;
-	position: absolute;
-	margin: 7px 0px;
+    display: inline-block;
+    width: 0px;
+    height: 45px;
+    border-left: 1px solid #004C5E;
+    border-right: 1px solid #004C5E;
+    position: absolute;
+    margin: 7px 0px;
 }
 
 html
 {
-	height: 100%;
-	font-size: 16px; /*1rem = 16px*/
-	width: 100%;
+    height: 100%;
+    font-size: 16px; /*1rem = 16px*/
+    width: 100%;
 }
 
 i{

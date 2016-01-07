@@ -58,9 +58,6 @@ var BASE_DATA = {
         contenido_7: {
             tag: "pt-contenido7"
         },
-        contenido_8: {
-            tag: "pt-contenido8"
-        },
         examen: {
             tag: "pt-examen"
         }
@@ -105,6 +102,9 @@ var BASE_DATA = {
             },
             basico:{
                 tag: "pt-titulo-basico"
+            },
+            basico_centrado:{
+                tag: "pt-titulo-basico-centrado"
             },
             parrafo_negrilla_subrayado_centrado:{
                 tag: "pt-titulo-parrafo-negrilla-subrayado-centrado"

@@ -101,8 +101,8 @@ div.img_container button, div.img_simple_org button
     border-width: 3px;
     border-color: #04BCC8;
     border-radius: 40px;
-    font-size: 30px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 7px;
     cursor: pointer;
 }
 
@@ -231,6 +231,26 @@ div#content_container div.title_basic_title
     font-size: 2rem;
     padding: 1% 0;
     color: #407389;
+}
+
+/*Estilo del título básico centrado*/
+div#content_container div.title_basic_center
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+div#content_container div.title_basic_center_title
+{
+    margin: 0 15px;
+    font-size: 2rem;
+    padding: 1% 0;
+    text-align: center;
+    color: #407389;
+    width: 100%;
 }
 
 /*Estilo del título de párrafo con negrilla, subrayado y centrado*/
