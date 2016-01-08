@@ -5,5 +5,5 @@
 	<ul sortable class="sortable-items">
 		<li ng-repeat="(idP, item) in elementos" class="sortable-item elementos elemento{{vectorInicial[idP]}}" numero="{{vectorInicial[idP]}}">{{item}}</li>
 	</ul>
-	<div class="sortable-btnEnviar hvr-float-shadow" ng-click="enviarSortable(this)">Enviar</div>
+	<div class="sortable-btnEnviar hvr-float-shadow" ng-show="dataSortable.muestrabtnEnviar" ng-click="enviarSortable(this)">Enviar<div>
 </div>

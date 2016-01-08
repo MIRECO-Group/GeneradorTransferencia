@@ -116,8 +116,19 @@
     border-bottom: 4px solid #005f7b;
 }
 
-/*Mapa conceptual*/
+/*Créditos*/
+#popup_creditos > .popup-contenido
+{
+    height: 80%;
+}
 
+#popup_creditos > .popup-contenido > .creditos-texto
+{
+    text-align: center;
+    height: 100%;
+}
+
+/*Mapa conceptual*/
 .popup-contenido > .mapa-texto1, .mapa-texto2
 {
     text-align: center;

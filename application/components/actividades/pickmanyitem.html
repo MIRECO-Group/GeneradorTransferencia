@@ -1,4 +1,8 @@
 <div class="pickmany-pregunta-item" ng-repeat="(idP, item) in picks">
-	<input data-ng-disabled="disabledInputs" class="pickmany-pregunta-item-input" type={{typeInputAssociated}} name={{nameInputAssociated}} ng-value={{idP}} ng-click="escCambioInput()">
+	<div class="pickmany-pregunta-item-fieldInput">
+		<input class="pickmany-pregunta-item-input" type={{typeInputAssociated}} name={{nameInputAssociated}} ng-value={{idP}} ng-click="escCambioInput()">
+		<div class="pickmany-pregunta-item-fieldInput-iconNoCheck"></div>
+		<div class="pickmany-pregunta-item-fieldInput-iconCheck"><div></div></div>
+	</div>	
 	<div class="pickmany-pregunta-item-pick" pt-pick-item="item.chain"></div>
 </div>

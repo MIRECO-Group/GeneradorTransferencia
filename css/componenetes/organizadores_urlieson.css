@@ -407,7 +407,6 @@ html, body{
     border-bottom: 2px solid #C9EFF1;
     color: #357181;
     padding-bottom: 4px;
-    text-align: left;
 }
 .org_bot_num>div>div p {
     line-height: 28px;
@@ -498,7 +497,6 @@ html, body{
     color: #357181;
     margin-bottom: 30px;
     padding-bottom: 4px;
-    text-align: left;
 }
 .org_int_sli_est>div>div p {
     line-height: 25px;

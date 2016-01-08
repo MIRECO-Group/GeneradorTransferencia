@@ -204,72 +204,73 @@ var componente = {
 
 var componente = {
     tipo: "drag_drop",
-    estilo: "dragdrop_horizontal",
-    atributos: {
-        preguntas: {
-            1: {
-                enunciado: "",
-                drags: {
-                    1: "texto 1",
-                    2: "texto 2",
-                    3: "texto 3",
-                    4: "texto 4"
-                },
-                atributos: {
-                    drops: {
-                        1: {
-                            accepted: [4],
-                            elemento: {
-                                tipo: "imagen",
-                                estilo: "basica",
-                                atributos: {
-                                    thumbnail: "img/drop1_thumbnail.png",
-                                    url: "img/drop1.png",
-                                    descripcion: ""
-                                }
-                            }
-                        },
-                        2: {
-                            accepted: [3],
-                            elemento: {
-                                tipo: "imagen",
-                                estilo: "imagen_basica",
-                                atributos: {
-                                    thumbnail: "img/drop2_thumbnail.png",
-                                    url: "img/drop2.png",
-                                    descripcion: ""
-                                }
-                            }
-                        },
-                        3: {
-                            accepted: [2],
-                            elemento: {
-                                tipo: "imagen",
-                                estilo: "imagen_basica",
-                                atributos: {
-                                    thumbnail: "img/drop3_thumbnail.png",
-                                    url: "img/drop3.png",
-                                    descripcion: ""
-                                }
-                            }
-                        },
-                        4: {
-                            accepted: [1],
-                            elemento: {
-                                tipo: "imagen",
-                                estilo: "imagen_basica",
-                                atributos: {
-                                    thumbnail: "img/drop4_thumbnail.png",
-                                    url: "img/drop4.png",
-                                    descripcion: ""
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+	estilo: "dragdrop_horizontal",
+	atributos: {
+		intentos: 3,
+		preguntas: {
+			1: {
+				enunciado: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+				drags: {
+					1: "texto 1",
+					2: "texto 2",
+					3: "texto 3",
+					4: "texto 4"
+				},
+				atributos: {
+					drops: {
+						1: {
+							accepted: [4],
+							elemento: {
+								tipo: "imagen",
+								estilo: "basica",
+								atributos: {
+									thumbnail: "img/leon_thumbnail.jpg",
+									url: "img/leon.jpg",
+									descripcion: ""
+								}
+							}
+						},
+						2: {
+							accepted: [3],
+							elemento: {
+								tipo: "imagen",
+								estilo: "basica",
+								atributos: {
+									thumbnail: "img/leon_thumbnail.jpg",
+									url: "img/leon.jpg",
+									descripcion: ""
+								}
+							}
+						},
+						3: {
+							accepted: [2],
+							elemento: {
+								tipo: "imagen",
+								estilo: "basica",
+								atributos: {
+									thumbnail: "img/leon_thumbnail.jpg",
+									url: "img/leon.jpg",
+									descripcion: ""
+								}
+							}
+						},
+						4: {
+							accepted: [1],
+							elemento: {
+								tipo: "imagen",
+								estilo: "basica",
+								atributos: {
+									thumbnail: "img/leon_thumbnail.jpg",
+									url: "img/leon.jpg",
+									descripcion: ""
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 };
 
 //PICK MANY
@@ -291,55 +292,109 @@ var componente = {
 
 var componente = {
     tipo: "pick_many",
-    estilo: "pickmany_horizontal",
-    atributos: {
-        preguntas: {
-            1: {
-                enunciado: "¿De qué color es la nieve?",
-                respuesta: [2],/*[2,3]*/
-                atributos: {
-                    picks: {
-                        1: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/pick1_thumbnail.png",
-                                url: "img/pick1.png",
-                                descripcion: ""
-                            }
-                        },
-                        2: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/pick2_thumbnail.png",
-                                url: "img/pick2.png",
-                                descripcion: ""
-                            }
-                        },
-                        3: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/pick3_thumbnail.png",
-                                url: "img/pick3.png",
-                                descripcion: ""
-                            }
-                        },
-                        4: {
-                            tipo: "imagen",
-                            estilo: "imagen_basica",
-                            atributos: {
-                                thumbnail: "img/pick4_thumbnail.png",
-                                url: "img/pick4.png",
-                                descripcion: ""
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+	estilo: "pickmany_horizontal",
+	atributos: {
+		intentos: 3,
+		preguntas: {
+			1: {
+				enunciado: "Enunciado pregunta 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam officia debitis possimus cupiditate ab porro excepturi quo, quam placeat eaque provident veritatis consectetur, pariatur, aperiam tempore aut quas voluptatum. Vel!",
+				respuesta: [1],
+				atributos: {
+					picks: {
+						1: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								}
+							}
+						},
+						2: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								}
+							}
+						},
+						3: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								}
+							}
+						},
+						4: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								}
+							}
+						},
+						5: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "pick 5 anasaf tor bin"
+								}
+							}
+						}
+					}
+				}
+			},
+			2: {
+				enunciado: "Enunciado pregunta 2: Lorem ipsum dolor sit amet, illo voluptates alias, labore, ut ut numquam, quasi ullam dolores veniam assumenda, eius illum! Harum, amet. Nobis sint dolorum sapiente odit! illo voluptates alias, labore, ut numquam, quasi ullam dolores veniam assumenda, eius illum! Harum, amet. Nobis sint dolorum sapiente odit!",
+				respuesta: [2,3],
+				atributos: {
+					picks: {
+						1: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "pick 1 - Lorem ipsum."
+								}
+							}
+						},
+						2: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "pick 2 - Lorem ipsum."
+								}
+							}
+						},
+						3: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "pick 3 - Lorem ipsum dolor."
+								}
+							}
+						},
+						4: {
+							tipo: "parrafo",
+							estilo: "basico",
+							atributos: {
+								parrafos: {
+									1: "pick 4 - Lorem ipsum dolor sit."
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 };
 //ORDENAMIENTO
 /*
@@ -351,22 +406,23 @@ var componente = {
 
 var componente = {
     tipo: "sortable",
-    estilo: "sortable_vertical",
-    atributos: {
-        preguntas: {
-            1: {
-                enunciado: "",
-                orden: [1, 3, 2, 4],
-                elementos: {
-                    1: "Despertar",
-                    2: "Comer",
-                    3: "Cocinar",
-                    4: "Cepillar"
-                }
-            }
-        }
-    }
+	estilo: "sortable_vertical",
+	atributos: {
+		intentos: 3,
+		preguntas: {
+			1: {
+				enunciado: "El nuevo instructor debe:",
+				orden: [3, 2, 1],
+				elementos: {
+					1: "Generar conocimiento",
+					2: "Profundizar conocimiento",
+					3: "Tener nociones básicas de TIC"
+				}
+			}
+		}
+	}
 };
+
 //LISTA DESPLEGABLE
 /*
  enunciado: Texto. OPCIONAL. Puede ser usado como pregunta antes de un ordenamiento como complemento de la instrucción del recurso.
@@ -382,28 +438,29 @@ var componente = {
 
 var componente = {
     tipo: "select",
-    estilo: "select_horizontal",
-    atributos: {
-        enunciado: "",
-        preguntas: {
-            1: {
-                respuesta: 1,
-                opciones: {
-                    1: "Blanco",
-                    2: "Verde",
-                    3: "Amarillo",
-                    4: "Rojo"
-                },
-                elemento: {
-                    tipo: "imagen",
-                    estilo: "imagen_basica",
-                    atributos: {
-                        thumbnail: "img/select1_thumbnail.png",
-                        url: "img/select1.png",
-                        descripcion: ""
-                    }
-                }
-            }
-        }
-    }
+	estilo: "select_horizontal",
+	atributos: {
+		enunciado: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		intentos: 3,
+		preguntas: {
+			1: {
+				respuesta: 1,
+				opciones: {
+					1: "Blanco",
+					2: "Verde",
+					3: "Amarillo",
+					4: "Rojo"
+				},
+				elemento: {
+					tipo: "parrafo",
+					estilo: "basico",
+					atributos: {
+						parrafos: {
+							1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						}
+					}
+				}
+			}
+		}
+	}
 };
