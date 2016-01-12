@@ -337,56 +337,58 @@ footer
 }
 footer input[type="button"]
 {
-	font-family: 'transferenciaregular';
+    font-family: 'transferenciaregular';
 }
-	footer > div#left_buttons
-	{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-items: inherit;
-	}
-footer > div#left_buttons > input[type="button"]:nth-child(1) /*Bot�n Portada*/
+footer > ul#left_buttons
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: inherit;
+}
+footer > ul#left_buttons > li span /*tooltips*/
+{
+    position: absolute;
+    background-color: blue;
+    color: white;
+}
+footer > ul#left_buttons > li:nth-child(1) > input[type="button"] /*Bot�n Portada*/
 {
     font-size: 2rem;
     border-style: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     color: white;
-    padding: 3% 4%;
+    padding: 15% 20%;
+    height: 100%;
     background: #004c5e;
     background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
     background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
     background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
 }
-footer > div#left_buttons > input[type="button"]:nth-child(2) /*Bot�n Bibliograf�a*/
+footer > ul#left_buttons > li:nth-child(1) > span /*Tooltip del Bot�n Portada*/
 {
-    font-size: 1.8rem;
-    border-style: none;
-    color: #00435A;
-    display: block;
-    padding: 3% 4%;
-
-    background: #1fb5ae;
-    background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
-    background: -webkit-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: -o-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: -ms-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: linear-gradient(to bottom, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
-
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    /*display: none;*/
+    left: 10px;
+    padding: 1% 1%;
+    text-align: center;
+    bottom: 75px;
+    font-size: 0.8rem;
 }
-footer > div#left_buttons > input[type="button"]:nth-child(4) /*Bot�n Glosario*/
+footer > ul#left_buttons > li:nth-child(2) > input[type="button"] /*Bot�n Bibliograf�a*/
 {
     font-size: 1.8rem;
     border-style: none;
     color: #00435A;
     display: block;
-    padding: 3% 4%;	
+    padding: 15% 20%;
+    height: 100%;
     background: #1fb5ae;
     background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
@@ -395,6 +397,47 @@ footer > div#left_buttons > input[type="button"]:nth-child(4) /*Bot�n Glosario
     background: -ms-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: linear-gradient(to bottom, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
+}
+footer > ul#left_buttons > li:nth-child(2) > span /*Tooltip del Botón Bibliografía*/
+{
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    /*display: none;*/
+    left: 60px;
+    padding: 1% 1%;
+    text-align: center;
+    bottom: 75px;
+    font-size: 0.8rem;
+}
+footer > ul#left_buttons > li:nth-child(3) > input[type="button"] /*Bot�n Glosario*/
+{
+    font-size: 1.8rem;
+    border-style: none;
+    color: #00435A;
+    display: block;
+    padding: 15% 20%;
+    height: 100%;
+    background: #1fb5ae;
+    background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
+    background: -webkit-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: -o-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: -ms-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: linear-gradient(to bottom, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
+}
+footer > ul#left_buttons > li:nth-child(3) > span:nth-child(3) /*Tooltip del Botón Glosario*/
+{
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    /*display: none;*/
+    left: 120px;
+    padding: 1% 1%;
+    text-align: center;
+    bottom: 75px;
+    font-size: 0.8rem;
 }
 footer > div#center_buttons
 {
@@ -481,7 +524,7 @@ footer > div#center_buttons > ul#smart_menu li p
 {
 
 }
-footer > div#right_buttons
+footer > ul#right_buttons
 {
     flex-grow: 1;
     display: flex;
@@ -490,14 +533,49 @@ footer > div#right_buttons
     justify-content: flex-end;
     align-items: inherit;
 }
-footer > div#right_buttons > input[type="button"]:nth-child(1) /*Bot�n Mapa Conceptual*/
+footer > ul#right_buttons > li span /*tooltips*/
+{
+    position: absolute;
+    background-color: blue;
+    color: white;
+}
+footer > ul#right_buttons > li:nth-child(1) > input[type="button"] /*Bot�n Mapa Conceptual*/
 {
     font-size: 1.8rem;
     border-style: none;
     color: #00435A;
     display: block;
-    padding: 3% 3%;
-
+    padding: 15% 20%;
+    height: 100%;
+    background: #1fb5ae;
+    background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
+    background: -webkit-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: -o-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: -ms-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    background: linear-gradient(to bottom, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
+}
+footer > ul#right_buttons > li:nth-child(1) > span /*Tooltip del Mapa Conceptual*/
+{
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    /*display: none;*/
+    right: 95px;
+    padding: 1% 1%;
+    text-align: center;
+    bottom: 75px;
+    font-size: 0.8rem;
+}
+footer > ul#right_buttons > li:nth-child(2) > input[type="button"] /*Bot�n Descargable - PDF*/
+{
+    font-size: 1.8rem;
+    border-style: none;
+    color: #00435A;
+    display: block;
+    padding: 15% 20%;
+    height: 100%;
     background: #1fb5ae;
     background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
@@ -508,37 +586,21 @@ footer > div#right_buttons > input[type="button"]:nth-child(1) /*Bot�n Mapa Co
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
 
 }
-footer > div#right_buttons > input[type="button"]:nth-child(3) /*Bot�n Descargable - PDF*/
-{
-    font-size: 1.8rem;
-    border-style: none;
-    color: #00435A;
-    display: block;
-    padding: 3% 3%;
-
-    background: #1fb5ae;
-    background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
-    background: -webkit-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: -o-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: -ms-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    background: linear-gradient(to bottom, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
-
-}
-footer > div#right_buttons > input[type="button"]:nth-child(4)
+footer > ul#right_buttons > li:nth-child(3) > input[type="button"]
 {
 	font-size: 2rem;
 	border-style: none;
 	color: white;
-	padding: 4%;
+	padding: 15% 20%;
+        height: 100%;
+        border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 	background: #004c5e;
 	background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
 	background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
 	background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+	
 }
 
 section#popups, .popup-contenedor
