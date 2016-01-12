@@ -303,7 +303,7 @@ header > img:nth-child(4) /*Logo del sena*/
 	top: 0.6rem;
 	left: 1.2rem;
 	width: 6rem;
-	/* z-index: 10; */
+        z-index: 10;
 }
 
 div#content_container

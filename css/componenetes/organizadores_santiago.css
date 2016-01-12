@@ -298,6 +298,7 @@ div#content_container div.text_container .text_text_center
 {
     text-align: center;
     padding: 5px 0;
+    width: 100%;
 }
 
 /* Párrafo en negrilla */
@@ -307,10 +308,19 @@ div#content_container div.text_container .text_text_bold
     padding: 5px 5px 5px 15px;
 }
 
-/* Párrafo en negrilla bold */
+/* Párrafo en negrilla centrado */
 div#content_container div.text_container .text_text_bold_center
 {
     text-align: center;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+}
+
+/* Párrafo en negrilla cursiva */
+div#content_container div.text_container .text_text_bold_italic
+{
+    text-align: center;
+    font-style: italic;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
 }

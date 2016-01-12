@@ -124,6 +124,9 @@ var BASE_DATA = {
             },
             negrilla_centrado: {
                 tag: "pt-parrafo-negrilla-centrado"
+            },
+            negrilla_cursiva: {
+                tag: "pt-parrafo-negrilla-cursiva"
             }
             //</editor-fold>
         },

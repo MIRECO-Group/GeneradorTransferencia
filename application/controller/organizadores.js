@@ -356,6 +356,16 @@
                     }
                 };
             })
+            .directive("ptParrafoNegrillaCursiva", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/texto/negrilla_cursiva.html",
+                    controller: "parrafoController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptParrafoCentrado", function () {
                 return{
                     restrict: "A",
