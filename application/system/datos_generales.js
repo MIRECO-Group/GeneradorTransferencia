@@ -19,7 +19,44 @@ var generales = {
     },
     generales: {
         pagina_inicial: 1,
-        precargas: []
+        precargas: [],
+        iconos: [
+            {
+                nombre: 'portada',
+                codigo: 'a',
+                estilo: 'icon_style_portada'
+            },
+            {
+                nombre: 'sensibilización de apertura',
+                codigo: 'b',
+                estilo: 'icon_style_sensibilizacion_apertura'
+            },
+            {
+                nombre: 'contextualización',
+                codigo: 'h',
+                estilo: 'icon_style_contextualizacion'
+            },
+            {
+                nombre: 'contenido y actividades',
+                codigo: 'c',
+                estilo: 'icon_style_contenidos'
+            },
+            {
+                nombre: 'recordemos',
+                codigo: 'd',
+                estilo: 'icon_style_recordemos'
+            },
+            {
+                nombre: 'preguntas de conocimiento',
+                codigo: 'e',
+                estilo: 'icon_style_preguntas_conocimiento'
+            },
+            {
+                nombre: 'sensibilización de cierre',
+                codigo: 'f',
+                estilo: 'icon_style_sensibilizacion_cierre'
+            }        
+        ]
     }
 };
 

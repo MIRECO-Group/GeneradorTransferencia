@@ -374,7 +374,7 @@ footer > ul#left_buttons > li:nth-child(1) > span /*Tooltip del Bot�n Portada*
     color: white;
     background-color: #305570;
     position: absolute;
-    /*display: none;*/
+    display: none;
     left: 10px;
     padding: 1% 1%;
     text-align: center;
@@ -403,7 +403,7 @@ footer > ul#left_buttons > li:nth-child(2) > span /*Tooltip del Botón Bibliogra
     color: white;
     background-color: #305570;
     position: absolute;
-    /*display: none;*/
+    display: none;
     left: 60px;
     padding: 1% 1%;
     text-align: center;
@@ -432,7 +432,7 @@ footer > ul#left_buttons > li:nth-child(3) > span:nth-child(3) /*Tooltip del Bot
     color: white;
     background-color: #305570;
     position: absolute;
-    /*display: none;*/
+    display: none;
     left: 120px;
     padding: 1% 1%;
     text-align: center;
@@ -561,7 +561,7 @@ footer > ul#right_buttons > li:nth-child(1) > span /*Tooltip del Mapa Conceptual
     color: white;
     background-color: #305570;
     position: absolute;
-    /*display: none;*/
+    display: none;
     right: 95px;
     padding: 1% 1%;
     text-align: center;
@@ -583,24 +583,46 @@ footer > ul#right_buttons > li:nth-child(2) > input[type="button"] /*Bot�n Des
     background: -o-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -ms-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: linear-gradient(to bottom, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );
-
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fb5ae', endColorstr='#0c9494', GradientType=0 );    
+}
+footer > ul#right_buttons > li:nth-child(2) > span:nth-child(3) /*Tooltip del Mapa Conceptual*/
+{
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    display: none;
+    right: 55px;
+    padding: 1% 1%;
+    text-align: center;
+    bottom: 75px;
+    font-size: 0.8rem;
 }
 footer > ul#right_buttons > li:nth-child(3) > input[type="button"]
 {
-	font-size: 2rem;
-	border-style: none;
-	color: white;
-	padding: 15% 20%;
-        height: 100%;
-        border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	background: #004c5e;
-	background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
-	background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
-	
+    font-size: 2rem;
+    border-style: none;
+    color: white;
+    padding: 15% 20%;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #004c5e;
+    background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
+    background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    background: linear-gradient(to bottom, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c5e', endColorstr='#1e3547',GradientType=0 );
+}
+footer > ul#right_buttons > li:nth-child(3) > span
+{
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    display: none;
+    right: 10px;
+    padding: 1% 1%;
+    text-align: center;
+    bottom: 75px;
+    font-size: 0.8rem;
 }
 
 section#popups, .popup-contenedor

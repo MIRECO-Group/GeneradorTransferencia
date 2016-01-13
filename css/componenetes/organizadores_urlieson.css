@@ -3,6 +3,31 @@
     font-family: "transferenciaregular";
 }
 
+.icon_style_portada
+{
+    color: white;
+    font-size: 3rem;
+    padding: 10px;
+    border-radius: 3rem;
+    background: #126E8B;
+    background: -moz-radial-gradient(center, ellipse cover, #126E8B 50%, #1C3D4F 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #126E8B 50%,#1C3D4F 100%);
+    background: radial-gradient(ellipse at center, #126E8B 50%,#1C3D4F 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#126E8B', endColorstr='#1C3D4F',GradientType=1 );
+}
+
+.icon_style_sensibilizacion_apertura
+{
+    color: white;
+    font-size: 3rem;
+    padding: 10px;
+    border-radius: 3rem;
+    background: #437678;
+    background: -moz-radial-gradient(center, ellipse cover, #437678 50%, #142438 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #437678 50%,#142438 100%);
+    background: radial-gradient(ellipse at center, #437678 50%,#142438 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#437678', endColorstr='#142438',GradientType=1 );
+}
 .icon_style_contextualizacion
 {
     color: white;

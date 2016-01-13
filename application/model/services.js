@@ -32,6 +32,18 @@
                     }
                 };
             })
+            .service('$iconos', function($filter){
+
+                var icono = {
+                    get_icono: function(nombre_recurso){
+                        return $filter('filter')(array_iconos, {nombre: nombre_recurso})[0];
+                    }
+                }
+
+                var array_iconos = generales.generales.iconos;
+
+                return icono;
+            })
             .service('$plantilla', function ($log) {
                 var config = {
                     data: generales,
@@ -83,6 +95,9 @@
                     },
                     get_obj_pagina: function (id) {
                         return config.pages[id];
+                    },
+                    get_recursos_pagina: function (id) {
+                        return config.recursos[id];
                     },
                     get_generales: function () {
                         return config.data;

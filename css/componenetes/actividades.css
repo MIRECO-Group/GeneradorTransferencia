@@ -42,7 +42,7 @@
 .act_dra_dro>div>div>div>div div.elemento {
   text-align: justify;
   display: flex;
-  flex: 1 1 0%;
+  flex: 1;
 }
 
 
@@ -86,6 +86,7 @@
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;
+    cursor: pointer;
 }
 .con_drag_drop_hov{
     background: #01B3BE;
@@ -94,6 +95,7 @@
 .act_dra_dro>div>div>div>div div.drag.ui-draggable-dragging {
     background-color: #004B5E; 
     border-color: #004B5E;
+    cursor: move;
 }
 
 .act_dra_dro>div div .btnEnviar{
@@ -500,7 +502,6 @@
   left: 50%;
   color: white;
   border-radius: 8px;
-  border: 1px solid rgb(75, 149, 170);
   width: 270px;
   height: auto;
   padding: 0px;
@@ -526,18 +527,21 @@
 .popupActCorrecta {
   background-color: rgb(155, 187, 89);
   padding: 20px;
+  border-radius: 8px;
 }
 
 .popupActNuevoIntento {
   background-color: #6FBDDA;
   padding: 20px;
   text-align: center;
+  border-radius: 8px;
 }
 
 .popupActVerRespuesta {
   background-color: #EB9183;
   padding: 20px;
   text-align: center;
+  border-radius: 8px;
 }
 
 .popupActNuevoIntento div, .popupActVerRespuesta div {

@@ -47,16 +47,27 @@
         </div>
 
         <footer ng-controller="Paginacion as pag">
-            <div id="left_buttons">
-                <input type="button" value="a" ng-click="cambiar_pagina(1)">                
-                <input type="button" value="g">
-                <span class="divition_bot_span"></span>
-                <input type="button" value="i">
-            </div>
-            <div id="center_buttons" ng-show="{{pag.actual>=1}}">
-                <input type="button" value="<" ng-click="ant_pagina()">
-                <p>{{pag.actual}}</p>
-                <input type="button" value=">" ng-click="sgte_pagina()">
+            <ul id="left_buttons">
+                <li>
+                    <input type="button" value="a" ng-click="cambiar_pagina(1)">
+                    <span>Iniciemos</span>
+                </li>
+                <li>
+                    <input type="button" value="g">
+                    <span>Bibliografía</span>
+                </li>
+                <li>
+                    <span class="divition_bot_span"></span>
+                    <input type="button" value="i">
+                    <span>Glosario</span>
+                </li>
+            </ul>
+            <div id="center_buttons">
+                <input id="anterior-pagina" type="button" ng-disabled="pag.checked" value="<" ng-click="ant_pagina()">
+                <p id="icono-pagina"><!--<span>{{pag.actual}}</span>-->
+                    
+                </p>
+                <input id="siguiente-pagina" type="button" ng-disabled="pag.checked" value=">" ng-click="sgte_pagina()">
                 <ul id="smart_menu">
                     <li><p>PDF<span class="icon_arrow_ed_s">k</span></p></li>
                     <li><p>Mapa<span class="icon_arrow_ed_s">j</span></p></li>
@@ -65,12 +76,21 @@
                     <li><p>Indice<span class="icon_arrow_ed_s">q</span></p></li>
                 </ul>
             </div>
-            <div id="right_buttons">                
-                <input type="button" value="j">
-                <span class="divition_bot_span"></span>
-                <input type="button" value="k">
-                <input type="button" value="-" class="closed">
-            </div>
+            <ul id="right_buttons">
+                <li>
+                    <input type="button" value="j">
+                    <span>Mapa conceptual</span>
+                </li>
+                <li>
+                    <span class="divition_bot_span"></span>
+                    <input type="button" value="k">
+                    <span>Descargable</span>
+                </li>
+                <li>
+                    <input type="button" value="-" class="closed">
+                    <span>Contenido</span>
+                </li>                
+            </ul>
         </footer>
         
         <section id="popups">            
