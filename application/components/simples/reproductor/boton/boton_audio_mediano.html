@@ -1,9 +1,3 @@
 <div class="btn_audio_mediano">
-    <audio class="btn_audio_mediano-audio" src="{{atributos.url}}" preload="auto"/>
-    <script>
-        audiojs.events.ready(function() {
-			var audios = document.getElementsByTagName('audio');
-	        audiojs.create(audios[1]);
-		});
-    </script>
+    <audio class="btn_audio_mediano-audio" data-idxaud="{{idxAudio}}" src="{{atributos.url}}" preload="auto"/>
 </div>

@@ -1,11 +1,5 @@
 <div class="btn_audio_recuadro">
 	<div class="btn_audio_recuadro-marco">
-		<audio class="btn_audio_recuadro-audio" src="{{atributos.url}}" preload="auto"/>
-		<script>
-	        audiojs.events.ready(function() {
-				var audios = document.getElementsByTagName('audio');
-		        audiojs.create(audios[2]);
-			});
-	    </script>
+		<audio class="btn_audio_recuadro-audio" data-idxaud="{{idxAudio}}" src="{{atributos.url}}" preload="auto"/>
 	</div>
 </div>

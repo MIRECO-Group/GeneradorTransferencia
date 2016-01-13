@@ -30,17 +30,17 @@ $(document).ready(function ()
     }
 
     /*Funcionalidad del botón de contenido*/
-    $("footer > div#right_buttons > input[type='button']:nth-child(4)").click(function ()
+    $("footer > ul#right_buttons > li:nth-child(3) > input[type='button']").click(function ()
     {        
-        if (!$("footer > div#right_buttons > input[type='button']:nth-child(1)").is(":visible"))
+        if (!$("footer > ul#right_buttons > li:nth-child(1) > input[type='button']").is(":visible"))
         {
-            if ($("footer > div#right_buttons > input[type='button']:nth-child(4)").hasClass('closed'))
+            if ($("footer > ul#right_buttons > li:nth-child(3) > input[type='button']").hasClass('closed'))
             {
                 $("ul#smart_menu").slideDown("slow");
                 $(this).removeClass('closed');
                 $(this).addClass('opened');
             }
-            else if ($("footer > div#right_buttons > input[type='button']:nth-child(4)").hasClass('opened'))
+            else if ($("footer > ul#right_buttons > li:nth-child(3) > input[type='button']").hasClass('opened'))
             {
                 $("ul#smart_menu").slideUp("slow");
                 $(this).removeClass('opened');
@@ -61,7 +61,6 @@ $(document).ready(function ()
             $("header > div:nth-child(1) > input[type='button']").removeClass('opened');
             $("header > div:nth-child(1) > input[type='button']").addClass('closed');
         }
-
     });
     
     $("footer > div#center_buttons > ul#smart_menu li:nth-child(5)").click(function()
@@ -69,12 +68,22 @@ $(document).ready(function ()
         $("section#popups, #popup_tabla_de_contenido").show();
     });
 
+    /*Muestra los tooltips del menú superior*/
     $("header > ul:nth-child(3) > li p").mouseenter(function ()
     {
         $(this).siblings('span').fadeIn("fast");
     }).mouseleave(function ()
     {
         $(this).siblings('span').fadeOut("fast");
+    });
+    
+    /*Muestra los tooltips de los botones inferiores de la izquierda y derecha*/
+    $("footer > ul#left_buttons > li input[type='button'], footer > ul#right_buttons > li input[type='button']").mouseenter(function ()
+    {        
+        $(this).siblings('span').fadeIn("fast");
+    }).mouseleave(function ()
+    {
+        $(this).siblings('span:not(".divition_bot_span")').fadeOut("fast");
     });
 
     $(window).resize(function ()
@@ -85,7 +94,7 @@ $(document).ready(function ()
         if ($(window).width() <= 700)
         {
             $("header > ul:nth-child(3) > li p").unbind();
-            $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value', 'q');
+            $("footer > ul#right_buttons > li::nth-child(3) > input[type='button']").attr('value', 'q');
             $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('-');
 
             if (!$("header > ul:nth-child(3) > li span").is(":visible"))
@@ -105,16 +114,15 @@ $(document).ready(function ()
                     $(this).siblings('span').fadeOut("fast");
                 }
             });
-            $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value', '-');
+            $("footer > ul#right_buttons > li:nth-child(3) > input[type='button']").attr('value', '-');
             $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('q');
-            $("header > ul:nth-child(3) > li span").css('display', 'none');
         }
     });
 
     if ($(window).width() <= 700)
     {
         $("header > ul:nth-child(3) > li p").unbind();
-        $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value', 'q');
+        $("footer > ul#right_buttons > li:nth-child(4) > input[type='button']").attr('value', 'q');
         $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('-');
     }
     else
@@ -129,7 +137,7 @@ $(document).ready(function ()
                 $(this).siblings('span').fadeOut("fast");
             }
         });
-        $("footer > div#right_buttons > input[type='button']:nth-child(4)").attr('value', '-');
+        $("footer > ul#right_buttons > li:nth-child(3) > input[type='button']").attr('value', '-');
         $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('q');
     }
     
@@ -152,7 +160,7 @@ $(document).ready(function ()
         $.fullscreen.exit();
     }
     /*Acción: mostrar pop-up de Mapa Conceptual*/
-    $("footer > div#right_buttons > input[type='button']:nth-child(1), footer > div#center_buttons > ul#smart_menu li:nth-child(2)").click(function()
+    $("footer > ul#right_buttons > li:nth-child(1) > input[type='button'], footer > div#center_buttons > ul#smart_menu li:nth-child(2)").click(function()
     {
         $("section#popups, #popup_mapa_conceptual").show();
     });
@@ -164,7 +172,7 @@ $(document).ready(function ()
     });
     
     /*Acción: mostrar pop-up de Glosario*/
-    $("footer > div#left_buttons > input[type='button']:nth-child(4), footer > div#center_buttons > ul#smart_menu li:nth-child(3)").click(function()
+    $("footer > ul#left_buttons > li:nth-child(3) > input[type='button'], footer > div#center_buttons > ul#smart_menu li:nth-child(3)").click(function()
     {
         $("section#popups, #popup_glosario").show();
     });
@@ -188,18 +196,16 @@ $(document).ready(function ()
     });
     
     /*Acción: mostrar pop-up de PDF*/
-    $("footer > div#right_buttons > input[type='button']:nth-child(3), footer > div#center_buttons > ul#smart_menu li:nth-child(1)").click(function()
+    $("footer > ul#right_buttons > li:nth-child(2) > input[type='button'], footer > div#center_buttons > ul#smart_menu li:nth-child(1)").click(function()
     {
         $("section#popups, #popup_PDF").show();
     });
-    
-    
+      
      /*Acción: mostrar pop-up de Bibliografía*/
-    $("footer > div#left_buttons > input[type='button']:nth-child(2), footer > div#center_buttons > ul#smart_menu li:nth-child(4)").click(function()
+    $("footer > ul#left_buttons > li:nth-child(2) > input[type='button'], footer > div#center_buttons > ul#smart_menu li:nth-child(4)").click(function()
     {
         $("section#popups, #popup_bibliografia").show();
     });
-    
     
     $(".popup-btnCerrar").click(function()
     {

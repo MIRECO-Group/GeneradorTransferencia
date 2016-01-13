@@ -116,6 +116,20 @@
     border-bottom: 4px solid #005f7b;
 }
 
+.popup-contenido
+{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 80%;
+}
+
+/*Ayuda*/
+#popup_ayuda > .popup-contenido
+{
+    overflow: scroll;
+    height: 80%;
+}
+
 /*Créditos*/
 #popup_creditos > .popup-contenido
 {
@@ -147,4 +161,34 @@
     font-size: 3rem;
     padding: 15px;
     border-radius: 80px;
+}
+
+/*popup de tabla de contenido*/
+div#popup_tabla_de_contenido > div.pop-contenido h3 span
+{
+    font-size: 1rem;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+div#popup_tabla_de_contenido > div.pop-contenido ol
+{
+    padding-left:15%;
+    margin: 25px 0;
+    list-style: number;
+    font-weight: bold;
+}
+
+div#popup_tabla_de_contenido > div.pop-contenido ol li
+{
+    color: #002D39;
+    margin: 5px 0;
+}
+
+div#popup_tabla_de_contenido > div.pop-contenido h3
+{
+    color: #002D39;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
 }

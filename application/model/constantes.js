@@ -150,6 +150,12 @@ var BASE_DATA = {
             },
             portada: {
                 tag: "pt-boton-portada"
+            },
+            sabiasq: {
+                tag: "pt-boton-sabiasq"
+            },
+            noolvideq: {
+                tag: "pt-boton-noolvideq"
             }
         },
         icono: {
@@ -179,6 +185,12 @@ var BASE_DATA = {
             },
             mapa: {
                 tag: "ico-map"
+            },
+            sabiasq: {
+                tag: "ico-sabiasq"
+            },
+            noolvideq: {
+                tag: "ico-noolvideq"
             }
         },
         lista: {

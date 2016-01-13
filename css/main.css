@@ -632,12 +632,12 @@ section#popups, .popup-contenedor
 
 @media (max-width: 701px){ /*************************Tablet***********************/
 
-	header ul:nth-child(3) /*Men� desplegable*/
-	{		
-		background-color: inherit;
-		padding: 0 0;
-		width: auto;
-	}
+    header ul:nth-child(3) /*Men� desplegable*/
+    {		
+        background-color: inherit;
+        padding: 0 0;
+        width: auto;
+    }
 
     header ul:nth-child(3) li
     {
@@ -653,45 +653,45 @@ section#popups, .popup-contenedor
         background-color: rgba(0,0,0,0.7);
     }
 
-	header ul:nth-child(3) li span:nth-child(1) /*Tool tips del men� desplegable*/
-	{
-		background-color: initial;
-		display: inline-block;
-		padding: 0px 5px 0px 0px;
-		position: inherit;
-		margin-top: 0;
-		right: 0;
-		width: 6rem;
-	}
+    header ul:nth-child(3) li span:nth-child(1) /*Tool tips del men� desplegable*/
+    {
+        background-color: initial;
+        display: inline-block;
+        padding: 0px 5px 0px 0px;
+        position: inherit;
+        margin-top: 0;
+        right: 0;
+        width: 6rem;
+    }
 
-	header ul:nth-child(3) li p /*iconos del men� desplegable*/
-	{
-		border-radius: 0px;
-		display: inline-block;
-		font-size: 1.5rem;
-		margin-top: 0px;
-		margin-bottom: 0px;		
-	}
+    header ul:nth-child(3) li p /*iconos del men� desplegable*/
+    {
+        border-radius: 0px;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-top: 0px;
+        margin-bottom: 0px;		
+    }
 
-    footer > div#left_buttons > input[type="button"]:nth-child(2)
+    footer > ul#left_buttons > li:nth-child(2) > input[type="button"]
     {
         display: none;
     }
-    footer > div#left_buttons > input[type="button"]:nth-child(4)
+    footer > ul#left_buttons > li:nth-child(3) > input[type="button"]
     {
         display: none;
     }
-    footer > div#right_buttons > input[type="button"]:nth-child(1)
+    footer > ul#right_buttons > li:nth-child(1) > input[type="button"]
     {
         display: none;
     }
-    footer > div#right_buttons > input[type="button"]:nth-child(3)
+    footer > ul#right_buttons > li:nth-child(2) > input[type="button"]
     {
         display: none;
     }
     .divition_bot_span
     {
-        display: none;
+        display: none !important;
     }
 }
 

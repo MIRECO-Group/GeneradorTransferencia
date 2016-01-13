@@ -8,7 +8,14 @@
 /* global extras */
 
 (function () {
-    angular.module("organizadores", [])
+    var moduloOrganizadores = angular.module("organizadores", [])
+            moduloOrganizadores.service('datosPopupsSabiasNoolvide', [function () {
+                return {
+                    textosSabiasQue: null,
+                    textosNoOlvideQue: null,
+                    textosInforma: null
+                };
+            }])
             //<editor-fold defaultstate="collapsed" desc="TABS">
             .directive("ptOrganizadorTabsSuperiores", function () {
                 return{
@@ -322,6 +329,17 @@
                     restrict: "A",
                     templateUrl: "application/components/iconos/sensibilizacion_cierre.html"
                 };
+            }).directive("icoSabiasq", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/sabiasq.html"
+                };
+            })
+            .directive("icoNoolvideq", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/noolvideq.html"
+                };
             })
             
             //</editor-fold>
@@ -441,6 +459,26 @@
             })
             //</editor-fold>
             ////<editor-fold defaultstate="collapsed" desc="Botón">
+            .directive("ptBotonNoolvideq", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/botones/no_olvide_que.html",
+                    controller: "botonController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptBotonSabiasq", function () {
+                return {
+                    restrict: "A",
+                    templateUrl: "application/components/simples/botones/sabias_que.html",
+                    controller: "botonController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptBotonActividad", function () {
                 return{
                     restrict: "A",
@@ -461,11 +499,11 @@
                     }
                 };
             })
-            .controller("botonController", function ($scope, $contenido, $compile, $render, $plantilla) {
+            .controller("botonController", function ($scope, $contenido, $compile, $render, $plantilla, $popupSabiasQue, $popupNoOlvideQue, $popupInforma, datosPopupsSabiasNoolvide) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
+                $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
                 $scope.atributos = element.atributos;
-
                 $scope.funcion = function () {
                     switch ($scope.atributos.funcion) {
                         case "iniciar_examen":
@@ -474,10 +512,24 @@
                         case "ir_a":
                             cambiar_pagina($scope.atributos.destino);
                             break;
+                        case "abrir_popup":
+                            if ($scope.atributos.destino == "popup_sabias_que") {
+                                $scope.dataPopupsSabiasNoolvide.textosSabiasQue = $scope.atributos.textosPopupDestino;
+                                $popupSabiasQue.jQueryCompile($compile, $scope, true);
+                            }
+                            if ($scope.atributos.destino == "popup_no_olvide_que") {
+                                $scope.dataPopupsSabiasNoolvide.textosNoOlvideQue = $scope.atributos.textosPopupDestino;
+                                $popupNoOlvideQue.jQueryCompile($compile, $scope, true);
+                            }
+                            if ($scope.atributos.destino == "popup_informa") {
+                                $scope.dataPopupsSabiasNoolvide.textosInforma = $scope.atributos.textosPopupDestino;
+                                $popupInforma.jQueryCompile($compile, $scope, true);
+                            }
+                        break;
                         default:
                             console.warn("Funcion de botón no definida",
-                                    $scope.atributos.funcion, $scope.atributos);
-                            break;
+                            $scope.atributos.funcion, $scope.atributos);
+                        break;
                     }
                 };
                 
@@ -614,13 +666,11 @@
                 };
 
                 contPanel();
-
-                //console.log(this.popup);
             })
             //</editor-fold>
             ////<editor-fold defaultstate="collapsed" desc="Frame">
             .directive("ptFrameGrande", function () {
-                return{
+                return {
                     restrict: "A",
                     templateUrl: "application/components/simples/frame/frame_big.html",
                     controller: "frameController",
@@ -689,8 +739,122 @@
             .controller("frameController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
+                $scope.parentObj = angular.element($element)[0];
                 $scope.atributos = element.atributos;
+                $scope.idxAudio = "";
+                $scope.idxAudio = this.chainId.toString().replace(",","-");
+                $scope.idxAudio = "aud"+$scope.idxAudio;
+                $scope.objAudios = $($scope.parentObj).find("audio");
+                $scope.objAudio = $scope.objAudios[0];
+                $($scope.objAudio).attr("src",$scope.atributos.url);
+                $($scope.objAudio).attr("data-idxaud",$scope.idxAudio);
+                audiojs.events.ready(function() {
+                    audiojs.create($scope.objAudio);
+                });
             })
             //</editor-fold>
             ;
+
+    moduloOrganizadores.directive("ptPopupsabiasque", function () {
+        return {
+            restrict: "A",
+            templateUrl: "application/components/pops/popupSabiasQue.html",
+            controller: "popupSabiasQueController",
+            scope: {
+                "ptPopupsabiasqueest": '='
+            }
+        };
+    });
+    moduloOrganizadores.controller("popupSabiasQueController", function ($scope, $element, datosPopupsSabiasNoolvide) {
+        $scope.mostrar = $scope.ptPopupsabiasqueest;
+        $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
+        $scope.cerrar = function () {
+            $element.remove();
+        };
+    });
+    moduloOrganizadores.directive("ptPopupnoolvideque", function () {
+        return {
+            restrict: "A",
+            templateUrl: "application/components/pops/popupNoOlvideQue.html",
+            controller: "popupNoOlvideQueController",
+            scope: {
+                "ptPopupnoolvidequeest": '='
+            }
+        };
+    });
+    moduloOrganizadores.controller("popupNoOlvideQueController", function ($scope, $element, $popupNoOlvideQue, datosPopupsSabiasNoolvide) {
+        $scope.mostrar = $scope.ptPopupnoolvidequeest;
+        $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
+        $scope.cerrar = function () {
+            $element.remove();
+        };
+    });
+    moduloOrganizadores.directive("ptPopupinforma", function () {
+        return {
+            restrict: "A",
+            templateUrl: "application/components/pops/popupInforma.html",
+            controller: "popupInformaController",
+            scope: {
+                "ptPopupinformaest": '='
+            }
+        };
+    });
+    moduloOrganizadores.controller("popupInformaController", function ($scope, $element, $popupInforma, datosPopupsSabiasNoolvide) {
+        $scope.mostrar = $scope.ptPopupinformaest;
+        $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
+        $scope.cerrar = function () {
+            $element.remove();
+        };
+    });
+    moduloOrganizadores.factory("$popupSabiasQue", function ($render) {
+            var creaPopup = function($compile, $scope, $clase) {
+            var render = $("<div/>", {
+                "pt-popupsabiasque": "",
+                "pt-popupsabiasqueest": JSON.stringify($clase)
+            });
+               
+            if (render) {
+                $render.jQueryCompile(render, $("body"), $compile, $scope);
+            }
+        }
+        return {
+            jQueryCompile: function ($compile, $scope, $clase) {
+                creaPopup($compile, $scope, $clase);
+            }
+        };
+    });
+    moduloOrganizadores.factory("$popupNoOlvideQue", function ($render) {
+            var creaPopup = function($compile, $scope, $clase) {
+            var render = $("<div/>", {
+                "pt-popupnoolvideque": "",
+                "pt-popupnoolvidequeest": JSON.stringify($clase)
+            });
+               
+            if (render) {
+                $render.jQueryCompile(render, $("body"), $compile, $scope);
+            }
+        }
+        return {
+            jQueryCompile: function ($compile, $scope, $clase) {
+                creaPopup($compile, $scope, $clase);
+            }
+        };
+    });
+    moduloOrganizadores.factory("$popupInforma", function ($render) {
+            var creaPopup = function($compile, $scope, $clase) {
+            var render = $("<div/>", {
+                "pt-popupinforma": "",
+                "pt-popupinformaest": JSON.stringify($clase)
+            });
+               
+            if (render) {
+                $render.jQueryCompile(render, $("body"), $compile, $scope);
+            }
+        }
+        return {
+            jQueryCompile: function ($compile, $scope, $clase) {
+                creaPopup($compile, $scope, $clase);
+            }
+        };
+    });
 })(angular);

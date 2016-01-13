@@ -559,7 +559,6 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   height: 50px;
   width: 50px;
   margin-bottom: 10px;
-
 }
 /*Contenedor de los botones play y pause*/
 .play-pause {
@@ -604,12 +603,3 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 .audiojs .error {
   display: none;
 }
-
-/*Observaciones:
-1) Para modificar el tamaño del reproductor de audio
-modificar el widht y el height del selector .audiojs.
-
-2) Para cambiar los íconos de play y pause, modificar 
-las url de los background-image en los selectores .audiojs .play y
-.audiojs .pause 
-*/
