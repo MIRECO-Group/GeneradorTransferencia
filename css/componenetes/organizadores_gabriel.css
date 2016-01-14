@@ -620,7 +620,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background: -webkit-linear-gradient(top,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   background: linear-gradient(to bottom,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#147290', endColorstr='#004c5e',GradientType=0 );
-  border-radius: 6px;
+  border-radius: 10px;
 }
 .button_sabiasq {
   width: 100%;
@@ -637,7 +637,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background: -webkit-linear-gradient(top,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   background: linear-gradient(to bottom,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#147290', endColorstr='#004c5e',GradientType=0 );
-  border-radius: 6px;
+  border-radius: 10px;
 }
 .button_sabiasq-contenIconText {
   display: inline-block;

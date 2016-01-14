@@ -228,6 +228,7 @@ div#content_container div.title_basic
 div#content_container div.title_basic_title
 {
     margin: 0 15px;
+    text-align: left;
     font-size: 2rem;
     padding: 1% 0;
     color: #407389;
