@@ -603,3 +603,450 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 .audiojs .error {
   display: none;
 }
+
+/*Botones*/
+.button_noolvideq {
+  width: 100%;
+  height: 58px;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  background: #147290;
+  background: -moz-linear-gradient(top,  #147290 0%, #147290 50%, #004c5e 52%, #004c5e 100%);
+  background: -webkit-linear-gradient(top,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
+  background: linear-gradient(to bottom,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#147290', endColorstr='#004c5e',GradientType=0 );
+}
+.button_sabiasq {
+  width: 100%;
+  height: 58px;
+  background: #147290;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #147290;
+  background: -moz-linear-gradient(top,  #147290 0%, #147290 50%, #004c5e 52%, #004c5e 100%);
+  background: -webkit-linear-gradient(top,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
+  background: linear-gradient(to bottom,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#147290', endColorstr='#004c5e',GradientType=0 );
+}
+.button_sabiasq-contenIconText {
+  display: inline-block;
+}
+.button_noolvideq-contenIconText {
+  display: inline-block;
+}
+.button_noolvideq-contenIconText > div {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.button_noolvideq-contenIconText  > div > div {
+  width: 100%;
+  height: 100%;
+}
+.button_sabiasq-contenIconText > div {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.button_sabiasq-contenIconText > div > div {
+  width: 100%;
+  height: 100%;
+}
+.icon_style_retro_noolvideq {
+  width: 100%;
+  height: 100%;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #1ebebc;
+  background: #25a9a5;
+  background: -moz-radial-gradient(center, ellipse cover,  #25a9a5 0%, #2aa8a4 49%, #25a9a5 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  #25a9a5 0%,#2aa8a4 49%,#25a9a5 100%);
+  background: radial-gradient(ellipse at center,  #25a9a5 0%,#2aa8a4 49%,#25a9a5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a9a5', endColorstr='#25a9a5',GradientType=1 );
+}
+.icon_style_retro_sabiasque {
+  width: 50px;
+  height: 50px;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #1ebebc;
+  background: #25a9a5;
+  background: -moz-radial-gradient(center, ellipse cover,  #25a9a5 0%, #2aa8a4 49%, #25a9a5 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  #25a9a5 0%,#2aa8a4 49%,#25a9a5 100%);
+  background: radial-gradient(ellipse at center,  #25a9a5 0%,#2aa8a4 49%,#25a9a5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a9a5', endColorstr='#25a9a5',GradientType=1 );
+}
+.button_sabiasq_text {
+  font-size: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.button_noolvideq_text {
+  font-size: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+/******************/
+/*Popup sabias qué*/
+/******************/
+.popupSabiasQue-capaOpacidad {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: 10;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -moz-pointer-events: auto;
+  -webkit-pointer-events: auto;
+  pointer-events: auto;
+}
+.popupSabiasQue-contenedor {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  border: 3px solid #765E9B;
+  width: 98%;
+  max-width: 800px;
+  -moz-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+.popupSabiasQue-title {
+  display: block;
+  background-color: #765E9B;
+  height: 44px;
+  font-size: 24px;
+  text-indent: 100px;
+  color: white;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupSabiasQue-title-btnCerrar {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.popupSabiasQue-contenido {
+  padding: 35px 0;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupSabiasQue-contenido-texto {
+  margin-left: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin: 12px 20px 0 40px;
+  text-align: justify;
+}
+.popupSabiasQue-contenido-imagen {
+  width: 37.5%;
+  max-width: 200px;
+  min-width: 124px;
+  height: 210px;
+  background-image: url('../../img/sabiasque-persona.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin: 0 10px;
+}
+.popupSabiasQue-icon {
+  width: 96px;
+  height: 96px;
+  top: 0; left: 0;
+  margin-top: -24px;
+  margin-left: -24px;
+  background-image: url('../../img/sabiasque-icon.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  position: absolute;
+}
+@media screen and (max-width: 320px) {
+  .popupSabiasQue-contenido-imagen {
+    display: none;
+  }
+  .popupSabiasQue-contenido-texto {
+    margin: 0 14px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 520px) {
+  .popupSabiasQue-contenido-texto {
+    margin: 0 0 0 24px;
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+/*********************/
+/*Popup No olvide qué*/
+/*********************/
+.popupNoOlvideQue-capaOpacidad {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: 10;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -moz-pointer-events: auto;
+  -webkit-pointer-events: auto;
+  pointer-events: auto;
+}
+.popupNoOlvideQue-contenedor {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  border: 3px solid #00A3AA;
+  width: 98%;
+  max-width: 800px;
+  -moz-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+.popupNoOlvideQue-title {
+  display: block;
+  background-color: #00A3AA;
+  height: 44px;
+  font-size: 24px;
+  text-indent: 100px;
+  color: white;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupNoOlvideQue-title-btnCerrar {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.popupNoOlvideQue-contenido {
+  padding: 35px 0;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupNoOlvideQue-contenido-texto {
+  margin-left: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin: 12px 20px 0 40px;
+  text-align: justify;
+}
+.popupNoOlvideQue-contenido-imagen {
+  width: 37.5%;
+  max-width: 200px;
+  min-width: 124px;
+  height: 210px;
+  background-image: url('../../img/noolvideque-persona.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin: 0 10px;
+}
+.popupNoOlvideQue-icon {
+  width: 86px;
+  height: 92px;
+  top: 0; left: 0;
+  margin-left: -20px;
+  margin-top: -20px;
+  background-image: url('../../img/noolvideque-icon.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  position: absolute;
+}
+@media screen and (max-width: 320px) {
+  .popupNoOlvideQue-contenido-imagen {
+    display: none;
+  }
+  .popupNoOlvideQue-contenido-texto {
+    margin: 0 14px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 520px) {
+  .popupNoOlvideQue-contenido-texto {
+    margin: 0 0 0 24px;
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+/*********************/
+/****Popup Informa****/
+/*********************/
+.popupInforma-capaOpacidad {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: 10;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -moz-pointer-events: auto;
+  -webkit-pointer-events: auto;
+  pointer-events: auto;
+}
+.popupInforma-contenedor {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  border: 3px solid #00647C;
+  width: 98%;
+  max-width: 800px;
+  -moz-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+.popupInforma-title {
+  display: block;
+  background-color: #00647C;
+  height: 44px;
+  font-size: 24px;
+  text-indent: 100px;
+  color: white;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupInforma-title-btnCerrar {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.popupInforma-contenido {
+  padding: 35px 0;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupInforma-contenido-texto {
+  margin-left: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin: 12px 20px 0 40px;
+  text-align: justify;
+}
+.popupInforma-contenido-imagen {
+  width: 50%;
+  max-width: 250px;
+  min-width: 124px;
+  height: 210px;
+  background-image: url('../../img/popupInforma-persona.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin: 0 10px;
+}
+.popupInforma-icon {
+  width: 40px;
+  height: 34px;
+  margin-left: 10px;
+  background-image: url('../../img/popupInforma-icon.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+@media screen and (max-width: 320px) {
+  .popupInforma-contenido-imagen {
+    display: none;
+  }
+  .popupInforma-contenido-texto {
+    margin: 0 14px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 520px) {
+  .popupInforma-contenido-texto {
+    margin: 0 0 0 24px;
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+

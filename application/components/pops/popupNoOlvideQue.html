@@ -1,6 +1,9 @@
 <div class="popupNoOlvideQue-capaOpacidad" ng-click="cerrar()"></div>
 <div class="popupNoOlvideQue-contenedor">
-	<div class="popupNoOlvideQue-title">No olvide que...</div>
+	<div class="popupNoOlvideQue-title">
+		No olvide que...
+		<span class="popupNoOlvideQue-title-btnCerrar transfe_font" ng-click="cerrar()">x</span>
+	</div>
 	<div class="popupNoOlvideQue-contenido">
 		<div class="popupNoOlvideQue-contenido-texto">
 			<span ng-repeat="(idP, item) in dataPopupsSabiasNoolvide.textosNoOlvideQue">

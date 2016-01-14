@@ -1,6 +1,9 @@
 <div class="popupInforma-capaOpacidad" ng-click="cerrar()"></div>
 <div class="popupInforma-contenedor">
-	<div class="popupInforma-title"><div class="popupInforma-icon"/></div>
+	<div class="popupInforma-title">
+		<div class="popupInforma-icon"/>
+		<span class="popupInforma-title-btnCerrar transfe_font" ng-click="cerrar()">x</span>	
+	</div>
 	<div class="popupInforma-contenido">
 		<div class="popupInforma-contenido-texto">
 			<span ng-repeat="(idP, item) in dataPopupsSabiasNoolvide.textosInforma">

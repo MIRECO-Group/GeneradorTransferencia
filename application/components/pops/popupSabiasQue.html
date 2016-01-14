@@ -1,6 +1,9 @@
 <div class="popupSabiasQue-capaOpacidad" ng-click="cerrar()"></div>
 <div class="popupSabiasQue-contenedor">
-	<div class="popupSabiasQue-title">Sabía qué?</div>
+	<div class="popupSabiasQue-title">
+		Sabía qué?
+		<span class="popupSabiasQue-title-btnCerrar transfe_font" ng-click="cerrar()">x</span>
+	</div>
 	<div class="popupSabiasQue-contenido">
 		<div class="popupSabiasQue-contenido-texto">
 			<span ng-repeat="(idP, item) in dataPopupsSabiasNoolvide.textosSabiasQue">
