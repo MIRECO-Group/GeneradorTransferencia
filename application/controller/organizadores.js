@@ -32,7 +32,7 @@
              * this.chainId = $scope.ptConstructor; //Atributos iniciales que identifican el objeto
              * $scope.tabs = {}; //agregar aqui el objeto tabs leído por el servicio
              */
-            .controller("oTabController", function ($scope, $contenido) {
+            .controller("oTabController", function ($scope, $contenido, datosPreguntasConocimiento) {
                 this.chainId = $scope.ptConstructor;
                 var that = this;
                 var cantTabs = 0;
@@ -53,7 +53,7 @@
                 };
 
                 $scope.isCover = function () {
-                    return $scope.tab === 0;
+                    return $scope.tab === 0 || $scope.tab === ($scope.cantTabs+1);
                 };
 
                 $scope.checkMore = function ()
@@ -105,6 +105,47 @@
                         return "active";
                     }
                 };
+
+
+                //Scopes y Comportamiento preguntas de conocimiento
+                $scope.listaAcividades = function(){
+                    /*var tipoActividades = {};
+                    $.each($scope.tabs, function (key, value) {
+                        tipoActividades[key] = {id: JSON.parse(value.chain).join(""), tipo: value.componentes[1].tipo};
+                    });
+                    return tipoActividades;*/
+                    var tipoActividades = [];
+                    $.each($scope.tabs, function (key, value) {
+                        tipoActividades[key - 1] = value.tipo;
+                    });
+
+                    var uniqueVals = [];
+                    $.each(tipoActividades, function(i, el){
+                        if($.inArray(el, uniqueVals) === -1) uniqueVals.push(el);
+                    });
+
+                    return uniqueVals;
+                }
+
+                $scope.enviarEvaluacion = function(){
+                    var objetoActividades = $scope.listaAcividades();
+                    /*$.each(objetoActividades, function (key, value) {
+                        $scope.$broadcast("preguntasConocimiento-" + value.tipo, value.id.concat(1));
+                    });*/
+                    for (var i = objetoActividades.length - 1; i >= 0; i--) {
+                        $scope.$broadcast("preguntasConocimiento-" + objetoActividades[i]);
+                    };
+                    var correctas = 0;
+                    
+                    $.each(datosPreguntasConocimiento.objetoRetro, function (key, value) {
+                        if(value.correcta)
+                            correctas+=1;
+                    });
+                    $scope.porcentaje = (correctas / $scope.cantTabs)*100|0;
+                }
+
+
+
             })
             .directive("ptNewTab", function () {
                 return{

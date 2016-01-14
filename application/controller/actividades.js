@@ -6,6 +6,12 @@
 
     /*Services*/
 
+    actividades.service('datosPreguntasConocimiento', [function () {
+        return {
+            objetoRetro: {}
+        };
+    }]);
+
     actividades.service('datosSortable', [function () {
         return {
             muestrabtnEnviar: false,
@@ -108,14 +114,22 @@
         }
     });
 
-    actividades.controller('dragDropController', function ($scope, $contenido, $element, $popupAct, $compile, datosDragDrop) {
+    actividades.controller('dragDropController', function ($scope, $contenido, $element, $popupAct, $compile, datosDragDrop, datosPreguntasConocimiento, $plantilla) {
         this.chainId = $scope.ptConstructor;
+        $scope.idActividad = this.chainId.join("");
         var element = $contenido.get_element_page(this.chainId);
         var that = this;
 
         $.each(element.atributos.preguntas, function (key, value) {
             value.chain = JSON.stringify(that.chainId.concat([(key)]));
         });
+
+        var page = $plantilla.get_obj_pagina(this.chainId[0]);
+
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+            $scope.create = false;
+        else
+            $scope.create = true;
 
         $scope.preguntas = element.atributos.preguntas[1];
         $scope.preg = JSON.parse($scope.preguntas.chain);
@@ -157,6 +171,22 @@
                     $scope.verRespuestaDragDrop(); 
                 break;
             }
+        });
+
+        $scope.$on('preguntasConocimiento-drag_drop', function(event, args) {
+
+            for(var j=0; j < $scope.vectorVa.length; j++){
+                $scope.corDD = true;
+                if($scope.vectorVa[j]!=$scope.correctas[j]){
+                    $scope.corDD = false;
+                    break;
+                }
+            }
+
+            if($scope.corDD)
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: true};
+            else
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: false};
         });
 
         $scope.enviarDragDrop = function(){
@@ -296,8 +326,9 @@
         }
     });
 
-    actividades.controller("listaDesplegableController", function ($popupAct, $scope, $contenido, $element, $render, $compile, datosListaDesplegable) {
+    actividades.controller("listaDesplegableController", function ($popupAct, $scope, $contenido, $element, $render, $compile, datosListaDesplegable, datosPreguntasConocimiento, $plantilla) {
         this.chainId = $scope.ptConstructor;
+        $scope.idActividad = this.chainId.join("");
         var element = $contenido.get_element_page(this.chainId);
         var that = this;
 
@@ -309,6 +340,13 @@
             $scope.resCambio[key - 1] = 0;
             $scope.resIntento[key - 1] = 0;         
         });
+
+        var page = $plantilla.get_obj_pagina(this.chainId[0]);
+
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+            $scope.create = false;
+        else
+            $scope.create = true;
 
         $scope.dataListaDesplegable = datosListaDesplegable;
         $scope.dataListaDesplegable.muestrabtnEnviar = false;
@@ -336,7 +374,7 @@
 
         $scope.change = function(e){
             $scope.terLD = false;
-            $('select').each(function(i, e){
+            $('.act_lis_des-'+that.chainId.join("")+' select').each(function(i, e){
                 $scope.resCambio[i] = $(this).find(":selected").val();
                 if ($(this).find(":selected").val() === "")
                     $scope.terLD = true;
@@ -346,6 +384,20 @@
             else
                 $scope.dataListaDesplegable.muestrabtnEnviar = true;
         }
+
+        $scope.$on('preguntasConocimiento-select', function(event, args) {
+            console.log('select');
+            $scope.corLD = true;
+            $('.act_lis_des-'+that.chainId.join("")+' select').each(function (i, e) {
+                if($(this).find(":selected").val() != $scope.preguntas[i + 1].respuesta)
+                    $scope.corLD = false;
+            });
+
+            if($scope.corLD)
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: true};
+            else
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: false};
+        });
 
         $scope.enviarListaDesplegable = function () {
             /*var jsonSalida = {};
@@ -466,13 +518,21 @@
         }
     });
 
-    actividades.controller('sortableController', function ($scope, $contenido, $element, $popupAct, $compile, datosSortable) {
+    actividades.controller('sortableController', function ($scope, $contenido, $element, $popupAct, $compile, datosSortable, $plantilla, datosPreguntasConocimiento) {
         this.chainId = $scope.ptConstructor;
+        $scope.idActividad = this.chainId.join("");
         var element = $contenido.get_element_page(this.chainId);
         var that = this;
         $.each(element.atributos.preguntas, function (key, value) {
             value.chain = JSON.stringify(that.chainId.concat([(key)]));
         });
+
+        var page = $plantilla.get_obj_pagina(this.chainId[0]);
+
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+            $scope.create = false;
+        else
+            $scope.create = true;
 
         $scope.preguntas = element.atributos.preguntas[1];
         $scope.vectorInicial = element.atributos.preguntas[1].orden.slice();
@@ -509,6 +569,20 @@
             }
         });
 
+        $scope.$on('preguntasConocimiento-sortable', function(event, args) {
+            console.log('sortable');
+            $scope.corS = true;
+            $('.sortable-contenedor-'+that.chainId.join("")+' .sortable-items li').each(function(indice, elementos){
+                if($(this).attr('numero')!=$scope.preguntas.orden[indice]){
+                    $scope.corS = false;
+                }
+            });
+            if($scope.corS)
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: true};
+            else
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: false};
+        });
+
         $scope.enviarSortable = function(){
             $scope.corS = true;
 
@@ -530,6 +604,7 @@
                 $scope.intento_actual ++;
                 if($scope.corS){
                     $scope.muestraretro.retrobn = true;
+                    datosSortable.correcta = true;
                     $scope.bloqueoSortable();
                 }
                 else
@@ -648,7 +723,7 @@
         };
     });
 
-    actividades.controller("itempickmanyActividadController", function ($contenido, $element, $render, $scope, $compile, datosPickmany) {
+    actividades.controller("itempickmanyActividadController", function ($contenido, $element, $render, $scope, $compile, datosPickmany, datosPreguntasConocimiento, $plantilla) {
         this.chainId = JSON.parse($scope.ptItemPick);
         var that = this;
         $scope.dataPickmany = datosPickmany;
@@ -719,8 +794,9 @@
         }        
     });
 
-    actividades.controller('pickmanyController', function ($popupAct, $scope, $contenido, $element, $compile, datosPickmany) {
+    actividades.controller('pickmanyController', function ($popupAct, $scope, $contenido, $element, $compile, datosPickmany, datosPreguntasConocimiento, $plantilla) {
         this.chainId = $scope.ptConstructor;
+        $scope.idActividad = this.chainId.join("");
         var element = $contenido.get_element_page(this.chainId);
         var that = this;
         $scope.dataPickmany = datosPickmany;
@@ -734,6 +810,14 @@
             value.chain = JSON.stringify(that.chainId.concat([(key)]));
             value.keyPreg = key;
         });
+
+        var page = $plantilla.get_obj_pagina(this.chainId[0]);
+
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+            $scope.create = false;
+        else
+            $scope.create = true;
+
         $scope.atributos = element.atributos;
         $scope.preguntas = element.atributos.preguntas;
         $scope.cantPreguntas = 0;
@@ -750,6 +834,16 @@
             }
             $scope.cantPreguntas++;
         }
+
+        $scope.$on('preguntasConocimiento-pick_many', function(event, args) {
+            $scope.registraRespuestas();
+            $scope.registraValidacionRespuestas();
+            if ( $scope.getCantRespuestasCorrectas() == $scope.cantPreguntas ) 
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: true};
+            else 
+                datosPreguntasConocimiento.objetoRetro[that.chainId.join("")] = {correcta: false};
+        });
+
         $scope.clickBtnSend = function() {
             $scope.muestraretro = {
                 retrobn: false,

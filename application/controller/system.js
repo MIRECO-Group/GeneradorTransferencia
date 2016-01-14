@@ -31,7 +31,7 @@
 
                     var page = $plantilla.get_obj_pagina(idPage);
 
-                    that.nombre_recurso = $plantilla.get_recursos_pagina(that.actual).nombre;
+                    that.nombre_recurso = $plantilla.get_recursos_pagina(page.numberID).nombre;
 
                     var icon = $iconos.get_icono(that.nombre_recurso);
                     $contenido.set_obj_pagina(page);

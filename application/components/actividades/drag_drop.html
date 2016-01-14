@@ -1,4 +1,4 @@
-<div class="act_dra_dro">
+<div class="act_dra_dro act_dra_dro-{{idActividad}}">
     <div>
       	<h1>{{preguntas.enunciado}}</h1>
 		<div class="con_drag_drop">
@@ -13,7 +13,7 @@
 					<div class="drag drag{{idP}}" draggable data-numero="{{idP}}">{{pregunta}}</div>
 				</div>                             
 			</div>
-			<div class="btnEnviar hvr-float-shadow" ng-show="dataDragDrop.muestrabtnEnviar" ng-click="enviarDragDrop(this)">Enviar</div>
+			<div ng-if="create" class="btnEnviar hvr-float-shadow" ng-show="dataDragDrop.muestrabtnEnviar" ng-click="enviarDragDrop(this)">Enviar</div>
 		</div>
     </div>
 </div>

@@ -5,15 +5,11 @@
 
 .icon_style_portada
 {
-    color: white;
+    color: #00415B;
     font-size: 3rem;
     padding: 10px;
     border-radius: 3rem;
-    background: #126E8B;
-    background: -moz-radial-gradient(center, ellipse cover, #126E8B 50%, #1C3D4F 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, #126E8B 50%,#1C3D4F 100%);
-    background: radial-gradient(ellipse at center, #126E8B 50%,#1C3D4F 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#126E8B', endColorstr='#1C3D4F',GradientType=1 );
+    background: white;
 }
 
 .icon_style_portada_boton
@@ -547,4 +543,27 @@ html, body{
 
 @media screen and (max-width: 600px) {
 
+}
+/*Cierre preguntas de conocimiento*/
+
+.cierre-preguntas-conocimiento {
+    align-items: center;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+}
+
+.cierre-preguntas-conocimiento div{
+    text-align: center;
+}
+
+.cierre-preguntas-conocimiento div p{
+    font-family: SourceSans Pro;
+    font-size: 30px;
+}
+
+.cierre-preguntas-conocimiento div span{
+    font-family: SourceSans Pro;
+    font-size: 40px;
+    color: #024D60;
 }

@@ -620,6 +620,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background: -webkit-linear-gradient(top,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   background: linear-gradient(to bottom,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#147290', endColorstr='#004c5e',GradientType=0 );
+  border-radius: 6px;
 }
 .button_sabiasq {
   width: 100%;
@@ -636,6 +637,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background: -webkit-linear-gradient(top,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   background: linear-gradient(to bottom,  #147290 0%,#147290 50%,#004c5e 52%,#004c5e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#147290', endColorstr='#004c5e',GradientType=0 );
+  border-radius: 6px;
 }
 .button_sabiasq-contenIconText {
   display: inline-block;
@@ -690,30 +692,31 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a9a5', endColorstr='#25a9a5',GradientType=1 );
 }
 .icon_style_retro_sabiasque {
-  width: 50px;
-  height: 50px;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  -ms-align-items: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -ms-justify-content: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  font-size: 30px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 2px solid #1ebebc;
-  background: #25a9a5;
-  background: -moz-radial-gradient(center, ellipse cover,  #25a9a5 0%, #2aa8a4 49%, #25a9a5 100%);
-  background: -webkit-radial-gradient(center, ellipse cover,  #25a9a5 0%,#2aa8a4 49%,#25a9a5 100%);
-  background: radial-gradient(ellipse at center,  #25a9a5 0%,#2aa8a4 49%,#25a9a5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a9a5', endColorstr='#25a9a5',GradientType=1 );
+    width: 50px;
+    height: 50px;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid #5BAAB3;
+    background: #25a9a5;
+    background: #835ca8;
+    background: -moz-radial-gradient(center, ellipse cover,  #835ca8 50%, #65568f 87%, #65568f 87%, #65568f 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  #835ca8 50%,#65568f 87%,#65568f 87%,#65568f 100%);
+    background: radial-gradient(ellipse at center,  #835ca8 50%,#65568f 87%,#65568f 87%,#65568f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#835ca8', endColorstr='#65568f',GradientType=1 );
 }
 .button_sabiasq_text {
   font-size: 20px;

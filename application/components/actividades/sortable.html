@@ -1,9 +1,9 @@
-<div class="sortable-contenedor">
+<div class="sortable-contenedor sortable-contenedor-{{idActividad}}">
 	<div class="sortable-texto1">
 		{{preguntas.enunciado}}
 	</div>
 	<ul sortable class="sortable-items">
 		<li ng-repeat="(idP, item) in elementos" class="sortable-item elementos elemento{{vectorInicial[idP]}}" numero="{{vectorInicial[idP]}}">{{item}}</li>
 	</ul>
-	<div class="sortable-btnEnviar hvr-float-shadow" ng-show="dataSortable.muestrabtnEnviar" ng-click="enviarSortable(this)">Enviar<div>
+	<div ng-if="create" class="sortable-btnEnviar hvr-float-shadow" ng-show="dataSortable.muestrabtnEnviar" ng-click="enviarSortable(this)">Enviar<div>
 </div>

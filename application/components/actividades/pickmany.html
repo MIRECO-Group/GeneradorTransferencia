@@ -1,7 +1,7 @@
-<div class="pickmany">
+<div class="pickmany pickmany-{{idActividad}}">
 	<div class="pickmany-pregunta" ng-repeat="(k, preg) in preguntas">
 		<div class="pickmany-pregunta-enunciado"><h3>{{preg.enunciado}}</h3></div>
 		<div class="pickmany-pregunta-items" pt-item-pick="preg.chain"></div>
 	</div>
-	<div class="hvr-float-shadow pickmany-btnEnviar" ng-click="clickBtnSend(this)" ng-show="dataPickmany.boolShowBtnSendPickmany">Enviar</div>
+	<div ng-if="create" class="hvr-float-shadow pickmany-btnEnviar" ng-click="clickBtnSend(this)" ng-show="dataPickmany.boolShowBtnSendPickmany">Enviar</div>
 </div>
