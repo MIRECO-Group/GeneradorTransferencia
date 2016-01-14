@@ -124,16 +124,78 @@
 }
 
 /*Ayuda*/
-#popup_ayuda > .popup-contenido
+div#popup_ayuda > div.popup-contenido ul li
 {
-    overflow: scroll;
-    height: 80%;
+    margin:10px 0;
+    display:flex;
+    flex-direction:row;
+
+}
+div#popup_ayuda > div.popup-contenido ul li p
+{
+    align-self:center;
+    padding-left:5px;
+
+}
+#popup_ayuda > .popup-contenido .icon_help
+{
+    font-size:2rem;
+    padding:8px;
+
+
+}
+#popup_ayuda > .popup-contenido .color_txthelp
+{
+    font-size:2rem;
+    color:#00415B;
+    margin: 0 8px;
+
+}
+
+#popup_ayuda > .popup-contenido li:nth-child(13) img
+{
+    width:41px;
+    height:217px;
+    margin: 0 5px;
+
+}
+#popup_ayuda > .popup-contenido li:nth-child(14) img
+{
+    height:22px;
+    width:218px;
+    margin: 0;		
+}
+#popup_ayuda > .popup-contenido li:nth-child(15) img
+{
+    height:31px;
+    width:219px;
+    margin: 0;	
+}
+#popup_ayuda > .popup-contenido li:nth-child(16) img
+{
+    height:22px;
+    width:94px;
+    margin:0;		
 }
 
 /*Créditos*/
 #popup_creditos > .popup-contenido
 {
-    height: 80%;
+    
+}
+
+/*Información*/
+div#popup_informacion > .popup-contenido
+{
+    overflow: hidden;
+    display: flex;
+}
+div#popup_informacion > .popup-contenido > p
+{
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+    width: 100%;
 }
 
 #popup_creditos > .popup-contenido > .creditos-texto
@@ -142,33 +204,138 @@
     height: 100%;
 }
 
-/*Mapa conceptual*/
-.popup-contenido > .mapa-texto1, .mapa-texto2
+/*Accesibilidad*/
+div#popup_accesibilidad > .popup-contenido
 {
+    display: flex;
+}
+
+div#popup_accesibilidad > .popup-contenido > div
+{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+div#popup_accesibilidad > .popup-contenido > div > h1
+{
+    color: #00415B;
+    font-size: 2rem;
     text-align: center;
 }
 
-.popup-contenido > .mapa-imagen
+div#popup_accesibilidad > .popup-contenido > div > p
 {
     text-align: center;
-    margin: 60px 0;
+    margin: 15px 0;
+    width: 100%;
 }
 
-.popup-contenido > .mapa-imagen a
+div#popup_accesibilidad > .popup-contenido > div a > img
+{
+    margin: 0 auto;
+    height: 100%;
+    width: 10%;
+}
+
+/*PDF*/
+div#popup_PDF > .popup-contenido
+{
+    display: flex;
+}
+
+div#popup_PDF > .popup-contenido > div
+{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+div#popup_PDF > .popup-contenido > div > h1
+{
+    color: #00415B;
+    font-size: 2rem;
+    text-align: center;
+}
+
+div#popup_PDF > .popup-contenido > div > p
+{
+    text-align: center;
+    margin: 15px 0;
+    width: 100%;
+}
+
+div#popup_PDF > .popup-contenido > div a
 {
     color: yellow;
     background-color: rgb(0, 73, 102);
     font-size: 3rem;
     padding: 15px;
     border-radius: 80px;
+    text-align: center;
+    width: 50px;
+    align-self: center;
+}
+
+/*Mapa conceptual*/
+div#popup_mapa_conceptual > .popup-contenido
+{
+    display: flex;
+}
+
+div#popup_mapa_conceptual > .popup-contenido > div
+{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+div#popup_mapa_conceptual > .popup-contenido > div > h1
+{
+    color: #00415B;
+    font-size: 2rem;
+    text-align: center;
+}
+
+div#popup_mapa_conceptual > .popup-contenido > div > p
+{
+    text-align: center;
+    margin: 15px 0;
+    width: 100%;
+}
+
+div#popup_mapa_conceptual > .popup-contenido > div a
+{
+    color: yellow;
+    background-color: rgb(0, 73, 102);
+    font-size: 3rem;
+    padding: 15px;
+    border-radius: 80px;
+    text-align: center;
+    width: 50px;
+    align-self: center;
 }
 
 /*popup de tabla de contenido*/
-div#popup_tabla_de_contenido > div.pop-contenido h3 span
+div#popup_tabla_de_contenido > div.popup-contenido > ul li
 {
-    font-size: 1rem;
-    margin-right: 15px;
-    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+div#popup_tabla_de_contenido > div.popup-contenido > ul li span
+{
+    font-size: 2rem;
+}
+
+div#popup_tabla_de_contenido > div.popup-contenido > ul li p
+{
+    align-self: center;
+    padding-left: 15px;
 }
 
 div#popup_tabla_de_contenido > div.pop-contenido ol

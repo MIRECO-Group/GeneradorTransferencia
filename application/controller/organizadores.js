@@ -327,9 +327,16 @@
             .directive("icoPortada", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/iconos/sensibilizacion_cierre.html"
+                    templateUrl: "application/components/iconos/portada.html"
                 };
-            }).directive("icoSabiasq", function () {
+            })
+            .directive("icoPortadaBoton", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/iconos/portada_boton.html"
+                };
+            })
+            .directive("icoSabiasq", function () {
                 return{
                     restrict: "A",
                     templateUrl: "application/components/iconos/sabiasq.html"

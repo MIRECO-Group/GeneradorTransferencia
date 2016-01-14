@@ -165,6 +165,9 @@ var BASE_DATA = {
             portada: {
                 tag: "ico-portada"
             },
+            portada_boton: {
+                tag: "ico-portada-boton"
+            },
             sensibilizacion_apertura: {
                 tag: "ico-apertura"
             },

@@ -329,8 +329,7 @@ div#content_container div.text_container .text_text_bold_italic
 div#content_container .button_portada
 {
 	border-style: none;
-	color: blue;
-	
+	color: #014359;
 	/* position: absolute; */
 	/* margin-top: 15px; */
 	/* background: #b3b3b3; */
@@ -350,9 +349,12 @@ div#content_container .button_portada
     width: 260px;
     margin-left: auto;
 }
-div#content_container .button_portada-icono {
-	float: left;
-	margin-right: -5px;
+div#content_container .button_portada-icono
+{
+    float: left;
+    margin-right: -10px;
+    margin-left: 10px;
+    margin-top: 10px;
 } 
 div#content_container .button_simple
 {
@@ -364,20 +366,22 @@ div#content_container .button_simple
     font-size: 1rem;
 }
 
- div#content_container .button_portada_text
+div#content_container .button_portada_text
 {
-	background-color: white;
+    background-color: white;
     display: block;
     font-size: 1.5rem;
     margin-top: 20px;
     overflow: hidden;
     padding: 4px 28px 4px 0;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#aaaaaa+13,f0f0f0+57,ffffff+100 */
-background: #aaaaaa; /* Old browsers */
-background: -moz-linear-gradient(top,  #aaaaaa 13%, #f0f0f0 57%, #ffffff 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #aaaaaa 13%,#f0f0f0 57%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #aaaaaa 13%,#f0f0f0 57%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#aaaaaa+13,f0f0f0+57,ffffff+100 */
+    background: #aaaaaa; /* Old browsers */
+    background: -moz-linear-gradient(top,  #aaaaaa 13%, #f0f0f0 57%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #aaaaaa 13%,#f0f0f0 57%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #aaaaaa 13%,#f0f0f0 57%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
 }
 
