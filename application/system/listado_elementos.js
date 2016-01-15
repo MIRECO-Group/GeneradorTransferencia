@@ -76,6 +76,7 @@ var componente = {
  tag: Texto. Obligatorio. Texto que aparecerá dentro del botón.
  funcion: Texto. Obligatorio. Define la funcionalidad que debe tener el botón.
  destino: Texto. Opcional. Para botones que dirigen a un popup o link específico, define hacia donde debe dirigirse.
+ clasescss: Texto. Opcional. Adiciona clase css(animaciones etc). 
  */
 
 var componente = {
@@ -84,25 +85,41 @@ var componente = {
     atributos: {
         tag: "Enviar",
         funcion: "iniciar_examen",
-        destino: "glosario"
+        destino: "glosario",
+        clasescss: "animated pulse infinite"
     }
 };
-//REPRODUCTOR
-/*
- tipo: Texto. OBLIGATORIO. Corresponde al tipo de archivo multimedia a ser reproducido (audio/video).
- url: Texto con formato URL. OBLIGATORIO. Corresponde a la ruta donde se encuentra el archivo multimedia a reproducir.
- imagen_reproductor: Texto con formato URL. OPCIONAL. Corresponde a la ruta donde se encuentra la imagen a mostrar por defecto en el reproductor (antes de dar play si es un video, siempre si es un audio).
- */
+//REPRODUCTOR DE AUDIO Y VÍDEO
+
+/*Componente audio*/
+
 var componente = {
     tipo: "reproductor",
-    estilo: "reproductor_basico",
+    estilo: "boton_pequeno",
     atributos: {
-        tipo: "audio/video",
-        url: "media/audio/melones.mp3",
-        imagen_reproductor: "img/melon.png",
+        tipo: "audio",
+        url: "media/audio/audio1.mp3",
         descripcion: ""
     }
 };
+
+/*Componente video*/
+
+var componente = {
+	tipo: "reproductor",
+	estilo: "video",
+	atributos: {
+	    tipo: "video",
+	    url: "media/video/video1.mp4",
+	    poster: "img/leon.jpg",
+	    descripcion: "",
+	    autoplay: true,
+	    controls: false,
+	    loop: true
+	}
+}
+
+
 //LISTA
 /*
  enunciado: Texto. OPCIONAL. Corresponde a un texto introductorio que precede a la lista.

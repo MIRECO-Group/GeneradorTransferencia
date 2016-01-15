@@ -156,6 +156,9 @@ var BASE_DATA = {
             },
             noolvideq: {
                 tag: "pt-boton-noolvideq"
+            },
+            lineanarrativa: {
+	    tag: "pt-boton-lineanarrativa"
             }
         },
         icono: {

@@ -161,7 +161,7 @@
 
 .org_pes_lat>div.tipoa h1
 {
-    border-bottom: 2px solid #C9EFF1;
+    border-bottom: 2px solid #004C5F;
     padding: 5px 0;
 }
 
@@ -250,7 +250,7 @@ html, body{
 }
 
 .org_bot_num_bol>div>div h1 {
-    border-bottom: 2px solid #C9EFF1;
+    border-bottom: 2px solid #004C5F;
     color: #357181;
     margin-bottom: 30px;
     padding-bottom: 4px;
@@ -442,7 +442,7 @@ html, body{
 }
 
 .org_bot_num>div>div h1 {
-    border-bottom: 2px solid #C9EFF1;
+    border-bottom: 2px solid #004C5F;
     color: #357181;
     padding-bottom: 4px;
 }
@@ -531,7 +531,7 @@ html, body{
 }
 
 .org_int_sli_est>div>div h1 {
-    border-bottom: 2px solid #C9EFF1;
+    border-bottom: 2px solid #004C5F;
     color: #357181;
     margin-bottom: 30px;
     padding-bottom: 4px;

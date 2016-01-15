@@ -13,7 +13,7 @@
                 return {
                     textosSabiasQue: null,
                     textosNoOlvideQue: null,
-                    textosInforma: null
+                    textosLineaNarrativa: null
                 };
             }])
             //<editor-fold defaultstate="collapsed" desc="TABS">
@@ -527,6 +527,16 @@
                     }
                 };
             })
+            .directive("ptBotonLineanarrativa", function () {
+                return {
+                    restrict: "A",
+                    templateUrl: "application/components/simples/botones/linea_narrativa.html",
+                    controller: "botonController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptBotonActividad", function () {
                 return{
                     restrict: "A",
@@ -547,7 +557,7 @@
                     }
                 };
             })
-            .controller("botonController", function ($scope, $contenido, $compile, $render, $plantilla, $popupSabiasQue, $popupNoOlvideQue, $popupInforma, datosPopupsSabiasNoolvide) {
+            .controller("botonController", function ($scope, $contenido, $compile, $render, $plantilla, $popupSabiasQue, $popupNoOlvideQue, $popupLineaNarrativa, datosPopupsSabiasNoolvide) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
@@ -569,11 +579,11 @@
                                 $scope.dataPopupsSabiasNoolvide.textosNoOlvideQue = $scope.atributos.textosPopupDestino;
                                 $popupNoOlvideQue.jQueryCompile($compile, $scope, true);
                             }
-                            if ($scope.atributos.destino == "popup_informa") {
-                                $scope.dataPopupsSabiasNoolvide.textosInforma = $scope.atributos.textosPopupDestino;
-                                $popupInforma.jQueryCompile($compile, $scope, true);
+                            if ($scope.atributos.destino == "popup_linea_narrativa") {
+                                $scope.dataPopupsSabiasNoolvide.textosLineaNarrativa = $scope.atributos.textosPopupDestino;
+                                $popupLineaNarrativa.jQueryCompile($compile, $scope, true);
                             }
-                        break;
+                            break;
                         default:
                             console.warn("Funcion de botón no definida",
                             $scope.atributos.funcion, $scope.atributos);
@@ -792,13 +802,26 @@
                 $scope.idxAudio = "";
                 $scope.idxAudio = this.chainId.toString().replace(",","-");
                 $scope.idxAudio = "aud"+$scope.idxAudio;
+                //para el audio
                 $scope.objAudios = $($scope.parentObj).find("audio");
                 $scope.objAudio = $scope.objAudios[0];
                 $($scope.objAudio).attr("src",$scope.atributos.url);
                 $($scope.objAudio).attr("data-idxaud",$scope.idxAudio);
-                audiojs.events.ready(function() {
-                    audiojs.create($scope.objAudio);
-                });
+                if ($scope.objAudio) {
+                    audiojs.events.ready(function() {
+                        audiojs.create($scope.objAudio);
+                    });
+                }
+                //para el vídeo
+                $scope.objVideos = $($scope.parentObj).find("video");
+                $scope.objVideo = $scope.objVideos[0];
+                if ($scope.objVideo) {
+                    console.log("Está dentro del vídeo");
+                    videojs.options.flash.swf = "../../media/swf/video-js.swf";
+                    $($scope.objVideo).attr("controls",$scope.atributos.controls);
+                    $($scope.objVideo).attr("loop",$scope.atributos.loop);
+                    $($scope.objVideo).attr("autoplay",$scope.atributos.autoplay);
+                }
             })
             //</editor-fold>
             ;
@@ -837,18 +860,18 @@
             $element.remove();
         };
     });
-    moduloOrganizadores.directive("ptPopupinforma", function () {
+    moduloOrganizadores.directive("ptPopuplineanarrativa", function () {
         return {
             restrict: "A",
-            templateUrl: "application/components/pops/popupInforma.html",
-            controller: "popupInformaController",
+            templateUrl: "application/components/pops/popupLineaNarrativa.html",
+            controller: "popupLineaNarrativaController",
             scope: {
-                "ptPopupinformaest": '='
+                "ptPopuplineanarrativaest": '='
             }
         };
     });
-    moduloOrganizadores.controller("popupInformaController", function ($scope, $element, $popupInforma, datosPopupsSabiasNoolvide) {
-        $scope.mostrar = $scope.ptPopupinformaest;
+    moduloOrganizadores.controller("popupLineaNarrativaController", function ($scope, $element, $popupLineaNarrativa, datosPopupsSabiasNoolvide) {
+        $scope.mostrar = $scope.ptPopuplineanarrativaest;
         $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
         $scope.cerrar = function () {
             $element.remove();
@@ -888,11 +911,11 @@
             }
         };
     });
-    moduloOrganizadores.factory("$popupInforma", function ($render) {
+    moduloOrganizadores.factory("$popupLineaNarrativa", function ($render) {
             var creaPopup = function($compile, $scope, $clase) {
             var render = $("<div/>", {
-                "pt-popupinforma": "",
-                "pt-popupinformaest": JSON.stringify($clase)
+                "pt-popuplineanarrativa": "",
+                "pt-popuplineanarrativaest": JSON.stringify($clase)
             });
                
             if (render) {
