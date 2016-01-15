@@ -314,7 +314,7 @@ div#content_container
     overflow: auto;
     margin: -20px 10px 0px;
     height: 100%;
-    flex: 5 1 80%;
+    flex: 5 1 auto;
     display: flex;
     padding: 20px 5px 5px;
 }

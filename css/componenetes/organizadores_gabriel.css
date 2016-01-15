@@ -303,7 +303,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   width: 100%;
 }
 .org_aco-acordeon h1{
-    border-bottom: 2px solid #C9EFF1;
+    border-bottom: 2px solid #004C5F;
     padding: 5px 0;
 }
 .org_aco-acordeon-contenBtnContainer {
@@ -862,10 +862,10 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
     overflow-y: auto;
   }
 }
-/*********************/
-/*Popup No olvide qué*/
-/*********************/
-.popupNoOlvideQue-capaOpacidad {
+/*****************************/
+/****Popup Linea Narrativa****/
+/*****************************/
+.popupLineaNarrativa-capaOpacidad {
   background: rgba(0,0,0,0.8);
   position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
@@ -877,116 +877,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   -webkit-pointer-events: auto;
   pointer-events: auto;
 }
-.popupNoOlvideQue-contenedor {
-  position: absolute;
-  background-color: white;
-  top: 50%;
-  left: 50%;
-  border-radius: 8px;
-  border: 3px solid #00A3AA;
-  width: 98%;
-  max-width: 800px;
-  -moz-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  z-index: 10;
-}
-.popupNoOlvideQue-title {
-  display: block;
-  background-color: #00A3AA;
-  height: 44px;
-  font-size: 24px;
-  text-indent: 100px;
-  color: white;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  -ms-align-items: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -ms-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-.popupNoOlvideQue-title-btnCerrar {
-  margin-right: 20px;
-  cursor: pointer;
-}
-.popupNoOlvideQue-contenido {
-  padding: 35px 0;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  -ms-align-items: flex-start;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-  -ms-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-.popupNoOlvideQue-contenido-texto {
-  margin-left: 40px;
-  font-size: 16px;
-  line-height: 20px;
-  margin-top: 12px;
-  margin: 12px 20px 0 40px;
-  text-align: justify;
-}
-.popupNoOlvideQue-contenido-imagen {
-  width: 37.5%;
-  max-width: 200px;
-  min-width: 124px;
-  height: 210px;
-  background-image: url('../../img/noolvideque-persona.png');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-  margin: 0 10px;
-}
-.popupNoOlvideQue-icon {
-  width: 86px;
-  height: 92px;
-  top: 0; left: 0;
-  margin-left: -20px;
-  margin-top: -20px;
-  background-image: url('../../img/noolvideque-icon.png');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-  position: absolute;
-}
-@media screen and (max-width: 320px) {
-  .popupNoOlvideQue-contenido-imagen {
-    display: none;
-  }
-  .popupNoOlvideQue-contenido-texto {
-    margin: 0 14px;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 520px) {
-  .popupNoOlvideQue-contenido-texto {
-    margin: 0 0 0 24px;
-    max-height: 240px;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-}
-/*********************/
-/****Popup Informa****/
-/*********************/
-.popupInforma-capaOpacidad {
-  background: rgba(0,0,0,0.8);
-  position: fixed;
-  top: 0; bottom: 0; left: 0; right: 0;
-  z-index: 10;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  -moz-pointer-events: auto;
-  -webkit-pointer-events: auto;
-  pointer-events: auto;
-}
-.popupInforma-contenedor {
+.popupLineaNarrativa-contenedor {
   position: absolute;
   background-color: white;
   top: 50%;
@@ -1000,7 +891,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   transform: translate(-50%,-50%);
   z-index: 10;
 }
-.popupInforma-title {
+.popupLineaNarrativa-title {
   display: block;
   background-color: #00647C;
   height: 44px;
@@ -1017,11 +908,11 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-.popupInforma-title-btnCerrar {
+.popupLineaNarrativa-title-btnCerrar {
   margin-right: 20px;
   cursor: pointer;
 }
-.popupInforma-contenido {
+.popupLineaNarrativa-contenido {
   padding: 35px 0;
   display: -ms-flex;
   display: -webkit-flex;
@@ -1033,7 +924,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-.popupInforma-contenido-texto {
+.popupLineaNarrativa-contenido-texto {
   margin-left: 40px;
   font-size: 16px;
   line-height: 20px;
@@ -1041,40 +932,39 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   margin: 12px 20px 0 40px;
   text-align: justify;
 }
-.popupInforma-contenido-imagen {
+.popupLineaNarrativa-contenido-imagen {
   width: 50%;
   max-width: 250px;
   min-width: 124px;
   height: 210px;
-  background-image: url('../../img/popupInforma-persona.png');
+  background-image: url('../../img/popupLineaNarrativa-persona.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
   margin: 0 10px;
 }
-.popupInforma-icon {
+.popupLineaNarrativa-icon {
   width: 40px;
   height: 34px;
   margin-left: 10px;
-  background-image: url('../../img/popupInforma-icon.png');
+  background-image: url('../../img/popupLineaNarrativa-icon.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
 }
 @media screen and (max-width: 320px) {
-  .popupInforma-contenido-imagen {
+  .popupLineaNarrativa-contenido-imagen {
     display: none;
   }
-  .popupInforma-contenido-texto {
+  .popupLineaNarrativa-contenido-texto {
     margin: 0 14px;
   }
 }
 @media screen and (min-width: 321px) and (max-width: 520px) {
-  .popupInforma-contenido-texto {
+  .popupLineaNarrativa-contenido-texto {
     margin: 0 0 0 24px;
     max-height: 240px;
     overflow-x: hidden;
     overflow-y: auto;
   }
 }
-
