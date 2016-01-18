@@ -10,10 +10,13 @@
 (function () {
     var moduloOrganizadores = angular.module("organizadores", [])
             moduloOrganizadores.service('datosPopupsSabiasNoolvide', [function () {
-                return {
+            return {
                     textosSabiasQue: null,
                     textosNoOlvideQue: null,
-                    textosLineaNarrativa: null
+                    textosLineaNarrativa: null,
+                    urlVideoSabiasQue: "",
+                    urlVideoNoOlvideQUe: "",
+                    urlVideoLineaNarrativa: ""
                 };
             }])
             //<editor-fold defaultstate="collapsed" desc="TABS">
@@ -573,24 +576,27 @@
                         case "abrir_popup":
                             if ($scope.atributos.destino == "popup_sabias_que") {
                                 $scope.dataPopupsSabiasNoolvide.textosSabiasQue = $scope.atributos.textosPopupDestino;
+                                $scope.dataPopupsSabiasNoolvide.urlVideoSabiasQue = $scope.atributos.urlVideo;
                                 $popupSabiasQue.jQueryCompile($compile, $scope, true);
                             }
                             if ($scope.atributos.destino == "popup_no_olvide_que") {
                                 $scope.dataPopupsSabiasNoolvide.textosNoOlvideQue = $scope.atributos.textosPopupDestino;
+                                $scope.dataPopupsSabiasNoolvide.urlVideoNoOlvideQue = $scope.atributos.urlVideo;
                                 $popupNoOlvideQue.jQueryCompile($compile, $scope, true);
                             }
                             if ($scope.atributos.destino == "popup_linea_narrativa") {
                                 $scope.dataPopupsSabiasNoolvide.textosLineaNarrativa = $scope.atributos.textosPopupDestino;
+                                $scope.dataPopupsSabiasNoolvide.urlVideoLineaNarrativa = $scope.atributos.urlVideo;
                                 $popupLineaNarrativa.jQueryCompile($compile, $scope, true);
                             }
                             break;
                         default:
                             console.warn("Funcion de botón no definida",
-                            $scope.atributos.funcion, $scope.atributos);
-                        break;
+                                    $scope.atributos.funcion, $scope.atributos);
+                            break;
                     }
                 };
-                
+
                 /*
                  * Abre un popup basado en el atributo Destino configurado
                  */
@@ -838,6 +844,13 @@
     });
     moduloOrganizadores.controller("popupSabiasQueController", function ($scope, $element, datosPopupsSabiasNoolvide) {
         $scope.mostrar = $scope.ptPopupsabiasqueest;
+        /*this.chainId = $scope.ptPopupsabiasqueest;
+         var element = $contenido.get_element_page(this.chainId);
+         $scope.parentObj = angular.element($element)[0];*/
+        $scope.parentObj = angular.element($element)[0];
+        $scope.objVideos = $($scope.parentObj).find("video");
+        $scope.objVideo = $scope.objVideos[0];
+        //$scope.atributos = element.atributos;
         $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
         $scope.cerrar = function () {
             $element.remove();
@@ -855,6 +868,9 @@
     });
     moduloOrganizadores.controller("popupNoOlvideQueController", function ($scope, $element, $popupNoOlvideQue, datosPopupsSabiasNoolvide) {
         $scope.mostrar = $scope.ptPopupnoolvidequeest;
+        $scope.parentObj = angular.element($element)[0];
+        $scope.objVideos = $($scope.parentObj).find("video");
+        $scope.objVideo = $scope.objVideos[0];
         $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
         $scope.cerrar = function () {
             $element.remove();
@@ -872,6 +888,9 @@
     });
     moduloOrganizadores.controller("popupLineaNarrativaController", function ($scope, $element, $popupLineaNarrativa, datosPopupsSabiasNoolvide) {
         $scope.mostrar = $scope.ptPopuplineanarrativaest;
+        $scope.parentObj = angular.element($element)[0];
+        $scope.objVideos = $($scope.parentObj).find("video");
+        $scope.objVideo = $scope.objVideos[0];
         $scope.dataPopupsSabiasNoolvide = datosPopupsSabiasNoolvide;
         $scope.cerrar = function () {
             $element.remove();

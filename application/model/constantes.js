@@ -131,6 +131,7 @@ var BASE_DATA = {
             //</editor-fold>
         },
         imagen: {
+            //<editor-fold defaultstate="collapsed" desc="Imágenes">
             basica: {
                 tag: "pt-imagen"
             },
@@ -143,6 +144,7 @@ var BASE_DATA = {
             basica_organizador: {
                 tag: "pt-imagen-simple-organizador"
             }
+            //</editor-fold>
         },
         boton: {
             actividad: {

@@ -30,7 +30,7 @@
         </div>
 
         <div class="boton">
-            <button class="button_simple" ng-click="setTab(1)">
+            <button class="button_simple hvr-float-shadow" ng-click="setTab(1)">
                 <span class="button_simple_text">Inicio</span>
             </button>
         </div>
@@ -40,7 +40,7 @@
         <div class="pregunta" ng-repeat="(key, tab) in tabs" ng-show="isSet(key)" pt-new-tab="tab.chain"></div>
         <div class="botonera">
             <div>
-                <button class="button_simple">
+                <button ng-if="tab==cantTabs" class="button_simple hvr-float-shadow" ng-click="enviarEvaluacion(); setTab(cantTabs+1);">
                     <span class="button_simple_text">Enviar</span>
                 </button>
                 
@@ -50,6 +50,17 @@
                     <span class="transfe_font" ng-class="setNextArrowActive()" ng-click="addTab()">></span>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="cierre-preguntas-conocimiento" ng-show="isSet(cantTabs+1)">
+        <div>
+            <img src="img/bombillo.png" alt="bombillo"/>
+        </div>
+        <div>
+            <p>!Muy bien! Ha completado <br><br>las preguntas de <br><br>conocimientos estos fueron<br><br> sus resultados</p>
+            <br><br>
+            <span>{{porcentaje}}%</span>
         </div>
     </div>
 </div>

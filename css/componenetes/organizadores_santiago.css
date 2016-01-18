@@ -293,6 +293,7 @@ div#content_container div.text_container .text_text
 {
     padding: 5px 5px 5px 15px;
     line-height: 25px;
+    width:100%;
 }
 /* Párrafo centrado */
 div#content_container div.text_container .text_text_center

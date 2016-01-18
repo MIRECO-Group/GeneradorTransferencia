@@ -326,7 +326,6 @@ footer
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: stretch;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1fb5ae+0,57e6eb+50,28ced4+51,0c9494+100&0.7+0,0.7+100 */
     background: -moz-linear-gradient(top, rgba(31,181,174,0.7) 0%, rgba(87,230,235,0.7) 50%, rgba(40,206,212,0.7) 51%, rgba(12,148,148,0.7) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(31,181,174,0.7) 0%,rgba(87,230,235,0.7) 50%,rgba(40,206,212,0.7) 51%,rgba(12,148,148,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(31,181,174,0.7) 0%,rgba(87,230,235,0.7) 50%,rgba(40,206,212,0.7) 51%,rgba(12,148,148,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -348,6 +347,7 @@ footer > ul#left_buttons
     justify-content: flex-start;
     align-items: inherit;
 }
+
 footer > ul#left_buttons > li span /*tooltips*/
 {
     position: absolute;
@@ -363,6 +363,7 @@ footer > ul#left_buttons > li:nth-child(1) > input[type="button"] /*Bot�n Port
     color: white;
     padding: 15% 20%;
     height: 100%;
+    width: 3.5rem;
     background: #004c5e;
     background: -moz-linear-gradient(top, #004c5e 0%, #147290 50%, #1b4b5b 50%, #1e3547 90%);
     background: -webkit-linear-gradient(top, #004c5e 0%,#147290 50%,#1b4b5b 50%,#1e3547 90%);
@@ -389,6 +390,7 @@ footer > ul#left_buttons > li:nth-child(2) > input[type="button"] /*Bot�n Bibl
     display: block;
     padding: 15% 20%;
     height: 100%;
+    width: 3.5rem;
     background: #1fb5ae;
     background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
@@ -418,6 +420,7 @@ footer > ul#left_buttons > li:nth-child(3) > input[type="button"] /*Bot�n Glos
     display: block;
     padding: 15% 20%;
     height: 100%;
+    width: 3.5rem;
     background: #1fb5ae;
     background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
@@ -547,6 +550,7 @@ footer > ul#right_buttons > li:nth-child(1) > input[type="button"] /*Bot�n Map
     display: block;
     padding: 15% 20%;
     height: 100%;
+    width: 3.5rem;
     background: #1fb5ae;
     background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
@@ -576,6 +580,7 @@ footer > ul#right_buttons > li:nth-child(2) > input[type="button"] /*Bot�n Des
     display: block;
     padding: 15% 20%;
     height: 100%;
+    width: 3.5rem;
     background: #1fb5ae;
     background: -moz-linear-gradient(top, #1fb5ae 0%, #57e6eb 50%, #28ced4 51%, #0c9494 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #1fb5ae), color-stop(50%, #57e6eb), color-stop(51%, #28ced4), color-stop(100%, #0c9494));
@@ -604,6 +609,7 @@ footer > ul#right_buttons > li:nth-child(3) > input[type="button"]
     color: white;
     padding: 15% 20%;
     height: 100%;
+    width: 3.5rem;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background: #004c5e;

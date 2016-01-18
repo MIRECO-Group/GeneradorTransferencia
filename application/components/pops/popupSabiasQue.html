@@ -10,7 +10,18 @@
 				{{item}}<br/><br/>
 			</span>				
 		</div>
-		<div class="popupSabiasQue-contenido-imagen"/>
+		<div class="popupSabiasQue-contenido-video">
+			<video class="video video-js vjs-default-skin vjs-big-play-centered"
+		           preload="auto"
+		           autoplay
+		           loop
+		           data-setup='{"example_option":true}'>
+		        <source src="{{dataPopupsSabiasNoolvide.urlVideoSabiasQue}}" type='video/mp4' />
+		        <source src="{{dataPopupsSabiasNoolvide.urlVideoSabiasQue}}" type='video/webm' />
+		        <source src="{{dataPopupsSabiasNoolvide.urlVideoSabiasQue}}" type='video/ogg' />
+		        <p class="vjs-no-js">Para ver este video, por favor habilite JavaScript en su navegador</p>
+		    </video>
+		</div>
 	</div>
 	<div class="popupSabiasQue-icon"/>
 </div>

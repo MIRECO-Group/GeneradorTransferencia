@@ -823,16 +823,15 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   margin: 12px 20px 0 40px;
   text-align: justify;
 }
-.popupSabiasQue-contenido-imagen {
+.popupSabiasQue-contenido-video {
   width: 37.5%;
+  margin: 0 36px 0 10px;
   max-width: 200px;
   min-width: 124px;
-  height: 210px;
-  background-image: url('../../img/sabiasque-persona.png');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-  margin: 0 10px;
+}
+.popupSabiasQue-contenido-video .video-js {
+  background-color: transparent;
+  width: 100%;
 }
 .popupSabiasQue-icon {
   width: 96px;
@@ -847,7 +846,8 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   position: absolute;
 }
 @media screen and (max-width: 320px) {
-  .popupSabiasQue-contenido-imagen {
+  .popupSabiasQue-contenido-imagen,
+  .popupSabiasQue-contenido-video {
     display: none;
   }
   .popupSabiasQue-contenido-texto {
@@ -856,6 +856,115 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 }
 @media screen and (min-width: 321px) and (max-width: 520px) {
   .popupSabiasQue-contenido-texto {
+    margin: 0 0 0 24px;
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+/*********************/
+/*Popup No olvide qué*/
+/*********************/
+.popupNoOlvideQue-capaOpacidad {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: 10;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -moz-pointer-events: auto;
+  -webkit-pointer-events: auto;
+  pointer-events: auto;
+}
+.popupNoOlvideQue-contenedor {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  border: 3px solid #00A3AA;
+  width: 98%;
+  max-width: 800px;
+  -moz-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+.popupNoOlvideQue-title {
+  display: block;
+  background-color: #00A3AA;
+  height: 44px;
+  font-size: 24px;
+  text-indent: 100px;
+  color: white;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupNoOlvideQue-title-btnCerrar {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.popupNoOlvideQue-contenido {
+  padding: 35px 0;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popupNoOlvideQue-contenido-texto {
+  margin-left: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin: 12px 20px 0 40px;
+  text-align: justify;
+}
+.popupNoOlvideQue-contenido-video {
+  width: 37.5%;
+  margin: 0 36px 0 10px;
+  max-width: 200px;
+  min-width: 124px;
+}
+.popupNoOlvideQue-contenido-video .video-js {
+  background-color: transparent;
+  width: 100%;
+}
+.popupNoOlvideQue-icon {
+  width: 86px;
+  height: 92px;
+  top: 0; left: 0;
+  margin-left: -20px;
+  margin-top: -20px;
+  background-image: url('../../img/noolvideque-icon.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  position: absolute;
+}
+@media screen and (max-width: 320px) {
+  .popupNoOlvideQue-contenido-imagen,
+  .popupNoOlvideQue-contenido-video {
+    display: none;
+  }
+  .popupNoOlvideQue-contenido-texto {
+    margin: 0 14px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 520px) {
+  .popupNoOlvideQue-contenido-texto {
     margin: 0 0 0 24px;
     max-height: 240px;
     overflow-x: hidden;
@@ -932,6 +1041,16 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   margin: 12px 20px 0 40px;
   text-align: justify;
 }
+.popupLineaNarrativa-contenido-video {
+  width: 37.5%;
+  margin: 0 36px 0 10px;
+  max-width: 200px;
+  min-width: 124px;
+}
+.popupLineaNarrativa-contenido-video .video-js {
+  background-color: transparent;
+  width: 100%;
+}
 .popupLineaNarrativa-contenido-imagen {
   width: 50%;
   max-width: 250px;
@@ -953,7 +1072,8 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background-position: center;
 }
 @media screen and (max-width: 320px) {
-  .popupLineaNarrativa-contenido-imagen {
+  .popupLineaNarrativa-contenido-imagen,
+  .popupLineaNarrativa-contenido-video {
     display: none;
   }
   .popupLineaNarrativa-contenido-texto {
