@@ -70,11 +70,22 @@ div.img_simple_org
 {
     display: flex;
     position: relative;
-    width: 80%;
+    /*width: 80%;*/
     border: solid 2px rgba(128, 128, 128, 0.5);
     border-radius: 15px;
     overflow: hidden;
     margin: 15px auto;
+    height: 300px;
+    width: 300px;
+}
+
+@media (max-width: 750px){
+    div.img_simple_org
+    {
+        height: 100px;
+        width: 100px;
+    }
+
 }
 
 div.img_container img, div.img_full img, div.img_mitad, div.img_simple_org img
@@ -175,7 +186,7 @@ div#popup_accesibilidad img{
 
 div#content_container div.title_container
 {
-    padding-left:25px;
+    /*padding-left:25px;*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -217,7 +228,7 @@ div#content_container div.title_subtitle_text
 /*Estilo del título básico*/
 div#content_container div.title_basic
 {
-    padding-left:25px;
+    /*padding-left:25px;*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -315,6 +326,15 @@ div#content_container div.text_container .text_text_bold_center
 {
     text-align: center;
     font-weight: bold;
+    padding: 5px 5px 5px 15px;
+}
+
+/* Párrafo en negrilla con color azul */
+div#content_container div.text_container .text_text_bold_color
+{
+    text-align: left;
+    font-weight: bold;
+    color: #00415B;
     padding: 5px 5px 5px 15px;
 }
 

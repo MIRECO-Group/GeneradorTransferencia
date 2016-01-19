@@ -8,7 +8,9 @@
 
     actividades.service('datosPreguntasConocimiento', [function () {
         return {
-            objetoRetro: {}
+            objetoRetro: {},
+            objetoTipo: [0,0,0,0],
+            arrayTipo: ["drag_drop", "pick_many", "select", "sortable"]
         };
     }]);
 
@@ -126,10 +128,18 @@
 
         var page = $plantilla.get_obj_pagina(this.chainId[0]);
 
-        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento'){
             $scope.create = false;
-        else
+            for(var i=0;i<datosPreguntasConocimiento.arrayTipo.length;i++){
+                if(datosPreguntasConocimiento.arrayTipo[i] == "drag_drop"){
+                    datosPreguntasConocimiento.objetoTipo[i] = 1;
+                    break;
+                }
+            }
+        }
+        else{
             $scope.create = true;
+        }
 
         $scope.preguntas = element.atributos.preguntas[1];
         $scope.preg = JSON.parse($scope.preguntas.chain);
@@ -343,10 +353,18 @@
 
         var page = $plantilla.get_obj_pagina(this.chainId[0]);
 
-        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento'){
             $scope.create = false;
-        else
+            for(var i=0;i<datosPreguntasConocimiento.arrayTipo.length;i++){
+                if(datosPreguntasConocimiento.arrayTipo[i] == "select"){
+                    datosPreguntasConocimiento.objetoTipo[i] = 1;
+                    break;
+                }
+            }
+        }
+        else{
             $scope.create = true;
+        }
 
         $scope.dataListaDesplegable = datosListaDesplegable;
         $scope.dataListaDesplegable.muestrabtnEnviar = false;
@@ -529,10 +547,18 @@
 
         var page = $plantilla.get_obj_pagina(this.chainId[0]);
 
-        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento'){
             $scope.create = false;
-        else
+            for(var i=0;i<datosPreguntasConocimiento.arrayTipo.length;i++){
+                if(datosPreguntasConocimiento.arrayTipo[i] == "sortable"){
+                    datosPreguntasConocimiento.objetoTipo[i] = 1;
+                    break;
+                }
+            }
+        }
+        else{
             $scope.create = true;
+        }
 
         $scope.preguntas = element.atributos.preguntas[1];
         $scope.vectorInicial = element.atributos.preguntas[1].orden.slice();
@@ -570,7 +596,6 @@
         });
 
         $scope.$on('preguntasConocimiento-sortable', function(event, args) {
-            console.log('sortable');
             $scope.corS = true;
             $('.sortable-contenedor-'+that.chainId.join("")+' .sortable-items li').each(function(indice, elementos){
                 if($(this).attr('numero')!=$scope.preguntas.orden[indice]){
@@ -808,15 +833,23 @@
         $scope.domParentPickmany = angular.element($element)[0];
         $.each(element.atributos.preguntas, function (key, value) {
             value.chain = JSON.stringify(that.chainId.concat([(key)]));
-            value.keyPreg = key;
+            value.keyPreg = JSON.parse(value.chain).join("");
         });
 
         var page = $plantilla.get_obj_pagina(this.chainId[0]);
 
-        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento')
+        if($plantilla.get_recursos_pagina(page.numberID).nombre=='preguntas de conocimiento'){
             $scope.create = false;
-        else
+            for(var i=0;i<datosPreguntasConocimiento.arrayTipo.length;i++){
+                if(datosPreguntasConocimiento.arrayTipo[i] == "pick_many"){
+                    datosPreguntasConocimiento.objetoTipo[i] = 1;
+                    break;
+                }
+            }
+        }
+        else{
             $scope.create = true;
+        }
 
         $scope.atributos = element.atributos;
         $scope.preguntas = element.atributos.preguntas;
@@ -880,9 +913,10 @@
         }
         //Crea el objeto con las respuestas
         $scope.registraRespuestas = function() {
-            $scope.objDomJqActividad = $($scope.domParentPickmany).find(".pickmany");
+            $scope.objDomJqActividad = $($scope.domParentPickmany).find(".pickmany-" + that.chainId.join(""));
+
             for ( var i=1; i<=$scope.cantPreguntas; i++ ) {
-                var obj = $(" input[name='"+i+"']",$scope.objDomJqActividad);
+                var obj = $("input[name='"+$scope.preguntas[i].keyPreg+"']",$scope.objDomJqActividad);
                 var arr1 = [];
                 for (var j=0; j<obj.length; j++ ) {
                     if ( obj[j].checked )
@@ -909,9 +943,9 @@
         }
         //asigna las respuestas correctas a los inputs
         $scope.asignaCorrectasAInputs = function() {
-            $scope.objDomJqActividad = $($scope.domParentPickmany).find(".pickmany");
+            $scope.objDomJqActividad = $($scope.domParentPickmany).find(".pickmany-" + that.chainId.join(""));
             for ( var i=1; i<=$scope.cantPreguntas; i++ ) {
-                var obj = $(" input[name='"+i+"']",$scope.objDomJqActividad);
+                var obj = $(" input[name='"+$scope.preguntas[i].keyPreg+"']",$scope.objDomJqActividad);
                 for (var j=0; j<obj.length; j++ ) {
                     if( $scope.preguntas[i].respuesta.indexOf(parseInt(obj[j].getAttribute("value"))) != -1 )
                         obj[j].checked = true;
@@ -924,9 +958,9 @@
         };
         //habilita/deshabilita todos los inputs
         $scope.disabledAllInputs = function(boolAllDisabled) {
-            $scope.objDomJqActividad = $($scope.domParentPickmany).find(".pickmany");
+           $scope.objDomJqActividad = $($scope.domParentPickmany).find(".pickmany-" + that.chainId.join(""));
             for ( var i=1; i<=$scope.cantPreguntas; i++ ) {
-                var obj = $(" input[name='"+i+"']",$scope.objDomJqActividad);
+                var obj = $(" input[name='"+$scope.preguntas[i].keyPreg+"']",$scope.objDomJqActividad);
                 for (var j=0; j<obj.length; j++ )
                     obj[j].disabled = boolAllDisabled;
             }

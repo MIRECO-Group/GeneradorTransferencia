@@ -104,7 +104,7 @@
 .popup-contenido {
     background-color: white;
     overflow: auto;
-    padding: 20px 10px;
+    padding: 25px 10px;
     -ms-flex-grow: 1;
     -webkit-flex-grow: 1;
     flex-grow: 1;
@@ -120,21 +120,28 @@
 {
     overflow-y: auto;
     overflow-x: hidden;
-    height: 80%;
+    height: auto;
+    max-height: 80%;
 }
 
 /*Ayuda*/
-div#popup_ayuda > div.popup-contenido ul li
+div#popup_ayuda > div.popup-contenido ul li:nth-child(1)
 {
     margin:10px 0;
     display:flex;
     flex-direction:row;
+}
 
+div#popup_ayuda > div.popup-contenido ul li
+{
+    margin:30px 0;
+    display:flex;
+    flex-direction:row;
 }
 div#popup_ayuda > div.popup-contenido ul li p
 {
     align-self:center;
-    padding-left:5px;
+    padding-left:20px;
 
 }
 #popup_ayuda > .popup-contenido .icon_help
@@ -152,12 +159,17 @@ div#popup_ayuda > div.popup-contenido ul li p
 
 }
 
+#popup_ayuda > .popup-contenido li:nth-child(13)
+{
+    margin: 20px 0;
+
+}
+
 #popup_ayuda > .popup-contenido li:nth-child(13) img
 {
     width:41px;
     height:217px;
     margin: 0 5px;
-
 }
 #popup_ayuda > .popup-contenido li:nth-child(14) img
 {
@@ -322,10 +334,23 @@ div#popup_mapa_conceptual > .popup-contenido > div a
 /*popup de tabla de contenido*/
 div#popup_tabla_de_contenido > div.popup-contenido > ul li
 {
-    margin: 15px 0;
+    margin: 10px 0;
     display: flex;
     flex-direction: row;
 }
+
+div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul
+{
+    list-style-type: disc;
+    margin-left: 50px;
+    width: 100%;
+}
+
+div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul li
+{
+    list-style-type: disc;
+}
+
 
 div#popup_tabla_de_contenido > div.popup-contenido > ul li span
 {

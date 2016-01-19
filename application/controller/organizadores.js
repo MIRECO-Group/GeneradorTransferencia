@@ -131,13 +131,20 @@
                 }
 
                 $scope.enviarEvaluacion = function(){
-                    var objetoActividades = $scope.listaAcividades();
-                    /*$.each(objetoActividades, function (key, value) {
+                    /*var objetoActividades = $scope.listaAcividades();
+                    $.each(objetoActividades, function (key, value) {
                         $scope.$broadcast("preguntasConocimiento-" + value.tipo, value.id.concat(1));
-                    });*/
+                    });
                     for (var i = objetoActividades.length - 1; i >= 0; i--) {
                         $scope.$broadcast("preguntasConocimiento-" + objetoActividades[i]);
+                    };*/
+
+                    for (var i = datosPreguntasConocimiento.objetoTipo.length - 1; i >= 0; i--) {
+                        if(datosPreguntasConocimiento.objetoTipo[i] == 1){
+                            $scope.$broadcast("preguntasConocimiento-" + datosPreguntasConocimiento.arrayTipo[i]);
+                        }
                     };
+
                     var correctas = 0;
                     
                     $.each(datosPreguntasConocimiento.objetoRetro, function (key, value) {
@@ -409,6 +416,16 @@
                 return{
                     restrict: "A",
                     templateUrl: "application/components/simples/texto/negrilla.html",
+                    controller: "parrafoController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptParrafoNegrillaColor", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/texto/negrilla_color.html",
                     controller: "parrafoController",
                     scope: {
                         'ptConstructor': '='

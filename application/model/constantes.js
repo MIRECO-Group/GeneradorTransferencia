@@ -122,6 +122,9 @@ var BASE_DATA = {
             negrilla: {
                 tag: "pt-parrafo-negrilla"
             },
+            negrilla_color: {
+                tag: "pt-parrafo-negrilla-color"
+            },
             negrilla_centrado: {
                 tag: "pt-parrafo-negrilla-centrado"
             },
