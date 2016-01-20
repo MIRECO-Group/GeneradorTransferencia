@@ -1,5 +1,19 @@
 $(document).ready(function ()
-{
+{   
+    angular.element(document).ready(function ()
+    { 
+        console.log("Fuck your ass off");
+        /*Mantiene el alto de una imagen con clase "img_simple_org" dependiendo del ancho.*/
+        $('div.img_simple_org').on('resize', function ()
+        {
+            var container_width = $(this).width();
+            console.log(container_width);
+            $(this).height(container_width);
+            console.log("Hey, fuck you");
+        });
+    });
+    
+    
     $("header > div:nth-child(1) > input[type='button']").click(function ()
     {
         if ($("header > div:nth-child(1) > input[type='button']").hasClass('closed'))
@@ -116,7 +130,7 @@ $(document).ready(function ()
             });
             $("footer > ul#right_buttons > li:nth-child(3) > input[type='button']").attr('value', '-');
             $("footer > div#center_buttons > ul#smart_menu li:last-child span").text('q');
-        }
+        }                
     });
 
     if ($(window).width() <= 700)

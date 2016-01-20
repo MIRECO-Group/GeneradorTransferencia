@@ -274,15 +274,15 @@ header ul:nth-child(3) li:hover
 }
 header ul:nth-child(3) li p /* Iconos del men� desplegable */
 {
-	color: white;
-	cursor: pointer;
-	border-radius: 40px;
-	display: block;
-	font-size: 2rem;
-	margin-bottom: 0.5rem;
-	text-align: center;
-	font-family: 'transferenciaregular';
-	margin-top: 0.5rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-family: 'transferenciaregular';
+    margin-top: 0.5rem;
 }
 header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
 {
@@ -298,12 +298,12 @@ header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
 }
 header > img:nth-child(4) /*Logo del sena*/
 {
-	font-family: "transferenciaregular";
-	position: absolute;
-	top: 0.6rem;
-	left: 1.2rem;
-	width: 6rem;
-        z-index: 10;
+    font-family: "transferenciaregular";
+    position: absolute;
+    top: 0.6rem;
+    left: 1.2rem;
+    width: 6rem;
+    z-index: 10;
 }
 
 div#content_container
@@ -377,10 +377,10 @@ footer > ul#left_buttons > li:nth-child(1) > span /*Tooltip del Bot�n Portada*
     position: absolute;
     display: none;
     left: 10px;
-    padding: 1% 1%;
+    padding: 0.5% 1%;
     text-align: center;
     bottom: 75px;
-    font-size: 0.8rem;
+    width: 5rem;
 }
 footer > ul#left_buttons > li:nth-child(2) > input[type="button"] /*Bot�n Bibliograf�a*/
 {
@@ -407,10 +407,10 @@ footer > ul#left_buttons > li:nth-child(2) > span /*Tooltip del Botón Bibliogra
     position: absolute;
     display: none;
     left: 60px;
-    padding: 1% 1%;
+    padding: 0.5% 1%;
     text-align: center;
     bottom: 75px;
-    font-size: 0.8rem;
+    width: 5rem;
 }
 footer > ul#left_buttons > li:nth-child(3) > input[type="button"] /*Bot�n Glosario*/
 {
@@ -437,10 +437,10 @@ footer > ul#left_buttons > li:nth-child(3) > span:nth-child(3) /*Tooltip del Bot
     position: absolute;
     display: none;
     left: 120px;
-    padding: 1% 1%;
+    padding: 0.5% 1%;
     text-align: center;
     bottom: 75px;
-    font-size: 0.8rem;
+    width: 5rem;
 }
 footer > div#center_buttons
 {
@@ -567,10 +567,10 @@ footer > ul#right_buttons > li:nth-child(1) > span /*Tooltip del Mapa Conceptual
     position: absolute;
     display: none;
     right: 95px;
-    padding: 1% 1%;
+    padding: 0.5% 1%;
     text-align: center;
     bottom: 75px;
-    font-size: 0.8rem;
+    width: 5rem;
 }
 footer > ul#right_buttons > li:nth-child(2) > input[type="button"] /*Bot�n Descargable - PDF*/
 {
@@ -597,10 +597,10 @@ footer > ul#right_buttons > li:nth-child(2) > span:nth-child(3) /*Tooltip del Ma
     position: absolute;
     display: none;
     right: 55px;
-    padding: 1% 1%;
+    padding: 0.5% 1%;
     text-align: center;
     bottom: 75px;
-    font-size: 0.8rem;
+    width: 5rem;
 }
 footer > ul#right_buttons > li:nth-child(3) > input[type="button"]
 {
@@ -625,10 +625,10 @@ footer > ul#right_buttons > li:nth-child(3) > span
     position: absolute;
     display: none;
     right: 10px;
-    padding: 1% 1%;
+    padding: 0.5% 1%;
     text-align: center;
     bottom: 75px;
-    font-size: 0.8rem;
+    width: 5rem;
 }
 
 section#popups, .popup-contenedor

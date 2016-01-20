@@ -141,15 +141,26 @@ div#popup_ayuda > div.popup-contenido ul li
 div#popup_ayuda > div.popup-contenido ul li p
 {
     align-self:center;
-    padding-left:20px;
-
+    /*padding-left:20px;*/
 }
-#popup_ayuda > .popup-contenido .icon_help
+div#popup_ayuda > div.popup-contenido ul li div:nth-child(1)
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+div#popup_ayuda > div.popup-contenido ul li div:nth-child(2)
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+}
+div#popup_ayuda > .popup-contenido .icon_help
 {
     font-size:2rem;
     padding:8px;
-
-
 }
 #popup_ayuda > .popup-contenido .color_txthelp
 {
@@ -162,13 +173,12 @@ div#popup_ayuda > div.popup-contenido ul li p
 #popup_ayuda > .popup-contenido li:nth-child(13)
 {
     margin: 20px 0;
-
 }
 
 #popup_ayuda > .popup-contenido li:nth-child(13) img
 {
-    width:41px;
-    height:217px;
+    width: 60px;
+    height:100%;
     margin: 0 5px;
 }
 #popup_ayuda > .popup-contenido li:nth-child(14) img
@@ -248,7 +258,7 @@ div#popup_accesibilidad > .popup-contenido > div a > img
 {
     margin: 0 auto;
     height: 100%;
-    width: 10%;
+    width: 8%;
 }
 
 /*PDF*/
@@ -341,6 +351,7 @@ div#popup_tabla_de_contenido > div.popup-contenido > ul li
 
 div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul
 {
+    list-style: inside;
     list-style-type: disc;
     margin-left: 50px;
     width: 100%;
@@ -349,8 +360,13 @@ div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul
 div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul li
 {
     list-style-type: disc;
+    display: list-item;
 }
 
+div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul li span
+{
+    font-size: 1rem;
+}
 
 div#popup_tabla_de_contenido > div.popup-contenido > ul li span
 {

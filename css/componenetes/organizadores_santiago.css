@@ -37,15 +37,25 @@ body
 	font-family: "SourceSans Pro";
 }
 
-div.img_container
-{
+div.img_rectangular
+{   
     display: flex;
     position: relative;
-    width: 80%;
+    /*width: 80%;*/
+    align-self: center;
     border: solid 2px rgba(128, 128, 128, 0.5);
     border-radius: 15px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 15px auto;
+    height: 327px;
+    width: 1160px;
+}
+@media (max-width: 750px){
+    div.img_rectangular
+    {
+        height: 131px;
+        width: 467px;
+    }
 }
 
 div.img_mitad
@@ -71,6 +81,7 @@ div.img_simple_org
     display: flex;
     position: relative;
     /*width: 80%;*/
+    align-self: center;
     border: solid 2px rgba(128, 128, 128, 0.5);
     border-radius: 15px;
     overflow: hidden;
@@ -85,17 +96,24 @@ div.img_simple_org
         height: 100px;
         width: 100px;
     }
-
 }
 
-div.img_container img, div.img_full img, div.img_mitad, div.img_simple_org img
+div.img_rectangular img, div.img_full img, div.img_mitad, div.img_simple_org img
 {
     flex: 1;
     max-width: 100%;
     max-height: 100%;
     height: auto;
 }
-
+.div.img_full img {
+    display: flex;
+}
+div.img_full .img_full-img {
+    display: block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
 div.img_container button, div.img_simple_org button
 {
     font-family: 'transferenciaregular';
@@ -297,6 +315,7 @@ div#content_container div.text_container
     flex:1;
     display:flex;
     flex-direction: column;
+    padding-right: 5%;
     align-self: center;
 }
 
@@ -342,7 +361,6 @@ div#content_container div.text_container .text_text_bold_color
 div#content_container div.text_container .text_text_bold_italic
 {
     font-style: italic;
-    font-weight: bold;
     padding: 5px 5px 5px 15px;
 }
 /* a?adido luis*/

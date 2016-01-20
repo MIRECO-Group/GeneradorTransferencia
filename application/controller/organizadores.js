@@ -470,10 +470,20 @@
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Imagen">
-            .directive("ptImagen", function () {
+            .directive("ptImagenSimpleOrganizador", function () {
                 return{
                     restrict: "A",
-                    templateUrl: "application/components/simples/imagen/simple.html",
+                    templateUrl: "application/components/simples/imagen/simple_organizador.html",
+                    controller: "imagenController",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
+            .directive("ptRectangular", function () {
+                return{
+                    restrict: "A",
+                    templateUrl: "application/components/simples/imagen/rectangular.html",
                     controller: "imagenController",
                     scope: {
                         'ptConstructor': '='
@@ -499,23 +509,17 @@
                         'ptConstructor': '='
                     }
                 };
-            })
-            .directive("ptImagenSimpleOrganizador", function () {
-                return{
-                    restrict: "A",
-                    templateUrl: "application/components/simples/imagen/simple_organizador.html",
-                    controller: "imagenController",
-                    scope: {
-                        'ptConstructor': '='
-                    }
-                };
-            })
+            })            
             .controller("imagenController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
-
-                //console.log(element);
-
+                $scope.atributos = element.atributos;
+                $scope.parentObj = angular.element($element)[0];
+                $scope.objImgFull = $($scope.parentObj).find(".img_full-img")[0];
+                if ($scope.objImgFull) {
+                    $($scope.objImgFull).css("color", "grey");
+                    $($scope.objImgFull).css("background-image", "url(" + $scope.atributos.url + ")");
+                }
                 $scope.abrir_pop = function () {
                     $('.blackout, .popup', $element).fadeIn("fast");
                 };
@@ -523,7 +527,6 @@
                 $scope.cerrar_pop = function () {
                     $(".blackout, .popup", $element).fadeOut("fast");
                 };
-                $scope.atributos = element.atributos;
             })
             //</editor-fold>
             ////<editor-fold defaultstate="collapsed" desc="Botón">

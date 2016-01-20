@@ -6,6 +6,7 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  padding: 0 5px 0 15px;
 }
 
 .act_dra_dro>div {
@@ -19,7 +20,6 @@
   font-family: SourceSans Pro;
   font-size: 16px;
   font-style: italic;
-  font-weight: bold;
   box-sizing: border-box;
   margin: 30px 0;
   text-align: justify;
@@ -36,7 +36,11 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 0%;
-    padding: 0 10px;
+    padding: 0 10px 0 0;
+}
+
+.act_dra_dro>div>div>div>div:last-child{
+  padding: 0 0 0 0;
 }
 
 .act_dra_dro>div>div>div>div div.elemento {
@@ -128,6 +132,7 @@
     text-align: center;
     display: flex;
     flex-direction: row;
+    padding: 0 5px 0 15px;
 }
 
 .act_lis_des>div {
@@ -141,7 +146,6 @@
     font-family: SourceSans Pro;
     font-size: 16px;
     font-style: italic;
-    font-weight: bold;
     box-sizing: border-box;
     margin: 30px 0;
 }
@@ -157,7 +161,11 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 0 10px;
+    padding: 0 10px 0 0;
+}
+
+.act_lis_des>div>div>div>div:last-child{
+  padding: 0 0 0 0;
 }
 
 .act_lis_des>div>div>div>div div.elemento {
@@ -245,6 +253,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0 5px 0 15px;
 }
 
 
@@ -252,7 +261,6 @@
     font-family: SourceSans Pro;
     font-size: 16px;
     font-style: italic;
-    font-weight: bold;
     margin: 30px 0;
     text-align: justify;
     width: 100%;
@@ -313,6 +321,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding: 0 5px 0 15px;
 }
 .pickmany-pregunta {
     margin-bottom: 20px;
@@ -331,7 +340,6 @@
     font-family: SourceSans Pro;
     font-size: 16px;
     font-style: italic;
-    font-weight: bold;
     text-align: justify;
     margin: 30px 0;
 }

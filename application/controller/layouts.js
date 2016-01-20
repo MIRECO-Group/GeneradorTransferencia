@@ -196,6 +196,17 @@
                     }
                 };
             })
+            .directive("ptContenido8", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/contenido8.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptExamen", function () {
                 return{
                     controller: "LayoutController",

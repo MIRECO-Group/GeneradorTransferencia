@@ -456,14 +456,12 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
     flex-grow: 1;
   }
 }
-
-
 /*ORGANIZADOR COMPONENTE DE VIDEO*/
 #content_container .contenedorVideo {
     width: 100%;
     height: 100%;
     background-color: #ccc;
-    margin: 0 auto;
+    margin: -10px auto;
     padding: 4px;
 }
 #content_container .video {
