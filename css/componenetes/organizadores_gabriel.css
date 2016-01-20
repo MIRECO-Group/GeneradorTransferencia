@@ -569,7 +569,6 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   float: none;
   margin: 0;
 }
-/*botón play*/
 .audiojs .play {
   width: 100% !important;
   height: 100% !important;
@@ -578,6 +577,17 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background-position: 0 0 !important;
   background-repeat: no-repeat !important;
   background-size: 100% auto;
+}
+.audiojs .play:hover:before {
+  background-color: #305570;
+  color: white;
+  content: "Play";
+  font-size: 0.8rem;
+  margin-left: 22px;
+  margin-top: -26px;
+  padding: 12px;
+  position: absolute;
+  text-align: center;
 }
 /*botón pause*/
 .audiojs .pause {
@@ -594,13 +604,6 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   display: none;
 }
 .time {
-  display: none;
-}
-/*Ocultando otros elementos*/
-.audiojs .loading {
-  display: none;
-}
-.audiojs .error {
   display: none;
 }
 
