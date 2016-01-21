@@ -292,7 +292,7 @@ header ul:nth-child(3) li span:nth-child(1) /* Tooltips de los iconos */
     display: none;
     right: 3.5rem;
     margin-top: 0.4rem;
-    padding: 5% 30%;
+    padding: 2px 30%;
     text-align: center;
     width: 5rem;
 }
@@ -597,7 +597,7 @@ footer > ul#right_buttons > li:nth-child(2) > span:nth-child(3) /*Tooltip del Ma
     position: absolute;
     display: none;
     right: 55px;
-    padding: 0.5% 1%;
+    padding: 2px 1%;
     text-align: center;
     bottom: 75px;
     width: 5rem;

@@ -119,6 +119,17 @@
                     }
                 };
             })
+            .directive("ptActividad5", function () {
+                return{
+                    controller: "LayoutController",
+                    controllerAs: "layout",
+                    restrict: "A",
+                    templateUrl: "application/components/layouts/actividad_contenido_5.html",
+                    scope: {
+                        'ptConstructor': '='
+                    }
+                };
+            })
             .directive("ptContenido1", function () {
                 return{
                     controller: "LayoutController",

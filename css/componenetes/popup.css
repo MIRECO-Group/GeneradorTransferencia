@@ -164,10 +164,9 @@ div#popup_ayuda > .popup-contenido .icon_help
 }
 #popup_ayuda > .popup-contenido .color_txthelp
 {
-    font-size:2rem;
+    font-size:3rem;
     color:#00415B;
     margin: 0 8px;
-
 }
 
 #popup_ayuda > .popup-contenido li:nth-child(13)

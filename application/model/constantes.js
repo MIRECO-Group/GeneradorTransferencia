@@ -37,6 +37,9 @@ var BASE_DATA = {
         actividad_contenido_4: {
             tag: "pt-actividad4"
         },
+        actividad_contenido_5: {
+            tag: "pt-actividad5"
+        },
         contenido_1: {
             tag: "pt-contenido1"
         },
@@ -224,14 +227,17 @@ var BASE_DATA = {
             //</editor-fold>
         },
         frame: {
+            //<editor-fold defaultstate="collapsed" desc="Frames">
             grande: {
                 tag: "pt-frame-grande"
             },
             mediano: {
                 tag: "pt-frame-mediano"
             }
+            //</editor-fold>
         },
         reproductor: {
+            //<editor-fold defaultstate="collapsed" desc="Reproductores">
             boton_pequeno: {
                 tag: "pt-reproductor-boton-pequeno"
             },
@@ -244,6 +250,7 @@ var BASE_DATA = {
             video:{
                 tag: "pt-reproductor-video"
             }
+            //</editor-fold>
         },
         select: {
             select_horizontal: {

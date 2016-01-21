@@ -217,7 +217,7 @@ div.lista_container{
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: 10px 0 0 15px;
+    margin: 10px 0 0;
     align-self: center;
 }
 
