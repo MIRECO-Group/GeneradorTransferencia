@@ -9,16 +9,16 @@
 
 (function () {
     var moduloOrganizadores = angular.module("organizadores", [])
-            moduloOrganizadores.service('datosPopupsSabiasNoolvide', [function () {
+    moduloOrganizadores.service('datosPopupsSabiasNoolvide', [function () {
             return {
-                    textosSabiasQue: null,
-                    textosNoOlvideQue: null,
-                    textosLineaNarrativa: null,
-                    urlVideoSabiasQue: "",
-                    urlVideoNoOlvideQUe: "",
-                    urlVideoLineaNarrativa: ""
-                };
-            }])
+                textosSabiasQue: null,
+                textosNoOlvideQue: null,
+                textosLineaNarrativa: null,
+                urlVideoSabiasQue: "",
+                urlVideoNoOlvideQUe: "",
+                urlVideoLineaNarrativa: ""
+            };
+        }])
             //<editor-fold defaultstate="collapsed" desc="TABS">
             .directive("ptOrganizadorTabsSuperiores", function () {
                 return{
@@ -56,7 +56,7 @@
                 };
 
                 $scope.isCover = function () {
-                    return $scope.tab === 0 || $scope.tab === ($scope.cantTabs+1);
+                    return $scope.tab === 0 || $scope.tab === ($scope.cantTabs + 1);
                 };
 
                 $scope.checkMore = function ()
@@ -111,47 +111,49 @@
 
 
                 //Scopes y Comportamiento preguntas de conocimiento
-                $scope.listaAcividades = function(){
+                $scope.listaAcividades = function () {
                     /*var tipoActividades = {};
-                    $.each($scope.tabs, function (key, value) {
-                        tipoActividades[key] = {id: JSON.parse(value.chain).join(""), tipo: value.componentes[1].tipo};
-                    });
-                    return tipoActividades;*/
+                     $.each($scope.tabs, function (key, value) {
+                     tipoActividades[key] = {id: JSON.parse(value.chain).join(""), tipo: value.componentes[1].tipo};
+                     });
+                     return tipoActividades;*/
                     var tipoActividades = [];
                     $.each($scope.tabs, function (key, value) {
                         tipoActividades[key - 1] = value.tipo;
                     });
 
                     var uniqueVals = [];
-                    $.each(tipoActividades, function(i, el){
-                        if($.inArray(el, uniqueVals) === -1) uniqueVals.push(el);
+                    $.each(tipoActividades, function (i, el) {
+                        if ($.inArray(el, uniqueVals) === -1)
+                            uniqueVals.push(el);
                     });
 
                     return uniqueVals;
                 }
 
-                $scope.enviarEvaluacion = function(){
+                $scope.enviarEvaluacion = function () {
                     /*var objetoActividades = $scope.listaAcividades();
-                    $.each(objetoActividades, function (key, value) {
-                        $scope.$broadcast("preguntasConocimiento-" + value.tipo, value.id.concat(1));
-                    });
-                    for (var i = objetoActividades.length - 1; i >= 0; i--) {
-                        $scope.$broadcast("preguntasConocimiento-" + objetoActividades[i]);
-                    };*/
+                     $.each(objetoActividades, function (key, value) {
+                     $scope.$broadcast("preguntasConocimiento-" + value.tipo, value.id.concat(1));
+                     });
+                     for (var i = objetoActividades.length - 1; i >= 0; i--) {
+                     $scope.$broadcast("preguntasConocimiento-" + objetoActividades[i]);
+                     };*/
 
                     for (var i = datosPreguntasConocimiento.objetoTipo.length - 1; i >= 0; i--) {
-                        if(datosPreguntasConocimiento.objetoTipo[i] == 1){
+                        if (datosPreguntasConocimiento.objetoTipo[i] == 1) {
                             $scope.$broadcast("preguntasConocimiento-" + datosPreguntasConocimiento.arrayTipo[i]);
                         }
-                    };
+                    }
+                    ;
 
                     var correctas = 0;
-                    
+
                     $.each(datosPreguntasConocimiento.objetoRetro, function (key, value) {
-                        if(value.correcta)
-                            correctas+=1;
+                        if (value.correcta)
+                            correctas += 1;
                     });
-                    $scope.porcentaje = (correctas / $scope.cantTabs)*100|0;
+                    $scope.porcentaje = (correctas / $scope.cantTabs) * 100 | 0;
                 }
 
 
@@ -399,7 +401,7 @@
                     templateUrl: "application/components/iconos/noolvideq.html"
                 };
             })
-            
+
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="Parrafo">
             .directive("ptParrafo", function () {
@@ -509,7 +511,7 @@
                         'ptConstructor': '='
                     }
                 };
-            })            
+            })
             .controller("imagenController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
@@ -636,11 +638,11 @@
                         }
                     }
                 };
-                
+
                 /*
                  * Cambiar de página según el atributo Destino configurado
                  */
-                var cambiar_pagina = function(destino){
+                var cambiar_pagina = function (destino) {
                     $plantilla.get_paginacion_controller().cambiar_pagina(destino);
                 };
             })
@@ -690,10 +692,10 @@
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
                 $scope.atributos = element.atributos;
-                
-                $scope.checkEnunciado = function(){
-                   return $scope.atributos.hasOwnProperty("enunciado") && $scope.atributos.enunciado.trim().length>0; 
-                } ;
+
+                $scope.checkEnunciado = function () {
+                    return $scope.atributos.hasOwnProperty("enunciado") && $scope.atributos.enunciado.trim().length > 0;
+                };
             })
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="PopUp">
@@ -776,7 +778,44 @@
             .controller("frameController", function ($scope, $contenido, $element) {
                 this.chainId = $scope.ptConstructor;
                 var element = $contenido.get_element_page(this.chainId);
+                $scope.parentObj = angular.element($element)[0];
                 $scope.atributos = element.atributos;
+                $scope.idxAudio = "";
+                $scope.idxAudio = this.chainId.toString().replace(",", "-");
+                $scope.idxAudio = "aud" + $scope.idxAudio;
+                $scope.idxVideo = "";
+                $scope.idxVideo = this.chainId.toString().replace(",", "-");
+                $scope.idxVideo = "aud" + $scope.idxVideo;
+                //para el audio
+                $scope.objAudios = $($scope.parentObj).find("audio");
+                $scope.objAudio = $scope.objAudios[0];
+                $($scope.objAudio).attr("src", $scope.atributos.url);
+                $($scope.objAudio).attr("data-idxaud", $scope.idxAudio);
+                if ($scope.objAudio) {
+                    audiojs.events.ready(function () {
+                        audiojs.create($scope.objAudio);
+                    });
+                }
+                //para el vídeo
+                $scope.objVideos = $($scope.parentObj).find("video");
+                $scope.objVideo = $scope.objVideos[0];
+                if ($scope.objVideo) {
+                    console.log("Está dentro del vídeo");
+                    $($scope.objVideo).attr("id", $scope.idxVideo);
+                    $($scope.objVideo).attr("poster", $scope.atributos.poster);
+                    $($scope.objVideo).attr("controls", $scope.atributos.controls);
+                    $($scope.objVideo).attr("loop", $scope.atributos.loop);
+                    $($scope.objVideo).attr("autoplay", $scope.atributos.autoplay);
+                    console.log($scope.objVideo);
+                    $scope.objSources = $($scope.objVideo).find("source");
+                    if ($scope.objSources) {
+                        console.log("Si existen los sources");
+                        for (var i = 0; i < $scope.objSources.length; i++)
+                            $($scope.objSources[i]).attr("src", $scope.atributos.url);
+                        videojs.options.flash.swf = "../../media/swf/video-js.swf";
+                        videojs($scope.idxVideo, {}, function () {});
+                    }
+                }
             })
             //</editor-fold>
             ////<editor-fold defaultstate="collapsed" desc="Reproductor">
@@ -826,15 +865,15 @@
                 $scope.parentObj = angular.element($element)[0];
                 $scope.atributos = element.atributos;
                 $scope.idxAudio = "";
-                $scope.idxAudio = this.chainId.toString().replace(",","-");
-                $scope.idxAudio = "aud"+$scope.idxAudio;
+                $scope.idxAudio = this.chainId.toString().replace(",", "-");
+                $scope.idxAudio = "aud" + $scope.idxAudio;
                 //para el audio
                 $scope.objAudios = $($scope.parentObj).find("audio");
                 $scope.objAudio = $scope.objAudios[0];
-                $($scope.objAudio).attr("src",$scope.atributos.url);
-                $($scope.objAudio).attr("data-idxaud",$scope.idxAudio);
+                $($scope.objAudio).attr("src", $scope.atributos.url);
+                $($scope.objAudio).attr("data-idxaud", $scope.idxAudio);
                 if ($scope.objAudio) {
-                    audiojs.events.ready(function() {
+                    audiojs.events.ready(function () {
                         audiojs.create($scope.objAudio);
                     });
                 }
@@ -844,9 +883,9 @@
                 if ($scope.objVideo) {
                     console.log("Está dentro del vídeo");
                     videojs.options.flash.swf = "../../media/swf/video-js.swf";
-                    $($scope.objVideo).attr("controls",$scope.atributos.controls);
-                    $($scope.objVideo).attr("loop",$scope.atributos.loop);
-                    $($scope.objVideo).attr("autoplay",$scope.atributos.autoplay);
+                    $($scope.objVideo).attr("controls", $scope.atributos.controls);
+                    $($scope.objVideo).attr("loop", $scope.atributos.loop);
+                    $($scope.objVideo).attr("autoplay", $scope.atributos.autoplay);
                 }
             })
             //</editor-fold>
@@ -917,12 +956,12 @@
         };
     });
     moduloOrganizadores.factory("$popupSabiasQue", function ($render) {
-            var creaPopup = function($compile, $scope, $clase) {
+        var creaPopup = function ($compile, $scope, $clase) {
             var render = $("<div/>", {
                 "pt-popupsabiasque": "",
                 "pt-popupsabiasqueest": JSON.stringify($clase)
             });
-               
+
             if (render) {
                 $render.jQueryCompile(render, $("body"), $compile, $scope);
             }
@@ -934,12 +973,12 @@
         };
     });
     moduloOrganizadores.factory("$popupNoOlvideQue", function ($render) {
-            var creaPopup = function($compile, $scope, $clase) {
+        var creaPopup = function ($compile, $scope, $clase) {
             var render = $("<div/>", {
                 "pt-popupnoolvideque": "",
                 "pt-popupnoolvidequeest": JSON.stringify($clase)
             });
-               
+
             if (render) {
                 $render.jQueryCompile(render, $("body"), $compile, $scope);
             }
@@ -951,12 +990,12 @@
         };
     });
     moduloOrganizadores.factory("$popupLineaNarrativa", function ($render) {
-            var creaPopup = function($compile, $scope, $clase) {
+        var creaPopup = function ($compile, $scope, $clase) {
             var render = $("<div/>", {
                 "pt-popuplineanarrativa": "",
                 "pt-popuplineanarrativaest": JSON.stringify($clase)
             });
-               
+
             if (render) {
                 $render.jQueryCompile(render, $("body"), $compile, $scope);
             }

@@ -409,7 +409,7 @@ div.layout_actividad_contenido_2
 .layout_actividad_contenido_2 > div.container_2
 {   
     display: flex;
-    flex: 3 0 auto;
+    flex: 2 0 auto;
     width: 100%;
 }
 
@@ -425,7 +425,7 @@ div.layout_actividad_contenido_2
 {
     display: flex;
     flex: 1 0 auto;
-    width: 65%;
+    width: 80%;
 }
 
 .layout_actividad_contenido_2 > div.container_3 > div.container_3_2
@@ -434,7 +434,7 @@ div.layout_actividad_contenido_2
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 20%;
 }
 
 .layout_actividad_contenido_2 > div.container_3 > div.container_3_2 > div.container_3_2_1
@@ -719,7 +719,6 @@ div.layout_actividad_contenido_5
 
 .layout_actividad_contenido_5 > div.container_1
 {
-    background-color:green;
     display: flex;
     flex: 1 0 auto;
     width: 100%;
@@ -727,17 +726,15 @@ div.layout_actividad_contenido_5
 
 .layout_actividad_contenido_5 > div.container_2
 {   
-    background-color:red;
     display: flex;
-    flex: 3 0 auto;
+    flex: 1 0 auto;
     width: 100%;
 }
 
 .layout_actividad_contenido_5 > div.container_3
 {
-    background-color:gray;
     display: flex;
-    flex: 4 0 auto;
+    flex: 5 0 auto;
     flex-direction: row;
     width: 100%;
 }
@@ -747,7 +744,7 @@ div.layout_actividad_contenido_5
     flex: 1 0 auto;
     display: flex;
     flex-direction: row;
-    width: 65%;
+    width: 80%;
 }
 
 .layout_actividad_contenido_5 > div.container_3 > div.container_3_1 > div.container_3_1_1
@@ -769,19 +766,17 @@ div.layout_actividad_contenido_5
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
-    width: 35%;
+    width: 20%;
 }
 
 .layout_actividad_contenido_5 > div.container_3 > div.container_3_2 > div.container_3_2_1
 {
-    background-color: green;
     display: flex;
     flex: 5 0 auto;
 }
 
 .layout_actividad_contenido_5 > div.container_3 > div.container_3_2 > div.container_3_2_2
 {
-    background-color: blue;
     display: flex;
     flex: 2 0 auto;
 }
@@ -999,7 +994,7 @@ div.layout_contenido_4
 .layout_contenido_4 > div.container_1 > div.container_1_2
 {
     display: flex;
-    flex: 2 0 auto;
+    flex: 1 0 auto;
     flex-direction: row;
     width: 100%;
 }
@@ -1007,7 +1002,7 @@ div.layout_contenido_4
 .layout_contenido_4  > div.container_1 > div.container_1_3
 {
     display: flex;
-    flex: 6 0 auto;
+    flex: 10 0 auto;
     width: 100%;
 }
 

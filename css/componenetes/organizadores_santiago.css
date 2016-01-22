@@ -254,6 +254,11 @@ div#content_container div.title_basic
     width: 100%;
 }
 
+div#content_container div.title_basic span
+{
+    margin-right: 10px;
+}
+
 div#content_container div.title_basic_title
 {
     margin: 0 0px;
@@ -321,7 +326,7 @@ div#content_container div.text_container
 
 div#content_container div.text_container .text_text
 {
-    padding: 5px 5px 5px 15px;
+    padding: 5px 5px 5px 0px;
     line-height: 25px;
     width:100%;
 }

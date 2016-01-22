@@ -85,6 +85,15 @@ $(document).ready(function ()
     {
         $(this).siblings('span:not(".divition_bot_span")').fadeOut("fast");
     });
+    
+    /*Muestra los tooltips las flechas de navegación*/
+    $("footer > div#center_buttons > div:nth-child(1) > input[type='button'], footer > div#center_buttons > div:nth-child(3) > input[type='button']").mouseenter(function ()
+    {
+        $(this).siblings('span').fadeIn("fast");
+    }).mouseleave(function ()
+    {
+        $(this).siblings('span').fadeOut("fast");
+    });
 
     $(window).resize(function ()
     {

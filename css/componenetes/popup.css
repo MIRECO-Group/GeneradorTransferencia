@@ -141,7 +141,8 @@ div#popup_ayuda > div.popup-contenido ul li
 div#popup_ayuda > div.popup-contenido ul li p
 {
     align-self:center;
-    /*padding-left:20px;*/
+    text-align: left;
+    width: 100%;
 }
 div#popup_ayuda > div.popup-contenido ul li div:nth-child(1)
 {

@@ -458,7 +458,7 @@ footer > div#center_buttons
     width: 0rem;
     align-items: inherit;
 }
-footer > div#center_buttons > input[type="button"]:nth-child(1)/*Bot�n ir a la izquierda*/
+footer > div#center_buttons > div:nth-child(1) > input[type="button"]/*Bot�n ir a la izquierda*/
 {
     font-size: 2rem;
     background: #004c5e;
@@ -473,6 +473,20 @@ footer > div#center_buttons > input[type="button"]:nth-child(1)/*Bot�n ir a la
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     flex: 1;
+    height: 100%;
+    width: 100%;
+}
+footer > div#center_buttons > div:nth-child(1) > span/*tooltip*/
+{
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    display: none;
+    left: 18rem;
+    bottom: 4.6rem;
+    padding: 4px 5px;
+    text-align: center;
+    width: 5rem;
 }
 footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que recurso va*/
 {
@@ -485,7 +499,7 @@ footer > div#center_buttons > p:nth-child(2)/*Espacio donde se indica en que rec
     text-align: center;
     align-self: inherit;
 }
-footer > div#center_buttons > input[type="button"]:nth-child(3)/*Bot�n ir a la derecha*/
+footer > div#center_buttons > div:nth-child(3) > input[type="button"]/*Bot�n ir a la derecha*/
 {
     font-size: 2rem;
     background: #004c5e;
@@ -500,6 +514,20 @@ footer > div#center_buttons > input[type="button"]:nth-child(3)/*Bot�n ir a la
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     flex: 1;
+    height: 100%;
+    width: 100%;
+}
+footer > div#center_buttons > div:nth-child(3) > span/*tooltip*/
+{
+    color: white;
+    background-color: #305570;
+    position: absolute;
+    display: none;
+    right: 18rem;
+    bottom: 4.6rem;
+    padding: 4px 5px;
+    text-align: center;
+    width: 5rem;
 }
 footer > div#center_buttons > ul#smart_menu
 {
