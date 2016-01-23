@@ -125,6 +125,7 @@
 }
 
 /*Ayuda*/
+/*Ayuda*/
 div#popup_ayuda > div.popup-contenido ul li:nth-child(1)
 {
     margin:10px 0;
@@ -143,20 +144,21 @@ div#popup_ayuda > div.popup-contenido ul li p
     align-self:center;
     text-align: left;
     width: 100%;
+	margin-right:5%;
 }
 div#popup_ayuda > div.popup-contenido ul li div:nth-child(1)
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45%;
+    width: 35%;
 }
 div#popup_ayuda > div.popup-contenido ul li div:nth-child(2)
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 55%;
+    width: 65%;
 }
 div#popup_ayuda > .popup-contenido .icon_help
 {
@@ -177,8 +179,8 @@ div#popup_ayuda > .popup-contenido .icon_help
 
 #popup_ayuda > .popup-contenido li:nth-child(13) img
 {
-    width: 60px;
-    height:100%;
+    width: 45px;
+    height:86%;
     margin: 0 5px;
 }
 #popup_ayuda > .popup-contenido li:nth-child(14) img
@@ -399,4 +401,26 @@ div#popup_tabla_de_contenido > div.pop-contenido h3
     font-size: 1rem;
     font-weight: bold;
     margin: 10px 0;
+}
+
+/*Bibliografía*/
+div#popup_bibliografia > div.popup-contenido .bibliografia-item
+{
+    margin: 0 30px;
+}
+
+div#popup_bibliografia > div.popup-contenido .bibliografia-item:nth-child(1)
+{
+    margin-top: 15px;
+}
+
+/*Glosario*/
+div#popup_glosario > div.popup-contenido .glosario-item
+{
+    margin: 0 30px;
+}
+
+div#popup_glosario > div.popup-contenido .glosario-item:nth-child(1)
+{
+    margin-top: 15px;
 }

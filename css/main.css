@@ -482,7 +482,6 @@ footer > div#center_buttons > div:nth-child(1) > span/*tooltip*/
     background-color: #305570;
     position: absolute;
     display: none;
-    left: 18rem;
     bottom: 4.6rem;
     padding: 4px 5px;
     text-align: center;
@@ -523,7 +522,6 @@ footer > div#center_buttons > div:nth-child(3) > span/*tooltip*/
     background-color: #305570;
     position: absolute;
     display: none;
-    right: 18rem;
     bottom: 4.6rem;
     padding: 4px 5px;
     text-align: center;
