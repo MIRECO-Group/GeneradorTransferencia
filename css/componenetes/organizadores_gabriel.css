@@ -115,7 +115,7 @@
   height: auto;
   margin-left: 40px;
   padding: 20px;
-  text-align: justify;
+  text-align: left;
 }
 .orgEsfNum-txt > h3 {
   border-bottom: 2px solid #c9eff1;
@@ -127,7 +127,7 @@
   color: #5b606e;
   line-height: 28px;
   padding-left: 12px;
-  text-align: justify;
+  text-align: left;
 }
 /* Extra small devices */
 @media screen and (max-width: 767px) {
@@ -214,7 +214,7 @@ Para 4, 5, 6 el proceder es similar, solo cambiando el valor del número.
 }
 .orgTitTxtImg-txt > p {
   line-height: 26px;
-  text-align: justify;
+  text-align: left;
 }
 /*Media queries*/
 @media screen and (max-width: 767px) {
@@ -267,7 +267,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 .orgTxtImgGrande-contenTxt {
   line-height: 24px;
   padding: 20px 38px;
-  text-align: justify;
+  text-align: left;
 }
 /*Media queries*/
 @media screen and (max-width: 767px) {
@@ -284,7 +284,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
-  text-align: justify;
+  text-align: left;
   flex: 1;
 }
 .org_aco-text {
@@ -384,7 +384,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 }
 .org_aco-acordeon-container-info-text {
   line-height: 22px;
-  text-align: justify;
+  text-align: left;
   padding: 0 40px;
 }
 /*Responsive*/
@@ -462,7 +462,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background-color: #ccc;
   border-radius: 10px;
   height: 99.5%;
-  padding: 0.5%;
+  padding: 0;
   width: 99.5%;
 }
 #content_container .video {
@@ -504,6 +504,13 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   padding: 12px;
   position: absolute;
   text-align: center;
+}
+.vid1-3-dimensions {
+  width: 90% !important;
+  height: auto !important;
+}
+.video-js .vjs-tech {
+  position: relative !important;
 }
 /* ORGANIZADORES DE AUDIO */
 /*componente audio*/
@@ -606,7 +613,7 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
   background-color: #305570;
   color: white;
   content: "Play";
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-left: 22px;
   margin-top: -26px;
   padding: 12px;
@@ -774,12 +781,12 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#835ca8', endColorstr='#65568f',GradientType=1 );
 }
 .button_sabiasq_text {
-  font-size: 20px;
+  font-size: 24px;
   margin-left: 10px;
   vertical-align: middle;
 }
 .button_noolvideq_text {
-  font-size: 20px;
+  font-size: 24px;
   margin-left: 10px;
   vertical-align: middle;
 }
@@ -848,10 +855,10 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 .popupSabiasQue-contenido-texto {
   margin-left: 40px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 25px;
   margin-top: 12px;
   margin: 12px 20px 0 40px;
-  text-align: justify;
+  text-align: left;
   padding-top: 40px;
 }
 .popupSabiasQue-contenido-video {
@@ -958,10 +965,10 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 .popupNoOlvideQue-contenido-texto {
   margin-left: 40px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 25px;
   margin-top: 12px;
   margin: 12px 20px 0 40px;
-  text-align: justify;
+  text-align: left;
   padding-top: 40px;
 }
 .popupNoOlvideQue-contenido-video {
@@ -995,12 +1002,12 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
     margin: 0 14px;
   }
   .popupNoOlvideQue-title {
-    font-size: 14px;
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 321px) and (max-width: 520px) {
   .popupNoOlvideQue-title {
-    font-size: 18px;
+    font-size: 24px;
   }
   .popupNoOlvideQue-contenido-texto {
     margin: 0 0 0 24px;
@@ -1074,10 +1081,10 @@ orgTitTxtImg-contenImg, orgTitTxtImg-audio, orgTitTxtImg-vídeo
 .popupLineaNarrativa-contenido-texto {
   margin-left: 40px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 25px;
   margin-top: 12px;
   margin: 12px 20px 0 40px;
-  text-align: justify;
+  text-align: left;
   padding-top: 40px;
 }
 .popupLineaNarrativa-contenido-video {

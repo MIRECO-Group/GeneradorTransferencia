@@ -21,12 +21,6 @@ input[type="button"]
 	cursor: pointer;
 }
 
-html
-{
-	height: 100%;
-	font-size: 16px; /*1rem = 16px*/
-}
-
 body
 {
 	height: 100%;
@@ -130,7 +124,7 @@ div.img_rectangular button, div.img_simple_org button
     border-width: 3px;
     border-color: #04BCC8;
     border-radius: 40px;
-    font-size: 20px;
+    font-size: 24px;
     padding: 7px;
     cursor: pointer;
 }
@@ -250,6 +244,7 @@ div#content_container div.title_basic
     display: flex;
     flex-direction: row;
     align-items: center;
+
     height: 100%;
     width: 100%;
 }
@@ -342,7 +337,7 @@ div#content_container div.text_container .text_text_center
 div#content_container div.text_container .text_text_bold
 {
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
+    padding: 5px -1px 5px 15px;
 }
 
 /* Párrafo en negrilla centrado */
@@ -366,7 +361,7 @@ div#content_container div.text_container .text_text_bold_color
 div#content_container div.text_container .text_text_bold_italic
 {
     font-style: italic;
-    padding: 5px 5px 5px 15px;
+    padding: 5px -1px 5px 15px;
 }
 /* a?adido luis*/
 
@@ -390,7 +385,7 @@ div#content_container .button_portada
 	width: 45%;
 	*/
 	background-color: transparent;
-    width: 260px;
+    width: 280px;
     margin-left: auto;
 }
 div#content_container .button_portada-icono

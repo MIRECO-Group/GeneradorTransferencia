@@ -6,7 +6,7 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  padding: 0 5px 0 15px;
+  padding: 0 -1px 0 15px;
 }
 
 .act_dra_dro>div {
@@ -132,7 +132,7 @@
     text-align: center;
     display: flex;
     flex-direction: row;
-    padding: 0 5px 0 15px;
+    padding: 0 -1px 0 15px;
 }
 
 .act_lis_des>div {
@@ -253,7 +253,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 5px 0 15px;
+    padding: 0 -1px 0 15px;
 }
 
 
@@ -321,7 +321,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 0 5px 0 15px;
+    padding: 0 -1px 0 15px;
 }
 .pickmany-pregunta {
     margin-bottom: 20px;

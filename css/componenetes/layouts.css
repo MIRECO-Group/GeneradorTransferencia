@@ -55,6 +55,7 @@ img{
     flex: 1;    
     height: 100%;
     width: 100%;
+    margin-left: 5px;
 }
 
 .c1, .c2, .c3 , .c4, .c5{
@@ -79,6 +80,7 @@ img{
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    flex: 1;
     flex-grow: 10;
     width: 100%;
 }

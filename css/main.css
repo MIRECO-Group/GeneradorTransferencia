@@ -164,7 +164,7 @@ header div:nth-child(1) > h1
 {
     color: white;
     font-size: 1.8rem;
-    margin: 0.8rem 0px 0.8rem 105px;
+    margin: 0.8rem 0px 0.8rem 150px;
 }
 header div:nth-child(1) > input[type="button"] /*Bot�n que activa el men� desplegable*/
 {
@@ -208,7 +208,7 @@ header div:nth-child(2) > p:nth-child(1)/*Barra miga de pan*/
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     text-align: left;
-    padding: 10px 0px 5px 110px;
+    padding: 10px 0px 5px 150px;
     margin-top: -5px;
     position: relative;
     /* z-index: 2; */
@@ -316,7 +316,7 @@ div#content_container
     height: 100%;
     flex: 5 1 auto;
     display: flex;
-    padding: 20px 5px 5px;
+    padding: 40px 5px 5px;
 }
 
 footer

@@ -122,9 +122,9 @@
     overflow-x: hidden;
     height: auto;
     max-height: 80%;
+    padding-left:5%;
 }
 
-/*Ayuda*/
 /*Ayuda*/
 div#popup_ayuda > div.popup-contenido ul li:nth-child(1)
 {
@@ -259,8 +259,8 @@ div#popup_accesibilidad > .popup-contenido > div > p
 div#popup_accesibilidad > .popup-contenido > div a > img
 {
     margin: 0 auto;
-    height: 100%;
-    width: 8%;
+    height: 80px;
+    width: 65px;
 }
 
 /*PDF*/
@@ -299,7 +299,7 @@ div#popup_PDF > .popup-contenido > div a
     padding: 15px;
     border-radius: 80px;
     text-align: center;
-    width: 50px;
+    width: 63px;
     align-self: center;
 }
 
@@ -339,7 +339,7 @@ div#popup_mapa_conceptual > .popup-contenido > div a
     padding: 15px;
     border-radius: 80px;
     text-align: center;
-    width: 50px;
+    width: 63px;
     align-self: center;
 }
 
@@ -367,7 +367,7 @@ div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul li
 
 div#popup_tabla_de_contenido > div.popup-contenido > ul > li:nth-child(5) ul li span
 {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 div#popup_tabla_de_contenido > div.popup-contenido > ul li span
@@ -398,7 +398,7 @@ div#popup_tabla_de_contenido > div.pop-contenido ol li
 div#popup_tabla_de_contenido > div.pop-contenido h3
 {
     color: #002D39;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0;
 }

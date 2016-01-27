@@ -97,6 +97,7 @@ $(document).ready(function ()
 
     $(window).resize(function ()
     {
+        /*Reacomoda el menú superior.*/
         $("header ul:nth-child(3)").css('top', $("header div:nth-child(1)").height() + 10);
         $("footer > div#center_buttons > ul#smart_menu").css('bottom', $("footer").height() + 7);
 
@@ -221,6 +222,9 @@ $(document).ready(function ()
        $(this).parent().parent().hide();
        $("section#popups").hide();
     });
+    
+    /*Reacomoda el menú superior desplegable al iniciar la plantilla*/
+    $("header ul:nth-child(3)").css('top', $("header div:nth-child(1)").height() + 10);
     
 });
 
